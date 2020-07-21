@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Drag and Drop script for complex nested html structures">
+    <title>Lean & Mean Drag and Drop - LMDD</title>
+    <meta property="og:title" content="Lean & Mean Drag and Drop"/>
+    <meta property="og:description" content="Drag and Drop script for complex nested html structures"/>
+    <meta property="og:url" content="https://supraniti.github.io/Lean-Mean-Drag-and-Drop/"/>
+    <meta property="og:image"
+          content="https://supraniti.github.io/Lean-Mean-Drag-and-Drop/gh-pages/images/logo.png"/>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="gh-pages/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="gh-pages/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="gh-pages/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="gh-pages/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="gh-pages/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="gh-pages/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="gh-pages/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="gh-pages/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="gh-pages/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="gh-pages/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="gh-pages/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="gh-pages/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="gh-pages/images/favicon-16x16.png">
+    <link rel="manifest" href="gh-pages/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ef5423">
+    <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#ef5423">
+    <!-- CSS-->
+    <link href="gh-pages/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+    <link href="dist/lmdd.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" type="text/css"
+          rel="stylesheet" media="screen,projection">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="google-site-verification" content="t8GPQFbC5CeqIvVrxan6kUHE4gRmM4ua22RxjyHxQwY"/>
+</head>
+<body>
+<header>
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">LMDD</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#about">About</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#options">Options</a></li>
+                <li><a href="#advanced">Advanced</a></li>
+                <li><a href="#integration">Integration</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a class="waves-effect" href="#about"><i class="material-icons">announcement</i>About</a></li>
+                <li><a class="waves-effect" href="#usage"><i class="material-icons">lightbulb_outline</i>Usage</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="waves-effect" href="#examples">Examples</a></li>
+                <li><a class="waves-effect" href="#options">Options</a></li>
+                <li><a class="waves-effect" href="#advanced">Advanced</a></li>
+                <li><a class="waves-effect" href="#integration">Integration</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</header>
+<main>
+    <a href="https://github.com/supraniti/Lean-Mean-Drag-and-Drop"
+       onclick="trackOutboundLink('https://github.com/supraniti/Lean-Mean-Drag-and-Drop'); return false;"
+       class="github-link">
+        <img src="gh-pages/images/GitHub-Mark-32px.png">
+    </a>
+    <div class="container">
+        <div id="about" class="section scrollspy">
+            <p class="flow-text"><i>Lean & Mean Drag and Drop is a small script for dragging, dropping, sorting and reordering html structures</i></p>
+            <h5>Features</h5>
+            <div id="features">
+                <div class="feature-grid">
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Supports nested structures ('nestable sortables')</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Smooth transitions</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Auto scroll while dragging</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Lightweight (~3.5kb gzipped)</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">No dependencies</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Super easy to integrate with your own app</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Supports touch events</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Compatible with all modern browsers</div>
+                    </div>
+                    <div class="z-depth-3 black lmdd-block feature-item">
+                        <div class="feature">Can work with any type of layout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="usage" class="section scrollspy">
+            <h5>Usage</h5>
+            <pre><code class="hljs html">//Load LMDD css and js files
+&lt;link href="../css/lmdd.min.css" rel="stylesheet">
+&lt;script src="../js/lmdd.min.js">&lt;/script>
+
+//Initialize LMDD instance with your preferred options
+&lt;script>lmdd.set(document.getElementById('markupID'),{optionsObject});&lt;/script></code></pre>
+        </div>
+        <div id="examples">
+            <h5>Examples</h5>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">speaker_notes</i></div>
+                    <div class="collapsible-body">
+                        <p>
+                            The basic script is essentially the same for all cases. Set LMDD on an element (containing
+                            all that has to be dragged or nested in), and declare the relevant classes
+                            (containerClass,draggableItemClass & handleClass). The rest is done through proper HTML
+                            markup.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header active"><i class="material-icons">filter_1</i>Simple Grid</div>
+                    <div class="collapsible-body">
+                        <div id="simple-grid-example" class="example">
+                            <div class="simple-grid">
+                                <div class="light-green z-depth-3 grid-item">Green</div>
+                                <div class="pink z-depth-3 grid-item">Pink</div>
+                                <div class="deep-purple z-depth-3 grid-item">Purple</div>
+                                <div class="light-blue z-depth-3 grid-item">Blue</div>
+                                <div class="lime z-depth-3 grid-item">Lime</div>
+                                <div class="teal z-depth-3 grid-item">Teal</div>
+                                <div class="amber z-depth-3 grid-item">Amber</div>
+                                <div class="deep-orange z-depth-3 grid-item">Orange</div>
+                                <div class="black z-depth-3 grid-item">Black</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_2</i>Multiple containers + handle</div>
+                    <div class="collapsible-body">
+                        <div id="handle-example" class="example">
+                            <div class="handle-grid regular">
+                                <div class="title z-depth-2">Tasks</div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Code refactoring & optimizations</div>
+                                    </div>
+                                </div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Cross browser testing</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handle-grid priority">
+                                <div class="title z-depth-2">Important Tasks</div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Call mom</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handle-grid done">
+                                <div class="title z-depth-2">Done</div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Basic Drag & Drop script</div>
+                                    </div>
+                                </div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Smooth transitions</div>
+                                    </div>
+                                </div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Support nested structures</div>
+                                    </div>
+                                </div>
+                                <div class="z-depth-3 handle-item">
+                                    <div class="content lmdd-block">
+                                        <i class="material-icons handle">reorder</i>
+                                        <div class="task">Scroll while dragging</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_3</i>Nested Grid</div>
+                    <div class="collapsible-body">
+                        <div id="nested-example" class="example">
+                            <div class="nestable w-1-1">
+                                <div class="nestable w-1-3 nested-item red accent-1 z-depth-3">
+                                    <div class="nested-item red z-depth-1"><p>Red</p></div>
+                                    <div class="nested-item red z-depth-1"><p>Red</p></div>
+                                    <div class="nested-item red z-depth-1"><p>Red</p></div>
+                                </div>
+                                <div class="nestable w-1-3 nested-item green accent-1 z-depth-3">
+                                    <div class="nested-item green z-depth-1"><p>Green</p></div>
+                                    <div class="nested-item green z-depth-1"><p>Green</p></div>
+                                    <div class="nested-item green z-depth-1"><p>Green</p></div>
+                                </div>
+                                <div class="nestable w-1-3 nested-item blue accent-1 z-depth-3">
+                                    <div class="nested-item blue z-depth-1"><p>Blue</p></div>
+                                    <div class="nested-item blue z-depth-1"><p>Blue</p></div>
+                                    <div class="nested-item blue z-depth-1"><p>Blue</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">code</i></div>
+                    <div class="collapsible-body">
+                    <pre><code class="hljs HTML">   Simple
+    &lt;div id="basic-example"> (scope)
+        &lt;div class="grid"> (container)
+            &lt;div class="item">&lt;/div> (draggable)
+        &lt;/div>
+    &lt;/div>
+    &lt;script>
+        lmdd.set(document.getElementById('basic-example'), {
+            containerClass: 'grid',
+            draggableItemClass: 'item'
+    });
+    &lt;/script>
+
+    Multiple Containers and handle
+    &lt;div id="handle-example"> (scope)
+        &lt;div class="grid"> (container)
+            &lt;div class="item"> (draggable)
+                &lt;div class="handle">&lt;/div> (handle)
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="grid"> (another container)
+        &lt;/div>
+    &lt;/div>
+    &lt;script>
+        lmdd.set(document.getElementById('handle-example'), {
+            containerClass: 'grid',
+            draggableItemClass: 'item',
+            handleClass:'handle'
+        });
+    &lt;/script>
+
+    Nested
+    &lt;div id="nested-example"> (scope)
+        &lt;div class="grid"> (container)
+            &lt;div class="grid item"> (container AND draggable)
+                &lt;div class="item">&lt;/div> (draggable)
+                &lt;div class="item">&lt;/div> (draggable)
+                &lt;div class="item">&lt;/div> (draggable)
+            &lt;/div>
+            &lt;div class="grid item"> (container AND draggable)
+                &lt;div class="item">&lt;/div> (draggable)
+                &lt;div class="item">&lt;/div> (draggable)
+                &lt;div class="item">&lt;/div> (draggable)
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;script>
+        lmdd.set(document.getElementById('nested-example'), {
+            containerClass: 'grid',
+            draggableItemClass: 'item'
+        });
+    &lt;/script></code></pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="options" class="section scrollspy">
+            <h5>Options</h5>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header active"><i class="material-icons">speaker_notes</i></div>
+                    <div class="collapsible-body">
+                        <div class="table-indent">
+                            <table class="white highlight bordered">
+                                <thead>
+                                <tr>
+                                    <th>Option</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>containerClass</td>
+                                    <td>Containers act as drop zones for draggable items</td>
+                                </tr>
+                                <tr>
+                                    <td>draggableItemClass</td>
+                                    <td>Draggable items can be moved inside and between containers</td>
+                                </tr>
+                                <tr>
+                                    <td>handleClass</td>
+                                    <td>Restricts drag start to a specific element which acts as a drag "handle"</td>
+                                </tr>
+                                <tr>
+                                    <td>dragstartTimeout</td>
+                                    <td>Delays the drag start for a short time to distinct it from other user intentions
+                                        (such as selecting text)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>calcInterval</td>
+                                    <td>Time interval in which LMDD evaluates the dragged element position, Short
+                                        interval means more responsive experience (and more CPU usage)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>revert</td>
+                                    <td>When set to true the draggable item will revert to its original position when
+                                        the cursor is out of the container bounds
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>nativeScroll</td>
+                                    <td>LMDD uses its own auto-scroll function, you can eliminate it and use the native
+                                        browser scroll
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mirrorMinHeight,
+                                        mirrorMaxWidth
+                                    </td>
+                                    <td>Scale down the mirror size when it exceeds the maximum width set</td>
+                                </tr>
+                                <tr>
+                                    <td>positionDelay</td>
+                                    <td>When set to true - position will not be recalculated when the mouse stops moving
+                                        (Prevents flickering on deep nested structures)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>dataMode</td>
+                                    <td>When set to 'true' LMDD will undo all DOM mutations when the drag event ends,
+                                        This is useful for integrating LMDD with Angular/React/Vue etc.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">code</i></div>
+                    <div class="collapsible-body">
+                        <pre><code class="hljs javascript"> //LMDD Options default values:
+    lmdd.set(document.getElementById('someID'), {
+        containerClass:'lmdd-container',
+        draggableItemClass: 'lmdd-draggable',
+        handleClass: false,
+        dragstartTimeout: 50,
+        calcInterval: 200,
+        revert: true,
+        nativeScroll: false,
+        mirrorMinHeight: 100,
+        mirrorMaxWidth: 500,
+        positionDelay: false,
+        dataMode: false
+    });</code></pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="advanced" class="section scrollspy">
+            <h5>Advanced</h5>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header active"><i class="material-icons">content_copy</i>Cloning</div>
+                    <div class="collapsible-body">
+                        <p>
+                            To clone dragged elements, just add two additional classes to your markup:<br>
+                            <b>'lmdd-clonner'</b> - for every element you want to clone when dragged<br>
+                            <b>'lmdd-dispatcher'</b> - for the container (parent of the elements to be cloned)<br>
+                            containers having the 'lmdd-dispatcher' class will not act as drop zones, the cloning
+                            operation will begin when the mouse cursor enters a different container.
+                        </p>
+                        <pre><code class="hljs HTML">   //Example markup:
+    &lt;div id="clone-example"> (scope)
+        &lt;div class="grid lmdd-dispatcher"> (dragging items out from this container will clone them)
+            &lt;div class="item lmdd-clonner">(this draggable item will be cloned when dragged)
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="grid"> (container)
+        &lt;/div>
+    &lt;/div>
+            </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">event</i>Events</div>
+                    <div class="collapsible-body">
+                        <p>LMDD dispatches three events:</p>
+                        <ol class="browser-default">
+                            <li class="obd"><b>'lmddbeforestart'</b>: Dispatched before any changes has been made to the
+                                DOM. Does not contain a detail object
+                            </li>
+                            <li class="obd"><b>'lmddstart'</b>: Dispatched when the drag operation starts. Contains a
+                                'detail' object
+                            </li>
+                            <li class="obd"><b>'lmddend'</b>:Dispatched when the drag operation ends. Contains a
+                                'detail' object
+                            </li>
+                        </ol>
+                        <p>The detail object carries the following information:</p>
+                        <ul class="browser-default">
+                            <li class="ubd"><b>dragType</b>: "move" or "clone"</li>
+                            <li class="ubd"><b>draggedElement</b>: HTML element being dragged</li>
+                            <li class="ubd"><b>from.container</b>: HTML element that originally contained the dragged
+                                element
+                            </li>
+                            <li class="ubd"><b>from.index</b>: The original index of the dragged element</li>
+                            <li class="ubd"><b>to.container</b>: HTML element that currently contains the dragged
+                                element
+                            </li>
+                            <li class="ubd"><b>to.index</b>: The current index of the dragged element</li>
+                        </ul>
+                        <br>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">block</i>Rendering Blocks</div>
+                    <div class="collapsible-body">
+                        <p>
+                            To animate transitions LMDD makes a copy of all movable elements on its scope and manage
+                            their location with relative positioning,<br>
+                            this is an expensive process and might (in some cases) alter the way your markup renders
+                            while dragging.<br>
+                            To prevent this from happening, AND save CPU on drag operations, add the class <b>'lmdd-block'</b>
+                            to the parts of your markup which are not needed to be animated.<br>
+                            This will stop LMDD from traversing down the DOM tree and keep all children of the element
+                            intact.
+                        </p>
+                        <pre><code class="hljs HTML">   //Example markup:
+    &lt;div id="basic-example"> (scope)
+        &lt;div class="grid"> (container)
+            &lt;div class="item lmdd-block">(draggable)
+                &lt;--! A lot of additional markup -->
+            &lt;/div>
+        &lt;/div>
+    &lt;/div></code></pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="integration" class="section scrollspy">
+            <h5>Integration</h5>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header active"><i class="material-icons">bookmark</i>Guidelines</div>
+                    <div class="collapsible-body">
+                        <p>LMDD is fairly easy to integrate with any other script. I would recommend treating the drag
+                            operation as any other user input, think of it as some kind of a sophisticated mouse
+                            gesture. Having this point of view in mind, the integration process should be as
+                            follows:</p>
+                        <ol class="browser-default">
+                            <li class="obd">Upon rendering your markup, set an LMDD instance on the relevant part of the
+                                DOM
+                            </li>
+                            <li class="obd">Set the dataMode to 'true'. (Which will undo any changes LMDD made on the
+                                DOM when the drag operation ends)
+                            </li>
+                            <li class="obd">Add an eventListener for the 'lmddend' event</li>
+                            <li class="obd">Use an event handler to process the event details and implement the
+                                necessary changes on your app data/state
+                            </li>
+                        </ol>
+                        <br>
+                    </div>
+            </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_1</i>Vue Example</div>
+                    <div class="collapsible-body">
+                        <p data-height="350" data-theme-id="0" data-slug-hash="zogjGW" data-default-tab="result"
+                           data-user="supraniti" data-embed-version="2" data-pen-title="vue.js drag and drop with lmdd"
+                           class="codepen">See the Pen <a href="http://codepen.io/supraniti/pen/zogjGW/">vue.js drag and
+                            drop with lmdd</a> by Yair Levy (<a href="http://codepen.io/supraniti">@supraniti</a>) on <a
+                                href="http://codepen.io">CodePen</a>.</p>
+                        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                        <blockquote>
+                            Note that the relevant code for implementing the drag and drop operation is made out of two
+                            simple functions,
+                            <ol class="browser-default">
+                                <li class="obd">setting up lmdd and adding an event listener (on Vue 'mounted'
+                                    function).
+                                </li>
+                                <li class="obd">moving the relevant data object from it's original parent into it's new
+                                    parent (on our 'handleDragEvent' function)
+                                </li>
+                            </ol>
+                            Everything else is just proper markup for the "todo-item" and "todo-container" components.
+                        </blockquote>
+                    </div>
+            </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">code</i></div>
+                    <div class="collapsible-body">
+                    <pre><code class="hljs javascript">  mounted: function() {
+    //set lmdd
+    lmdd.set(document.getElementById('drag-scope'), {
+      containerClass: 'todo-container',
+      draggableItemClass: 'todo-item',
+      handleClass: 'handle',
+      dataMode: true //set dataMode to true
+    });
+    //listen to 'lmddend' event
+    this.$el.addEventListener('lmddend', this.handleDragEvent);
+  }
+  methods: {
+      //handle 'lmddend' event
+      handleDragEvent: function(event) {
+          // Process the event detail
+          var newIndex = event.detail.to.index;
+          var oldIndex = event.detail.from.index;
+          var newContainer = event.detail.to.container.__vue__.data;
+          var oldContainer = event.detail.from.container.__vue__.data;
+          if (event.detail.dragType === 'move') {
+            //implement the changes on the app data
+            newContainer.splice(newIndex, 0, oldContainer.splice(oldIndex, 1)[0]);
+          }
+      }
+  }</code></pre>
+                    </div>
+                </li>
+            </ul>
+            <blockquote>Angular and React integration is pretty much the same, examples will be added to this section
+                later on.
+            </blockquote>
+        </div>
+        <div id="more" class="section scrollspy">
+            <h5>More</h5>
+            <p>
+                Bug reports & feature requests are more than welcome.<br>
+                Feel free to ask questions and contribute on <a
+                    href="https://github.com/supraniti/Lean-Mean-Drag-and-Drop">github</a>
+            </p>
+            <p>If you are interested in a drag&drop functionality for your web apps, you might also like:</p>
+            <ul class="browser-default">
+                <li class="ubd"><a href="https://jqueryui.com/sortable/">jQuery UI - sortable</a></li>
+                <li class="ubd"><a href="https://bevacqua.github.io/dragula/">Dragula - "Drag and drop so simple it
+                    hurts"</a></li>
+                <li class="ubd"><a href="https://rubaxa.github.io/Sortable/">Sortable - no jQuery</a></li>
+                <li class="ubd"><a href="http://mjsarfatti.com/sandbox/nestedSortable/">nestedSortable jQuery Plugin</a>
+                </li>
+                <li class="ubd"><a href="http://react-dnd.github.io/react-dnd/">React DnD</a></li>
+                <li class="ubd"><a href="https://github.com/marceljuenemann/angular-drag-and-drop-lists/">angular-drag-and-drop-lists</a>
+                </li>
+            </ul>
+        </div>
+        <div id="disqus" class="section scrollspy">
+            <h5>Discussion</h5>
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+    <script>
+
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+         var disqus_config = function () {
+         this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+         };
+         */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://lmdd.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+</main>
+<footer class="page-footer black">
+    <div class="footer-copyright">
+        <div class="container">
+            2017 © Supraniti, All rights reserved.
+            <a class="grey-text text-lighten-4 right"
+               href="https://github.com/supraniti/Lean-Mean-Drag-and-Drop/blob/master/LICENSE">MIT License</a>
+        </div>
+    </div>
+</footer>
+<!--  Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="dist/lmdd.min.js"></script>
+<script src="gh-pages/script.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".button-collapse").sideNav({
+                menuWidth: 250, // Default is 240
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            }
+        );
+        $('.scrollspy').scrollSpy();
+    })
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-96446945-1', 'auto');
+    ga('send', 'pageview');
+    var trackOutboundLink = function (url) {
+        ga('send', 'event', 'outbound', 'click', url, {
+            'transport': 'beacon',
+            'hitCallback': function () {
+                document.location = url;
+            }
+        });
+    }
+</script>
+</body>
+</html>
