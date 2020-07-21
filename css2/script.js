@@ -113,7 +113,7 @@ function addMoreElements(selected) {
 
 function generatePage() {
     var i = 0;
-    var max = Math.floor(Math.random() * 10 + 20);
+    var max = Math.floor(Math.random() * 10 + 30);
     var classes = [];
     while (i < max) {
         var y = Math.random();
