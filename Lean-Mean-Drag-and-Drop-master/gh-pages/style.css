@@ -1,0 +1,161 @@
+#features{
+    margin-bottom:15px;
+}
+.feature-grid{
+    display:flex;
+    padding:7px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border: 1px dashed black;
+}
+.feature-item{
+    padding:5px;
+    margin:5px;
+    font-size:15px;
+    border: 3px solid white;
+    flex: 1 1 auto;
+    vertical-align: middle;
+    cursor:move;
+}
+.feature{
+    color:white;
+    text-align:center;
+    padding: 5px;
+}
+
+.example {
+    background-color: white;
+}
+
+.simple-grid{
+    display:flex;
+    padding:7px;
+    max-width: 350px;
+    flex-flow: row wrap;
+    justify-content:space-around;
+}
+.grid-item{
+    text-align: center;
+    vertical-align: middle;
+    line-height:78px;
+    margin:5px;
+    width:78px;
+    height:78px;
+    color:white;
+    font-size:15px;
+    border: 3px solid white;
+    cursor:move;
+}
+
+#handle-example {
+    display: flex;
+    justify-content: space-around;
+}
+
+.handle-grid {
+    flex: 1 1 50%;
+    display: flex;
+    padding: 7px;
+    max-width: 350px;
+    flex-flow: column nowrap;
+}
+
+.handle-item {
+    padding: 3px;
+    margin: 5px;
+    color: white;
+    font-size: 15px;
+    background-color: grey;
+    border: 3px solid lightgoldenrodyellow;
+}
+
+.regular .handle-item {
+    background-color: #8bc34a;
+}
+
+.priority .handle-item {
+    background-color: #E57373;
+}
+
+.done .handle-item {
+    background-color: lightgrey;
+    color: gray;
+    text-decoration: line-through;
+}
+
+.handle {
+    cursor: move;
+}
+
+.task {
+    border: 1px dotted white;
+    padding: 5px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+}
+
+.nestable{
+    display:flex;
+    flex-flow:row wrap;
+    border:3px solid white !important;
+}
+.nested-item{
+    flex: 1 1 calc(33.3333% - 14px);
+    min-height:50px;
+    border: 3px solid white;
+    padding: 7px;
+    margin:7px;
+    cursor:move;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 15px;
+}
+.w-1-1{
+    flex: 1 1 100%;
+    border: 5px solid white;
+    padding: 7px;
+}
+
+.github-link{
+    position:absolute;
+    top:12px;
+    right:32px;
+    height:32px;
+    width:32px;
+    filter:invert(100%);
+    transition:0.3s;
+}
+@media only screen and (min-width: 601px){
+    .github-link {
+        top: 16px;
+    }
+}
+
+.github-link:hover {
+    transform: rotate(360deg);
+}
+
+.collapsible.popout > li {
+    background-color: #F0F0F0;
+}
+
+td, th {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 20px !important;
+    padding-right: 5px !important;
+}
+
+.obd {
+    list-style-type: decimal !important;
+}
+
+.ubd {
+    list-style-type: disc !important;
+}
