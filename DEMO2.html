@@ -6,6 +6,11 @@
 <title>Try It Yourself &raquo;</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="/w3css/4/w3.css">
+<link rel="stylesheet" href="/lib/codemirror.css">-->
+<script src="/lib/codemirror.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
 <link rel="stylesheet" href="/w3css/4/w3.css">
 <link rel="stylesheet" href="/lib/codemirror.css">
 <script src="/lib/codemirror.js"></script>
@@ -384,12 +389,12 @@ function dialog() {
   } );
 }
 $(document).ready(function(){
-  $("body").click(function() {
+  /*$("body").click(function() {
     if (event.target.id == "instructions" || event.target.id == "runbutton")
       $("#container").css("opacity", "0.2");
     else if (event.target.nodeName == "BUTTON" && event.target.id != "fullscreen")
       $("#container").css("opacity", "1");
-  });
+  });*/
   $(".runbutton").click(function(){
     validated = true;
     message = "You are either missing or need to recheck:\n";
