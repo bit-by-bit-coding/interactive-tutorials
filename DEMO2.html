@@ -354,7 +354,7 @@ body {
       <div id="goodwebsite">
         <h1>Hello! How are you doing today?</h1>
         <p>What I do each day...</p>
-        <p>This is my schedule: <a href="https://en.wikipedia.org/wiki/Wiki">https://en.wikipedia.org/wiki/Wiki</a></p>
+        <p>This is my schedule: <strong><a href="https://en.wikipedia.org/wiki/Wiki">https://en.wikipedia.org/wiki/Wiki</a></strong></p>
         <ol>
             <li>Brush my teeth</li>
             <li>Take a shower</li>
@@ -402,6 +402,7 @@ $(document).ready(function(){
     message = "You are either missing or need to recheck:\n";
     validated = validate("h1", "Hello!Howareyoudoingtoday?");
     validated = validate("p", "WhatIdoeachday...");
+    validated = validate("strong", '<ahref="https://en.wikipedia.org/wiki/Wiki">https://en.wikipedia.org/wiki/Wiki</a>');
     validated = validate("a", "https://en.wikipedia.org/wiki/Wiki");
     validated = validate("ol", "<li>Brushmyteeth</li><li>Takeashower</li><li>Getdressed</li>");
     validated = validate("button", "Clickme!<imgsrc=\"https://static01.nyt.com/images/2019/04/02/science/28SCI-ZIMMER1/28SCI-ZIMMER1-superJumbo.jpg\"width=\"50\"height=\"50\">");
