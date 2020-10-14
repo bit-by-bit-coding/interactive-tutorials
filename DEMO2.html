@@ -357,7 +357,7 @@ body {
         <p>This is my schedule: <strong><a href="https://en.wikipedia.org/wiki/Wiki">https://en.wikipedia.org/wiki/Wiki</a></strong></p>
         <ol>
             <li>Brush my teeth</li>
-            <li>Take a shower</li>
+            <li>Take a shower</li><br>
             <li>Get dressed</li>
         </ol>
         <button>Click me!
@@ -404,7 +404,8 @@ $(document).ready(function(){
     validated = validate("p", "WhatIdoeachday...");
     validated = validate("strong", '<ahref="https://en.wikipedia.org/wiki/Wiki">https://en.wikipedia.org/wiki/Wiki</a>');
     validated = validate("a", "https://en.wikipedia.org/wiki/Wiki");
-    validated = validate("ol", "<li>Brushmyteeth</li><li>Takeashower</li><li>Getdressed</li>");
+    validated = validate("ol", "<li>Brushmyteeth</li><li>Takeashower</li><br><li>Getdressed</li>");
+    validated = validate("br", "");
     validated = validate("button", "Clickme!<imgsrc=\"https://static01.nyt.com/images/2019/04/02/science/28SCI-ZIMMER1/28SCI-ZIMMER1-superJumbo.jpg\"width=\"50\"height=\"50\">");
     var order = [$("#iframeResult").contents().find("h1").index(), $("#iframeResult").contents().find("p").index(), $("#iframeResult").contents().find("ol").index(), $("#iframeResult").contents().find("button").index()];
     if (validated) {
