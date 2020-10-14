@@ -1,5 +1,17 @@
-var links = [["http://www.khanacademy.org", "Time to learn"], ["http://www.google.com", "What should we look up?"], ["http://www.stackoverfow.com", "Get your coding question answered"], ["http://www.youtube.com", "Lots of nice videos"], ["https://theuselessweb.com/", "Completely RANDOM website!!!"]];
-var imgs = [
+
+
+
+
+/*class Elem{
+    constructor(){
+
+    }
+
+
+}
+
+let links = [["http://www.khanacademy.org", "Time to learn"], ["http://www.google.com", "What should we look up?"], ["http://www.stackoverfow.com", "Get your coding question answered"], ["http://www.youtube.com", "Lots of nice videos"], ["https://theuselessweb.com/", "Completely RANDOM website!!!"]];
+let imgs = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0twwlSomBt2i33P78KY5SSj5-0C3X9hWAkA&usqp=CAU",
     "https://www.vvsupremo.com/wp-content/uploads/2018/05/Pepperoni-Pizza-1.jpg",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/CargoNet_Di_12_Euro_4000_L%C3%B8nsdal_-_Bolna.jpg/1200px-CargoNet_Di_12_Euro_4000_L%C3%B8nsdal_-_Bolna.jpg",
@@ -12,7 +24,7 @@ var imgs = [
     "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sevan_Armenia_%D0%A1%D0%B5%D0%B2%D0%B0%D0%BD_%D0%90%D1%80%D0%BC%D0%B5%D0%BD%D0%B8%D1%8F.jpeg",
     "https://ichef.bbci.co.uk/news/1024/cpsprodpb/113D1/production/_110090607_gettyimages-512766800.jpg",
     "https://cdn3.vectorstock.com/i/1000x1000/53/27/trophy-cup-icon-vector-13465327.jpg",
-    "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_zz-plant_variant_medium_grant_cream_1200x.jpg?v=1593031568",
+    "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_zz-plant_letiant_medium_grant_cream_1200x.jpg?v=1593031568",
     "https://ichef.bbci.co.uk/news/976/cpsprodpb/4ECA/production/_98607102_015.jpg",
     "https://vignette.wikia.nocookie.net/evil/images/7/79/The_El_Dorado_Sarcophagus.jpg/revision/latest/scale-to-width-down/340?cb=20170226063128",
     "https://www.pngitem.com/pimgs/m/37-374885_clipart-cross-swords-sword-clipart-png-transparent-png.png",
@@ -25,7 +37,7 @@ var imgs = [
     "https://media.wired.com/photos/5a593a7ff11e325008172bc2/125:94/w_2393,h_1800,c_limit/pulsar-831502910.jpg",
     "https://www.thoughtco.com/thmb/9-iCj7lj21Dd8zFGWnbiVzhi5n8=/1333x1000/smart/filters:no_upscale()/clouds-5b6b4e50c9e77c0050491212.jpg"
 ];
-var videos = [
+let videos = [
     "https://www.youtube.com/embed/J0ZeVTHWC1U",
     "https://www.youtube.com/embed/iM_KMYulI_s",
     "https://www.youtube.com/embed/eLkgILAkqVI",
@@ -35,27 +47,20 @@ var videos = [
     "https://www.youtube.com/embed/EpLbrP2MM-s",
     "https://www.youtube.com/embed/4qvmumHnkVA",
     "https://www.youtube.com/embed/pCjY3ZQY8WY",
-    "https://www.youtube.com/embed/Vc9da31phP4",
+    "https://www.youtube.com/embed/Vc9da31phP4"
 ];
 
-var paragraph = "The smartphone owner, named Alex, sits in a history class while his teacher rambles on about hieroglyphics. The teacher asks the class what hieroglyphics remind them of, winking so hard his eyeball almost pops out of the side of his head. They remain silent, pubescent, transfixed by their phones. The audience strains to keep the answer to themselves. The audience pleads with the class to answer the question, but they are so dumb, they have no idea what he could mean. Meanwhile, Alex asks his snotty friend what he should text to his crush Addie, in response to something she said earlier that day. What she texted was never revealed, but Alex decides to send a single emoji in response. Words arent cool, his friend says, in a perfect bit of dialogue that effortlessly captures how teens really feel. Words arent cool echoes into the back of the theater and reverberates off the skulls of adults, now terrified, unsure their mindless spawn can even speak a verbal language. Hi-5 takes Gene to the Loser Lounge, a place in Alexs messaging app where all the rarely used emoji, like the Fishcake, Grandma, and Broom all hang out and think about their pointless, idiotic emoji lives. Here, the writers had a chance to be thoughtful or maybe even sweet. Whats it like to be an outcast emoji? Are you always waiting for some niche meme to bring you to the apps surface? Instead, they toss in a Bye, Felicia joke, confirming they dont know who this movie is for, or what year it is."
+let paragraph = "The smartphone owner, named Alex, sits in a history class while his teacher rambles on about hieroglyphics. The teacher asks the class what hieroglyphics remind them of, winking so hard his eyeball almost pops out of the side of his head. They remain silent, pubescent, transfixed by their phones. The audience strains to keep the answer to themselves. The audience pleads with the class to answer the question, but they are so dumb, they have no idea what he could mean. Meanwhile, Alex asks his snotty friend what he should text to his crush Addie, in response to something she said earlier that day. What she texted was never revealed, but Alex decides to send a single emoji in response. Words arent cool, his friend says, in a perfect bit of dialogue that effortlessly captures how teens really feel. Words arent cool echoes into the back of the theater and reverberates off the skulls of adults, now terrified, unsure their mindless spawn can even speak a verbal language. Hi-5 takes Gene to the Loser Lounge, a place in Alexs messaging app where all the rarely used emoji, like the Fishcake, Grandma, and Broom all hang out and think about their pointless, idiotic emoji lives. Here, the writers had a chance to be thoughtful or maybe even sweet. Whats it like to be an outcast emoji? Are you always waiting for some niche meme to bring you to the apps surface? Instead, they toss in a Bye, Felicia joke, confirming they dont know who this movie is for, or what year it is."
 
-var phrases = paragraph.split(".");
-var words = paragraph.split(" ");
+let phrases = paragraph.split(".");
+let words = paragraph.split(" ");
 
-var classes = [];
-var classList = [".one", ".two", ".three", "div", "progress", "a", "img", "ul", "iframe", "table", "h3", "p", "button"];
+let classes = [];
+const classList = ["classOne", "classTwo", "classThree"],
+    elemList = ["div", "progress", "a", "img", "ul", "iframe", "table", "h3", "p", "button"];
 
-function generateLink() {
-    return Math.floor(Math.random() * links.length);
-}
-
-function generateImg() {
-    return imgs[Math.floor(Math.random() * imgs.length)];
-}
-
-function generateVideo() {
-    return videos[Math.floor(Math.random() * videos.length)];
+function selectRadom(arr){
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
 function classListEXpush(str) {
@@ -67,11 +72,10 @@ $("body").append("<h1>Hello world!</h1><br>");
 
 function addMoreElements(selected) {
     $("body").append("<br><br>");
-    var i = 0;
-    var max = Math.floor(Math.random() * 10 + 20);
-    var classes = [];
-    while (i < max) {
-        var y = Math.random();
+    let max = Math.floor(Math.random() * 10 + 20);
+    let classes = [];
+    for(let i = 0; i < matchMedia; i++){
+        let y = Math.random();
         if (y < 0.33) {
             classes.push("one");
             classListEXpush(".one");
@@ -84,13 +88,12 @@ function addMoreElements(selected) {
             classes.push("three");
             classListEXpush(".three");
         }
-        i = i + 1;
     }
     i = 0;
 
     while (i < max) {
-        var x = Math.floor(Math.random() * 10);
-        var link = generateLink();
+        let x = Math.floor(Math.random() * 10);
+        let link = generateLink();
         switch (x) {
             case 0: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: div<br><div class=\"" + classes[i] + "\" style=\"background-color:lightblue\">" + phrases[Math.floor(Math.random() * phrases.length)] + "</div><br><br><br><br>"); classListEXpush("div"); break;
             case 1: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: progress<br>Progress bar: <progress class=\"" + classes[i] + "\" value=\"" + 100 * Math.random() + "\" max=\"100\"></progress><br /><br><br><br><br>"); classListEXpush("progress"); break;
@@ -112,11 +115,11 @@ function addMoreElements(selected) {
 }
 
 function generatePage() {
-    var i = 0;
-    var max = Math.floor(Math.random() * 10 + 30);
-    var classes = [];
+    let i = 0;
+    let max = Math.floor(Math.random() * 10 + 20);
+    let classes = [];
     while (i < max) {
-        var y = Math.random();
+        let y = Math.random();
         if (y < 0.33) {
             classes.push("one");
             classListEXpush(".one");
@@ -129,13 +132,9 @@ function generatePage() {
             classes.push("three");
             classListEXpush(".three");
         }
-        i = i + 1;
-    }
-    i = 0;
-
-    while (i < max) {
-        var x = Math.floor(Math.random() * 10);
-        var link = generateLink();
+    
+        let x = Math.floor(Math.random() * 10);
+        let link = generateLink();
         switch (x) {
             case 0: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: div<br><div class=\"" + classes[i] + "\" style=\"background-color:lightblue\">" + phrases[Math.floor(Math.random() * phrases.length)] + "</div><br><br><br><br>"); classListEXpush("div"); break;
             case 1: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: progress<br>Progress bar: <progress class=\"" + classes[i] + "\" value=\"" + 100 * Math.random() + "\" max=\"100\"></progress><br /><br><br><br><br>"); classListEXpush("progress"); break;
@@ -148,12 +147,17 @@ function generatePage() {
             case 8: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: p<br><p class=\"" + classes[i] + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("p"); break;
             case 9: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: button<br><button class=\"" + classes[i] + "\" onclick=alert(\"Benjamin\")>Benjamin Button</button><br><br><br><br>"); classListEXpush("button"); break;
         }
-        i = i + 1;
     }
-    var selected = classList[Math.floor(Math.random() * classList.length)];
+    let selected = classList[Math.floor(Math.random() * classList.length)];
     $("body").append("<button style=\"font-size:28px;border-size:0px;display:block;margin:0px auto;\" onclick=addMoreElements(\"" + selected + "\")>Stuck? Generate more elements!</button>");
     $(document).ready(function(){
         $(selected).css("border","10px solid red");
     });
 }
-generatePage();
+
+function checkGuess(guess, ){
+    
+}
+
+
+generatePage();*/
