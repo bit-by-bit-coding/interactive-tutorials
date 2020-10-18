@@ -405,11 +405,11 @@ function dialog() {
 $(document).ready(function(){
   $("#select").change(function() {
       if ($("#select").val() == "standard")
-          document.getElementById("textareaCode").innerHTML = "<html>\n    <body>\n        <p>Hello! How are you doing today?</p>\n        <h1>What I do each day...</h1>\n        <p>https://en.wikipedia.org/wiki/Wiki</p>\n        <ul>\n            <li>Brush my teeth</li>\n            <li>Take a shower</li>\n            <li>Get dressed</li>\n        </ul>\n        <button>Click me!</button>\n        <img src=\"https://static01.nyt.com/images/2019/04/02/science/28SCI-ZIMMER1/28SCI-ZIMMER1-superJumbo.jpg\" width=\"50\" height=\"50\">\n    </body>\n</html>";
+          document.getElementById("textareaCode").value = "<html>\n    <body>\n        <p>Hello! How are you doing today?</p>\n        <h1>What I do each day...</h1>\n        <p>https://en.wikipedia.org/wiki/Wiki</p>\n        <ul>\n            <li>Brush my teeth</li>\n            <li>Take a shower</li>\n            <li>Get dressed</li>\n        </ul>\n        <button>Click me!</button>\n        <img src=\"https://static01.nyt.com/images/2019/04/02/science/28SCI-ZIMMER1/28SCI-ZIMMER1-superJumbo.jpg\" width=\"50\" height=\"50\">\n    </body>\n</html>";
       else if ($("#select").val() == "hard")
-          document.getElementById("textareaCode").innerHTML = "";
+          document.getElementById("textareaCode").value = "";
       else if ($("#select").val() == "reveal")
-          document.getElementById("textareaCode").innerHTML = "<html>\n    <body>\n        <h1>Hello! How are you doing today?</h1>\n        <p>What I do each day...</p>\n        <a href=\"\">https://en.wikipedia.org/wiki/Wiki</a>\n        <ol>\n            <li>Brush my teeth</li>\n            <li>Take a shower</li>\n            <li>Get dressed</li>\n        </ol>\n        <button>Click me!\n        <img src=\"https://static01.nyt.com/images/2019/04/02/science/28SCI-ZIMMER1/28SCI-ZIMMER1-superJumbo.jpg\" width=\"50\" height=\"50\"></button>\n    </body>\n</html>";
+          document.getElementById("textareaCode").value = "<html>\n    <body>\n        <h1>Hello! How are you doing today?</h1>\n        <p>What I do each day...</p>\n        <a href=\"\">https://en.wikipedia.org/wiki/Wiki</a>\n        <ol>\n            <li>Brush my teeth</li>\n            <li>Take a shower</li>\n            <li>Get dressed</li>\n        </ol>\n        <button>Click me!\n        <img src=\"https://static01.nyt.com/images/2019/04/02/science/28SCI-ZIMMER1/28SCI-ZIMMER1-superJumbo.jpg\" width=\"50\" height=\"50\"></button>\n    </body>\n</html>";
       submitTryit(1);
   });
   $(".runbutton").click(function(){

@@ -345,9 +345,9 @@ body {
         </style>
     </head>
     <body>
-        <p id="one">This text is red and aligned to the left.</p>
-        <p id="two">This text is blue and centered in the middle of the page.</p>
-        <p id="three">This text is green and aligned to the right.</p>
+        <p id="one">This text has an id of "one", is red,  and aligned to the left.</p>
+        <p id="two">This text has an id of "two", is blue,  and centered in the middle of the page.</p>
+        <p id="three">This text has an id of "three", is green,  and aligned to the right.</p>
         <div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>
     </body>
 </html>
@@ -362,9 +362,9 @@ body {
     <div id="iframe">
       <div id="iframewrapper"></div>
       <div id="goodwebsite">
-        <p style="color:red;">This text is red and aligned to the left.</p>
-        <p style="color:blue;text-align:center;">This text is blue and centered in the middle of the page.</p>
-        <p style="color:green;text-align:right;">This text is green and aligned to the right.</p>
+        <p style="color:red;">This text has an id of "one", is red,  and aligned to the left.</p>
+        <p style="color:blue;text-align:center;">This text has an id of "two", is blue,  and centered in the middle of the page.</p>
+        <p style="color:green;text-align:right;">This text has an id of "three", is green,  and aligned to the right.</p>
         <div style="margin:auto;border:5px solid red;background-color:yellow;width:200px;height:200px;">The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>
       </div>
     </div>
@@ -383,7 +383,7 @@ function validateHTML() {
     return true;
 }
 function dialog() {
-  document.getElementById("message").innerHTML = "The HTML/CSS code on the left affects the webpage on the upper right. Your goal is to change the CSS code within the <style> tags so that the upper right webpage will match with the lower right webpage. When you feel you have matched the two websites, click the VERIFY button to see how you did. Good luck!<br><br>(Click \"Close\" to exit.)";
+  document.getElementById("message").innerHTML = "The HTML/CSS code on the left affects the webpage on the upper right. Your goal is to change the CSS code within the style tags so that the upper right webpage will match with the lower right webpage. When you feel you have matched the two websites, click the VERIFY button to see how you did. Good luck!<br><br>(Click \"Close\" to exit.)";
   $(".ui-dialog").css("background", "linear-gradient(to right, #307bdd, #00F)");
   $( function() {
     $( "#dialog" ).dialog();
@@ -392,11 +392,11 @@ function dialog() {
 $(document).ready(function(){
   $("#select").change(function() {
       if ($("#select").val() == "standard")
-          document.getElementById("textareaCode").innerHTML = "<html>\n\t<head>\n\t\t<style type=\"text/css\">\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<p id=\"one\">This text is red and aligned to the left.</p>\n\t\t<p id=\"two\">This text is blue and centered in the middle of the page.</p>\n\t\t<p id=\"three\">This text is green and aligned to the right.</p>\n\t\t<div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n\t</body>\n</html>";
+          document.getElementById("textareaCode").value = "<html>\n\t<head>\n\t\t<style type=\"text/css\">\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<p id=\"one\">This text has an id of \"one\", is red,  and aligned to the left.</p>\n\t\t<p id=\"two\">This text has an id of \"two\", is blue,  and centered in the middle of the page.</p>\n\t\t<p id=\"three\">This text has an id of \"three\", is green,  and aligned to the right.</p>\n\t\t<div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n\t</body>\n</html>";
       else if ($("#select").val() == "hard")
-          document.getElementById("textareaCode").innerHTML = "";
+          document.getElementById("textareaCode").value = "";
       else if ($("#select").val() == "reveal")
-          document.getElementById("textareaCode").innerHTML = "<html>\n    <head>\n        <style type=\"text/css\">\n#one { color: red; }\n#two { color: blue; text-align: center; }\n#three {color: green; text-align: right; }\ndiv { border: 5px solid red; background-color: yellow; width: 200px; height: 200px; margin: auto;}\n        </style>\n    </head>\n    <body>\n        <p id=\"one\">This text is red and aligned to the left.</p>\n        <p id=\"two\">This text is blue and centered in the middle of the page.</p>\n        <p id=\"three\">This text is green and aligned to the right.</p>\n        <div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n    </body>\n</html>";
+          document.getElementById("textareaCode").value = "<html>\n    <head>\n        <style type=\"text/css\">\n#one { color: red; }\n#two { color: blue; text-align: center; }\n#three {color: green; text-align: right; }\ndiv { border: 5px solid red; background-color: yellow; width: 200px; height: 200px; margin: auto;}\n        </style>\n    </head>\n    <body>\n        <p id=\"one\">This text has an id of \"one\", is red,  and aligned to the left.</p>\n        <p id=\"two\">This text has an id of \"two\", is blue,  and centered in the middle of the page.</p>\n        <p id=\"three\">This text has an id of \"three\", is green,  and aligned to the right.</p>\n        <div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n    </body>\n</html>";
       submitTryit(1);
   });
   $(".runbutton").click(function(){
