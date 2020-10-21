@@ -220,7 +220,21 @@ body {
   color: white;
   font-family: Tahoma, Geneva, sans-serif;
   font-size:16px;
-  height:100%;
+  height:45%;
+  width:100%;
+  padding:8px;
+  resize: none;
+  border:none;
+  line-height:normal;    
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#textareaCodeB {
+  background-color: black;
+  color: white;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size:16px;
+  height:45%;
   width:100%;
   padding:8px;
   resize: none;
@@ -230,6 +244,10 @@ body {
   transition: 0.5s;
 }
 #textareaCode:hover {
+    cursor: cell;
+    background-color: #012;
+}
+#textareaCodeB:hover {
     cursor: cell;
     background-color: #012;
 }
@@ -319,7 +337,7 @@ body {
 </head>
 <body>
   <div id="dialog" title="ALERT">
-    <p id="message">The HTML code on the left affects the webpage on the upper right. Your goal is to change the HTML code so that the upper right webpage will match with the lower right webpage. When you feel you have matched the two websites, click the VERIFY button to see how you did. Good luck!<br><br>(Click "Close" to exit.)</p>
+    <p id="message" style="color:white">The HTML code on the left affects the webpage on the upper right. Your goal is to change the HTML code so that the upper right webpage will match with the lower right webpage. When you feel you have matched the two websites, click the VERIFY button to see how you did. Good luck!<br><br>(Click "Close" to exit.)</p>
   </div>
   <div style="background-color:#2064bc;padding:10px;position:absolute;top:0px;width:100%;height:70px;border:5px solid black;">
     <div id="runcont"><button id="runbutton" class="runbutton">Verify &raquo;</button></div>
@@ -337,20 +355,16 @@ body {
 <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
   <div id="textareacontainer">
     <div id="textarea">
-      <div id="textareawrapper">
-        <textarea autocomplete="on" id="textareaCode" wrap="logical" spellcheck="false" onkeyup="submitTryit(1);" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">
-<html>
-    <head>
-        <style type="text/css">
-        </style>
-    </head>
-    <body>
-        <p id="one">This text has an id of <code>"one"</code>, is red,  and aligned to the left.</p>
-        <p id="two">This text has an id of <code>"two"</code>, is blue,  and centered in the middle of the page.</p>
-        <p id="three">This text has an id of <code>"three"</code>, is green,  and aligned to the right.</p>
-        <div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>
-    </body>
-</html>
+      <div id="textareawrapper"><span style="font-size:25px;font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;color:black;">CSS</span>
+<textarea autocomplete="on" id="textareaCode" wrap="logical" spellcheck="false" onkeyup="submitTryit(1);" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">
+</textarea><span style="font-size:25px;font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;color:black;">HTML</span>
+<textarea autocomplete="on" id="textareaCodeB" wrap="logical" spellcheck="false" onkeyup="submitTryit(1);" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">
+<body>
+  <p id="one">This text has an id of <code>"one"</code>, is red,  and aligned to the left.</p>
+  <p id="two">This text has an id of <code>"two"</code>, is blue,  and centered in the middle of the page.</p>
+  <p id="three">This text has an id of <code>"three"</code>, is green,  and aligned to the right.</p>
+  <div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>
+</body>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
           <input type="hidden" name="code" id="code" />
@@ -391,12 +405,18 @@ function dialog() {
 }
 $(document).ready(function(){
   $("#select").change(function() {
-      if ($("#select").val() == "standard")
-          document.getElementById("textareaCode").value = "<html>\n\t<head>\n\t\t<style type=\"text/css\">\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<p id=\"one\">This text has an id of \"one\", is red,  and aligned to the left.</p>\n\t\t<p id=\"two\">This text has an id of \"two\", is blue,  and centered in the middle of the page.</p>\n\t\t<p id=\"three\">This text has an id of \"three\", is green,  and aligned to the right.</p>\n\t\t<div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n\t</body>\n</html>";
-      else if ($("#select").val() == "hard")
+      if ($("#select").val() == "standard") {
           document.getElementById("textareaCode").value = "";
-      else if ($("#select").val() == "reveal")
-          document.getElementById("textareaCode").value = "<html>\n    <head>\n        <style type=\"text/css\">\n#one { color: red; }\n#two { color: blue; text-align: center; }\n#three {color: green; text-align: right; }\ndiv { border: 5px solid red; background-color: yellow; width: 200px; height: 200px; margin: auto;}\n        </style>\n    </head>\n    <body>\n        <p id=\"one\">This text has an id of \"one\", is red,  and aligned to the left.</p>\n        <p id=\"two\">This text has an id of \"two\", is blue,  and centered in the middle of the page.</p>\n        <p id=\"three\">This text has an id of \"three\", is green,  and aligned to the right.</p>\n        <div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n    </body>\n</html>";
+          document.getElementById("textareaCodeB").value = "<body>\n\t<p id=\"one\">This text has an id of \"one\", is red,  and aligned to the left.</p>\n\t<p id=\"two\">This text has an id of \"two\", is blue,  and centered in the middle of the page.</p>\n\t<p id=\"three\">This text has an id of \"three\", is green,  and aligned to the right.</p>\n\t<div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n</body>";
+      }
+      else if ($("#select").val() == "hard") {
+          document.getElementById("textareaCode").value = "";
+          document.getElementById("textareaCodeB").value = "";
+      }
+      else if ($("#select").val() == "reveal") {
+          document.getElementById("textareaCode").value = "#one {\n\tcolor: red;\n}\n#two {\n\tcolor: blue;\n\ttext-align: center;\n}\n#three {\n\tcolor: green;\n\ttext-align: right;\n}\ndiv {\n\tborder: 5px solid red;\n\tbackground-color: yellow;\n\twidth: 200px;\n\theight: 200px;\n\tmargin: auto;\n}"
+          document.getElementById("textareaCodeB").value = "<body>\n\t<p id=\"one\">This text has an id of \"one\", is red,  and aligned to the left.</p>\n\t<p id=\"two\">This text has an id of \"two\", is blue,  and centered in the middle of the page.</p>\n\t<p id=\"three\">This text has an id of \"three\", is green,  and aligned to the right.</p>\n\t<div>The border of this div is red with a width of 5 pixels. The background color is yellow. The width and height are both 200 pixels. This div is also centered.</div>\n</body>";
+      }
       submitTryit(1);
   });
   $(".runbutton").click(function(){
@@ -506,7 +526,7 @@ function submitTryit(n) {
   if (window.editor) {
     window.editor.save();
   }
-  var text = document.getElementById("textareaCode").value;
+  var text = "<head>\n<style>\n" + document.getElementById("textareaCode").value + "\n</style>\n</head>\n" + document.getElementById("textareaCodeB").value;
   var ifr = document.createElement("iframe");
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
