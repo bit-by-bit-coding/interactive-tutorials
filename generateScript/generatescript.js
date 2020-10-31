@@ -42,6 +42,7 @@ let paragraph = "The smartphone owner, named Alex, sits in a history class while
 let selected = "";
 let phrases = paragraph.split(".");
 let words = paragraph.split(" ");
+let elemIndex = 0;
 
 let classes = [];
 const classList = [],
@@ -101,19 +102,20 @@ function addMoreElements(selected) {
     i = 0;
 
     while (i < max) {
+        elemIndex = elemIndex + 1;
         let x = Math.floor(Math.random() * 10);
         let link = Math.floor(Math.random()*links.length);
         switch (x) {
-            case 0: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: div<br><div class=\"" + classes[i] + "\" style=\"background-color:lightblue\">" + phrases[Math.floor(Math.random() * phrases.length)] + "</div><br><br><br><br>"); classListEXpush("div"); break;
-            case 1: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: progress<br>Progress bar: <progress class=\"" + classes[i] + "\" value=\"" + 100 * Math.random() + "\" max=\"100\"></progress><br /><br><br><br><br>"); classListEXpush("progress"); break;
-            case 2: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: a<br><br><a class=\"" + classes[i] + "\" href=\"" + links[link][0] + "\">" + links[link][1] + " @ " + links[link][0] + "</a><br><br><br><br>"); classListEXpush("a"); break;
-            case 3: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: img<br><img class=\"" + classes[i] + "\" src=\"" + generateImg() + "\" width=400 height=300 /><br><br><br><br>"); classListEXpush("img"); break;
-            case 4: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: ul<br><ul class=\"" + classes[i] + "\"><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li></ul><br><br><br><br>"); classListEXpush("ul"); break;
-            case 5: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: iframe<br><iframe class=\"" + classes[i] + "\" width=\"420\" height=\"345\" src=\"" + generateVideo() + "\"></iframe><br><br><br><br>"); classListEXpush("iframe"); break;
-            case 6: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: table<br><table class=\"" + classes[i] + "\"><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr></table><br><br><br><br>"); classListEXpush("table"); break;
-            case 7: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: h3<br><h3 class=\"" + classes[i] + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("h3"); break;
-            case 8: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: p<br><p class=\"" + classes[i] + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("p"); break;
-            case 9: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: button<br><button class=\"" + classes[i] + "\" onclick=alert(\"Benjamin\")>Benjamin Button</button><br><br><br><br>"); classListEXpush("button"); break;
+            case 0: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: div<br><div class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" style=\"background-color:lightblue\">" + phrases[Math.floor(Math.random() * phrases.length)] + "</div><br><br><br><br>"); classListEXpush("div"); break;
+            case 1: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: progress<br>Progress bar: <progress class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" value=\"" + 100 * Math.random() + "\" max=\"100\"></progress><br /><br><br><br><br>"); classListEXpush("progress"); break;
+            case 2: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: a<br><br><a class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" href=\"" + links[link][0] + "\">" + links[link][1] + " @ " + links[link][0] + "</a><br><br><br><br>"); classListEXpush("a"); break;
+            case 3: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: img<br><img class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" src=\"" + generateImg() + "\" width=400 height=300 /><br><br><br><br>"); classListEXpush("img"); break;
+            case 4: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: ul<br><ul class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\"><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li></ul><br><br><br><br>"); classListEXpush("ul"); break;
+            case 5: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: iframe<br><iframe class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" width=\"420\" height=\"345\" src=\"" + generateVideo() + "\"></iframe><br><br><br><br>"); classListEXpush("iframe"); break;
+            case 6: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: table<br><table class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\"><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr></table><br><br><br><br>"); classListEXpush("table"); break;
+            case 7: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: h3<br><h3 class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("h3"); break;
+            case 8: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: p<br><p class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("p"); break;
+            case 9: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: button<br><button class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" onclick=alert(\"Benjamin\")>Benjamin Button</button><br><br><br><br>"); classListEXpush("button"); break;
         }
         i = i + 1;
     }
@@ -128,6 +130,7 @@ function generatePage() {
     let max = Math.floor(Math.random() * 10 + 20);
     let classes = [];
     while (i < max) {
+        elemIndex = elemIndex + 1;
         let y = Math.random();
         if (y < 0.33) {
             classes.push("one");
@@ -144,20 +147,26 @@ function generatePage() {
         let x = Math.floor(Math.random() * 10);
         let link = Math.floor(Math.random() * links.length);
         switch (x) {
-            case 0: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: div<br><div class=\"" + classes[i] + "\" style=\"background-color:lightblue\">" + phrases[Math.floor(Math.random() * phrases.length)] + "</div><br><br><br><br>"); classListEXpush("div"); break;
-            case 1: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: progress<br>Progress bar: <progress class=\"" + classes[i] + "\" value=\"" + 100 * Math.random() + "\" max=\"100\"></progress><br /><br><br><br><br>"); classListEXpush("progress"); break;
-            case 2: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: a<br><br><a class=\"" + classes[i] + "\" href=\"" + links[link][0] + "\">" + links[link][1] + " @ " + links[link][0] + "</a><br><br><br><br>"); classListEXpush("a"); break;
-            case 3: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: img<br><img class=\"" + classes[i] + "\" src=\"" + generateImg() + "\" width=400 height=300 /><br><br><br><br>"); classListEXpush("img"); break;
-            case 4: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: ul<br><ul class=\"" + classes[i] + "\"><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li></ul><br><br><br><br>"); classListEXpush("ul"); break;
-            case 5: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: iframe<br><iframe class=\"" + classes[i] + "\" width=\"420\" height=\"345\" src=\"" + generateVideo() + "\"></iframe><br><br><br><br>"); classListEXpush("iframe"); break;
-            case 6: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: table<br><table class=\"" + classes[i] + "\"><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr></table><br><br><br><br>"); classListEXpush("table"); break;
-            case 7: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: h3<br><h3 class=\"" + classes[i] + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("h3"); break;
-            case 8: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: p<br><p class=\"" + classes[i] + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("p"); break;
-            case 9: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>TYPE: button<br><button class=\"" + classes[i] + "\" onclick=alert(\"Benjamin\")>Benjamin Button</button><br><br><br><br>"); classListEXpush("button"); break;
+            case 0: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: div<br><div class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" style=\"background-color:lightblue\">" + phrases[Math.floor(Math.random() * phrases.length)] + "</div><br><br><br><br>"); classListEXpush("div"); break;
+            case 1: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: progress<br>Progress bar: <progress class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" value=\"" + 100 * Math.random() + "\" max=\"100\"></progress><br /><br><br><br><br>"); classListEXpush("progress"); break;
+            case 2: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: a<br><br><a class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" href=\"" + links[link][0] + "\">" + links[link][1] + " @ " + links[link][0] + "</a><br><br><br><br>"); classListEXpush("a"); break;
+            case 3: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: img<br><img class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" src=\"" + generateImg() + "\" width=400 height=300 /><br><br><br><br>"); classListEXpush("img"); break;
+            case 4: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: ul<br><ul class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\"><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li><li>" + phrases[Math.floor(Math.random() * phrases.length)] + "</li></ul><br><br><br><br>"); classListEXpush("ul"); break;
+            case 5: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: iframe<br><iframe class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" width=\"420\" height=\"345\" src=\"" + generateVideo() + "\"></iframe><br><br><br><br>"); classListEXpush("iframe"); break;
+            case 6: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: table<br><table class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\"><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr><tr><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th><th>" + words[Math.floor(Math.random() * words.length)] + "</th></tr></table><br><br><br><br>"); classListEXpush("table"); break;
+            case 7: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: h3<br><h3 class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("h3"); break;
+            case 8: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: p<br><p class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\">" + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + " " + phrases[Math.floor(Math.random() * phrases.length)] + "<br><br><br><br>"); classListEXpush("p"); break;
+            case 9: $("body").append("CLASS OF ELEMENT: " + classes[i] + "<br>ID OF ELEMENT: elem" + elemIndex + "<br>TYPE: button<br><button class=\"" + classes[i] + "\" id=\"elem" + elemIndex + "\" onclick=alert(\"Benjamin\")>Benjamin Button</button><br><br><br><br>"); classListEXpush("button"); break;
         }
         i = i + 1;
     }
-    selected = classList[Math.floor(Math.random() * classList.length)];
+    let y = Math.random();
+    if (y < 0.1)
+        selected = "#elem" + Math.floor((Math.random() * elemIndex) + 1);
+    else if (y < 0.2)
+        selected = "body";
+    else
+        selected = classList[Math.floor(Math.random() * classList.length)];
     $("body").append("<button style=\"font-size:28px;border-size:0px;display:block;margin:0px auto;\" onclick=addMoreElements(\"" + selected + "\")>Stuck? Generate more elements!</button>");
     $(document).ready(function(){
         $(selected).css("border","10px solid red");
