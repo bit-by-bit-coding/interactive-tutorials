@@ -1,3 +1,5 @@
+alert("Instructions: Enter a selector in the box in the top right corner of the screen. This will apply a red border on any element under that selector.\n\nIn the boxes by the elements, you can give the element an ID and a class (both optional). Just make sure not to give 2 elements the same ID!");
+
 function highlight() {
     $("*").css("border", "0px solid white");
     $($("#selectinput").val()).css("border", "10px solid red");
