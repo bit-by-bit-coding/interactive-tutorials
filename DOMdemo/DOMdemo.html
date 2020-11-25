@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Document-Object Model Demo</title>
+        <link rel="stylesheet" href="DOMstyle.css">
+    </head>
+    <body>
+        <h1>Document-Object Model (DOM) Demo</h1>
+        <div id="bigcont">
+            <div id="leftcont">
+                <p>ID: <input id="giveID" type="text"></p>
+                <div id="pre">
+                    <p>Hello world! I am a DIV.</p>
+                </div>
+            </div>
+            <div id="arrow">
+                <img src="https://img.icons8.com/carbon-copy/2x/arrow.png">
+            </div>
+            <div id="rightcont">
+                <p>The ID of this div is: <code id="showID">N/A</code></p>
+                <div id="post">
+                    <p id="postContent">Hello world! I am a DIV.</p>
+                </div>
+                <span>Change text:<br><textarea id="giveText">Hello world! I am a DIV.</textarea></span><br><br>
+                <span>Change background color:<br><input id="giveBGColor" type="text" value="red"></span><br><br>
+                <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br><br>
+                <span>Change border:<br><input id="giveWidth" type="text" value="3">px solid <input id="giveBorderColor" type="text" value="black"></span><br><br>
+                <button id="submit">CHANGE</button>
+            </div>
+        </div>
+        <h2>JavaScript Code for transition:</h2>
+        <span id="slider">Animation Speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
+        <br>
+        <div id="DOMCode"></div>
+        <script src="DOMscript.js"></script>
+    </body>
+</html>
