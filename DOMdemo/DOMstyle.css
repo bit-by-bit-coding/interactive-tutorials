@@ -14,7 +14,7 @@
     border: 3px solid black;
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 24px;
-    width: 470px;
+    width: 370px;
     height: 350px;
     float: left;
     padding: 10px;
@@ -25,7 +25,8 @@
 }
 #rightcont {
     margin-right: 20px;
-    width: 800px;
+    width: 610px;
+    display: block;
 }
 #post {
     margin-right: 30px;
@@ -40,6 +41,10 @@
 }
 #bigcont {
     height: 450px;
+    display: block;
+}
+#secondcont {
+    display: block;
 }
 #DOMcode {
     height: flex;
@@ -66,4 +71,17 @@ h1 {
 }
 #giveWidth {
     width: 30px;
+}
+@media (max-width: 1367px) {
+    #pre, #post {
+        width: 150px;
+    }
+    #rightcont {
+        width: 420px;
+    }
+}
+@media (max-width: 960px) {
+    #secondcont {
+        margin-top: 300px;
+    }
 }
