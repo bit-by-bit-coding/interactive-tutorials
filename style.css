@@ -1,0 +1,104 @@
+body {
+  background-color: white;
+  /* Transitions enable you to define the transition between two states of an element. Note the background color of the body. */
+  transition: 0.5s;
+  margin: 3em;
+  /* Note that the animiation property refers to the value of 'walk'. Scroll down to see the 'walk' keyframe rule. */
+  animation: walk 6s infinite;
+}
+
+body:hover {
+  /* Note the transition property set above in the body. Hover over the robot's body and see what happens! */
+  background-color: yellow;
+}
+
+.robot {
+  position: relative;
+  width: 350px;
+  margin: auto;
+}
+
+.robot img {
+  width: max-content;
+}
+
+.robot .head {
+  position: absolute;
+  left: 105px;
+  animation: headbop 1s infinite alternate; 
+}
+
+.robot .body { 
+  position: absolute;
+  z-index: 1;
+  top: 128px;
+  left: 80px;
+}
+
+.robot .larm {
+  animation: wave-larm 1s infinite alternate; 
+  position: absolute;
+  z-index: 100;
+  transform-origin: 80% 60%;
+  top: 132px;
+  left: 50px; 
+}
+
+.robot .rarm {
+  animation: wave-rarm 1s infinite alternate; 
+  position: absolute;
+  z-index: 100;
+  transform-origin: 80% 60%; 
+  top: 132px;
+  left: 240px;
+}
+
+.robot .lfoot {
+  animation: stomp-lfoot 0.5s infinite alternate;
+  position: absolute;
+  top: 270px;
+  left: 110px;
+}
+
+.robot .rfoot {
+  animation: stomp-rfoot 0.5s infinite alternate;
+  position: absolute;
+  top: 270px;
+  left: 182px;
+}
+
+/* The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence. */
+  
+@keyframes headbop {
+  /* The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled and skewed.*/
+  0% {transform: translateY(-10px);}
+  50% {transform: rotate(5deg);}
+  100% {transform: translateY(10px);}
+}
+
+@keyframes wave-rarm {
+  0% {transform: rotate(-7deg);}
+  100% {transform: rotate(7deg);}
+}
+
+@keyframes wave-larm {
+  0% {transform: rotate(7deg);}
+  100% {transform: rotate(-7deg);}
+}
+
+@keyframes walk {
+  0% {transform: translateX(0);}
+  33% {transform: translateX(-100px);}
+  66% {transform: translateY(-35px);}
+  100% {transform: translate(0)}
+}
+
+@keyframes stomp-rfoot {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-6px);}
+}
+
+@keyframes stomp-lfoot {
+  0% {transform: translateY(-6px);}
+  100% {transform: translateY(0px);}
+}
