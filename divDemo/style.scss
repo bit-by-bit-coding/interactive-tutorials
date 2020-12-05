@@ -69,8 +69,18 @@ body {
   padding: 0.25em 0.5em;
 }
 
+.pinkify {
+  background-color: pink;
+  color: $text-color;
+  padding: 0.25em 0.5em;
+}
+
 ul {
   padding: 0 1em;
+}
+
+.code {
+  font-family: 'Anonymous Pro', monospace;
 }
 
 .flex-box {
