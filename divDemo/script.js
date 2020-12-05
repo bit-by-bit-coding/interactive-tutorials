@@ -1,7 +1,7 @@
 // script.js
 // by Preston Hager
 
-const defaultCode = '<body>\n<div class="section-orange">\n  Hello there\n  <div class="nested">\n    Nested Div.\n  </div>\n</div>\n</body>';
+const defaultCode = '<body>\n<div class="section-orange">\n  <h1>A Div Demo</h1>\n  <div class="nested">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>';
 const autoSaveTime = 1000 // time in miliseconds.
 
 const editorElement = document.querySelector("#editor");
