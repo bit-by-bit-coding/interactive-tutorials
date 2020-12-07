@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prism.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-box">
+    <a href="#" class="no-flex-col" style="margin-right: 1em;">
+      <button id="back-button" title="Back to all demos">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </a>
+    <h1 class="flex-col">&ltDIV&gt TAG DEMO</h1>
+    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  </div>
+  <div class="content">
+    <div class="flex-box" style="margin: 1em 0;">
+      <div id="editor-section" class="flex-col section">
+          <div id="editor" class="lang-html"></div>
+          <div id="button-overlay">
+            <button id="execute-button" title="Execute the code">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="reset-button" title="Reset the code">
+              <i class="fas fa-redo-alt"></i>
+            </button>
+          </div>
+      </div>
+      <div id="showcase-section" class="flex-col section">
+        <iframe id="explore-show" src="about:blank">
+        </iframe>
+      </div>
+    </div>
+    <div class="section">
+      <h3>Boxes inside Boxes</h3>
+      <p>
+        Div tags, are essentially boxes that you can put things in.
+        The process of putting something in a box in HTML is called <strong>nesting</strong>.
+        Here, each div has a different background color which shows where each box (or div) is.
+        To view an animation of creating the divs, <a id="animate" href="#">click here</a>.
+        Use the code editor above and the play button to create your own divs.
+        A list of usable classes are below, don't worry if you don't know these are.
+      </p>
+    </div>
+    <div class="section">
+      <h3>Possible Classes</h3>
+      <ul>
+        <li>
+          <span class="code">section</span>: white background with a yellow border.
+        </li>
+        <li>
+          <span class="code">orange</span>: white background with an orange border.
+        </li>
+        <li>
+          <span class="code">blue</span>: blue background with white text.
+        </li>
+        <li>
+          <span class="code">pinkify</span>: pink background with black text.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="prism.js"></script>
+  <script src="codejar.js"></script>
+  <script src="linenumbers.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

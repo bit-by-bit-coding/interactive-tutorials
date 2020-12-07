@@ -1,0 +1,8 @@
+# Ignore docs files.
+**/.sass-cache
+**/.sass-cache/*
+**\/*.map
+
+
+# Stupid apple files.
+.DS_Store
