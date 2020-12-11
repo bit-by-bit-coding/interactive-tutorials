@@ -1,7 +1,7 @@
 // script.js
 // by Preston Hager
 
-const defaultCode = '<body>\n\n</body>';
+const defaultCode = '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n  <div class="blue">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>';
 const codeAnimation = [
   '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n</div>\n</body>',
   '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n  <div class="blue">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>'

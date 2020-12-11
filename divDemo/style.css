@@ -87,6 +87,7 @@ button:active {
 
 #editor-section {
   position: relative;
+  overflow: scroll;
 }
 
 #editor {
