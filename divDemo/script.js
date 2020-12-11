@@ -38,7 +38,8 @@ editorElement.addEventListener("keydown", function(e) {
 
 // set up the editor
 var jar = CodeJar(editorElement, withLineNumbers(Prism.highlightElement, {
-  color: "#fff" // for some reason the colors get inverted so we put in white to get black text.
+  color: "#000", // for some reason the colors get inverted so we put in white to get black text.
+  backgroundColor: "rgb(232, 232, 232)"
 }), {
   tab: '  ',
   indentOn: /<[a-zA-Z =\"\-]+>$/
