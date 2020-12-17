@@ -33,7 +33,6 @@ function init(editor, opts) {
     gutter.style.overflow = "hidden";
     gutter.style.backgroundColor = opts.backgroundColor;
     gutter.style.color = opts.color || css.color;
-    gutter.style.setProperty("mix-blend-mode", "difference");
     // Copy editor styles
     gutter.style.fontFamily = css.fontFamily;
     gutter.style.fontSize = css.fontSize;

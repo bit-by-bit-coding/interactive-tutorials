@@ -1,32 +1,38 @@
-/* style.scss */
-/* Import the common styling */
 /* common.scss */
+
 /* Define all the colors */
+$background-color: #fff;
+$background-color-dark: #1bb1de;
+$primary-color: #38Bfe7;
+$accent-color: #ff8900;
+$text-color: #000;
+$text-color-dark: #fff;
+
 body {
   margin: 5em 0 0 0;
   padding: 0;
-  background-color: #fff;
-  font-family: "Nunito", sans-serif;
+  background-color: $background-color;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
 
 button {
   border: none;
-  background: #38Bfe7;
+  background: $primary-color;
   padding: 0.5em 1em;
-  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-}
-button:hover {
-  background-color: #19a8d3;
-}
-button:active {
-  box-shadow: none;
+  box-shadow: 0.125em 0.125em 0.2em darken($text-color-dark, 25%);
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+  &:active {
+    box-shadow: none;
+  }
 }
 
 #header {
   padding: 1em 2em;
   background-color: white;
-  color: #000;
+  color: $text-color;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,13 +41,13 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   box-shadow: 0 2px 2px #eee;
-}
-#header > * {
-  display: inline-block;
-  margin: 0;
-}
-#header button {
-  width: 3em;
+  > * {
+    display: inline-block;
+    margin: 0;
+  }
+  button {
+    width: 3em;
+  }
 }
 
 #back-button {
@@ -59,9 +65,9 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
-  background-color: #fff;
-  color: #000;
+  border: 0.2em solid $primary-color;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 .flex-box {
@@ -72,11 +78,9 @@ button:active {
   flex: 1;
   padding: 0;
 }
-
 .flex-col:not(:last-child) {
   margin: 0 0.2em 0 0;
 }
-
 .flex-col:last-child {
   margin: 0 0 0 0.2em;
 }
@@ -89,12 +93,13 @@ button:active {
   position: relative;
   overflow: scroll;
 }
-
 #editor {
   margin: 0;
   height: 20em;
+  // calculate the width by the folloing equation:
+  // 100% - line_gutter_width - padding*2
   width: calc(100% - 35px - calc(0.625em*2));
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -113,33 +118,3 @@ button:active {
   right: 1em;
   padding: 0;
 }
-
-/* The page-specific styling */
-.orange {
-  margin: 1em 0;
-  padding: 1em;
-  background-color: #ff8900;
-  color: #fff;
-}
-
-.blue {
-  background-color: #1bb1de;
-  color: #fff;
-  padding: 1em;
-}
-
-.pinkify {
-  background-color: pink;
-  color: #000;
-  padding: 1em;
-}
-
-ul {
-  padding: 0 1em;
-}
-
-.code {
-  font-family: "Anonymous Pro", monospace;
-}
-
-/*# sourceMappingURL=style.css.map */
