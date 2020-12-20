@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+#container {
+    margin: auto;
+    display: block;
+    border: 1px solid black;
+    background-image: url("https://i.pinimg.com/originals/e1/a9/f9/e1a9f9b1803a305cc54e3d409b63a332.gif");
+    width: 300px;
+    height: 300px;
+}
+#dynamic {
+    display: flex;
+    background-color: red;
+    border: 0px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 300px;
+    height: 300px;
+}
+#content {
+    background-color: transparent;
+    overflow: hidden;
+    height: 300px;
+    word-break: break-all;
+}
+#controls {
+    width: 340px;
+    height: 500px;
+    padding: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: lightblue;
+    font-family: Courier;
+}
+.slider {
+    float: right;
+}
