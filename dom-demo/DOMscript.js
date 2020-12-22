@@ -1,6 +1,6 @@
 window.onload = async function() {
     await sleep(400);
-    alert("INSTRUCTIONS:\n\nThis demo will show you how DOM (Document-Object Model) in JavaScript works.\nSimply change the div in the way you want (through changing text, color, background, and border) and click the CHANGE button and see how JavaScript changes the original DIV on the left to the new DIV on the right that you specified.\nAlso, try giving the DIV an ID.");
+    
 }
 let giveID = document.getElementById("giveID");
 let showID = document.getElementById("showID");
@@ -43,7 +43,7 @@ submit.onclick = async function() {
     DOMCode.textContent = "";
     SPEED = 0.29 * (sliderValue.value - 101) * (sliderValue.value - 101) + 100;
     postContent.textContent = "Hello world! I am a DIV.";
-    post.style.backgroundColor = "red";
+    post.style.backgroundColor = "white";
     post.style.color = "black";
     post.style.border = "3px solid black";
     generatedCode = "";
@@ -62,7 +62,7 @@ submit.onclick = async function() {
     DOMCode.innerHTML = generatedCode;
     postContent.textContent = giveText.value;
     SPEED = 0.29 * (sliderValue.value - 101) * (sliderValue.value - 101) + 100;
-    if (giveBGColor.value != "red" && giveBGColor.value != "#F00" && giveBGColor.value != "#f00" && giveBGColor.value != "#f00000" && giveBGColor.value != "#FF0000" && giveBGColor.value != "rgb(255, 0, 0)") {
+    if (giveBGColor.value != "white" && giveBGColor.value != "#fff" && giveBGColor.value != "#FFF" && giveBGColor.value != "#ffffff" && giveBGColor.value != "#FFFFFF" && giveBGColor.value != "rgb(255, 255, 255)") {
         generatedCode += colorText(chosenID, "#8EF") + "." + colorText("style", "#A3A") + "." + colorText("backgroundColor", "#FAF") + " = " + colorText("\"" + giveBGColor.value + "\"", "#C90") + ";<br>";
         await sleep(SPEED);
     }
@@ -83,13 +83,13 @@ submit.onclick = async function() {
     DOMCode.innerHTML = generatedCode;
     post.style.borderWidth = giveWidth.value;
     SPEED = 0.29 * (sliderValue.value - 101) * (sliderValue.value - 101) + 100;
-    if (giveBorderColor.value != "black" && giveBorderColor.value != "#000" && giveBorderColor.value != "#000000" && giveBorderColor.value != "rgb(0, 0, 0)") {
+    if (giveBorderColor.value != "black" && giveBorderColor.value != "#000000" && giveBorderColor.value != "rgb(0, 0, 0)") {
         generatedCode += colorText(chosenID, "#8EF") + "." + colorText("style", "#A3A") + "." + colorText("borderColor", "#FAF") + " = " + colorText("\"" + giveBorderColor.value + "\"", "#C90") + ";<br>";
         await sleep(SPEED);
     }
     DOMCode.innerHTML = generatedCode;
     post.style.borderColor = giveBorderColor.value;
     submit.style.cursor = "auto";
-    submit.textContent = "CHANGE";
+    submit.textContent = "GO!";
     currentlyRunning = false;
 }
