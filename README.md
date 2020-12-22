@@ -29,7 +29,9 @@ They are used in class and also outside of class, teaching HTML, CSS, and JavaSc
 
 ### What's included in the Common Files?
 
-The `common.scss` file includes the Bit by Bit theme colors, certain element styles, and helpful classes.
+##### The `common.scss` file
+
+This file includes the Bit by Bit theme colors, certain element styles, and helpful classes.
 The theme colors are defined as follows:
 
 | Variable Name         | Color   | Where to use it                                                                             |
@@ -57,3 +59,48 @@ If you don't want the element to flex, for example it's an image, use the `no-fl
 The `editor`, `editor-section`, and `button-overlay` ids are used when creating a CodeJar editor.
 See the **Adding an Editor** section for more on this.
 The `explore-show` id is used for an iframe that shows the code inside of the editor.
+
+##### Adding an Editor
+
+CodeJar is a light weight Javascript code editor.
+The first step is to add a `<div>` to the main HTML page.
+The div has the id `editor` and a class designating the language the editor uses.
+The following code adds an HTML editor to the page.
+
+```html
+<div id="editor-section">
+  <div id="editor" class="lang-html"></div>
+</div>
+```
+
+Note that a wrapper must be used otherwise there is a scrolling bug causing the page rather than the editor to scroll on the x-axis.
+Next, create the Jar inside the Javascript file.
+There are a few options when creating a new Jar as well.
+The recommended options are `tab` and `indentOn`.
+The option `tab` is what the tab key types and what character(s) count as a tab.
+The default is `\t`, the recommended setting is `"  "` (two spaces).
+`indentOn` is when the editor will insert a tab after a new line.
+By default, this is a `{`, `[` or `(` character.
+The recommended for HTML is `/<[a-zA-Z =\"\-]+>$/`.
+Any other language can ignore this and keep the default.
+
+There is still one more tool however, which is the `withLineNumbers` function.
+Wrap the `Prism.highlightElement` in this function to generate line numbers on the side.
+With this comes two more options: `color` and `backgroundColor`.
+
+After all this, this is the code to create a new HTML Jar.
+
+```js
+var jar = CodeJar(document.getElementById("editor"), withLineNumbers(Prism.highlightElement, {
+  color: '#000',
+  backgroundColor: 'rgb(232, 232, 232)'
+}), {
+  tab: '  ',
+  indentOn: /<[a-zA-Z =\"\-]+>$/
+});
+```
+
+A jar has multiple methods as well.
+The main ones are `updateCode` and `onUpdate`.
+`updateCode` takes one argument, a string, and will update the current code to that string.
+Second, `onUpdate` is called whenever the code changes, either from user input or from the `updateCode` method.
