@@ -2,7 +2,7 @@
 // use to create drop-down filterable inputs
 
 let createOption = (element, options, handler) => {
-  handler = handler || () => {};
+  handler = handler || function(){};
   let styleSheet = document.getElementById("option-stylesheet")
   if (!styleSheet) {
     styleSheet = document.createElement("style");
