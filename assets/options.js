@@ -1,6 +1,7 @@
 // options.js
 // use to create drop-down filterable inputs
 
+// TODO: remove the # colors and replace with a common js color variable.
 let createOption = (element, options, handler) => {
   handler = handler || function(){};
   let styleSheet = document.getElementById("option-stylesheet")
