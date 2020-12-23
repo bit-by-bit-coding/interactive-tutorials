@@ -67,6 +67,8 @@ let readify = (string) => {
 /* update functions */
 
 let updateCar = (carObject) => {
+  car.node.style.display = "block";
+  easterEgg.node.style.display = "none";
   for (let property in carObject) {
     if (property === "size") {
       switch(carObject[property]) {
@@ -90,31 +92,26 @@ let updateCar = (carObject) => {
       car.find(".car-roof").fill(carObject[property]);
     } else if (property === "outline") {
       car.children().stroke(carObject[property]);
-    } else if (property == "easterEgg") {
+    } else if (property == "easterEgg" && carObject[property]) {
       // Congrats! You found the easter egg
       // add the "easterEgg" value to the object and set it to `true`
-      if (carObject[property]) {
-        car.node.style.display = "none";
-        easterEgg.node.style.display = "block";
-        if (carObject[property] instanceof Object) {
-          let eggObject = carObject[property];
-          for (let eggProperty in eggObject) {
-            if (eggProperty === "color") {
-              easterEgg.find(".egg").fill(eggObject[eggProperty]);
-            } else if (eggProperty === "starColor") {
-              easterEgg.find(".stars").children().fill(eggObject[eggProperty]);
-            } else if (eggProperty === "dotColor") {
-              easterEgg.find(".dots").children().fill(eggObject[eggProperty]);
-            }
+      car.node.style.display = "none";
+      easterEgg.node.style.display = "block";
+      if (carObject[property] instanceof Object) {
+        let eggObject = carObject[property];
+        for (let eggProperty in eggObject) {
+          if (eggProperty === "color") {
+            easterEgg.find(".egg").fill(eggObject[eggProperty]);
+          } else if (eggProperty === "starColor") {
+            easterEgg.find(".stars").children().fill(eggObject[eggProperty]);
+          } else if (eggProperty === "dotColor") {
+            easterEgg.find(".dots").children().fill(eggObject[eggProperty]);
           }
-        } else {
-          easterEgg.find(".egg").fill("#fafafa");
-          easterEgg.find(".stars").children().fill("pink");
-          easterEgg.find(".dots").children().fill("lightblue");
         }
       } else {
-        car.node.style.display = "block";
-        easterEgg.node.style.display = "none";
+        easterEgg.find(".egg").fill("#fafafa");
+        easterEgg.find(".stars").children().fill("pink");
+        easterEgg.find(".dots").children().fill("lightblue");
       }
       continue;
     } else {
