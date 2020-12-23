@@ -1,21 +1,21 @@
 // script.js
 // by Preston Hager
 
-const defaultCode = '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n  <div class="blue">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>';
-const codeAnimation = [
+let defaultCode = '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n  <div class="blue">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>';
+let codeAnimation = [
   '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n</div>\n</body>',
   '<body>\n<div class="orange">\n  <h1>A Div Demo</h1>\n  <div class="blue">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>'
 ]
-const autoSaveTime = 3000 // time in miliseconds.
-var autoSaveTimeout = setTimeout(executeCode, autoSaveTime);
+let autoSaveTime = 3000 // time in miliseconds.
+let autoSaveTimeout = setTimeout(executeCode, autoSaveTime);
 
 // create the code animation
-const animationLink = document.getElementById("animate");
+let animationLink = document.getElementById("animate");
 animationLink.addEventListener("click", function(e) {
-  var animation = genCode(codeAnimation);
+  let animation = genCode(codeAnimation);
   function animationTimeout(code) {
     setTimeout(() => {
-      var next = code.next();
+      let next = code.next();
       if (! next.done) {
         jar.updateCode(next.value);
         executeCode();
@@ -27,7 +27,7 @@ animationLink.addEventListener("click", function(e) {
 });
 
 // code for the editor
-const editorElement = document.getElementById("editor");
+let editorElement = document.getElementById("editor");
 // add the "Cmd+S" or "Ctrl+S" to execute the code.
 editorElement.addEventListener("keydown", function(e) {
   if ((e.ctrlKey || e.metaKey ) && e.keyCode === 83) {
@@ -37,8 +37,8 @@ editorElement.addEventListener("keydown", function(e) {
 });
 
 // set up the editor
-var jar = CodeJar(editorElement, withLineNumbers(Prism.highlightElement, {
-  color: "#000", // for some reason the colors get inverted so we put in white to get black text.
+let jar = CodeJar(editorElement, withLineNumbers(Prism.highlightElement, {
+  color: "#000",
   backgroundColor: "rgb(232, 232, 232)"
 }), {
   tab: '  ',
@@ -50,8 +50,8 @@ jar.onUpdate(code => {
   autoSaveTimeout = setTimeout(executeCode, autoSaveTime);
 });
 
-var executeButton = document.getElementById("execute-button");
-var resetButton = document.getElementById("reset-button");
+let executeButton = document.getElementById("execute-button");
+let resetButton = document.getElementById("reset-button");
 executeButton.onclick = executeCode;
 resetButton.onclick = function (e) {
   jar.updateCode(defaultCode);
@@ -62,12 +62,12 @@ executeCode();
 
 // HELPER FUNCTIONS
 function executeCode(e) {
-  var frame = document.getElementById("explore-show");
-  var frameDoc =
+  let frame = document.getElementById("explore-show");
+  let frameDoc =
     frame.contentWindow ||
     frame.contentDocument.document ||
     frame.contentDocument;
-  var body = jar.toString();
+  let body = jar.toString();
   frameDoc.document.write(
     '<html><head><link rel="stylesheet" href="style.css"><style>body{padding:0.5em 1em;margin:0;}</style></head>' +
       body +
