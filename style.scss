@@ -1,0 +1,23 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "assets/common.scss";
+
+/* The page-specific styling */
+div.grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.grid-item {
+  margin: 1em;
+  border: solid 2px $primary-color;
+  padding: 1em 1.5em;
+  flex: 0 0 15em;
+  &:hover {
+    cursor: pointer;
+    box-shadow: #aaaaaa 2px 2px 2px;
+    background-color: darken($background-color, 2%);
+  }
+}
