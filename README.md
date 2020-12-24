@@ -91,7 +91,7 @@ With this comes two more options: `color` and `backgroundColor`.
 After all this, this is the code to create a new HTML Jar.
 
 ```js
-var jar = CodeJar(document.getElementById("editor"), withLineNumbers(Prism.highlightElement, {
+let jar = CodeJar(document.getElementById("editor"), withLineNumbers(Prism.highlightElement, {
   color: '#000',
   backgroundColor: 'rgb(232, 232, 232)'
 }), {
@@ -104,3 +104,58 @@ A jar has multiple methods as well.
 The main ones are `updateCode` and `onUpdate`.
 `updateCode` takes one argument, a string, and will update the current code to that string.
 Second, `onUpdate` is called whenever the code changes, either from user input or from the `updateCode` method.
+To get the code from the jar call the `toString` method.
+For a good example of use of CodeJar, check out the `div-demo/script.js` file.
+
+##### Option Input with Dropdowns
+
+An input with a dropdown attatched to it, which automatically filters the options.
+This helps greatly enhance the User Interface.
+The file `assets/options.js` must first by included.
+Then, call the `createOption` function.
+
+The `createOption` function takes three arguments, one optional.
+First, the element.
+This is the DOM element that will get modified.
+Create an `<input>` element with an ID and the class `option`.
+Then pass this element in as the first argument of the `createOption` function.
+The second argument is a mapping of the options.
+The format is an object with the readable text as the key and the value as the value.
+An example might be something like this:
+
+```json
+{
+  "Small": "small",
+  "Medium": "medium",
+  "Large": "large"
+}
+```
+
+Finally, the callback function.
+This funciton is called whenever the option gets changed.
+This is the only optional function.
+Note that the argument passed into this function is the registered event with an additional key.
+Access the options through this function by the `event.options` object.
+
+Check out the `object-demo` for a good example of this option module.
+A completed custom option might look something like this:
+
+```js
+let sizeOptionElement = document.getElementById("size-option");
+createOption(sizeOptionElement, {
+  "Small": "small",
+  "Medium": "medium",
+  "Large": "large"
+}, optionHandler);
+```
+
+##### How to Include a Common
+
+So many common files to choose from, but how does one include this in their project?
+For JavaScript files, use the `<script>` tag.
+This usually looks like `<script src="../assets/{name}.js"></script>`.
+Where `{name}` is then replaced by whatever filename is to be included.
+For CSS files it's similar with a `<link>` tag.
+The keything to remember is the use of the double dots (`..`) at the start of the file path.
+This included would therefore look something like `<link href="../assets/{name}.css" rel="stylesheet">`.
+Where `{name}` is again replaced with whichever file is to be included.

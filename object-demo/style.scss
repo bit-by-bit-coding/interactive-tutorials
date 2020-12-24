@@ -1,0 +1,33 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+#showcase-section {
+  position: relative;
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+  }
+}
+
+#options-section {
+  min-height: 20em;
+  padding: 0 1em;
+}
+
+div.option-wrapper {
+  display: flex;
+  margin: 1em 0 1em 0;
+  & > *:first-child {
+    flex: 1;
+    // margin-right: 1em;
+  }
+  & > *:last-child {
+    flex: 2;
+  }
+}

@@ -1,4 +1,7 @@
 # Ignore docs files.
+.sass-cache
+.sass-cache\/*
+*.map
 **/.sass-cache
 **/.sass-cache/*
 **\/*.map
