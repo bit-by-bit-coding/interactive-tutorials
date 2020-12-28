@@ -24,7 +24,7 @@
             <div id="leftcont">
                 <p>ID: <input id="giveID" type="text"></p>
                 <div id="pre">
-                    <p>Hello world! I am a DIV.</p>
+                    <p>Hello world! I am a div.</p>
                 </div>
             </div>
            <div id="arrow">
@@ -34,24 +34,26 @@
             <div id="rightcont">
                 <p>The ID of this div is: <code id="showID">N/A</code></p>
                 <div id="post">
-                    <p id="postContent">Hello world! I am a DIV.</p>
+                    <p id="postContent">Hello world! I am a div.</p>
                 </div>
-                <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a DIV.</textarea></span><br><br>
+                <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br><br>
                 <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br><br>
                 <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br><br>
                 <span>Change border:<br><input id="giveWidth" type="text" value="3">px solid <input id="giveBorderColor" type="text" value="black"></span><br><br>
-                <span id="slider">Animation Speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
+                <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
                 <button id="submit">GO!</button>
             </div>
         </div>
         <div id="infoText">
-            <h3>This demo will show you how DOM (Document-Object Model) in JavaScript works.<br><br> Change the div in the way you want (through changing text, color, background, and border) and click the GO! button and see how JavaScript changes the original DIV on the left to the new DIV on the right that you specified.<br><br>Also, try giving the DIV an ID.</h3>
+            <h3>Let's see how the DOM (Document-Object Model) works in JavaScript!<br><br>The goal is to change this div tag using JavaScript.<br><br>First things first, we need to find some way to reference (talk about) this div in our JavaScript. It helps if the div tag has a name -- click on the ID input box on the upper left and type out an ID. <br><br>
+                After giving it an ID, look at all the input boxes on the right. Try typing different values for the text, colors, and border. <br><br>
+                Once you have finished, click the GO! button. It will show you, line by line, the JavaScript necessary to change the div tag according to the descriptions that you wrote.<br><br>If all of the lines of code go by too fast or too slow, feel free to change the transition speed.</h3>
         </div>    
         <br>
         <div id="secondcont">
 
            
-            <h2 style="padding-left: 10px;">JavaScript Code showing the transition:</h2>
+            <h2 style="padding-left: 10px;">JavaScript code showing the transition:</h2>
             <br>
             <div id="DOMCode"></div>
         </div>
