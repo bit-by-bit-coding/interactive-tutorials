@@ -132,7 +132,7 @@ An example might be something like this:
 ```
 
 Finally, the callback function.
-This funciton is called whenever the option gets changed.
+This function is called whenever the option gets changed.
 This is the only optional function.
 Note that the argument passed into this function is the registered event with an additional key.
 Access the options through this function by the `event.options` object.
