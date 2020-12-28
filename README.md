@@ -109,7 +109,7 @@ For a good example of use of CodeJar, check out the `div-demo/script.js` file.
 
 ##### Option Input with Dropdowns
 
-An input with a dropdown attatched to it, which automatically filters the options.
+An input with a dropdown attached to it, which automatically filters the options.
 This helps greatly enhance the User Interface.
 The file `assets/options.js` must first by included.
 Then, call the `createOption` function.
