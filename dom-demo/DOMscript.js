@@ -14,6 +14,7 @@ let DOMCode = document.getElementById("DOMCode");
 let post = document.getElementById("post");
 let postContent = document.getElementById("postContent");
 let sliderValue = document.getElementById("sliderValue");
+let rightcont = document.getElementById("rightcont");
 let generatedCode = "";
 let chosenID = "";
 let SPEED;
@@ -89,7 +90,14 @@ submit.onclick = async function() {
     }
     DOMCode.innerHTML = generatedCode;
     post.style.borderColor = giveBorderColor.value;
-    submit.style.cursor = "auto";
+    submit.style.cursor = "pointer";
     submit.textContent = "GO!";
+    if(giveWidth.value >= 10){
+        rightcont.style.overflow = "auto";
+    }
+    else{
+
+        rightcont.style.overflow = "hidden";
+    }
     currentlyRunning = false;
 }
