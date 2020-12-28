@@ -4,7 +4,7 @@ body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
@@ -12,17 +12,13 @@ button {
   border: none;
   background: #38Bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
 }
-
 button:hover {
   background-color: #19a8d3;
 }
-
 button:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -36,15 +32,12 @@ button:active {
   max-height: 3em;
   z-index: 1000;
   opacity: 95%;
-  -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
-
 #header > * {
   display: inline-block;
   margin: 0;
 }
-
 #header button {
   width: 3em;
 }
@@ -70,16 +63,12 @@ button:active {
 }
 
 .flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0;
+  flex: 1;
+  padding: 0.5em;
 }
 
 .flex-col:not(:last-child) {
@@ -91,9 +80,7 @@ button:active {
 }
 
 .no-flex-col {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  flex: 0;
 }
 
 #editor-section {
@@ -105,7 +92,7 @@ button:active {
   margin: 0;
   height: 20em;
   width: calc(100% - 35px - calc(0.625em*2));
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -125,6 +112,7 @@ button:active {
   padding: 0;
 }
 
+<<<<<<< HEAD
 #leftcont {
   float: left;
 }
@@ -428,6 +416,7 @@ button:active {
   right: 1em;
   padding: 0;
 }
+<<<<<<< HEAD
 
 #arrowIcon {
   font-size: 200px;
@@ -437,3 +426,9 @@ button:active {
   margin-top: 140px;
 }
 /*# sourceMappingURL=style.css.map */
+=======
+/*# sourceMappingURL=style.css.map */
+=======
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 8326653 (fixed wording)
+>>>>>>> 694c184 (fixed wording)
