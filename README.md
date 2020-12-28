@@ -109,7 +109,7 @@ For a good example of use of CodeJar, check out the `div-demo/script.js` file.
 
 ##### Option Input with Dropdowns
 
-An input with a dropdown attatched to it, which automatically filters the options.
+An input with a dropdown attached to it, which automatically filters the options.
 This helps greatly enhance the User Interface.
 The file `assets/options.js` must first by included.
 Then, call the `createOption` function.
@@ -132,7 +132,7 @@ An example might be something like this:
 ```
 
 Finally, the callback function.
-This funciton is called whenever the option gets changed.
+This function is called whenever the option gets changed.
 This is the only optional function.
 Note that the argument passed into this function is the registered event with an additional key.
 Access the options through this function by the `event.options` object.
