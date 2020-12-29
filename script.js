@@ -12,7 +12,7 @@ let interactiveTutorials = {
     content: "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!"
   },
   domDemo: {
-    path: 'dom-demo/DOMdemo.html',
+    path: 'dom-demo',
     title: 'DOM DEMO',
     content: "The Document Object Model and how to manipulate it."
   }
