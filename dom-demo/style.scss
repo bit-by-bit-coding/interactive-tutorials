@@ -51,8 +51,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff8900;
-    color: #fff;
+    background-color: #ffe1bf;
+    color: black;
     border: 0.2em solid #38Bfe7;
     padding-bottom: 20px;
 }
@@ -157,7 +157,7 @@ body {
   
   button {
     border: none;
-    background: #38Bfe7;
+    background: #42C2E8;
     padding: 0.5em 1em;
     box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
     color: #fff;
@@ -262,5 +262,11 @@ body {
     padding: 0;
   }
   
- 
+ #arrowIcon{
+     font-size: 200px;
+     color: #38Bfe7;
+     text-align: center;
+     margin: 700px, 0px;
+     margin-top: 140px;
+ }
   
