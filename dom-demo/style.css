@@ -190,8 +190,8 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
-  color: #fff;
+  background-color: #ffe1bf;
+  color: black;
   border: 0.2em solid #38Bfe7;
   padding-bottom: 20px;
 }
@@ -427,5 +427,13 @@ button:active {
   bottom: 1em;
   right: 1em;
   padding: 0;
+}
+
+#arrowIcon {
+  font-size: 200px;
+  color: #38Bfe7;
+  text-align: center;
+  margin: 700px, 0px;
+  margin-top: 140px;
 }
 /*# sourceMappingURL=style.css.map */
