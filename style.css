@@ -1,0 +1,136 @@
+/* style.scss */
+/* Import the common styling */
+/* common.scss */
+/* Define all the colors */
+body {
+  margin: 5em 0 0 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background: #38Bfe7;
+  padding: 0.5em 1em;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+}
+button:hover {
+  background-color: #19a8d3;
+}
+button:active {
+  box-shadow: none;
+}
+
+#header {
+  padding: 1em 2em;
+  background-color: white;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 3em;
+  z-index: 1000;
+  opacity: 95%;
+  box-shadow: 0 2px 2px #eee;
+}
+#header > * {
+  display: inline-block;
+  margin: 0;
+}
+#header button {
+  width: 3em;
+}
+
+#back-button {
+  padding: 0.25em 1em;
+  font-size: 1em;
+  height: 100%;
+}
+
+.content {
+  padding: 1em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-col {
+  flex: 1;
+  padding: 0;
+}
+
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
+}
+
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
+}
+
+.no-flex-col {
+  flex: 0;
+}
+
+#editor-section {
+  position: relative;
+  overflow: scroll;
+}
+
+#editor {
+  margin: 0;
+  height: 20em;
+  width: calc(100% - 35px - calc(0.625em*2));
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  padding: 1px 0.625em;
+}
+
+#explore-show {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+#button-overlay {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 0;
+}
+
+/* The page-specific styling */
+div.grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.grid-item {
+  margin: 1em;
+  border: solid 2px #38Bfe7;
+  padding: 1em 1.5em;
+  flex: 0 0 15em;
+}
+div.grid-item:hover {
+  cursor: pointer;
+  box-shadow: #aaaaaa 2px 2px 2px;
+  background-color: #fafafa;
+}
+
+/*# sourceMappingURL=style.css.map */
