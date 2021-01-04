@@ -5,7 +5,7 @@
 **/.sass-cache
 **/.sass-cache/*
 **\/*.map
-
+node_modules
 
 # Dumb apple files.
 .DS_Store

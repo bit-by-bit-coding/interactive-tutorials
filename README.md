@@ -9,6 +9,7 @@ They are used in class and also outside of class, teaching HTML, CSS, and JavaSc
 
 1. Clone the repository
 1. Install Live Sass Compiler and Live Server on Visual Studio Code
+1. Run `npm install` to install dependencies
 1. Hit Watch Sass in the bottom right
 1. Click go live in the bottom of Visual Studio Code
 
