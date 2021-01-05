@@ -96,12 +96,12 @@ button:active {
           flex: 0;
 }
 
-#editor-section {
+.editor-section {
   position: relative;
   overflow: scroll;
 }
 
-#editor {
+.editor {
   margin: 0;
   height: 20em;
   width: calc(100% - 35px - calc(0.625em*2));
@@ -111,14 +111,14 @@ button:active {
   padding: 1px 0.625em;
 }
 
-#explore-show {
+.explore-show {
   width: 100%;
   height: 100%;
   margin: 0;
   border: none;
 }
 
-#button-overlay {
+.editor-button-overlay {
   position: absolute;
   bottom: 1em;
   right: 1em;
