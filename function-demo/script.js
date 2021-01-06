@@ -40,6 +40,7 @@ function easterEgg() {
         dancer.style.left = "5px";
         dancer.style.top = "5px";
     }, 11);
+    dialog();
 }
 
 function danceMove() {
@@ -91,6 +92,9 @@ function stop() {
     clearInterval(dancing);
     spinner.style.opacity = 0.0;
     codeLine.innerHTML = "N/A";
+    jumpDisplay.innerText = "";
+    speedDisplay.innerText = "";
+    timeDisplay.innerText = "";
 }
 
 inputJump.onkeyup = verify;
@@ -129,7 +133,7 @@ stopButton.onclick = function() {
 }
 
 function dialog() {
-    document.getElementById("message").innerHTML = "The HTML code on the left affects the webpage on the upper right. Your goal is to change the HTML code so that the upper right webpage will match with the lower right webpage. When you feel you have matched the two websites, click the VERIFY button to see how you did. Good luck!<br><br>(Click \"Close\" to exit.)";
+    document.getElementById("message").innerHTML = "I'M EXHAUSTED. You win. You've found the EASTER EGG.<br><br>(Click \"Close\" to exit.)";
     $(".ui-dialog").css("background", "linear-gradient(to right, #307bdd, #00F)");
     $( function() {
       $( "#dialog" ).dialog();
