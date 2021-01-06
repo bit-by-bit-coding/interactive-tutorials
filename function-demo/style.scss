@@ -1,0 +1,32 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+.orange {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: $accent-color;
+  color: $text-color-dark;
+}
+
+.blue {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+  padding: 1em;
+}
+
+.pinkify {
+  background-color: pink;
+  color: $text-color;
+  padding: 1em;
+}
+
+ul {
+  padding: 0 1em;
+}
+
+.code {
+  font-family: 'Anonymous Pro', monospace;
+}

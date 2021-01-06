@@ -1,0 +1,231 @@
+/* style.scss */
+/* Import the common styling */
+/* common.scss */
+/* Define all the colors */
+body {
+    margin: 5em 0 0 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+  }
+  
+  button {
+    border: none;
+    background: #38Bfe7;
+    padding: 0.5em 1em;
+    -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+            box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  }
+  
+  button:hover {
+    background-color: #19a8d3;
+  }
+  
+  button:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  #header {
+    padding: 1em 2em;
+    background-color: white;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 3em;
+    z-index: 1000;
+    opacity: 95%;
+    -webkit-box-shadow: 0 2px 2px #eee;
+            box-shadow: 0 2px 2px #eee;
+  }
+  
+  #header > * {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  #header button {
+    width: 3em;
+  }
+  
+  #back-button {
+    padding: 0.25em 1em;
+    font-size: 1em;
+    height: 100%;
+  }
+  
+  .content {
+    padding: 1em;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .section {
+    margin: 1em 0;
+    padding: 0.5em;
+    border: 0.2em solid #38Bfe7;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .flex-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .flex-col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0;
+  }
+  
+  .flex-col:not(:last-child) {
+    margin: 0 0.2em 0 0;
+  }
+  
+  .flex-col:last-child {
+    margin: 0 0 0 0.2em;
+  }
+  
+  .no-flex-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+  
+  #editor-section {
+    position: relative;
+    overflow: scroll;
+  }
+  
+  #editor {
+    margin: 0;
+    height: 20em;
+    width: calc(100% - 35px - calc(0.625em*2));
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 0.875em;
+    line-height: 1.25em;
+    padding: 1px 0.625em;
+  }
+  
+  #explore-show {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+  }
+  
+  #button-overlay {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    padding: 0;
+  }
+  
+  /* The page-specific styling */
+  .line i {
+      width: 40px;
+      margin-left: 20px;
+  }
+  
+  .line {
+      font-size: 2em;
+  }
+
+  #functionCode {
+      width: 70%;
+      float: left;
+      margin-right: 0.2em;
+  }
+
+  #control {
+      width: 30%;
+      float: right;
+      margin-left: 0.2em;
+  }
+
+  #warning1, #warning2, #warning3 {
+      color: red;
+      font-family: 0.5em;
+  }
+
+  #instructions {
+      width: 30%;
+      float: left;
+      margin-right: 0.2em;
+  }
+
+  #spinner {
+      opacity: 0.0;
+  }
+  
+  #danceArena {
+      width: 70%;
+      float: right;
+      margin-left: 0.2em;
+      height: 350px;
+  }
+
+  #inputJump, #inputSpeed, #inputTime {
+      width: 3em;
+  }
+
+  #codeLine {
+      font-family: Courier, monospace;
+      font-size: 1.5em;
+  }
+
+  #dancer {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: relative;
+      left: 5px;
+      top: 295px;
+  }
+
+  #easterEggVerdict {
+    color: red;
+    font-size: 40px;
+    position: relative;
+    top: 5px;
+    left: 70px;
+    display: inline;
+  }
+
+  .ui-button {
+    float: right;
+    border: 3px solid gray;
+  }
+  .ui-button:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    transition: 0.25s;
+  }
+.ui-draggable-handle {
+  background-color: black;
+  padding: 10px;
+}
+.ui-draggable-handle:hover {
+  cursor: move;
+  background-color: #222;
+}
+.ui-dialog {
+    display: block;
+    padding: 10px;
+    border: 1px solid #DDD;
+    background: linear-gradient(to right, #307bdd , #00F);
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+    box-shadow: 8px 8px 5px #888888;
+}
+.ui-widget-content, .ui-widget-header {
+  color: white;
+}
+  /*# sourceMappingURL=style.css.map */
