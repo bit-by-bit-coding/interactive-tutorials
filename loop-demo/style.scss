@@ -1,0 +1,26 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+
+.description {
+  display: flex;
+  p {
+    flex: 1;
+  }
+}
+
+.reset-button {
+  font-size: 0.75em;
+}
+
+.bitbybitbot {
+  flex: 0; 
+  height: 10em;
+}
+
+#minus-button {
+  margin-right: 5px;
+}

@@ -128,30 +128,30 @@ button:active {
 }
 
 /* The page-specific styling */
-div.grid-flex {
+.description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-div.grid-item {
-  margin: 1em;
-  border: solid 2px #38Bfe7;
-  padding: 1em 1.5em;
+.description p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.reset-button {
+  font-size: 0.75em;
+}
+
+.bitbybitbot {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 15em;
-          flex: 0 0 15em;
+      -ms-flex: 0;
+          flex: 0;
+  height: 10em;
 }
 
-div.grid-item:hover {
-  cursor: pointer;
-  -webkit-box-shadow: #aaaaaa 2px 2px 2px;
-          box-shadow: #aaaaaa 2px 2px 2px;
-  background-color: #fafafa;
+#minus-button {
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */
