@@ -43,6 +43,7 @@ button:active {
 }
 
 #header > * {
+  display: inline-block;
   margin: 0;
 }
 
@@ -62,28 +63,6 @@ button:active {
   margin: 0 auto;
 }
 
-/*Flexbox*/
-.flex-container-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-item-header{
-  flex: 1 1 200px;
-}
-
-#top-heading{
-  width: max-content;
-}
-
-#bxb-logo{
-  max-height: 3em;
-  display: block;
-  text-align: left;
-  margin-left: calc(100% - 200px);
-}
-
 .section {
   margin: 1em 0;
   padding: 0.5em;
@@ -92,17 +71,39 @@ button:active {
   color: #000;
 }
 
-.showcase-section {
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0;
 }
 
-.editor-section {
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
+}
+
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
+}
+
+.no-flex-col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+#editor-section {
   position: relative;
   overflow: scroll;
-  padding: 0;
 }
 
-.editor {
+#editor {
   margin: 0;
   height: 20em;
   width: calc(100% - 35px - calc(0.625em*2));
@@ -112,7 +113,14 @@ button:active {
   padding: 1px 0.625em;
 }
 
-.editor-button-overlay {
+#explore-show {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+#button-overlay {
   position: absolute;
   bottom: 1em;
   right: 1em;
@@ -120,30 +128,30 @@ button:active {
 }
 
 /* The page-specific styling */
-div.grid-flex {
+.description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-div.grid-item {
-  margin: 1em;
-  border: solid 2px #38Bfe7;
-  padding: 1em 1.5em;
+.description p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.reset-button {
+  font-size: 0.75em;
+}
+
+.bitbybitbot {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 15em;
-          flex: 0 0 15em;
+      -ms-flex: 0;
+          flex: 0;
+  height: 10em;
 }
 
-div.grid-item:hover {
-  cursor: pointer;
-  -webkit-box-shadow: #aaaaaa 2px 2px 2px;
-          box-shadow: #aaaaaa 2px 2px 2px;
-  background-color: #fafafa;
+#minus-button {
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */

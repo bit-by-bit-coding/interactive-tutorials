@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loop Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-box">
+    <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
+      <button id="back-button" title="Back to all demos">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </a>
+    <h1 class="flex-col">LOOP DEMO</h1>
+    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="description">
+        <p>
+          Loops are a way to do an action over and over again, within constraints that you set.<br>
+          Use the input boxes below to add bit by bots to the conga line, then use the second set 
+          to change the whole conga line. 
+          This will also change the loop code below.<br>
+          When you are ready, try modifying the code instead of the dropdown.
+          Remember, you can always reset the code by hitting the reset (
+          <i class="fas fa-redo-alt reset-button"></i>
+          ) button.
+        </p>
+        <img class="bitbybitbot" src="https://bitbybitcoding.org/imgs/happybot.PNG">
+      </div>
+    </div>
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="flex-col section">
+      <button type="button" id="minus-button">-1</button>
+      <button type="button" id="plus-button">+1</button>
+      <p>Bit By Bots in Conga Line: <a id="conga-line-count">1</a></p>
+      </div>
+      <div id="showcase-section" class="flex-col section">
+       Conga line goes here
+      </div>
+    </div>
+    <div id="editor-section" class="flex-col section">
+      <div id="editor" class="lang-js"></div>
+      <div id="button-overlay">
+        <button id="execute-button" title="Execute the code">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="reset-button" title="Reset the code">
+          <i class="fas fa-redo-alt"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/options.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
