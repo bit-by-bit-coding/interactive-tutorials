@@ -24,9 +24,9 @@
   <div class="content">
     <div class="flex-box" style="margin: 1em 0;">
       <div class="section" id="functionCode" style="padding:0.5em">
-          function danceRobot(&nbsp;&nbsp;<span class="line"><span style="color:red">jump</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:blue">speed</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:green">time</span></span>&nbsp;&nbsp;) {
+          function danceRobot(&nbsp;&nbsp;<span class="line"><span style="color:red">jumpHeight</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:blue">speed</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:green">time</span></span>&nbsp;&nbsp;) {
             <br><br>
-            <span style="color:red" class="line"><i class="fas fa-angle-double-up"></i> jump: <span id="jumpDisplay"></span></span>
+            <span style="color:red" class="line"><i class="fas fa-angle-double-up"></i> jumpHeight: <span id="jumpDisplay"></span></span>
             <br><br>            
             <span style="color:blue" class="line"><i class="fas fa-tachometer-alt"></i> speed: <span id="speedDisplay"></span></span>
             <br><br>
@@ -34,7 +34,27 @@
             <br><br>
           }
       </div>
-      <div class="section" id="control" style="padding:0.5em">
+      <div class="section" id="instructions">
+        <p class="line" style="text-align:center;margin-top:0px;">INSTRUCTIONS</p>
+        <p>
+            Functions in JavaScript are pieces of code that act as a rulebook for how
+            to do something, in this case: DANCE! We can call the function and run that
+            code, or rulebook, with just one line. Functions can also have parameters,
+            which means that we can slightly tweak the way the code will be run. In this
+            case, the parameters are:
+            <ul>
+                <li>How high Bit by Bot jumps ("jumpHeight")</li>
+                <li>How fast Bit by Bot dances ("speed")</li>
+                <li>How long Bit by Bot dances for ("time")</li>
+            </ul>
+        </p>
+    </div>
+    </div>
+    <div id="dialog" title="ALERT">
+      <p id="message"></p>
+    </div>
+    <div class="flex-box" style="margin: 1em 0;">
+        <div class="section" id="control" style="padding:0.5em">
           <p class="line" style="text-align:center;margin-top:0px;">CONTROL</p>
           danceRobot(<input type="text" id="inputJump" value="200">, <input type="text" id="inputSpeed" value="15">, <input type="text" id="inputTime" value="3">);
           <br>
@@ -48,30 +68,11 @@
           <button id="stop-button">
             <i class="fas fa-stop"></i>
           </button>
-          <br><br><hr><br>
+          <br><hr><br>
           <p id="spinner" class="line" style="text-align:center;margin-top:0px;">CALLING: <i class="fas fa-spinner"></i></p>
           <p id="codeLine">N/A</p>
+          <p id="stopWatch"></p>
       </div>
-    </div>
-    <div id="dialog" title="ALERT">
-      <p id="message"></p>
-    </div>
-    <div class="flex-box" style="margin: 1em 0;">
-        <div class="section" id="instructions">
-            <p class="line" style="text-align:center;margin-top:0px;">INSTRUCTIONS</p>
-            <p>
-                Functions in JavaScript are pieces of code that act as a rulebook for how
-                to do something, in this case: DANCE! We can call the function and run that
-                code, or rulebook, with just one line. Functions can also have parameters,
-                which means that we can slightly tweak the way the code will be run. In this
-                case, the parameters are:
-                <ul>
-                    <li>How high Bit by Bot jumps ("jump")</li>
-                    <li>How fast Bit by Bot dances ("speed")</li>
-                    <li>How long Bit by Bot dances for ("time")</li>
-                </ul>
-            </p>
-        </div>
         <div class="section" id="danceArena">
             <div id="dancer"></div>
             <svg id="easter-egg-svg" viewBox="0 0 512 512" style="opacity:0.0;height:300px;display:inline-block;">

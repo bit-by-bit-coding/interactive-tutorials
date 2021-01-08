@@ -12,6 +12,7 @@ let warning2 = document.getElementById("warning2");
 let warning3 = document.getElementById("warning3");
 let spinner = document.getElementById("spinner");
 let codeLine = document.getElementById("codeLine");
+let stopWatch = document.getElementById("stopWatch");
 let jumpDisplay = document.getElementById("jumpDisplay");
 let speedDisplay = document.getElementById("speedDisplay");
 let timeDisplay = document.getElementById("timeDisplay");
@@ -44,6 +45,7 @@ function easterEgg() {
 }
 
 function danceMove() {
+    stopWatch.innerText = "Time remaining: " + Math.floor((time - timer) * 100) / 100 + " sec";
     spinner.style.opacity = 1.0;
     if (timer >= 15) {
         stop();
@@ -92,6 +94,7 @@ function stop() {
     clearInterval(dancing);
     spinner.style.opacity = 0.0;
     codeLine.innerHTML = "N/A";
+    stopWatch.innerText = "";
     jumpDisplay.innerText = "";
     speedDisplay.innerText = "";
     timeDisplay.innerText = "";
@@ -137,5 +140,5 @@ function dialog() {
     $(".ui-dialog").css("background", "linear-gradient(to right, #307bdd, #00F)");
     $( function() {
       $( "#dialog" ).dialog();
-    } );
-  }
+    });
+}
