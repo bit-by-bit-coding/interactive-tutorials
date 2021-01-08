@@ -23,7 +23,7 @@ let executeCode = function(e) {
 let autoSaveTime = 3000;
 let autoSaveTimeout = setTimeout(executeCode, autoSaveTime);
 
-let editorElement = document.getElementById("editor");
+let editorElement = document.querySelector(".editor");
 // Add the "Cmd+S" or "Ctrl+S" to execute the code
 editorElement.addEventListener("keydown", function(e) {
   if ((e.ctrlKey || e.metaKey ) && e.keyCode === 83) {

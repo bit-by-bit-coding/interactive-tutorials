@@ -1,11 +1,14 @@
-# Ignore docs files.
+# Ignore sass files.
 .sass-cache
-.sass-cache\/*
+.sass-cache/*
 *.map
 **/.sass-cache
 **/.sass-cache/*
-**\/*.map
+**/*.map
 node_modules
+
+# Ignore VS Code files.
+.vs_code/*
 
 # Dumb apple files.
 .DS_Store
