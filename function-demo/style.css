@@ -151,7 +151,7 @@ body {
 
   #warning1, #warning2, #warning3 {
       color: red;
-      font-family: 0.5em;
+      font-size: 0.5em;
   }
 
   #instructions {
@@ -198,9 +198,16 @@ body {
     display: inline;
   }
 
+  #stopWatch {
+    margin-top: -20px;
+  }
+
   .ui-button {
     float: right;
     border: 3px solid gray;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .ui-button:hover {
     cursor: pointer;
@@ -219,13 +226,11 @@ body {
 .ui-dialog {
     display: block;
     padding: 10px;
-    border: 1px solid #DDD;
-    background: linear-gradient(to right, #307bdd , #00F);
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: white;
+    border: 0.2em solid #FF8900;
+    background-color: white;
     box-shadow: 8px 8px 5px #888888;
 }
-.ui-widget-content, .ui-widget-header {
+.ui-widget-header {
   color: white;
 }
   /*# sourceMappingURL=style.css.map */

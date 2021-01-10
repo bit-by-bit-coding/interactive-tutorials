@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Box Model Demo | Bit by Bit</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../assets/prism.css">
+        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header" class="flex-box">
+            <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
+            <h1 class="flex-col">BOX MODEL DEMO</h1>
+            <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+        </div>
+        <h1>&nbsp;</h1>
+        <div id="instructions">
+            <p style="font-size:28px;text-align:center">INSTRUCTIONS</p><br>
+            <p>The red box represents a DIV with some silly sentences inside. Change its padding, border, and margin
+                to see how the box changes!
+            </p>
+        </div>
+        <div id="container">
+            <div id="dynamic">
+                <div id="content">
+                Why do potatoes make great detectives? Because they always keep their eyes peeled. 
+                What do you use to carry potatoes? A tater tote. 
+                Which day of the week do potatoes dread the most? Fry-day. 
+                What do you call a lazy spud? A couch potato. 
+                Why did the potato salad blush? Because it saw the salad dressing. 
+                Why can't a farmer keep secrets on her farm? Because the corn has ears, the potatoes have eyes and the beans stalk. 
+                How do you know a potato is in a bad mood? When they’re acting salty. 
+                What do you call potatoes with right angles? Square roots. 
+                What do you say to a baked potato that's angry? Anything you like, just butter it up. 
+                What do you call a baby potato? Small fry. 
+                Why did the potato cross the road? He saw a fork up ahead.
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <h2>div {</h2>
+            <p class="slider">padding: <input id="padding" type="range" min="0" max="100" value="15"> <span id="paddingNum"></span>px;</p>
+            <p class="slider">borderWidth: <input id="border" type="range" min="0" max="50" value="3"> <span id="borderNum"></span>px;</p>
+            <p class="slider">margin: <input id="margin" type="range" min="0" max="100" value="20"> <span id="marginNum"></span>px;</p>
+            <br><br><br><br><br><br><br><br><br>
+            <h2>}</h2>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
