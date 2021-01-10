@@ -3,15 +3,15 @@ body {
 }
 
 * {
-  font-family: "Nunito";
+  font-family: 'Nunito';
 }
 
 #input {
   float: right;
 }
+
 #input input {
   border: none;
   border-bottom: 5px solid black;
 }
-
 /*# sourceMappingURL=style.css.map */
