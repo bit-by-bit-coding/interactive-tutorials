@@ -111,9 +111,9 @@ executeButton.onclick = function() {
     stop();
     document.body.style.backgroundColor = "white";
     easterEggIMG.style.opacity = "0.0";
-    jumpDisplay.innerText = inputJump.value;
+    jumpDisplay.innerText = inputJump.value + " px";
     speedDisplay.innerText = inputSpeed.value;
-    timeDisplay.innerText = inputTime.value;
+    timeDisplay.innerText = inputTime.value + " sec";
     posX = 0;
     posY = 0;
     height = parseFloat(inputJump.value);
