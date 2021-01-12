@@ -23,10 +23,6 @@ dynamic.style.height = CONST_HEIGHT;
 content.style.height = CONST_HEIGHT;
 instructions.style.height = CONST_HEIGHT;
 
-function changeResize() {
-    instructions.style.marginTop = (CONST_MARGINTOP - border.value - margin.value) + "px";
-    instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT) + "px";
-}
 function changePadding() {
     content.style.margin = padding.value;
     content.style.height = (CONST_HEIGHT - 2 * padding.value) + "px";
@@ -41,6 +37,8 @@ function changeBorderOrMargin() {
     borderNum.textContent = border.value;
     marginNum.textContent = margin.value;
     instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT) + "px";
+    if (CONST_MARGINTOP - border.value - margin.value <= 30)
+        container.style.marginTop = "30px";
 }
 changePadding();
 changeBorderOrMargin();
@@ -50,4 +48,9 @@ margin.onmousemove = changeBorderOrMargin;
 padding.onchange = changePadding;
 border.onchange = changeBorderOrMargin;
 margin.onchange = changeBorderOrMargin;
-window.onresize = changeResize;
+window.onresize = function() {
+    instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT - 7) + "px";
+};
+window.onmousemove = function() {
+    instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT) + "px";
+};
