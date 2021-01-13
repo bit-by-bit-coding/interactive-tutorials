@@ -25,18 +25,28 @@
     <div class="section">
       <p>
         I'll put the instructions for the code here. Think about how to explain if/else easily.
+        Pick two numbers and an operator. If the condition evaluates to true, the webpage will alert you with true. Otherwise it will alert false. 
+
       </p>
     </div>
-    <div class="flex-box">
+    <div class="flex-box" style="margin: 1em 0;">
       <div class="flex-col section">
         <p>
-          Put the actual dropdown menu here.
-        </p>
-        <p>
-          This section is likely for the input of the demo.
-          Users will select options, code, or give values to change the result section of the demo.
-          <span>First Dropdown:</span>
-          <input id="dropdown" class="option">
+         
+          <!-- <span>First Dropdown:</span> -->
+          <div class="option-wrapper">
+            <span>Number 1:</span>
+              <input id="num1" class="option">
+          </div>
+          <div class="option-wrapper">
+              <span>Number 2:</span>
+              <input id="num2" class="option">
+          </div>
+          <div class="option-wrapper">
+            <span>Operator:</span>
+            <input id="op" class="option">
+        </div>
+        <button id="run">Run</button>
         </p>
       </div>
       <div class="flex-col section">
@@ -49,7 +59,7 @@
     </div>
     <!-- The end of the content div is here -->
   </div>
-  <script src="../assets/option.js"></script>
+  <script src="../assets/options.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
