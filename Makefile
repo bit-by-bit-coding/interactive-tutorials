@@ -6,7 +6,7 @@ all: sass
 ifndef DIR
 sass:
 	echo "Making SASS files..."
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && [ -e style.scss ] && sass style.scss style.css" \;
+	find . -maxdepth 1 -type d \( ! -name . \) \( ! -name assets \) -exec bash -c "cd '{}' && [ -e style.scss ] && sass style.scss style.css" \;
 else
 sass: $(DIR)
 	echo "Making SASS files for $^..."
