@@ -1,56 +1,51 @@
-let container = document.getElementById("container");
-let dynamic = document.getElementById("dynamic");
-let content = document.getElementById("content");
-let instructions = document.getElementById("instructions");
-let padding = document.getElementById("padding");
-let border = document.getElementById("border");
-let margin = document.getElementById("margin");
-let paddingNum = document.getElementById("paddingNum");
-let borderNum = document.getElementById("borderNum");
-let marginNum = document.getElementById("marginNum");
+let container1 = document.getElementById("container-1");
+let dynamic1 = document.getElementById("dynamic-1");
+let content1 = document.getElementById("content-1");
+let container2 = document.getElementById("container-2");
+let dynamic2 = document.getElementById("dynamic-2");
+let content2 = document.getElementById("content-2");
+let padding1 = document.getElementById("padding-1");
+let border1 = document.getElementById("border-1");
+let margin1 = document.getElementById("margin-1");
+let paddingNum1 = document.getElementById("paddingNum-1");
+let borderNum1 = document.getElementById("borderNum-1");
+let marginNum1 = document.getElementById("marginNum-1");
+let padding2 = document.getElementById("padding-2");
+let border2 = document.getElementById("border-2");
+let margin2 = document.getElementById("margin-2");
+let paddingNum2 = document.getElementById("paddingNum-2");
+let borderNum2 = document.getElementById("borderNum-2");
+let marginNum2 = document.getElementById("marginNum-2");
 
-let CONST_WIDTH = 400;
-let CONST_HEIGHT = 400;
-let CONST_MARGINTOP = 170;
-let CONST_MARGINLEFT = 331;
+let CONST_WIDTH = window.getComputedStyle(container1).width;
+let CONST_HEIGHT = window.getComputedStyle(container1).height;
 
-instructions.style.marginTop = (CONST_MARGINTOP - border.value - margin.value) + "px";
-instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT) + "px";
-container.style.width = CONST_WIDTH;
-container.style.height = CONST_HEIGHT;
-dynamic.style.width = CONST_WIDTH;
-dynamic.style.height = CONST_HEIGHT;
-content.style.height = CONST_HEIGHT;
-instructions.style.height = CONST_HEIGHT;
-
-function changePadding() {
+function changePadding(content, padding, paddingNum) {
     content.style.margin = padding.value;
     content.style.height = (CONST_HEIGHT - 2 * padding.value) + "px";
     paddingNum.textContent = padding.value;
 }
-function changeBorderOrMargin() {
+function changeBorderOrMargin(container, dynamic, border, margin, borderNum, marginNum) {
     dynamic.style.borderWidth = border.value;
     dynamic.style.margin = margin.value;
     container.style.width = (CONST_WIDTH + 2 * border.value + 2 * margin.value) + "px";
     container.style.height = (CONST_HEIGHT + 2 * border.value + 2 * margin.value) + "px";
-    container.style.marginTop = (CONST_MARGINTOP - border.value - margin.value) + "px";
     borderNum.textContent = border.value;
     marginNum.textContent = margin.value;
-    instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT) + "px";
-    if (CONST_MARGINTOP - border.value - margin.value <= 30)
-        container.style.marginTop = "30px";
 }
-changePadding();
-changeBorderOrMargin();
-padding.onmousemove = changePadding;
-border.onmousemove = changeBorderOrMargin;
-margin.onmousemove = changeBorderOrMargin;
-padding.onchange = changePadding;
-border.onchange = changeBorderOrMargin;
-margin.onchange = changeBorderOrMargin;
-window.onresize = function() {
-    instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT - 7) + "px";
-};
-window.onmousemove = function() {
-    instructions.style.marginLeft = (window.innerWidth / 2 - border.value - margin.value - (CONST_WIDTH / 2) - CONST_MARGINLEFT) + "px";
-};
+changePadding(content1, padding1, paddingNum1);
+changePadding(content2, padding2, paddingNum2);
+changeBorderOrMargin(container1, dynamic1, border1, margin1, borderNum1, marginNum1);
+changeBorderOrMargin(container2, dynamic2, border2, margin2, borderNum2, marginNum2);
+padding1.onmousemove = () => { changePadding(content1, padding1, paddingNum1); };
+border1.onmousemove = () => { changeBorderOrMargin(container1, dynamic1, border1, margin1, borderNum1, marginNum1); };
+margin1.onmousemove = () => { changeBorderOrMargin(container1, dynamic1, border1, margin1, borderNum1, marginNum1); };
+padding1.onchange = () => { changePadding(content1, padding1, paddingNum1); };
+border1.onchange = () => { changeBorderOrMargin(container1, dynamic1, border1, margin1, borderNum1, marginNum1); };
+margin1.onchange = () => { changeBorderOrMargin(container1, dynamic1, border1, margin1, borderNum1, marginNum1); };
+padding2.onmousemove = () => { changePadding(content2, padding2, paddingNum2); };
+border2.onmousemove = () => { changeBorderOrMargin(container2, dynamic2, border2, margin2, borderNum2, marginNum2); };
+margin2.onmousemove = () => { changeBorderOrMargin(container2, dynamic2, border2, margin2, borderNum2, marginNum2); };
+padding2.onchange = () => { changePadding(content2, padding2, paddingNum2); };
+border2.onchange = () => { changeBorderOrMargin(container2, dynamic2, border2, margin2, borderNum2, marginNum2); };
+margin2.onchange = () => { changeBorderOrMargin(container2, dynamic2, border2, margin2, borderNum2, marginNum2); };
