@@ -27,7 +27,7 @@
           function danceRobot(&nbsp;&nbsp;<span class="line"><span style="color:red">jumpHeight</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:blue">speed</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:green">time</span></span>&nbsp;&nbsp;) {
             <br><br>
             <span style="color:red" class="line"><i class="fas fa-angle-double-up"></i> jumpHeight: <span id="jumpDisplay"></span></span>
-            <br><br>            
+            <br><br>
             <span style="color:blue" class="line"><i class="fas fa-tachometer-alt"></i> speed: <span id="speedDisplay"></span></span>
             <br><br>
             <span style="color:green" class="line"><i class="fas fa-hourglass-start"></i> time: <span id="timeDisplay"></span></span>
@@ -74,7 +74,26 @@
           <p id="stopWatch"></p>
       </div>
         <div class="section" id="danceArena">
-            <div id="dancer"></div>
+            <div id="dancer">
+              <svg class="robot"
+              xmlns="http://www.w3.org/2000/svg" viewBox="-100 -10 333 466">
+                <defs>
+                  <style>.cls-1,.cls-2{fill:#c9fdfb;}.cls-1,.cls-2,.cls-3{stroke:#6bdcd8;stroke-miterlimit:10;}.cls-1,.cls-3{stroke-width:2px;}.cls-2{stroke-width:4px;}.cls-3{fill:#eef3f3;}.cls-4{fill:#fda454;}</style>
+                </defs>
+                <ellipse class="cls-1 lfoot" cx="88.61" cy="341.46" rx="13" ry="22"/>
+                <ellipse class="cls-1 rfoot" cx="148.5" cy="339.54" rx="13" ry="22"/>
+                <ellipse class="cls-1 rarm" cx="185" cy="251.04" rx="34.5" ry="20.5"/>
+                <ellipse class="cls-1 larm" cx="53" cy="255.04" rx="34.5" ry="20.5"/>
+                <path class="cls-2 body" d="M175.5,277a59.5,59.5,0,0,1-119,0c0-32.86,29.14-67.5,62-67.5S175.5,244.18,175.5,277Z"/>
+                <g class="head">
+                  <circle class="cls-2" cx="115.5" cy="116.54" r="112"/>
+                  <path class="cls-3" d="M179.5,154.54c-11,7-34.18,8.79-60.48,10-21,1-39.52-3-59.52-10v-86a452.63,452.63,0,0,0,60.48,4,454.48,454.48,0,0,0,59.52-4Z"/>
+                  <ellipse class="cls-4" cx="92" cy="104.04" rx="4.5" ry="12.5"/>
+                  <ellipse class="cls-4" cx="148" cy="104.04" rx="4.5" ry="12.5"/>
+                  <ellipse class="cls-4" cx="120" cy="135.04" rx="2.5" ry="9.5" transform="translate(-37.64 223.27) rotate(-77.61)"/>
+                </g>
+              </svg>
+            </div>
             <svg id="easter-egg-svg" viewBox="0 0 512 512" style="opacity:0.0;height:300px;display:inline-block;">
               <path class="egg egg-top" stroke="#000000" stroke-width="1" d="M256+118.062C189.265+118.063+135.031+193.342+132.594+287.469L177.875+262.656L221.188+286.344L256+263.812L300.969+286.625L340.312+264.281L379.375+286.375C376.545+192.762+322.476+118.062+256+118.062Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
               <path class="egg egg-bottom" stroke="#000000" stroke-width="1" d="M177.875+280.375L132.719+304.219C136.512+394.9+190.174+445.438+256+445.438C321.765+445.438+375.4+394.994+379.281+304.469L340.312+283.969L300.969+306.625L256+283.312L221.188+304.969L177.875+280.375Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
