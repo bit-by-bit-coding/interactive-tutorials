@@ -15,6 +15,16 @@ let interactiveTutorials = {
     path: 'dom-demo',
     title: 'DOM DEMO',
     content: "The Document Object Model and how to manipulate it."
+  },
+  functionDemo: {
+    path: 'function-demo',
+    title: 'FUNCTION DEMO',
+    content: "Condensing code and calling upon functions!"
+  },
+  boxModel: {
+    path: 'box-model',
+    title: 'BOX MODEL',
+    content: "Margin, border, padding. Every HTML element has these, what do they do?"
   }
 }
 
