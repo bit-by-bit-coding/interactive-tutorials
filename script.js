@@ -27,7 +27,7 @@ for (let name in interactiveTutorials) {
   item.classList.add('grid-item');
   item.addEventListener('click', (e) => {
     let anchor = document.createElement('a');
-    anchor.href = tutorial.path;
+    anchor.href = tutorial.path +  '/';
     document.body.appendChild(anchor);
     anchor.click();
   });

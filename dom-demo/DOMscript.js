@@ -43,7 +43,7 @@ submit.onclick = async function() {
     submit.textContent = "...";
     DOMCode.textContent = "";
     SPEED = 0.29 * (sliderValue.value - 101) * (sliderValue.value - 101) + 100;
-    postContent.textContent = "Hello world! I am a DIV.";
+    postContent.textContent = "Hello world! I am a div.";
     post.style.backgroundColor = "white";
     post.style.color = "black";
     post.style.border = "3px solid black";
@@ -55,7 +55,7 @@ submit.onclick = async function() {
     else
         chosenID = "div";
     DOMCode.innerHTML = generatedCode;
-    if (giveText.value != "Hello world! I am a DIV.") {
+    if (giveText.value != "Hello world! I am a div.") {
         var codeFriendlyText = giveText.value.replace(/\"/g, "\\\"");
         generatedCode += colorText(chosenID, "#8EF") + "." + colorText("textContent", "#FAF") + " = " + colorText("\"" + codeFriendlyText + "\"", "#C90") + ";<br>";
         await sleep(SPEED);

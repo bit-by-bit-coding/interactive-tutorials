@@ -1,0 +1,48 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+
+.container {
+  margin: auto;
+  display: inline-block;
+  border: 1px solid black;
+  background-image: url("https://i.pinimg.com/originals/e1/a9/f9/e1a9f9b1803a305cc54e3d409b63a332.gif");
+}
+.dynamic {
+  display: flex;
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+  border: 0px solid $accent-color;
+  width: 20em;
+  height: 20em;
+}
+.div-content {
+  background-color: transparent;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+.controls {
+  display: inline-block;
+  width: 20em;
+  padding: 1.2em;
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+}
+.slider {
+  display: flex;
+  padding-left: 2em;
+  & > input {
+    flex: 1;
+  }
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.center-content {
+  display: inline-block;
+}

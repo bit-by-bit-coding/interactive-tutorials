@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Function Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+  <div id="header" class="flex-box">
+    <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
+      <button id="back-button" title="Back to all demos">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </a>
+    <h1 class="flex-col">FUNCTION DEMO</h1>
+    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  </div>
+  <div class="content">
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="section" id="functionCode" style="padding:0.5em">
+          function danceRobot(&nbsp;&nbsp;<span class="line"><span style="color:red">jumpHeight</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:blue">speed</span>&nbsp;&nbsp;, &nbsp;&nbsp;<span style="color:green">time</span></span>&nbsp;&nbsp;) {
+            <br><br>
+            <span style="color:red" class="line"><i class="fas fa-angle-double-up"></i> jumpHeight: <span id="jumpDisplay"></span></span>
+            <br><br>            
+            <span style="color:blue" class="line"><i class="fas fa-tachometer-alt"></i> speed: <span id="speedDisplay"></span></span>
+            <br><br>
+            <span style="color:green" class="line"><i class="fas fa-hourglass-start"></i> time: <span id="timeDisplay"></span></span>
+            <br><br>
+          }
+      </div>
+      <div class="section" id="instructions">
+        <p class="line" style="text-align:center;margin-top:0px;">INSTRUCTIONS</p>
+        <p>
+            Functions in JavaScript are pieces of code that act as a rulebook for how
+            to do something, in this case: DANCE! We can call the function and run that
+            code, or rulebook, with just one line. Functions can also have parameters,
+            which means that we can slightly tweak the way the code will be run. In this
+            case, the parameters are:
+            <ul>
+                <li>How high Bit by Bot jumps ("jumpHeight")</li>
+                <li>How fast Bit by Bot dances ("speed")</li>
+                <li>How long Bit by Bot dances for ("time")</li>
+            </ul>
+        </p>
+    </div>
+    </div>
+    <div id="dialog" title="ALERT">
+      <p id="message"></p>
+    </div>
+    <div class="flex-box" style="margin: 1em 0;">
+        <div class="section" id="control" style="padding:0.5em">
+          <p class="line" style="text-align:center;margin-top:0px;">CONTROL</p>
+          danceRobot(<input type="text" id="inputJump" value="200">, <input type="text" id="inputSpeed" value="15">, <input type="text" id="inputTime" value="3">);
+          <br>
+          <p id="warning1"></p>
+          <p id="warning2"></p>
+          <p id="warning3"></p>
+          <br>
+          <button id="execute-button">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="stop-button">
+            <i class="fas fa-stop"></i>
+          </button>
+          <br><hr><br>
+          <p id="spinner" class="line" style="text-align:center;margin-top:0px;">CALLING: <i class="fas fa-spinner"></i></p>
+          <p id="codeLine">N/A</p>
+          <p id="stopWatch"></p>
+      </div>
+        <div class="section" id="danceArena">
+            <div id="dancer"></div>
+            <svg id="easter-egg-svg" viewBox="0 0 512 512" style="opacity:0.0;height:300px;display:inline-block;">
+              <path class="egg egg-top" stroke="#000000" stroke-width="1" d="M256+118.062C189.265+118.063+135.031+193.342+132.594+287.469L177.875+262.656L221.188+286.344L256+263.812L300.969+286.625L340.312+264.281L379.375+286.375C376.545+192.762+322.476+118.062+256+118.062Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+              <path class="egg egg-bottom" stroke="#000000" stroke-width="1" d="M177.875+280.375L132.719+304.219C136.512+394.9+190.174+445.438+256+445.438C321.765+445.438+375.4+394.994+379.281+304.469L340.312+283.969L300.969+306.625L256+283.312L221.188+304.969L177.875+280.375Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+              <g class="stars" opacity="1">
+                <path stroke="#000000" stroke-width="1" d="M256+144.281L264.031+160.562L282.031+163.188L269.031+175.875L272.094+193.781L256+185.344L239.906+193.781L242.969+175.875L229.969+163.188L247.969+160.562L256+144.281Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+                <path stroke="#000000" stroke-width="1" d="M210.688+362.406L218.719+378.688L236.719+381.312L223.719+394L226.781+411.906L210.688+403.469L194.594+411.906L197.656+394L184.656+381.312L202.656+378.688L210.688+362.406Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+                <path stroke="#000000" stroke-width="1" d="M301.312+362.406L309.344+378.688L327.344+381.312L314.344+394L317.406+411.906L301.312+403.469L285.219+411.906L288.281+394L275.281+381.312L293.281+378.688L301.312+362.406Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+              </g>
+              <g class="dots" opacity="1">
+                <path stroke="#000000" stroke-width="1" d="M187.165+232.722C187.165+221.888+195.948+213.105+206.783+213.105C217.617+213.105+226.4+221.888+226.4+232.722C226.4+243.557+217.617+252.34+206.783+252.34C195.948+252.34+187.165+243.557+187.165+232.722Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+                <path stroke="#000000" stroke-width="1" d="M285.6+232.722C285.6+221.888+294.383+213.105+305.217+213.105C316.052+213.105+324.835+221.888+324.835+232.722C324.835+243.557+316.052+252.34+305.217+252.34C294.383+252.34+285.6+243.557+285.6+232.722Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+                <path stroke="#000000" stroke-width="1" d="M236.383+336.52C236.383+325.686+245.166+316.903+256+316.903C266.834+316.903+275.617+325.686+275.617+336.52C275.617+347.355+266.834+356.138+256+356.138C245.166+356.138+236.383+347.355+236.383+336.52Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+              </g>
+            </svg>
+        </div>
+    </div>
+  </div>
+
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
