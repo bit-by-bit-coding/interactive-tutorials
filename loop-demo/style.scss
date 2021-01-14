@@ -21,6 +21,28 @@
   height: 10em;
 }
 
+.body-segment {
+  height: 55px;
+  width: 55px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.caterpillar-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
 #minus-button {
   margin-right: 5px;
+}
+
+#min-max-message {
+  height: 0.75em;
+}
+
+#bitbybotterpillar-head {
+  height: 100px;
 }
