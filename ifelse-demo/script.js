@@ -17,7 +17,7 @@ function calculate(){
 
   if(op.value == '<'){
     if(num1 < num2){
-      resultBox.style.backgroundColor = "green";
+      resultBox.style.backgroundColor = "lime";
       resultBox.innerText = "True!";
     }else{
       resultBox.style.backgroundColor = "red";
@@ -31,7 +31,7 @@ function calculate(){
 
   if(op.value == '==='){
     if(num1 == num2){     
-      resultBox.style.backgroundColor = "green";
+      resultBox.style.backgroundColor = "lime";
       resultBox.innerText = "True!";
     }else{
       resultBox.style.backgroundColor = "red";
@@ -41,7 +41,7 @@ function calculate(){
 
   if(op.value == '>'){
     if(num1 > num2){
-      resultBox.style.backgroundColor = "green";
+      resultBox.style.backgroundColor = "lime";
       resultBox.innerText = "True!";
     }else{
       resultBox.style.backgroundColor = "red";
@@ -55,7 +55,7 @@ function calculate(){
 
   if(op.value == '<='){
     if(num1 <= num2){     
-      resultBox.style.backgroundColor = "green";
+      resultBox.style.backgroundColor = "lime";
       resultBox.innerText = "True!";
     }else{
       resultBox.style.backgroundColor = "red";
@@ -65,7 +65,7 @@ function calculate(){
 
   if(op.value == '>='){
     if(num1 >= num2){     
-      resultBox.style.backgroundColor = "green";
+      resultBox.style.backgroundColor = "lime";
       resultBox.innerText = "True!";
     }else{
       resultBox.style.backgroundColor = "red";

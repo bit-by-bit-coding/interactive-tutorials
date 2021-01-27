@@ -25,11 +25,11 @@ let createOption = (element, options, handler) => {
   list.classList.add("option-list");
   for (let option in options) {
     let item = document.createElement("li");
-    item.innerHTML = option.toString();
+    item.innerText = option.toString();
     item.classList.add("option-" + options[option].toString());
     item.classList.add("option-item");
     item.addEventListener("click", (e) => {
-      element.value = e.target.innerHTML;
+      element.value = e.target.innerText;
       element.dispatchEvent(new Event('change'));
     });
     list.appendChild(item);
