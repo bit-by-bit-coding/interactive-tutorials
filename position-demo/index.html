@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title> Position Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <div id="header" class="flex-box">
+    <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
+      <button id="back-button" title="Back to all demos">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </a>
+    <h1 class="flex-col">POSITION DEMO</h1>
+    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  </div>
+
+  <div class="content"> 
+
+    <button type="button" onclick="changePositionAbsolute()"> Absolute </button>
+
+    <button type="button" onclick="changePositionStatic()"> Static </button>
+
+    <button type="button" onclick="changePositionFixed()"> Fixed </button>
+
+    <button type="button" onclick="changePositionRelative()"> Relative </button>
+
+    <h1> The Position Property </h1>
+
+    <div id="parent"> 
+      <p> Parent position: static</p>
+      <div id="child"> 
+        <p> Child position: </p>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+</body>
+</html>

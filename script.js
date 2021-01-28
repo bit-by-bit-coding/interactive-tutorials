@@ -25,6 +25,11 @@ let interactiveTutorials = {
     path: 'box-model',
     title: 'BOX MODEL',
     content: "Margin, border, padding. Every HTML element has these, what do they do?"
+  },
+  posDemo: {
+    path: 'position-demo',
+    title: 'POSITION DEMO',
+    content: "How to use position property."
   }
 }
 
