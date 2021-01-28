@@ -1,3 +1,5 @@
+let defaultCode = 'const arr = [1, 2, 3, 4, 5];';
+
 let jar = CodeJar(
   document.getElementById('editor'),
   withLineNumbers(Prism.highlightElement, {
@@ -9,3 +11,5 @@ let jar = CodeJar(
     indentOn: /<[a-zA-Z =\"\-]+>$/,
   }
 );
+
+jar.updateCode(defaultCode);
