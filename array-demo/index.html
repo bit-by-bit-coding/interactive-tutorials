@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    
     <div id="header" class="flex-box">
       <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
         <button id="back-button" title="Back to all demos">
@@ -21,20 +22,13 @@
   <div class="content">
     <div class='flex-box'>
     <div class='section flex-col'>
-      <div id="editor-section">
-        <div id="editor" class="lang-html">
-        
-        </div>
-        <div class="editor-button-overlay">
-          <button id="execute-button" title="Execute the code">
-            <i class="fas fa-play"></i>
-          </button>
-          <button id="reset-button" title="Reset the code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
+      <h3>Instructions</h3>
+       <p>Fill in the text area with comma separated values, then hit the button to see an array in action.</p>
+       <p>My Array: <textarea id="array-vals" placeholder='1, 2, 3, 4, 5'></textarea></p>
+       <button id="execute-button" title="Execute the code">
+        <i class="fas fa-play"></i>
+      </button>
       </div>
-    </div>
     <div class='section flex-col'>
       <h3>What is an array?</h3>
       <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. **change this wording</p>
