@@ -3,19 +3,42 @@ let executeButton = document.getElementById('execute-button');
 let codeDisplay = document.getElementById('code-display');
 let arrayLength = document.getElementById('array-length');
 let arrayAtI = document.getElementById('array-at-i');
+let visualization = document.getElementById('visualization');
+
 executeButton.onclick = () => {
-  showArrayCode(arrayValues.value);
+  // Turn comma separated vals into actual array using split
+  parsedArr = arrayValues.value.split(',');
+  showVisualization(parsedArr);
+  showArrayCode(parsedArr);
 };
 
-const showVisualization = (arr) => {};
+const showVisualization = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    let node = document.createElement('DIV');
+    let iNode = document.createTextNode(i);
+    let textNode = document.createTextNode(arr[i]);
+    node.setAttribute('class', 'array-element');
+    node.setAttribute('id', i);
+    node.appendChild(iNode);
+    node.appendChild(textNode);
+    visualization.appendChild(node);
+  }
+
+  document.addEventListener('click', function (e) {
+    if (e.target && Number.isInteger(parseInt(e.target.id))) {
+      let i = e.target.id;
+      arrayAtI.innerHTML = `myArray[${i}] = ${arr[i]}`;
+    }
+  });
+  // Still need to -
+  // add index value to visualization
+  // make visualization elements clickable
+};
 
 const showArrayCode = (arr) => {
-  // Turn comma separated vals into actual array using split
-  parsedArr = arr.split(',');
   // Display code to create array, length, & vals at different spots
-  codeDisplay.innerHTML = `let myArray = [${parsedArr}]`;
-  arrayLength.innerHTML = `myArray.length = ${parsedArr.length}`;
-  arrayAtI.innerHTML = `myArray[0] = ${parsedArr[0]}`;
+  codeDisplay.innerHTML = `let myArray = [${arr}];`;
+  arrayLength.innerHTML = `myArray.length = ${arr.length}`;
 };
 
 // let jar = CodeJar(

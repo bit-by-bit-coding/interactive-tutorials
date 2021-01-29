@@ -22,8 +22,8 @@
   <div class="content">
     <div class='flex-box'>
       <div class='section flex-col'>
-        <h3>Instructions</h3>
-        <p>Fill in the text area with comma separated values, then hit the button to see an array in action.</p>
+        <h3>INSTRUCTIONS</h3>
+        <p>Fill in the text area with comma separated values, then hit the button to see your array in action.</p>
         <p>My Array: <textarea id="array-vals" placeholder='1, 2, 3, 4, 5'></textarea></p>
         <button id="execute-button" title="Execute the code">
           <i class="fas fa-play"></i>
@@ -36,9 +36,12 @@
     </div>
     <div class='flex-box'>
       <div class='section flex-col'>
-        section for visualization
+        <div id='visualization'>
+          <h3>ARRAY CONTENTS</h3>
+        </div>
       </div>
       <div class='section flex-col'>
+        <h3>CODE</h3>
         <p id='code-display'></p>
         <p id="array-length"></p>
         <p id='array-at-i'></p>
