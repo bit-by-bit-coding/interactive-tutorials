@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>If/Else Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+  <div id="header" class="flex-box">
+    <a href="/interactive-tutorials/" class="no-flex-col" style="margin-right: 1em;">
+      <button id="back-button" title="Back to all demos">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </a>
+    <h1 class="flex-col">If/Else demo</h1>
+    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  </div>
+  <div class="content">
+    <div class="section">
+      <p>
+       Pick two numbers and an operator to compare them with. <br>
+       &lt; will be true if number 1 is smaller than number 2.<br>
+       &gt; will be true if number 1 is greater than number 2.<br>
+       === will be true if both numbers are equal. <br>
+       &lt;= will be true if number 1 is smaller than or equal to number 2.<br>
+       &gt;= will be true if number 1 is greater than or equal to number 2.<br> 
+      </p>
+    </div>
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="flex-col section">
+        <p>
+         
+          <!-- <span>First Dropdown:</span> -->
+          <div class="option-wrapper">
+            <span>Number 1:</span>
+              <input id="num1" type="number">
+          </div>
+          <div class="option-wrapper">
+              <span>Number 2:</span>
+              <input id="num2" type="number">
+          </div>
+          <div class="option-wrapper">
+            <span>Operator:</span>
+            <input id="op" class="option">
+        </div>
+        <button id="run" onclick="calculate()">Run</button>
+        </p>
+      </div>
+      <div class="flex-col section" id="result">
+        <p>
+          
+        </p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="../assets/options.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
