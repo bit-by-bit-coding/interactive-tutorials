@@ -51,20 +51,21 @@ function danceMove() {
         stop();
         easterEgg();
     }
-    if (timer >= time)
+    if (timer >= time) {
         stop();
+    }
     posX += velocityX;
     posY += velocityY;
     velocityY -= gravity;
-    dancer.style.left = (5 + posX) + "px";
-    dancer.style.top = (295 - posY) + "px";
+    dancer.style.left = posX + "px";
+    dancer.style.top = (200 - posY) + "px";
     if (posY <= 0) {
         posY = 0;
         velocityY = speed;
     }
-    if (posX >= window.innerWidth * 0.56 - 100) {
+    if (posX >= window.innerWidth * 0.5 - 100) {
         velocityX *= -1;
-        posX = window.innerWidth * 0.56 - 100;
+        posX = window.innerWidth * 0.5 - 100;
     }
     if (posX <= 0) {
         velocityX *= -1;
@@ -74,8 +75,8 @@ function danceMove() {
 }
 
 function verify() {
-    if (parseFloat(inputJump.value) < 0 || parseFloat(inputJump.value) > 290)
-        warning1.innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i> Whoa! This may work, but I might trip up if the jump isn't kept between 0 and 290!";
+    if (parseFloat(inputJump.value) < 0 || parseFloat(inputJump.value) > 200)
+        warning1.innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i> Whoa! This may work, but I might trip up if the jump isn't kept between 0 and 200!";
     else
         warning1.innerHTML = "";
     if (parseFloat(inputSpeed.value) < 0 || parseFloat(inputSpeed.value) > 36)
@@ -98,6 +99,12 @@ function stop() {
     jumpDisplay.innerText = "";
     speedDisplay.innerText = "";
     timeDisplay.innerText = "";
+    window.setTimeout(() => {
+        document.body.style.backgroundColor = "white";
+        easterEggIMG.style.opacity = "0.0";
+        dancer.style.left = "0px";
+        dancer.style.top = "200px";
+    }, 11);
 }
 
 inputJump.onkeyup = verify;
@@ -119,7 +126,7 @@ executeButton.onclick = function() {
     height = parseFloat(inputJump.value);
     speed = parseFloat(inputSpeed.value);
     time = parseFloat(inputTime.value);
-    velocityX = Math.pow(1.1225, speed);
+    velocityX = Math.pow(1.1, speed);
     velocityY = speed;
     gravity = 0.5 * velocityY * velocityY / height;
     timer = 0;
@@ -130,8 +137,8 @@ executeButton.onclick = function() {
 stopButton.onclick = function() {
     document.body.style.backgroundColor = "white";
     easterEggIMG.style.opacity = "0.0";
-    dancer.style.left = "5px";
-    dancer.style.top = "295px";
+    dancer.style.left = "0px";
+    dancer.style.top = "200px";
     stop();
 }
 
