@@ -4,8 +4,7 @@ let bodySegmentCount = 1;
 const minusButton = document.getElementById('minus-button')
 const plusButton = document.getElementById('plus-button')
 const caterpillar = document.getElementById('showcase-section')
-
-
+const bodySegment = document.createElement('div');
 
 function onPlusClick() {
   bodySegmentCount += 1;
@@ -14,6 +13,7 @@ function onPlusClick() {
     const bodySegment = document.createElement('div');
     caterpillar.appendChild(bodySegment);
     bodySegment.classList.add('body-segment');
+    bodySegment.id = bodySegmentCount
   //TODO: look at amount of children in caterpillar and limit to only 8 divs
       if (bodySegmentCount > 8 ) {
         bodySegmentCount= 8
@@ -24,9 +24,11 @@ function onPlusClick() {
       }
 };
 
+//TODO: correctly remove a div on minus click. look at remove and removeChild. Also declare bodysegment here first
 function onMinusClick() {
   bodySegmentCount -= 1;
   document.getElementById('min-max-message').innerHTML = ''
+  caterpillar.removeChild(bodySegment);
   if (bodySegmentCount < 1 ) {
     bodySegmentCount = 1
     document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
@@ -41,7 +43,7 @@ function onMinusClick() {
 
 
 let executeCode = function (e) {
-  updateCongaLine(bodySegmentCount);
+  updateCaterpillar(bodySegmentCount);
 };
 let autoSaveTime = 3000;
 let autoSaveTimeout = setTimeout(executeCode, autoSaveTime);
@@ -94,6 +96,7 @@ document.getElementById("reset-button").addEventListener('click', (e) => {
 
 plusButton.addEventListener('click', onPlusClick);
 minusButton.addEventListener('click', onMinusClick);
+
 
 
 
