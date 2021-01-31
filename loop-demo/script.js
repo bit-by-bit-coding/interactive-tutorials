@@ -1,43 +1,55 @@
 // script.js
 
 let bodySegmentCount = 1;
+let bodySegmentMaxLimit = 8;
+let bodySegmentMinLimit = 1;
 const minusButton = document.getElementById('minus-button')
 const plusButton = document.getElementById('plus-button')
 const caterpillar = document.getElementById('showcase-section')
 const bodySegment = document.createElement('div');
 
-function onPlusClick() {
-  bodySegmentCount += 1;
-    document.getElementById('min-max-message').innerHTML = ''
-    document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+function addBodySegments(){
+  if(bodySegmentCount < bodySegmentMaxLimit){
+    bodySegmentCount++;
     const bodySegment = document.createElement('div');
     caterpillar.appendChild(bodySegment);
     bodySegment.classList.add('body-segment');
-    bodySegment.id = bodySegmentCount
+    bodySegment.id = 'bodysegment-' + bodySegmentCount;
+  } else if (bodySegmentCount >= bodySegmentMaxLimit) {
+    document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    document.getElementById('min-max-message').innerHTML = 'Only 8 will fit!'
+    return;
+  }
+};
+
+function subtractBodySegments(){
+  if(bodySegmentCount > bodySegmentMinLimit){
+    bodySegmentCount--;
+    document.getElementById('min-max-message').innerHTML = ''
+    let bodySegmentToRemove = document.getElementById(`bodysegment-${bodySegmentCount}`);
+    bodySegmentToRemove.remove();
+
+  } else if (bodySegmentCount <= bodySegmentMaxLimit) {
+    document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    document.getElementById('min-max-message').innerHTML = 'You have to have at least 1!'
+    return;
+  }
+};
+
+function onPlusClick() {
+    document.getElementById('min-max-message').innerHTML = ''
+    document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    addBodySegments();
   //TODO: look at amount of children in caterpillar and limit to only 8 divs
-      if (bodySegmentCount > 8 ) {
-        bodySegmentCount= 8
-        document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
-        document.getElementById('min-max-message').innerHTML = 'Only 8 body segments will fit!'
-      } else {
-        document.getElementById('conga-line-count').innerHTML = bodySegmentCount;
-      }
+  
 };
 
 //TODO: correctly remove a div on minus click. look at remove and removeChild. Also declare bodysegment here first
 function onMinusClick() {
-  bodySegmentCount -= 1;
   document.getElementById('min-max-message').innerHTML = ''
-  caterpillar.removeChild(bodySegment);
-  if (bodySegmentCount < 1 ) {
-    bodySegmentCount = 1
-    document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
-    document.getElementById('min-max-message').innerHTML = 'You have to have at least 1 body segment!'
-  } else {
-    document.getElementById('conga-line-count').innerHTML = bodySegmentCount;
-  }
-  
-  console.log(bodySegmentCount)
+  document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+  subtractBodySegments();
+
 }
 
 
