@@ -132,4 +132,18 @@ button:active {
   padding: 0.5em;
   border: 0.2em solid #38bfe7;
 }
+
+.tooltip {
+  display: none;
+  background-color: #ffe266;
+  z-index: 1000;
+  width: 20px;
+  position: absolute;
+  /* left: 50px;
+  bottom: 20px; */
+}
+
+.hover-me:hover .tooltip {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

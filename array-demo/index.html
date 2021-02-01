@@ -24,7 +24,7 @@
       <div class='section flex-col'>
         <h3>INSTRUCTIONS</h3>
         <p>Fill in the text area with comma separated values, then hit the button to see your array in action.</p>
-        <p>My Array: <textarea id="array-vals" placeholder='1, 2, 3, 4, 5'></textarea></p>
+        <p>My Array: <textarea id="array-vals"></textarea></p>
         <button id="execute-button" title="Execute the code">
           <i class="fas fa-play"></i>
         </button>
@@ -42,9 +42,18 @@
       </div>
       <div class='section flex-col'>
         <h3>CODE</h3>
-        <p id='code-display'></p>
-        <p id="array-length"></p>
-        <p id='array-at-i'></p>
+        <p id='code-display' class='hover-me'>code appears here
+          <span class = 'tooltip'>1</span>
+        </p>
+        
+        <p id="array-length" class='hover-me'>length appears here
+          <span class = 'tooltip'>2</span>
+        </p>
+        
+        <p id='array-at-i' class='hover-me'>array at i appears here
+          <span class = 'tooltip'>3</span>
+        </p>
+        
       </div>
     </div>
   </div>

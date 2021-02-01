@@ -5,6 +5,8 @@ let arrayLength = document.getElementById('array-length');
 let arrayAtI = document.getElementById('array-at-i');
 let visualization = document.getElementById('visualization');
 
+arrayValues.defaultValue = '1, 2, 3, 4, 5';
+
 executeButton.onclick = () => {
   // Turn comma separated vals into actual array using split
   parsedArr = arrayValues.value.split(',');
