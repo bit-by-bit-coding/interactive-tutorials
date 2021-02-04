@@ -9,9 +9,13 @@ arrayValues.defaultValue = '1, 2, 3, 4, 5';
 
 executeButton.onclick = () => {
   // Turn comma separated vals into actual array using split
-  parsedArr = arrayValues.value.split(',');
+  let parsedArr = parseArray(arrayValues.value);
   showVisualization(parsedArr);
   showArrayCode(parsedArr);
+};
+
+const parseArray = (str) => {
+  return str.split(',');
 };
 
 const showVisualization = (arr) => {
