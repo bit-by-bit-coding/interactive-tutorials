@@ -1,0 +1,405 @@
+/* common.scss */
+/* Define all the colors */
+body {
+  margin: 5em 0 0 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background: #38Bfe7;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+}
+
+button:hover {
+  background-color: #19a8d3;
+}
+
+button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#header {
+  padding: 1em 2em;
+  background-color: white;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 3em;
+  z-index: 1000;
+  opacity: 95%;
+  -webkit-box-shadow: 0 2px 2px #eee;
+          box-shadow: 0 2px 2px #eee;
+}
+
+#header > * {
+  display: inline-block;
+  margin: 0;
+}
+
+#header button {
+  width: 3em;
+}
+
+#back-button {
+  padding: 0.25em 1em;
+  font-size: 1em;
+  height: 100%;
+}
+
+.content {
+  padding: 1em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0;
+}
+
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
+}
+
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
+}
+
+.no-flex-col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+#editor-section {
+  position: relative;
+  overflow: scroll;
+}
+
+#editor {
+  margin: 0;
+  height: 20em;
+  width: calc(100% - 35px - calc(0.625em*2));
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  padding: 1px 0.625em;
+}
+
+#explore-show {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+#button-overlay {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 0;
+}
+
+#header {
+  padding: 1em 2em;
+  background-color: #ffffff;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 3em;
+  z-index: 1000;
+  opacity: 95%;
+  -webkit-box-shadow: 0 2px 2px #eee;
+          box-shadow: 0 2px 2px #eee;
+}
+
+#explinations {
+  float: left;
+}
+
+#operationGame {
+  float: right;
+}
+
+#explinations, #operationGame, #instructionsTwo {
+  font-weight: 100;
+  border: 3px solid #000000;
+  background-color: #fff;
+  color: #000;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 24px;
+  padding: 30px;
+  height: 550px;
+  width: 45%;
+  margin: 20px;
+}
+
+@media (max-width: 1902px) {
+  #explinations, #operationGame, #instructionsTwo {
+    overflow: scroll;
+  }
+}
+
+#partOneContainer, #partTwoContainer {
+  height: 650px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  color: black;
+  border: 0.2em solid #38Bfe7;
+  padding-bottom: 20px;
+  margin-bottom: 100px;
+}
+
+#partTwoMarker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 0.2em solid #38Bfe7;
+}
+
+#transition, #thirdValue, #secondOperation, #fourthValue {
+  display: none;
+}
+
+#result {
+  font-size: xx-large;
+}
+
+#partTwoContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+#partTwoText {
+  font-size: xx-large;
+}
+
+#instructionsTwo {
+  height: 300px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+}
+
+#scrollwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  border: 3px solid #000000;
+  background-color: #fff;
+  color: #000;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 24px;
+  padding: 30px;
+  height: 650px;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+  bottom: 600px;
+}
+
+#card1, #card2, #card3, #card4, #card5 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border: 3px solid #000000;
+  width: 600px;
+  margin: 2px;
+  padding: 10px;
+}
+
+#check1, #check2, #check3, #check4, #check5 {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  position: relative;
+  left: 1000px;
+  top: 60px;
+  display: inline-block;
+  text-align: center;
+}
+
+#reset {
+  font-family: Verdana, Tahoma, sans-serif;
+  position: relative;
+  left: 1100px;
+  top: 60px;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    background-color: green;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    background-color: indigo;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    background-color: hotpink;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    background-color: green;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    background-color: indigo;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    background-color: hotpink;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#bitbybot {
+  position: relative;
+  left: 1200px;
+  top: 150px;
+  height: 575px;
+  width: 575px;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  visibility: hidden;
+  font-size: xx-large;
+}
+
+@media (max-width: 1530px) {
+  #check1, #check2, #check3, #check4, #check5 {
+    left: 800px;
+  }
+  #reset {
+    left: 900px;
+  }
+}
+
+@media (max-width: 1330px) {
+  #check1, #check2, #check3, #check4, #check5 {
+    left: 700px;
+  }
+  #reset {
+    left: 800px;
+  }
+}
+
+@media (max-width: 1230px) {
+  #check1, #check2, #check3, #check4, #check5 {
+    left: 650px;
+  }
+  #reset {
+    top: 120px;
+    left: 400px;
+  }
+}
+
+@media (max-width: 990px) {
+  #partTwoContainer {
+    overflow: scroll;
+  }
+}
+
+select {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  margin-bottom: 2px;
+}
+
+label {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */
