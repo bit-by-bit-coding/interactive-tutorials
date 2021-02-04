@@ -8,17 +8,17 @@ let visualization = document.getElementById('visualization');
 arrayValues.defaultValue = '1, 2, 3, 4, 5';
 
 executeButton.onclick = () => {
-  // Turn comma separated vals into actual array using split
-  let parsedArr = parseArray(arrayValues.value);
-  showVisualization(parsedArr);
-  showArrayCode(parsedArr);
+  updatePage();
 };
 
-const parseArray = (str) => {
-  return str.split(',');
+const updatePage = () => {
+  parsedArray = arrayValues.value.split(',');
+  showVisualization(parsedArray);
+  showArrayCode(parsedArray);
 };
 
 const showVisualization = (arr) => {
+  console.log('in showVisualization');
   for (let i = 0; i < arr.length; i++) {
     let node = document.createElement('DIV');
     let iNode = document.createTextNode(i);
