@@ -37,11 +37,17 @@ They are used in class and also outside of class, teaching HTML, CSS, and JavaSc
 
 ### Contributing and Pull Requests
 
-After completing a modification or improvement, you'll want to make those changes visible on the master branch. The process for doing this is as follows:
+After completing a modification or improvement, you'll want to make those changes visible on the master branch.
+The process for doing this is as follows:
 
  1. Create a pull request to the `pre-prod` branch, this can be a draft pull request if it's not finished yet
  1. Describe the new demo or changes with a few sentences inside the details box
  1. After a successful review and merge, the demo will be added to the master branch by the repository maintainers.
+ 
+When you should create this pull request is also important.
+Pull requests should be created when the demo is finished, however, creating a draft pull request can happen at any point.
+Inside the pull request, the comments section will be used to discuss the changes and modifications required for the demo.
+Code reviewers will comment and approve these pull requests when complete or when requested.
 
 ------
 
