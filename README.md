@@ -7,24 +7,41 @@ They are used in class and also outside of class, teaching HTML, CSS, and JavaSc
 
 ### How to Run Repository Locally
 
-1. Clone the repository
-1. Install Live Sass Compiler and Live Server on Visual Studio Code
-1. Run `npm install` to install dependencies
-1. Hit Watch Sass in the bottom right
-1. Click go live in the bottom of Visual Studio Code
+##### With Visual Studio Code
+
+ 1. Clone the repository
+ 1. Install Live Sass Compiler and Live Server on Visual Studio Code
+ 1. Run `npm install` to install dependencies
+ 1. Hit Watch Sass in the bottom right
+ 1. Click go live in the bottom of Visual Studio Code
+ 
+
+##### With command line interfaces
+
+ 1. Clone the repository
+ 1. Install SASS and Serve by running `npm install -g serve sass`
+ 1. Run `serve` from the root directory and goto `localhost:5000` (note that the port may be different)
 
 -----
 
 ### Creating a New Interactive Tutorial
 
-1. Click new folder at the root of the project
-1. Give the folder a descriptive name
-1. Inside the folder add the following files:
-    * `index.html`
-    * `script.js`
-    * `style.scss`
-1. Add `@import "../assets/common.scss";` to the `style.scss` file.
-  This allows you to use the variables and mixins from the shared `common.scss` file.
+ 1. Duplicate the `template` folder
+ 1. Give the folder a descriptive name along which demo you wish to create (note that this must be URL compatible)
+ 1. Inside the folder are the following files that make up the page:
+     * `index.html`
+     * `style.scss`
+ 1. Create the demo using HTML, CSS, and Javascript, there are also tools listed below for convince.
+
+------
+
+### Contributing and Pull Requests
+
+After completing a modification or improvement, you'll want to make those changes visible on the master branch. The process for doing this is as follows:
+
+ 1. Create a pull request to the `pre-prod` branch, this can be a draft pull request if it's not finished yet
+ 1. Describe the new demo or changes with a few sentences inside the details box
+ 1. After a successful review and merge, the demo will be added to the master branch by the repository maintainers.
 
 ------
 
