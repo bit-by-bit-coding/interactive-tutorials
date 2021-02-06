@@ -5,6 +5,14 @@ let arrayLength = document.getElementById('array-length');
 let arrayAtI = document.getElementById('array-at-i');
 let visualization = document.getElementById('visualization');
 
+// To do:
+// 1. Separate array slot #s visually
+// 2. Explanation - note that arrays start at 0
+// 3. Fix tooltip
+// 4. Add text to tooltips
+// 5. use style to connect numbers and stuff more?
+// 6. Make clear button
+
 arrayValues.defaultValue = '1, 2, 3, 4, 5';
 
 executeButton.onclick = () => {
@@ -18,10 +26,14 @@ const updatePage = () => {
 };
 
 const showVisualization = (arr) => {
-  console.log('in showVisualization');
+  //empty out whatever is ib visualation already
+  visualization.innerHTML = '';
+  // for every value in textarea, create a div representing value in array
   for (let i = 0; i < arr.length; i++) {
     let node = document.createElement('DIV');
-    let iNode = document.createTextNode(i);
+    let iNode = document.createElement('span');
+    iNode.innerHTML = i;
+    iNode.setAttribute('class', 'i-val');
     let textNode = document.createTextNode(arr[i]);
     node.setAttribute('class', 'array-element');
     node.setAttribute('id', i);
@@ -30,15 +42,13 @@ const showVisualization = (arr) => {
     visualization.appendChild(node);
   }
 
+  // Clicking element in visualization brings up textual representation of value at that array location
   document.addEventListener('click', function (e) {
     if (e.target && Number.isInteger(parseInt(e.target.id))) {
       let i = e.target.id;
       arrayAtI.innerHTML = `myArray[${i}] = ${arr[i]}`;
     }
   });
-  // Still need to -
-  // add index value to visualization
-  // make visualization elements clickable
 };
 
 const showArrayCode = (arr) => {
@@ -46,17 +56,3 @@ const showArrayCode = (arr) => {
   codeDisplay.innerHTML = `let myArray = [${arr}];`;
   arrayLength.innerHTML = `myArray.length = ${arr.length}`;
 };
-
-// let jar = CodeJar(
-//   document.getElementById('editor'),
-//   withLineNumbers(Prism.highlightElement, {
-//     color: '#000',
-//     backgroundColor: 'rgb(232, 232, 232)',
-//   }),
-//   {
-//     tab: '  ',
-//     indentOn: /<[a-zA-Z =\"\-]+>$/,
-//   }
-// );
-
-// jar.updateCode(defaultCode);

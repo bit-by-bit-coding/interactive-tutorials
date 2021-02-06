@@ -133,6 +133,11 @@ button:active {
   border: 0.2em solid #38bfe7;
 }
 
+.array-element:hover {
+  cursor: pointer;
+  background-color: #ffe266;
+}
+
 .tooltip {
   display: none;
   background-color: #ffe266;
