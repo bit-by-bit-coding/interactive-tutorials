@@ -3,9 +3,10 @@
 let bodySegmentCount = 1;
 let bodySegmentMaxLimit = 8;
 let bodySegmentMinLimit = 1;
-const minusButton = document.getElementById('minus-button')
-const plusButton = document.getElementById('plus-button')
-const caterpillar = document.getElementById('showcase-section')
+const minusButton = document.getElementById('minus-button');
+const plusButton = document.getElementById('plus-button');
+const caterpillar = document.getElementById('showcase-section');
+const greenButton = document.getElementById('green-button');
 
 
 function addBodySegments(){
@@ -47,9 +48,17 @@ function onMinusClick() {
   subtractBodySegments();
 }
 
+const addedDivs = document.querySelectorAll('.body-segment');
+
+function makeGreenSegments() {
+for (i = 0; i < addedDivs.length; i++) {
+  console.log('green!')
+  console.log(addedDivs.length)
+  addedDivs[i].style.color = "green";
+};
+};
+
+greenButton.addEventListener('click', makeGreenSegments)
+
 plusButton.addEventListener('click', onPlusClick);
 minusButton.addEventListener('click', onMinusClick);
-
-
-
-

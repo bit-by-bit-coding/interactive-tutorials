@@ -23,25 +23,44 @@
       <div class="description">
         <p>
           Loops are a way to do an action over and over again, within constraints that you set.<br>
-          Use the input boxes below to add body segments to the BitbyBotapillar, then use the second set 
-          to change all the body segments. 
+          It is a good way to alter a bunch of things at once!<br>
+          There are a few different types of loops, but we are going to focus on a <span class="bold">for loop.</span>
+
+        <img id="loop-explanation" src="/assets/loop-image.png" alt="parts of a for loop">
+      Use the input boxes below to add body segments to the BitbyBotapillar, then use the second set 
+          to change all the body segments. <br>
           This will also change the loop code below.<br>
         </p>
-        <img class="bitbybitbot" src="https://bitbybitcoding.org/imgs/happybot.PNG">
+        <img style="flex: 0; height: 10em;" src="https://bitbybitcoding.org/imgs/happybot.PNG">
       </div>
+      
     </div>
     <div class="flex-box" style="margin: 1em 0;">
       <div class="flex-col section">
+        <p>Caterpillar Body Segments: <a id="body-segment-count">1</a></p>
       <button type="button" id="minus-button">-1</button>
       <button type="button" id="plus-button">+1</button>
-      <p>Caterpillar Segments: <a id="body-segment-count">1</a></p>
+      
       <p id="min-max-message"></p>
-      <p>Options: <a id="options">will go here</a></p>
+      <p>Options: <a id="options">change colors</a>
+      move position
+      </p>
+      <button type="button" id="green-button">green</button>
+     
       </div>
       <div id="showcase-section" class="flex-col section caterpillar-container">
        <img id="bitbybotterpillar-head" src="/assets/bitbybotterpillar-head.png" alt="Bit By Botterpillar Head">
        <div class="body-segment" id="bodysegment-1"></div>
       </div>
+    </div>
+    <div id="loop-section" class="flex-col section">
+      
+  <span class="big-code">
+    for (let i=0; i < bodySegments.length; i++) {<br>
+    <br>
+    //change color of segments<br><br>
+  }</span>
+     
     </div>
   </div>
 
