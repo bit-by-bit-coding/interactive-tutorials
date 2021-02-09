@@ -1,1 +1,38 @@
-@import "../assets/common.scss"
+@import '../assets/common.scss';
+
+$highlighter: #ffe266;
+
+.array-element {
+  padding: 0;
+  border: 0.2em solid #38bfe7;
+  margin-bottom: 1em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $highlighter;
+  }
+}
+
+.selected {
+  background-color: $highlighter;
+}
+
+.tooltip {
+  display: none;
+  background-color: $highlighter;
+  z-index: 1000;
+  width: 20px;
+  position: absolute;
+}
+
+.hover-me:hover .tooltip {
+  display: block;
+}
+
+.i-val {
+  background-color: #38bfe7;
+  font-size: 1.2em;
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  margin: 0;
+}
