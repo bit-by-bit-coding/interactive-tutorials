@@ -48,14 +48,15 @@ function onMinusClick() {
   subtractBodySegments();
 }
 
-const addedDivs = document.querySelectorAll('.body-segment');
+
 
 function makeGreenSegments() {
+const addedDivs = document.querySelectorAll('.body-segment');
 for (i = 0; i < addedDivs.length; i++) {
   console.log('green!')
   console.log(addedDivs.length)
-  addedDivs[i].style.color = "green";
-};
+  addedDivs[i].style.background = "green";
+}
 };
 
 greenButton.addEventListener('click', makeGreenSegments)
