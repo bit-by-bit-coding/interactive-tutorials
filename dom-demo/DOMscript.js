@@ -49,7 +49,7 @@ submit.onclick = async function() {
     post.style.border = "3px solid black";
     generatedCode = "";
     if (giveID.value != "") {
-        generatedCode += colorText("let", "#77F") + " " + colorText(giveID.value, "#8EF") + " = document." + colorText("getElementById", "#FFA") + "(" + colorText("\"#" + giveID.value + "\"", "#C90") + ");<br>";
+        generatedCode += colorText("let", "#77F") + " " + colorText(giveID.value, "#8EF") + " = document." + colorText("getElementById", "#FFA") + "(" + colorText("\"" + giveID.value + "\"", "#C90") + ");<br>";
         chosenID = giveID.value;
     }
     else
@@ -57,7 +57,7 @@ submit.onclick = async function() {
     DOMCode.innerHTML = generatedCode;
     if (giveText.value != "Hello world! I am a div.") {
         var codeFriendlyText = giveText.value.replace(/\"/g, "\\\"");
-        generatedCode += colorText(chosenID, "#8EF") + "." + colorText("textContent", "#FAF") + " = " + colorText("\"" + codeFriendlyText + "\"", "#C90") + ";<br>";
+        generatedCode += colorText(chosenID, "#8EF") + "." + colorText("innerText", "#FAF") + " = " + colorText("\"" + codeFriendlyText + "\"", "#C90") + ";<br>";
         await sleep(SPEED);
     }
     DOMCode.innerHTML = generatedCode;
