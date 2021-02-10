@@ -7,6 +7,7 @@ const minusButton = document.getElementById('minus-button');
 const plusButton = document.getElementById('plus-button');
 const caterpillar = document.getElementById('showcase-section');
 const greenButton = document.getElementById('green-button');
+const orangeButton = document.getElementById('orange-button');
 
 
 function addBodySegments(){
@@ -48,18 +49,21 @@ function onMinusClick() {
   subtractBodySegments();
 }
 
-
-
 function makeGreenSegments() {
 const addedDivs = document.querySelectorAll('.body-segment');
 for (i = 0; i < addedDivs.length; i++) {
-  console.log('green!')
-  console.log(addedDivs.length)
   addedDivs[i].style.background = "green";
 }
 };
 
-greenButton.addEventListener('click', makeGreenSegments)
+function makeOrangeSegments() {
+  const addedDivs = document.querySelectorAll('.body-segment');
+  for (i = 0; i < addedDivs.length; i++) {
+    addedDivs[i].style.background = "#ff8900";
+  }
+  };
 
+greenButton.addEventListener('click', makeGreenSegments)
+orangeButton.addEventListener('click', makeOrangeSegments)
 plusButton.addEventListener('click', onPlusClick);
 minusButton.addEventListener('click', onMinusClick);
