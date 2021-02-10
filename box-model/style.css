@@ -1,127 +1,165 @@
+/* style.scss */
+/* Import the common styling */
+/* common.scss */
+/* Define all the colors */
 body {
-    background-color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
+  margin: 5em 0 0 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
 }
 
 button {
-    border: none;
-    background: #38Bfe7;
-    padding: 0.5em 1em;
-    -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-            box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-  }
-  
-  button:hover {
-    background-color: #19a8d3;
-  }
-  
-  button:active {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  
-  #header {
-    padding: 1em 2em;
-    background-color: white;
-    color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 3em;
-    z-index: 1000;
-    opacity: 95%;
-    -webkit-box-shadow: 0 2px 2px #eee;
-            box-shadow: 0 2px 2px #eee;
-  }
-  
-  #header > * {
-    display: inline-block;
-    margin: 0;
-  }
-  
-  #header button {
-    width: 3em;
-  }
-  
-  #back-button {
-    padding: 0.25em 1em;
-    font-size: 1em;
-    height: 100%;
-  }
+  border: none;
+  background: #38Bfe7;
+  padding: 0.5em 1em;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+}
+button:hover {
+  background-color: #19a8d3;
+}
+button:active {
+  box-shadow: none;
+}
 
-  .flex-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  .flex-col {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    padding: 0;
-  }
-  
-  .flex-col:not(:last-child) {
-    margin: 0 0.2em 0 0;
-  }
-  
-  .flex-col:last-child {
-    margin: 0 0 0 0.2em;
-  }
-  
-  .no-flex-col {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
-  }
+#header {
+  padding: 1em 2em;
+  background-color: white;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 3em;
+  z-index: 1000;
+  opacity: 95%;
+  box-shadow: 0 2px 2px #eee;
+}
+#header > * {
+  display: inline-block;
+  margin: 0;
+}
+#header button {
+  width: 3em;
+}
 
-h1 {
-    text-align: center;
+#back-button {
+  padding: 0.25em 1em;
+  font-size: 1em;
+  height: 100%;
 }
-#container {
-    margin: auto;
-    display: block;
-    border: 1px solid black;
-    background-image: url("https://i.pinimg.com/originals/e1/a9/f9/e1a9f9b1803a305cc54e3d409b63a332.gif");
-    width: 300px;
-    height: 300px;
+
+.content {
+  padding: 1em;
+  max-width: 80%;
+  margin: 0 auto;
 }
-#dynamic {
-    display: flex;
-    background-color: red;
-    border: 0px solid black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 300px;
-    height: 300px;
-    font-weight: 200;
+
+.section {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
 }
-#content {
-    background-color: transparent;
-    overflow: hidden;
-    height: 300px;
-    word-break: break-all;
+
+.flex-box {
+  display: flex;
 }
-#controls {
-    width: 340px;
-    height: 500px;
-    padding: 20px;
-    position: absolute;
-    top: 115px;
-    right: 15px;
-    background-color: lightblue;
-    font-family: Courier;
-    font-weight: 200;
+
+.flex-col {
+  flex: 1;
+  padding: 0.5em;
 }
-#instructions {
-    border: 0.2em solid #38Bfe7;
-    width: 300px;
-    height: 300px;
-    float: left;
-    padding: 0px 8px 0px 8px;
+
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
 }
+
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
+}
+
+.no-flex-col {
+  flex: 0;
+}
+
+.showcase-section {
+  padding: 0;
+}
+
+.editor-section {
+  position: relative;
+  overflow: scroll;
+  padding: 0;
+}
+
+.editor {
+  margin: 0;
+  height: 20em;
+  width: calc(100% - 35px - calc(0.625em*2));
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  padding: 1px 0.625em;
+}
+
+.editor-button-overlay {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 0;
+}
+
+/* The page-specific styling */
+.container {
+  margin: auto;
+  display: inline-block;
+  border: 1px solid black;
+  background-image: url("https://i.pinimg.com/originals/e1/a9/f9/e1a9f9b1803a305cc54e3d409b63a332.gif");
+  vertical-align: top;
+}
+
+.dynamic {
+  display: flex;
+  background-color: #1bb1de;
+  color: #fff;
+  border: 0px solid #ff8900;
+  width: 20em;
+  height: 20em;
+}
+
+.div-content {
+  background-color: transparent;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  position: absolute;
+}
+
+.controls {
+  display: inline-block;
+  width: 20em;
+  padding: 1.2em;
+  background-color: #1bb1de;
+  color: #fff;
+}
+
 .slider {
-    float: right;
+  display: flex;
+  padding-left: 2em;
 }
+.slider > input {
+  flex: 1;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.center-content {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */
