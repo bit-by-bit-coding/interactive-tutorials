@@ -56,6 +56,20 @@ button:active {
   margin: 0 auto;
 }
 
+/*Flexbox*/
+.flex-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-box-close{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
