@@ -69,6 +69,10 @@ button:active {
   align-items: center;
 }
 
+.flexitem{
+  flex: 1 1 200px;
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
