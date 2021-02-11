@@ -63,7 +63,7 @@ button:active {
 }
 
 /*Flexbox*/
-.flex-box{
+.flex-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
