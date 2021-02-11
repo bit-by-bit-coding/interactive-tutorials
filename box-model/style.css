@@ -56,13 +56,13 @@ button:active {
 }
 
 /*Flexbox*/
-.flex-box{
+.flex-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.flex-box-close{
+.flex-container-close{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
