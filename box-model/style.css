@@ -70,6 +70,15 @@ button:active {
   max-width: max-content;
 }
 
+.flex-item{
+  flex: 1 1 200px;
+}
+
+.flex-item-close{
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
