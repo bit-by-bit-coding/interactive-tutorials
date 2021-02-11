@@ -71,7 +71,7 @@ button:active {
 }
 
 /*Flexbox*/
-.flex-container{
+.flex-container-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,12 +84,12 @@ button:active {
   max-width: max-content;
 }
 
-.flex-container-div{
+.flex-container{
   display: flex;
   justify-content: space-between;
 }
 
-.flex-item{
+.flex-item-header{
   flex: 1 1 200px;
 }
 
@@ -98,7 +98,7 @@ button:active {
   max-width: max-content;
 }
 
-.flex-col {
+.flex-item {
   flex: 1 1 100px;
   padding: 0.5em;
   margin: 0 0.2em 0 0;

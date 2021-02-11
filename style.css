@@ -63,13 +63,13 @@ button:active {
 }
 
 /*Flexbox*/
-.flex-container{
+.flex-container-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.flex-item{
+.flex-item-header{
   flex: 1 1 200px;
 }
 
