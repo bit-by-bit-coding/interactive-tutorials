@@ -69,8 +69,19 @@ button:active {
   align-items: center;
 }
 
-.flexitem{
+.flex-item{
   flex: 1 1 200px;
+}
+
+#top-heading{
+  width: max-content;
+}
+
+#bxb-logo{
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
 }
 
 .section {
