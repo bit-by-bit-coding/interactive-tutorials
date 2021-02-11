@@ -64,27 +64,6 @@ button:active {
   color: #000;
 }
 
-.flex-box {
-  display: flex;
-}
-
-.flex-col {
-  flex: 1;
-  padding: 0.5em;
-}
-
-.flex-col:not(:last-child) {
-  margin: 0 0.2em 0 0;
-}
-
-.flex-col:last-child {
-  margin: 0 0 0 0.2em;
-}
-
-.no-flex-col {
-  flex: 0;
-}
-
 .showcase-section {
   padding: 0;
 }
