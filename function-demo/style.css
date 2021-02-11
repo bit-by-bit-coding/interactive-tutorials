@@ -37,7 +37,6 @@ button:active {
   box-shadow: 0 2px 2px #eee;
 }
 #header > * {
-  display: inline-block;
   margin: 0;
 }
 #header button {
@@ -47,7 +46,7 @@ button:active {
 #back-button {
   padding: 0.25em 1em;
   font-size: 1em;
-  height: 100%;
+  height: 48px;
 }
 
 .content {
@@ -64,25 +63,44 @@ button:active {
   color: #000;
 }
 
-.flex-box {
+/*Flexbox*/
+.flex-container-header{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.flex-col {
-  flex: 1;
-  padding: 0.5em;
+.flex-container-close{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
 }
 
-.flex-col:not(:last-child) {
-  margin: 0 0.2em 0 0;
+.flex-container{
+  display: flex;
+  justify-content: space-between;
 }
 
-.flex-col:last-child {
-  margin: 0 0 0 0.2em;
+.flex-item-header{
+  flex: 1 1 200px;
 }
 
-.no-flex-col {
-  flex: 0;
+.flex-item-close{
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
+#top-heading{
+  width: max-content;
+  text-align: left;
+}
+
+#bxb-logo{
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
 }
 
 .showcase-section {
