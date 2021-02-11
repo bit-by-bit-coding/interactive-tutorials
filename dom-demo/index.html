@@ -1,65 +1,62 @@
 <html>
-    <head>
-        <title>Document-Object Model Demo</title>
-        <link rel="stylesheet" href="style.css">
+  <head>
+    <title>Document-Object Model Demo</title>
+    <link rel="stylesheet" href="style.css">
 
-        <link rel="stylesheet" href="../assets/prism.css">
-        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
-    </head>
+    <link rel="stylesheet" href="../assets/prism.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+  </head>
 
-    <body >
-        <div id="header" class="flex-box">
-            <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
-              <button id="back-button" title="Back to all demos">
-                <i class="fas fa-arrow-left"></i>
-              </button>
-            </a>
-            <h1 class="flex-col">Document-Object Model (DOM) Demo</h1>
-            <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  <body>
+    <div id="header" class="flex-box">
+      <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
+        <button id="back-button" title="Back to all demos">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+      </a>
+      <h1 class="flex-col">Document-Object Model (DOM) Demo</h1>
+      <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+    <div id="bigcont">
+      <div id="leftcont">
+          <p id="idText"> ID: <input id="giveID" type="text"></p>
+          <div id="pre">
+              <p>Hello world! I am a div.</p>
           </div>
+      </div>
+      <div id="arrow">
+          <i id="arrowIcon" class="fas fa-arrow-right"></i>
+          <!-- <img src="https://img.icons8.com/?id=eEcZcOKmYvIJ&size=2x&color=000000"> -->
+      </div>
 
-        <div id="bigcont">
-            <div id="leftcont">
-                <p id="idText"> ID: <input id="giveID" type="text"></p>
-                <div id="pre">
-                    <p>Hello world! I am a div.</p>
-                </div>
-            </div>
-           <div id="arrow">
-                <i id="arrowIcon" class="fas fa-arrow-right"></i>
-                <!-- <img src="https://img.icons8.com/?id=eEcZcOKmYvIJ&size=2x&color=000000"> -->
-            </div>
-
-            <div id="rightcont">
-                <p>The ID of this div is: <code id="showID">N/A</code></p>
-                <div id="post">
-                    <p id="postContent">Hello world! I am a div.</p>
-                </div>
-
-                <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br><br>
-
-                <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br><br>
-                <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br><br>
-                <span>Change border:<br><input id="giveWidth" type="text" value="3">px solid <input id="giveBorderColor" type="text" value="black"></span><br><br>
-                <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
-                <button id="submit">GO!</button>
-            </div>
+      <div id="rightcont">
+        <p>The ID of this div is: <code id="showID">N/A</code></p>
+        <div id="post">
+          <p id="postContent">Hello world! I am a div.</p>
         </div>
-        <div id="infoText">
-            <h3>Let's see how the DOM (Document-Object Model) works in JavaScript!<br><br>The goal is to change this div tag using JavaScript.<br><br>First things first, we need to find some way to reference (talk about) this div in our JavaScript. It helps if the div tag has a name -- click on the ID input box on the upper left and type out an ID. <br><br>
-                After giving it an ID, look at all the input boxes on the right. Try typing different values for the text, colors, and border. <br><br>
-                Once you have finished, click the GO! button. It will show you, line by line, the JavaScript necessary to change the div tag according to the descriptions that you wrote.<br><br>If all of the lines of code go by too fast or too slow, feel free to change the transition speed.</h3>
-        </div>
-        <br>
-        <div id="secondcont">
 
+        <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br><br>
 
-            <h2 style="padding-left: 10px;">JavaScript code showing the transition:</h2>
-            <br>
-            <div id="DOMCode"></div>
-        </div>
-        <script src="DOMscript.js"></script>
-    </body>
+        <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br><br>
+        <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br><br>
+        <span>Change border:<br><input id="giveWidth" type="text" value="3">px solid <input id="giveBorderColor" type="text" value="black"></span><br><br>
+        <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
+        <button id="submit">GO!</button>
+      </div>
+    </div>
+    <div id="infoText">
+      <h3>Let's see how the DOM (Document-Object Model) works in JavaScript!<br><br>The goal is to change this div tag using JavaScript.<br><br>First things first, we need to find some way to reference (talk about) this div in our JavaScript. It helps if the div tag has a name -- click on the ID input box on the upper left and type out an ID. <br><br>
+          After giving it an ID, look at all the input boxes on the right. Try typing different values for the text, colors, and border. <br><br>
+          Once you have finished, click the GO! button. It will show you, line by line, the JavaScript necessary to change the div tag according to the descriptions that you wrote.<br><br>If all of the lines of code go by too fast or too slow, feel free to change the transition speed.</h3>
+    </div>
+    <br>
+    <div id="secondcont">
+      <h2 style="padding-left: 10px;">JavaScript code showing the transition:</h2>
+      <br>
+      <div id="DOMCode"></div>
+    </div>
+    <script src="DOMscript.js"></script>
+  </body>
 </html>
