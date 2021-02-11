@@ -79,6 +79,17 @@ button:active {
   max-width: max-content;
 }
 
+#top-heading{
+  width: max-content;
+}
+
+#bxb-logo{
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
