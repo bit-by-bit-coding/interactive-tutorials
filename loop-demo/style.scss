@@ -47,6 +47,28 @@
   font-weight: 800;
 }
 
+.description {
+  padding: 15px;
+}
+
+.option-buttons {
+  button {
+    padding: 5px;
+    margin: 10px;
+  }
+}
+
+.bounce {
+  animation:bouncy 1s infinite;
+}
+
+@keyframes bouncy { 
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-30px);} 
+  60% {transform: translateY(-15px);} 
+}
+
+
 #minus-button {
   margin-right: 5px;
 }
@@ -63,6 +85,3 @@
   width: 100%;
 }
 
-.description {
-  padding: 15px;
-}
