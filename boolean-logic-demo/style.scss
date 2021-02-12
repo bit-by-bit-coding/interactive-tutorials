@@ -8,11 +8,11 @@
   display: none;
 }
 #scrollwrapper{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 30px;
-    position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 30px;
+  position: relative;
 }
 #card1, #card2, #card3, #card4, #card5{
   flex: 0 0 auto;
@@ -22,33 +22,33 @@
   padding: 0.5em;
 }
 #check1, #check2, #check3, #check4, #check5{
-    width: 50px;
-    height: 50px;
-    border: 3px solid #000000;
-    display: inline-block;
-    text-align: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  display: inline-block;
+  text-align: center;
 }
 @keyframes rotate {
-    0% {
-      background-color: red;
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    25% {
-      background-color: yellow;
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-    50% {
-      background-color: green;
-      transform: translate(-50%, -50%) rotate(180deg);
-    }
-    75% {
-      background-color: indigo;
-      transform: translate(-50%, -50%) rotate(270deg);
-    }
-    100% {
-      background-color: hotpink;
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
+  0% {
+    background-color: red;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  50% {
+    background-color: green;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  75% {
+    background-color: indigo;
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+  100% {
+    background-color: hotpink;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 #bitbybot{
   position: fixed;
@@ -69,22 +69,22 @@
 }
 
 select{
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 0.875em;
-    line-height: 1.25em;
-    margin-bottom: 2px;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  margin-bottom: 2px;
 }
 label{
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 1em;
-    line-height: 1.25em;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1em;
+  line-height: 1.25em;
 }
 table, th, td{
-    border: 0.0625em solid $primary-color;
-    border-collapse: collapse;
+  border: 0.0625em solid $primary-color;
+  border-collapse: collapse;
 }
 th, td{
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 input {
