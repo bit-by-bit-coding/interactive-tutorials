@@ -1,181 +1,71 @@
 @import "../assets/common.scss";
-#header {
-    padding: 1em 2em;
-    background-color: #ffffff;
-    color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 3em;
-    z-index: 1000;
-    opacity: 95%;
-    box-shadow: 0 2px 2px #eee;
-}
-#explinations{
-    float: left;  
-}
-#operationGame{
-    float: right;
-}
-#explinations, #operationGame, #instructionsTwo {  
-    font-weight: 100;
-    border: 3px solid #000000;
-    background-color: #fff;
-    color: #000;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 24px;
-    padding: 30px;
-    height: 550px;
-    width: 45%;
-    margin: 20px;
 
-}
-@media (max-width: 1902px){
-    #explinations, #operationGame, #instructionsTwo{
-        overflow: scroll;
-    }
-}
-#partOneContainer, #partTwoContainer{
-    height: 650px;
-    width: 100%;
-    display: flex;
-    background-color: #fff;
-    color: black;
-    border: 0.2em solid #38Bfe7;
-    padding-bottom: 20px;
-    margin-bottom: 100px;
-}
-#partTwoMarker{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 0.2em solid #38Bfe7;
+#instructionsOne {
+  padding: 0.5em;
 }
 
 #transition, #thirdValue, #secondOperation, #fourthValue{
-    display: none;
-}
-#result{
-    font-size: xx-large;
-}
-#partTwoContainer{
-    align-items: center;
-    height: auto;
-    display: block;
-    position: relative;
-}
-#partTwoText{
-    font-size: xx-large;
-}
-#instructionsTwo{
-    height: 300px;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    overflow: hidden;
+  display: none;
 }
 #scrollwrapper{
- 
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    border: 3px solid #000000;
-    background-color: #fff;
-    color: #000;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 24px;
     padding: 30px;
-    height: 650px;
-    width:40%;
-    margin-left: 5%;
-    margin-right: 5%;
     position: relative;
-    bottom: 600px;
 }
 #card1, #card2, #card3, #card4, #card5{
-    flex: 0 0 auto;
-    border: 3px solid #000000;
-    width: 600px;
-    margin: 2px;
-    padding: 10px
+  flex: 0 0 auto;
+  border: 0.125em solid #000000;
+  width: 20em;
+  margin: 0.25em;
+  padding: 0.5em;
 }
 #check1, #check2, #check3, #check4, #check5{
     width: 50px;
     height: 50px;
     border: 3px solid #000000;
-    position: relative;
-    left: 1000px;
-    top: 60px;
     display: inline-block;
     text-align: center;
-    
 }
-#reset{
-    font-family: Verdana, Tahoma, sans-serif;
-    position: relative;
-    left: 1100px;
-    top: 60px;
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-}
-
 @keyframes rotate {
-    0% {background-color: red;}
-    25% {background-color: yellow; transform: rotate(90deg);}
-    50% {background-color: green; transform: rotate(180deg);}
-    75% {background-color: indigo; transform: rotate(270deg);}
-    100% {background-color: hotpink; transform: rotate(360deg);}
+    0% {
+      background-color: red;
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+      background-color: yellow;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    50% {
+      background-color: green;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75% {
+      background-color: indigo;
+      transform: translate(-50%, -50%) rotate(270deg);
+    }
+    100% {
+      background-color: hotpink;
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 #bitbybot{
-    position: relative; 
-    left: 1200px;
-    top: 150px;
-    height: 575px;
-    width: 575px;
-    margin: 0px;
-    padding: 0px;
-    align-items: center;
-    animation-name: rotate;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    visibility: hidden;
-    font-size: xx-large;
-}
-
-
-@media(max-width: 1530px){
-    #check1, #check2, #check3, #check4, #check5{
-        left: 800px
-    }
-    #reset{
-        left: 900px;
-    }
-}
-@media(max-width: 1330px){
-    #check1, #check2, #check3, #check4, #check5{
-        left: 700px
-    }
-    #reset{
-        left: 800px;
-    }
-}
-@media(max-width: 1230px){
-    #check1, #check2, #check3, #check4, #check5{
-        left: 650px
-    }
-    #reset{
-        top: 120px;
-        left: 400px;
-    }
-}
-@media(max-width: 990px){
-    #partTwoContainer{
-        overflow: scroll;
-    }
+  position: fixed;
+  height: 20em;
+  width: 20em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  &.active {
+    animation: rotate 4s infinite;
+  }
+  visibility: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 select{
@@ -190,9 +80,13 @@ label{
     line-height: 1.25em;
 }
 table, th, td{
-    border: 1px solid black;
+    border: 0.0625em solid $primary-color;
     border-collapse: collapse;
 }
 th, td{
-    padding: 10px;
+    padding: 0.5em;
+}
+
+input {
+  width: 3em;
 }
