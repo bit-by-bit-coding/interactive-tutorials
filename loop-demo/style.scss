@@ -24,7 +24,7 @@
 .body-segment {
   height: 55px;
   width: 55px;
-  background-color: $background-color-dark;
+  background-color: $primary-color;
   border-radius: 50%;
 }
 
@@ -61,4 +61,8 @@
 
 #loop-explanation {
   width: 100%;
+}
+
+.description {
+  padding: 15px;
 }
