@@ -15,6 +15,7 @@ button {
   background: #38Bfe7;
   padding: 0.5em 1em;
   box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  cursor: pointer;
 }
 button:hover {
   background-color: #19a8d3;
@@ -55,6 +56,40 @@ button:active {
   margin: 0 auto;
 }
 
+/*Flexbox*/
+.flex-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-close {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
+}
+
+.flex-item-header {
+  flex: 1 1 200px;
+}
+
+.flex-item-close {
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
+#top-heading {
+  width: max-content;
+}
+
+#bxb-logo {
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
@@ -63,44 +98,25 @@ button:active {
   color: #000;
 }
 
-/*Flexbox*/
-.flex-container-header{
+.flex-box {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.flex-container-close{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  max-width: max-content;
+.flex-col {
+  flex: 1;
+  padding: 0.5em;
 }
 
-.flex-container{
-  display: flex;
-  justify-content: space-between;
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
 }
 
-.flex-item-header{
-  flex: 1 1 200px;
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
 }
 
-.flex-item-close{
-  flex: 1 1 100px;
-  max-width: max-content;
-}
-
-#top-heading{
-  width: max-content;
-  text-align: left;
-}
-
-#bxb-logo{
-  max-height: 3em;
-  display: block;
-  text-align: left;
-  margin-left: calc(100% - 200px);
+.no-flex-col {
+  flex: 0;
 }
 
 .showcase-section {
