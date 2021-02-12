@@ -6,7 +6,7 @@ let bodySegmentMinLimit = 1;
 const minusButton = document.getElementById('minus-button');
 const plusButton = document.getElementById('plus-button');
 const caterpillar = document.getElementById('showcase-section');
-const greenButton = document.getElementById('green-button');
+const blueButton = document.getElementById('blue-button');
 const orangeButton = document.getElementById('orange-button');
 
 
@@ -42,28 +42,29 @@ function subtractBodySegments(){
 
 function onPlusClick() {
     addBodySegments();
-  
 };
 
 function onMinusClick() {
   subtractBodySegments();
 }
 
-function makeGreenSegments() {
+
+function makeColorSegments(color) {
 const addedDivs = document.querySelectorAll('.body-segment');
-for (i = 0; i < addedDivs.length; i++) {
-  addedDivs[i].style.background = "green";
+let running = 0;
+  if(running > 0) return;
+for (let i = 0; i < addedDivs.length; i++) {
+  running++;
+  setTimeout(function() {
+    addedDivs[i].style.backgroundColor = color;
+    running--;
+  }, 300*i);
+  
 }
 };
 
-function makeOrangeSegments() {
-  const addedDivs = document.querySelectorAll('.body-segment');
-  for (i = 0; i < addedDivs.length; i++) {
-    addedDivs[i].style.background = "#ff8900";
-  }
-  };
 
-greenButton.addEventListener('click', makeGreenSegments)
-orangeButton.addEventListener('click', makeOrangeSegments)
+blueButton.addEventListener('click', () => makeColorSegments('#38Bfe7'))
+orangeButton.addEventListener('click', () => makeColorSegments('#ff8900'))
 plusButton.addEventListener('click', onPlusClick);
 minusButton.addEventListener('click', onMinusClick);

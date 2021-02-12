@@ -152,7 +152,7 @@ button:active {
 .body-segment {
   height: 55px;
   width: 55px;
-  background-color: #1bb1de;
+  background-color: #38Bfe7;
   border-radius: 50%;
 }
 
@@ -198,5 +198,9 @@ button:active {
 
 #loop-explanation {
   width: 100%;
+}
+
+.description {
+  padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */
