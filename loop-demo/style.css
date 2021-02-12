@@ -184,6 +184,50 @@ button:active {
   font-weight: 800;
 }
 
+.description {
+  padding: 15px;
+}
+
+.option-buttons button {
+  padding: 5px;
+  margin: 10px;
+}
+
+.bounce {
+  -webkit-animation: bouncy 1s infinite;
+          animation: bouncy 1s infinite;
+}
+
+@-webkit-keyframes bouncy {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bouncy {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
 #minus-button {
   margin-right: 5px;
 }
@@ -198,9 +242,5 @@ button:active {
 
 #loop-explanation {
   width: 100%;
-}
-
-.description {
-  padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */
