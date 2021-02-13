@@ -25,6 +25,11 @@ let interactiveTutorials = {
     path: 'box-model',
     title: 'BOX MODEL',
     content: "Margin, border, padding. Every HTML element has these, what do they do?"
+  },
+  booleanLogic: {
+    path: 'boolean-logic-demo',
+    title: 'BOOLEAN LOGIC',
+    content: "How do booleans work? What are operators and statements?"
   }
 }
 
