@@ -43,7 +43,6 @@ button:active {
 }
 
 #header > * {
-  display: inline-block;
   margin: 0;
 }
 
@@ -63,39 +62,34 @@ button:active {
   margin: 0 auto;
 }
 
+/*Flexbox*/
+.flex-container-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-item-header{
+  flex: 1 1 200px;
+}
+
+#top-heading{
+  width: max-content;
+}
+
+#bxb-logo{
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
   border: 0.2em solid #38Bfe7;
   background-color: #fff;
   color: #000;
-}
-
-.flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0.5em;
-}
-
-.flex-col:not(:last-child) {
-  margin: 0 0.2em 0 0;
-}
-
-.flex-col:last-child {
-  margin: 0 0 0 0.2em;
-}
-
-.no-flex-col {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
 }
 
 .showcase-section {
