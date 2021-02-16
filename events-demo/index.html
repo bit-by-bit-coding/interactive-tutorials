@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Events Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-close">
+      <div class="flex-item-close">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-close">EVENTS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section" style="margin-right: 0.5em;">
+      <div style="display: flex; margin-left: 1em;">
+        <img style="flex: 0; height: 10em;" src="https://bitbybitcoding.org/imgs/happybot.PNG">
+        <p style="flex: 1; margin-left: 1em;">
+          An event is the browser’s way of saying, “This thing happened!” <br>
+          You can listen to these events by adding an event handler to the element. <br>
+          Adding an event handler is your way of telling JavaScript, “If this event happens on this element,
+          call this function.” <br><br>
+
+          For example, in this demo, if the selected event happens on the bulb, the power function will be called to
+          turn on/off the bulb.
+          <br>
+        </p>
+      </div>
+    </div>
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="flex-col section" style="margin-right: 0.5em;">
+        <label for="eventsList">Select event to turn on/off the bulb.</label>
+        <br><br>
+        <input type="checkbox" id="onclick"> onclick
+        <input type="checkbox" id="onmouseover"> onmouseover
+        <input type="checkbox" id="onmouseout"> onmouseout
+        <p id="eventDescription"></p>
+      </div>
+      <div class="flex-col section" style="margin-right: 0.5em;">
+        <img id="bulbImage" src="bulbon.png" style="display:block;margin:auto;">
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/options.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
