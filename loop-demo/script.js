@@ -17,11 +17,13 @@ function addBodySegments(){
   if(bodySegmentCount < bodySegmentMaxLimit){
     bodySegmentCount++;
     document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    document.getElementById('body-segment-count2').innerHTML = bodySegmentCount;
     document.getElementById('min-max-message').innerHTML = '';
     caterpillar.appendChild(bodySegment);
     bodySegment.classList.add('body-segment');
   } else if (bodySegmentCount >= bodySegmentMaxLimit) {
     document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    document.getElementById('body-segment-count2').innerHTML = bodySegmentCount;
     document.getElementById('min-max-message').innerHTML = 'Only 8 will fit!';
     return;
   }
@@ -31,12 +33,14 @@ function subtractBodySegments(){
   if(bodySegmentCount > bodySegmentMinLimit){
     bodySegmentCount--;
     document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    document.getElementById('body-segment-count2').innerHTML = bodySegmentCount;
     document.getElementById('min-max-message').innerHTML = '';
     let bodySegmentToRemove = document.querySelector(".body-segment:last-of-type")
     caterpillar.removeChild(bodySegmentToRemove);
     
   } else if (bodySegmentCount <= bodySegmentMinLimit) {
     document.getElementById('body-segment-count').innerHTML = bodySegmentCount;
+    document.getElementById('body-segment-count2').innerHTML = bodySegmentCount;
     document.getElementById('min-max-message').innerHTML = 'You have to have at least 1!'
     return;
   }
@@ -52,7 +56,7 @@ function onMinusClick() {
 
 
 function makeColorSegments(color) {
-const addedDivs = document.querySelectorAll('.body-segment');
+let addedDivs = document.querySelectorAll('.body-segment');
 let running = 0;
   if (running > 0) return;
 for (let i = 0; i < addedDivs.length; i++) {
@@ -67,9 +71,10 @@ for (let i = 0; i < addedDivs.length; i++) {
 
 let bouncing = false;
 function bounceSegments(){
-  const addedDivs = document.getElementsByClassName('body-segment');
+  let addedDivs = document.getElementsByClassName('body-segment');
   if (!bouncing) {
     bounceButton.innerText = 'make them stop!'
+    document.getElementById('change-description').innerHTML = 'Make each body segment bounce';
     bouncing = true;
     for (let i = 0; i < addedDivs.length; i++) {
       setTimeout(function() {
@@ -79,6 +84,7 @@ function bounceSegments(){
     }
   } else {
     bounceButton.innerText= 'make them bounce!'
+    document.getElementById('change-description').innerHTML = '';
     for (let i = 0; i < addedDivs.length; i++) {
       setTimeout(function() {
         addedDivs[i].classList.remove('bounce');
@@ -87,14 +93,27 @@ function bounceSegments(){
     bouncing = false;
       
     }
-    
-
 };
 
+function onBlueButtonClick() {
+makeColorSegments('#05D1E2')
+document.getElementById('change-description').innerHTML = 'Make each body segment aqua';
+}
 
-blueButton.addEventListener('click', () => makeColorSegments('#05D1E2'));
-orangeButton.addEventListener('click', () => makeColorSegments('#ff8900'));
-pinkButton.addEventListener('click', () => makeColorSegments('#FD47B3'));
+function onOrangeButtonClick() {
+  makeColorSegments('#ff8900')
+  document.getElementById('change-description').innerHTML = 'Make each body segment orange';
+}
+
+function onPinkButtonClick() {
+  makeColorSegments('#FD47B3')
+  document.getElementById('change-description').innerHTML = 'Make each body segment pink';
+}
+
+
+blueButton.addEventListener('click', onBlueButtonClick);
+orangeButton.addEventListener('click', onOrangeButtonClick);
+pinkButton.addEventListener('click', onPinkButtonClick);
 bounceButton.addEventListener('click', () => bounceSegments());
 plusButton.addEventListener('click', onPlusClick);
 minusButton.addEventListener('click', onMinusClick);
