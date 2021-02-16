@@ -26,10 +26,10 @@ let interactiveTutorials = {
     title: 'BOX MODEL',
     content: "Margin, border, padding. Every HTML element has these, what do they do?"
   },
-  posDemo: {
-    path: 'position-demo',
-    title: 'POSITION DEMO',
-    content: "How to use position property."
+  booleanLogic: {
+    path: 'boolean-logic-demo',
+    title: 'BOOLEAN LOGIC',
+    content: "How do booleans work? What are operators and statements?"
   }
 }
 
