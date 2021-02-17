@@ -37,8 +37,11 @@
 
 .big-code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 2em;
+  font-size: 1.25em;
   color: $primary-color;
+  .comment {
+    color: $accent-color;
+  }
 }
 
 .bold {

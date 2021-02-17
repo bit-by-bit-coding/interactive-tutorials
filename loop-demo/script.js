@@ -74,7 +74,8 @@ function bounceSegments(){
   let addedDivs = document.getElementsByClassName('body-segment');
   if (!bouncing) {
     bounceButton.innerText = 'make them stop!'
-    document.getElementById('change-description').innerHTML = 'Make each body segment bounce';
+    document.getElementById('change-description').innerHTML = 'Adds a css class to each body segment which activates the bounce animation';
+    document.getElementById('code-description').innerHTML = 'bodySegments[i].classList.add(\'bounce\')';
     bouncing = true;
     for (let i = 0; i < addedDivs.length; i++) {
       setTimeout(function() {
@@ -85,6 +86,7 @@ function bounceSegments(){
   } else {
     bounceButton.innerText= 'make them bounce!'
     document.getElementById('change-description').innerHTML = '';
+    document.getElementById('code-description').innerHTML = '';
     for (let i = 0; i < addedDivs.length; i++) {
       setTimeout(function() {
         addedDivs[i].classList.remove('bounce');
@@ -96,18 +98,21 @@ function bounceSegments(){
 };
 
 function onBlueButtonClick() {
-makeColorSegments('#05D1E2')
-document.getElementById('change-description').innerHTML = 'Make each body segment aqua';
+  makeColorSegments('#05D1E2')
+  document.getElementById('change-description').innerHTML = 'Makes each body segment aqua';
+  document.getElementById('code-description').innerHTML = 'bodySegments[i].style.backgroundColor = #05D1E2';
 }
 
 function onOrangeButtonClick() {
-  makeColorSegments('#ff8900')
-  document.getElementById('change-description').innerHTML = 'Make each body segment orange';
+  makeColorSegments('#FF8900')
+  document.getElementById('change-description').innerHTML = 'Makes each body segment orange';
+  document.getElementById('code-description').innerHTML = 'bodySegments[i].style.backgroundColor = #FF8900';
 }
 
 function onPinkButtonClick() {
   makeColorSegments('#FD47B3')
-  document.getElementById('change-description').innerHTML = 'Make each body segment pink';
+  document.getElementById('change-description').innerHTML = 'Makes each body segment pink';
+  document.getElementById('code-description').innerHTML = 'bodySegments[i].style.backgroundColor = #FD47B3';
 }
 
 

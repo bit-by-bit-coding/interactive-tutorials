@@ -34,8 +34,9 @@
           There are a few different types of loops, but we are going to focus on a <span class="bold">for loop.</span>
         </p>
         <img id="loop-explanation" src="/assets/loop-image.png" alt="parts of a for loop"><br>
-     <p>Use the input boxes below to add body segments to the BitbyBotapillar, then use the second set 
-          to change all the body segments. Usually a loop runs very quickly - so quickly you don't see each change individually!
+     <p>Use the buttons below to add body segments to the BitbyBotapillar, then use the second set 
+          to make a change to all the body segments.<br>
+          Usually a loop runs very quickly - so quickly you don't see each change individually!
           But this loop has been slowed down to show you what it does through each run through the loop.<br>
         </p>
       </div>
@@ -44,7 +45,7 @@
     </div>
     <div class="flex-box" style="margin: 1em 0;">
       <div class="flex-col section">
-        <p>Caterpillar Body Segments: <a id="body-segment-count">1</a></p>
+        <p>bodySegments.length =  <a id="body-segment-count">1</a></p>
       <button type="button" id="minus-button">-1</button>
       <button type="button" id="plus-button">+1</button>
       
@@ -69,10 +70,15 @@
     <div id="loop-section" class="flex-col section">
       
   <span class="big-code">
-    for (let i=0; i < <a id="body-segment-count2">1</a>; i++) {<br>
-    <br>
-    // <a id="change-description"></a><br><br>
-  }</span>
+   <span class="comment">// <em>Finds all Bitbybotterpillar body segments and stores them in a variable<br></em></span> 
+    let bodySegments = document.getElementsByClassName('body-segment');<br><br>
+    <span class="comment">// <em>Loop function. bodySegments.length currently equals <a id="body-segment-count2">1</a><br></em></span> 
+   function caterpillarLoop() { <br>
+    &emsp;for (let i=0; i < bodySegments.length; i++) {<br>
+    <span class="comment"> &emsp; // <a id="change-description"></a></span><br>
+    &emsp;<a id="code-description"></a><br>
+    &emsp;}<br>
+   }</span>
      
     </div>
   </div>
