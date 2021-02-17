@@ -198,16 +198,9 @@ button:active {
   font-size: 0.75em;
 }
 
-.bitbybitbot {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
-  height: 10em;
-}
-
 .body-segment {
-  height: 55px;
-  width: 55px;
+  height: 4vw;
+  width: 4vw;
   background-color: #38Bfe7;
   border-radius: 50%;
 }
@@ -297,7 +290,7 @@ button:active {
 }
 
 #bitbybotterpillar-head {
-  height: 100px;
+  height: 7vw;
 }
 
 #loop-explanation {
