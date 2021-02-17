@@ -37,7 +37,7 @@
      <p>Use the buttons below to add body segments to the BitbyBotapillar, then use the second set 
           to make a change to all the body segments.<br>
           Usually a loop runs very quickly - so quickly you don't see each change individually!
-          But this loop has been slowed down to show you what it does through each run through the loop.<br>
+          Choose 'Loop Slowly" if you would like to see it run slowly.<br>
         </p>
       </div>
     </div>
@@ -50,6 +50,13 @@
       <button type="button" id="plus-button">+1</button>
       
       <p id="min-max-message"></p>
+      
+      <input type="radio" name="loop-speed" id="regular-speed" value="regular-speed" checked>
+      <label for="regular-speed">Loop at regular speed</label>
+      <br>
+      
+      <input type="radio" name="loop-speed" id="slow-speed" value="slow-speed">
+      <label for="slow-speed">Loop Slowly</label>
       <p>I want to...
       </p>
       <div class="option-buttons">
@@ -70,7 +77,7 @@
     <div id="loop-section" class="flex-col section">
       
   <span class="big-code">
-   <span class="comment">// <em>Finds all Bitbybotterpillar body segments and stores them in a variable<br></em></span> 
+   <span class="comment">// <em>Finds all BitbyBotapillar body segments and stores them in a variable<br></em></span> 
     let bodySegments = document.getElementsByClassName('body-segment');<br><br>
     <span class="comment">// <em>Loop function. bodySegments.length currently equals <a id="body-segment-count2">1</a><br></em></span> 
    function caterpillarLoop() { <br>
