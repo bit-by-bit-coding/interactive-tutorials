@@ -10,6 +10,7 @@ const blueButton = document.getElementById('blue-button');
 const orangeButton = document.getElementById('orange-button');
 const pinkButton = document.getElementById('pink-button');
 const bounceButton = document.getElementById('bounce-button');
+const slowSpeed = document.getElementById('slow-speed');
 
 
 function addBodySegments(){
@@ -54,47 +55,45 @@ function onMinusClick() {
   subtractBodySegments();
 }
 
-
 function makeColorSegments(color) {
-let addedDivs = document.querySelectorAll('.body-segment');
-let running = 0;
-  if (running > 0) return;
-for (let i = 0; i < addedDivs.length; i++) {
-  running++;
-  setTimeout(function() {
-    addedDivs[i].style.backgroundColor = color;
-    running--;
-  }, 300*i);
-  
-}
+  let addedDivs = document.querySelectorAll('.body-segment');
+  for (let i = 0; i < addedDivs.length; i++) {
+    if(slowSpeed.checked) {
+      setTimeout(function() {
+        addedDivs[i].style.backgroundColor = color;
+      }, 300*i);
+    } else {
+      addedDivs[i].style.backgroundColor = color;
+    };
+  };
 };
 
 let bouncing = false;
 function bounceSegments(){
   let addedDivs = document.getElementsByClassName('body-segment');
   if (!bouncing) {
-    bounceButton.innerText = 'make them stop!'
+    bounceButton.innerText = 'reset bounce';
     document.getElementById('change-description').innerHTML = 'Adds a css class to each body segment which activates the bounce animation';
     document.getElementById('code-description').innerHTML = 'bodySegments[i].classList.add(\'bounce\')';
     bouncing = true;
     for (let i = 0; i < addedDivs.length; i++) {
-      setTimeout(function() {
-      addedDivs[i].classList.add('bounce');
-      }, 300*i);
-      
+      if(slowSpeed.checked) {
+        setTimeout(function() {
+          addedDivs[i].classList.add('bounce');
+          }, 300*i);
+      } else {
+        addedDivs[i].classList.add('bounce');
+      }
     }
   } else {
-    bounceButton.innerText= 'make them bounce!'
+    bounceButton.innerText= 'make them bounce!';
+    bouncing = false;
     document.getElementById('change-description').innerHTML = '';
     document.getElementById('code-description').innerHTML = '';
     for (let i = 0; i < addedDivs.length; i++) {
-      setTimeout(function() {
         addedDivs[i].classList.remove('bounce');
-      }, 300*i);
     }
-    bouncing = false;
-      
-    }
+  }
 };
 
 function onBlueButtonClick() {

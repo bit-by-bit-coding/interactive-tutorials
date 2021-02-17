@@ -254,8 +254,8 @@ button:active {
 }
 
 .bounce {
-  -webkit-animation: bouncy 1s infinite;
-          animation: bouncy 1s infinite;
+  -webkit-animation: bouncy 1s 1;
+          animation: bouncy 1s 1;
 }
 
 @-webkit-keyframes bouncy {
