@@ -51,10 +51,25 @@
 }
 
 .option-buttons {
-  button {
-    padding: 5px;
-    margin: 10px;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: space-evenly;
+    button {
+      padding: 10px;
+      margin: 10px;
+      width: 140px;
+   }
+}
+
+.section {
+  padding: 20px;
+}
+
+.radio-buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .bounce {
@@ -67,6 +82,9 @@
   60% {transform: translateY(-15px);} 
 }
 
+input[type="radio"] {
+  margin-left: 20px;
+}
 
 #minus-button {
   margin-right: 5px;

@@ -241,9 +241,36 @@ button:active {
   padding: 15px;
 }
 
+.option-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .option-buttons button {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
+  width: 140px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.radio-buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .bounce {
@@ -279,6 +306,10 @@ button:active {
     -webkit-transform: translateY(-15px);
             transform: translateY(-15px);
   }
+}
+
+input[type="radio"] {
+  margin-left: 20px;
 }
 
 #minus-button {

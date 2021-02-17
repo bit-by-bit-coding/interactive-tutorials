@@ -45,30 +45,38 @@
     </div>
     <div class="flex-box" style="margin: 1em 0;">
       <div class="flex-col section">
-        <p>bodySegments.length =  <a id="body-segment-count">1</a></p>
+        <div>
+      <p>Add body segments:</p>
       <button type="button" id="minus-button">-1</button>
       <button type="button" id="plus-button">+1</button>
+      <p>bodySegments.length =  <a id="body-segment-count">1</a></p>
+      
       
       <p id="min-max-message"></p>
-      
-      <input type="radio" name="loop-speed" id="regular-speed" value="regular-speed" checked>
-      <label for="regular-speed">Loop at regular speed</label>
-      <br>
-      
-      <input type="radio" name="loop-speed" id="slow-speed" value="slow-speed">
-      <label for="slow-speed">Loop Slowly</label>
-      <p>I want to...
-      </p>
-      <div class="option-buttons">
-      <button type="button" id="blue-button">make them aqua!</button>
-      <button type="button" id="orange-button">make them orange!</button>
     </div>
-    <div class="option-buttons">
-      <button type="button" id="pink-button">make them pink!</button>
-      <button type="button" id="bounce-button">make them bounce!</button>
+    <hr>
+      <div class="radio-buttons">
+        <p>Loop Speed:</p>
+        <input type="radio" name="loop-speed" id="regular-speed" value="regular-speed" checked>
+        <label for="regular-speed">Loop at regular speed</label>
+        <input type="radio" name="loop-speed" id="slow-speed" value="slow-speed">
+        <label for="slow-speed">Loop Slowly</label>
+      </div> 
+      <hr>
+
+      <div>
+        <p>I want to...</p>
+        <div class="option-buttons">
+      
+        
+          <button type="button" id="blue-button">make them aqua!</button>
+          <button type="button" id="orange-button">make them orange!</button>
+        
+          <button type="button" id="pink-button">make them pink!</button>
+          <button type="button" id="bounce-button">make them bounce!</button>
+        </div>
+     </div>
     </div>
-     
-      </div>
       <div id="showcase-section" class="flex-col section caterpillar-container">
        <img id="bitbybotterpillar-head" src="/assets/bitbybotterpillar-head.png" alt="Bit By Botterpillar Head">
        <div class="body-segment"></div>
