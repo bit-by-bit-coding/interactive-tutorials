@@ -70,6 +70,11 @@ button:active {
   max-width: max-content;
 }
 
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+
 .flex-item-header {
   flex: 1 1 200px;
 }
@@ -121,6 +126,7 @@ button:active {
 
 .showcase-section {
   padding: 0;
+  width: 75%;
 }
 
 .editor-section {
