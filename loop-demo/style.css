@@ -203,6 +203,20 @@ button:active {
   width: 4vw;
   background-color: #38Bfe7;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body-segment-number {
+  font-size: 1em;
+  color: white;
 }
 
 .caterpillar-container {
