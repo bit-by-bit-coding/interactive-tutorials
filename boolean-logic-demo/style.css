@@ -13,6 +13,7 @@ button {
   background: #38Bfe7;
   padding: 0.5em 1em;
   box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  cursor: pointer;
 }
 button:hover {
   background-color: #19a8d3;
@@ -35,7 +36,6 @@ button:active {
   box-shadow: 0 2px 2px #eee;
 }
 #header > * {
-  display: inline-block;
   margin: 0;
 }
 #header button {
@@ -45,13 +45,47 @@ button:active {
 #back-button {
   padding: 0.25em 1em;
   font-size: 1em;
-  height: 100%;
+  height: 48px;
 }
 
 .content {
   padding: 1em;
   max-width: 80%;
   margin: 0 auto;
+}
+
+/*Flexbox*/
+.flex-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
+}
+
+.flex-item-header {
+  flex: 1 1 200px;
+}
+
+.flex-item-left {
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
+#top-heading {
+  width: max-content;
+}
+
+#bxb-logo {
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
 }
 
 .section {
@@ -68,7 +102,7 @@ button:active {
 
 .flex-col {
   flex: 1;
-  padding: 0;
+  padding: 0.5em;
 }
 
 .flex-col:not(:last-child) {
@@ -83,12 +117,17 @@ button:active {
   flex: 0;
 }
 
-#editor-section {
-  position: relative;
-  overflow: scroll;
+.showcase-section {
+  padding: 0;
 }
 
-#editor {
+.editor-section {
+  position: relative;
+  overflow: scroll;
+  padding: 0;
+}
+
+.editor {
   margin: 0;
   height: 20em;
   width: calc(100% - 35px - calc(0.625em*2));
@@ -98,14 +137,7 @@ button:active {
   padding: 1px 0.625em;
 }
 
-#explore-show {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border: none;
-}
-
-#button-overlay {
+.editor-button-overlay {
   position: absolute;
   bottom: 1em;
   right: 1em;
