@@ -22,6 +22,14 @@
   width: 4vw;
   background-color: $primary-color;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-segment-number {
+  font-size: 1em;
+  color: white;
 }
 
 .caterpillar-container {

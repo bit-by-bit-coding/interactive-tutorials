@@ -79,7 +79,9 @@
     </div>
       <div id="showcase-section" class="flex-col section caterpillar-container">
        <img id="bitbybotterpillar-head" src="/assets/bitbybotterpillar-head.png" alt="Bit By Botterpillar Head">
-       <div class="body-segment"></div>
+       <div class="body-segment">
+         <span class="body-segment-number">1</span>
+        </div>
       </div>
     </div>
     <div id="loop-section" class="flex-col section">
@@ -87,13 +89,15 @@
   <span class="big-code">
    <span class="comment">// <em>Finds all BitbyBotapillar body segments and stores them in a variable<br></em></span> 
     let bodySegments = document.getElementsByClassName('body-segment');<br><br>
-    <span class="comment">// <em>Loop function. bodySegments.length currently equals <a id="body-segment-count2">1</a><br></em></span> 
+    <span class="comment">// <em>Loop function<br></em></span> 
    function caterpillarLoop() { <br>
     &emsp;for (let i=0; i < bodySegments.length; i++) {<br>
     <span class="comment"> &emsp; // <a id="change-description"></a></span><br>
     &emsp;<a id="code-description"></a><br>
     &emsp;}<br>
-   }</span>
+   };<br><br>
+   <span class="comment"><em>// Calls the function</em></span><br>
+  caterpillarLoop();</span>
      
     </div>
   </div>
