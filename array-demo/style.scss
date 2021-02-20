@@ -17,22 +17,20 @@ $highlighter: #ffe266;
   background-color: $highlighter;
 }
 
-.tooltip {
-  display: none;
-  background-color: $highlighter;
-  z-index: 1000;
-  width: 20px;
-  position: absolute;
-}
-
-.hover-me:hover .tooltip {
-  display: block;
-}
-
 .i-val {
   background-color: #38bfe7;
   font-size: 1.2em;
   display: inline-block;
   padding: 0.3em 0.6em;
   margin: 0;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.explanation {
+  margin-bottom: 0;
 }

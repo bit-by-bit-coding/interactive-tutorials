@@ -24,34 +24,38 @@
       <div class='section flex-col'>
         <h3>INSTRUCTIONS</h3>
         <p>Fill in the text area with comma separated values, then hit the button to see your array in action.</p>
-        <p>My Array: <textarea id="array-vals"></textarea></p>
+        <p>My Array: <input type="text" id="array-vals" /></p>
         <button id="execute-button" title="Execute the code">
           <i class="fas fa-play"></i>
         </button>
         </div>
       <div class='section flex-col'>
         <h3>What is an array?</h3>
-        <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. **change this wording</p>
+        <p>Arrays are special objects that store lists of data in order. In JavaScript, arrays come with functions that allow us to check their length, sort them, add new values to the end of them, etc.</p>
       </div>
     </div>
     <div class='flex-box'>
       <div class='section flex-col'>
+        <h3>ARRAY CONTENTS</h3>
+        <p>The numbers in the blue boxes represent the array "indexes," which put the elements of the array in order. Arrays always start counting at 0, not 1. So the first element of the array is #0, the second is #1, and so on.</p>
         <div id='visualization'>
-          <h3>ARRAY CONTENTS</h3>
+          
         </div>
       </div>
       <div class='section flex-col'>
         <h3>CODE</h3>
-        <p id='code-display' class='hover-me'>
-          <span class = 'tooltip'>1</span>
+        <p>This is what your code will look like in JavaScript:</p>
+        
+        <p class='explanation'>This is how you make a new array:</p>
+        <p id='code-display' class='code'>
         </p>
         
-        <p id="array-length" class='hover-me'>
-          <span class = 'tooltip'>2</span>
+        <p class='explanation'>If you tack a <code>.length</code> on the end of your array name, it will tell you how long your array is:</p>
+        <p id="array-length" class='code'>
         </p>
         
-        <p id='array-at-i' class='hover-me'>
-          <span class = 'tooltip'>3</span>
+        <p class='explanation'>Putting an index number in brackets after your array's name will evaluate to whatever is stored at that spot in the array. Click the elements on the left to change this value:</p>
+        <p id='array-at-i' class='code'>
         </p>
         
       </div>
