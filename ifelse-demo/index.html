@@ -6,17 +6,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
- 
+
 </head>
 <body>
-  <div id="header" class="flex-box">
-    <a href="/interactive-tutorials/" class="no-flex-col" style="margin-right: 1em;">
-      <button id="back-button" title="Back to all demos">
-        <i class="fas fa-arrow-left"></i>
-      </button>
-    </a>
-    <h1 class="flex-col">If/Else demo</h1>
-    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">IF/ELSE DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
   </div>
   <div class="content">
     <div class="section">
@@ -26,13 +32,13 @@
        &gt; will be true if number 1 is greater than number 2.<br>
        === will be true if both numbers are equal. <br>
        &lt;= will be true if number 1 is smaller than or equal to number 2.<br>
-       &gt;= will be true if number 1 is greater than or equal to number 2.<br> 
+       &gt;= will be true if number 1 is greater than or equal to number 2.<br>
       </p>
     </div>
     <div class="flex-box" style="margin: 1em 0;">
       <div class="flex-col section">
         <p>
-         
+
           <!-- <span>First Dropdown:</span> -->
           <div class="option-wrapper">
             <span>Number 1:</span>
@@ -51,7 +57,7 @@
       </div>
       <div class="flex-col section" id="result">
         <p>
-          
+
         </p>
       </div>
     </div>
