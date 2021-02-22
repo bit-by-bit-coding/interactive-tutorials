@@ -12,10 +12,10 @@ body {
 
 button {
   border: none;
-  background: #38Bfe7;
+  background: #38bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  cursor: pointer;
 }
 
 button:hover {
@@ -24,7 +24,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -39,11 +39,10 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
-  display: inline-block;
   margin: 0;
 }
 
@@ -54,7 +53,7 @@ button:active {
 #back-button {
   padding: 0.25em 1em;
   font-size: 1em;
-  height: 100%;
+  height: 48px;
 }
 
 .content {
@@ -63,10 +62,44 @@ button:active {
   margin: 0 auto;
 }
 
+/*Flexbox*/
+.flex-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
+}
+
+.flex-item-header {
+  flex: 1 1 200px;
+}
+
+.flex-item-left {
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
+#top-heading {
+  width: max-content;
+}
+
+#bxb-logo {
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
 }
@@ -79,8 +112,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -94,8 +127,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -111,7 +144,7 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
+  width: calc(100% - 35px - calc(0.625em * 2));
   font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
@@ -147,7 +180,9 @@ button:active {
   margin-left: 0.2em;
 }
 
-#warning1, #warning2, #warning3 {
+#warning1,
+#warning2,
+#warning3 {
   color: red;
   font-size: 0.5em;
 }
@@ -159,7 +194,7 @@ button:active {
 }
 
 #spinner {
-  opacity: 0.0;
+  opacity: 0;
 }
 
 #danceArena {
@@ -169,7 +204,9 @@ button:active {
   height: 350px;
 }
 
-#inputJump, #inputSpeed, #inputTime {
+#inputJump,
+#inputSpeed,
+#inputTime {
   width: 3em;
 }
 
@@ -225,10 +262,10 @@ button:active {
 .ui-dialog {
   display: block;
   padding: 10px;
-  border: 0.2em solid #FF8900;
+  border: 0.2em solid #ff8900;
   background-color: white;
   -webkit-box-shadow: 8px 8px 5px #888888;
-          box-shadow: 8px 8px 5px #888888;
+  box-shadow: 8px 8px 5px #888888;
 }
 
 .ui-widget-header {
@@ -241,156 +278,156 @@ button:active {
   /* The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled and skewed.*/
   0% {
     -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   50% {
     -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   100% {
     -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
 @keyframes headbop {
   /* The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled and skewed.*/
   0% {
     -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   50% {
     -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   100% {
     -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
 
 @-webkit-keyframes wave-rarm {
   0% {
     -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
   }
   100% {
     -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 }
 
 @keyframes wave-rarm {
   0% {
     -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
   }
   100% {
     -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 }
 
 @-webkit-keyframes wave-larm {
   0% {
     -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
   }
   100% {
     -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
   }
 }
 
 @keyframes wave-larm {
   0% {
     -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
   }
   100% {
     -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
   }
 }
 
 @-webkit-keyframes walk {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   33% {
     -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    transform: translateX(-100px);
   }
   66% {
     -webkit-transform: translateY(-35px);
-            transform: translateY(-35px);
+    transform: translateY(-35px);
   }
   100% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 
 @keyframes walk {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   33% {
     -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    transform: translateX(-100px);
   }
   66% {
     -webkit-transform: translateY(-35px);
-            transform: translateY(-35px);
+    transform: translateY(-35px);
   }
   100% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 
 @-webkit-keyframes stomp-rfoot {
   0% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
     -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    transform: translateY(-6px);
   }
 }
 
 @keyframes stomp-rfoot {
   0% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
     -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    transform: translateY(-6px);
   }
 }
 
 @-webkit-keyframes stomp-lfoot {
   0% {
     -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    transform: translateY(-6px);
   }
   100% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
 @keyframes stomp-lfoot {
   0% {
     -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    transform: translateY(-6px);
   }
   100% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -403,7 +440,7 @@ button:active {
   position: absolute;
   left: 105px;
   -webkit-animation: headbop 1s infinite alternate;
-          animation: headbop 1s infinite alternate;
+  animation: headbop 1s infinite alternate;
 }
 
 .robot .body {
@@ -415,29 +452,29 @@ button:active {
 
 .robot .larm {
   -webkit-animation: wave-larm 1s infinite alternate;
-          animation: wave-larm 1s infinite alternate;
+  animation: wave-larm 1s infinite alternate;
   position: absolute;
   z-index: 100;
   -webkit-transform-origin: 80% 60%;
-          transform-origin: 80% 60%;
+  transform-origin: 80% 60%;
   top: 132px;
   left: 50px;
 }
 
 .robot .rarm {
   -webkit-animation: wave-rarm 1s infinite alternate;
-          animation: wave-rarm 1s infinite alternate;
+  animation: wave-rarm 1s infinite alternate;
   position: absolute;
   z-index: 100;
   -webkit-transform-origin: 80% 60%;
-          transform-origin: 80% 60%;
+  transform-origin: 80% 60%;
   top: 132px;
   left: 240px;
 }
 
 .robot .lfoot {
   -webkit-animation: stomp-lfoot 0.5s infinite alternate;
-          animation: stomp-lfoot 0.5s infinite alternate;
+  animation: stomp-lfoot 0.5s infinite alternate;
   position: absolute;
   top: 270px;
   left: 110px;
@@ -445,7 +482,7 @@ button:active {
 
 .robot .rfoot {
   -webkit-animation: stomp-rfoot 0.5s infinite alternate;
-          animation: stomp-rfoot 0.5s infinite alternate;
+  animation: stomp-rfoot 0.5s infinite alternate;
   position: absolute;
   top: 270px;
   left: 182px;

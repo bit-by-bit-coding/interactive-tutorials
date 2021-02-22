@@ -9,14 +9,20 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-box">
-    <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
-      <button id="back-button" title="Back to all demos">
-        <i class="fas fa-arrow-left"></i>
-      </button>
-    </a>
-    <h1 class="flex-col">OBJECT DEMO</h1>
-    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">OBJECT DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
   </div>
   <div class="content">
     <div class="section">
@@ -37,7 +43,7 @@
       </div>
     </div>
     <div class="flex-box" style="margin: 1em 0;">
-      <div id="options-section" class="flex-col section">
+      <div id="options-section" class="flex-col section" style="margin-right: 0.5em;">
         <div class="option-wrapper">
           <span>Wheel Color:</span>
           <input id="wheel-color-option" class="option">
@@ -82,7 +88,7 @@
         </svg>
       </div>
     </div>
-    <div class="editor-section flex-col section">
+    <div class="editor-section flex-item section">
       <div class="editor lang-js"></div>
       <div class="editor-button-overlay">
         <button id="execute-button" title="Execute the code">

@@ -1,29 +1,24 @@
-/* style.scss */
-/* Import the common styling */
 /* common.scss */
 /* Define all the colors */
 body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
 button {
   border: none;
-  background: #38bfe7;
+  background: #38Bfe7;
   padding: 0.5em 1em;
   box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #19a8d3;
 }
-
 button:active {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -38,14 +33,11 @@ button:active {
   max-height: 3em;
   z-index: 1000;
   opacity: 95%;
-  -webkit-box-shadow: 0 2px 2px #eee;
   box-shadow: 0 2px 2px #eee;
 }
-
 #header > * {
   margin: 0;
 }
-
 #header button {
   width: 3em;
 }
@@ -99,20 +91,16 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38bfe7;
+  border: 0.2em solid #38Bfe7;
   background-color: #fff;
   color: #000;
 }
 
 .flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-col {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   padding: 0.5em;
 }
@@ -126,8 +114,6 @@ button:active {
 }
 
 .no-flex-col {
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
   flex: 0;
 }
 
@@ -144,8 +130,8 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em * 2));
-  font-family: 'Anonymous Pro', monospace;
+  width: calc(100% - 35px - calc(0.625em*2));
+  font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -158,41 +144,102 @@ button:active {
   padding: 0;
 }
 
-/* The page-specific styling */
-.showcase-section {
+#instructionsOne {
+  padding: 0.5em;
+}
+
+#transition, #thirdValue, #secondOperation, #fourthValue {
+  display: none;
+}
+
+#scrollwrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 30px;
   position: relative;
 }
 
-.showcase-section svg {
-  position: absolute;
+#card1, #card2, #card3, #card4, #card5 {
+  flex: 0 0 auto;
+  border: 0.125em solid #000000;
+  width: 20em;
+  margin: 0.25em;
+  padding: 0.5em;
+}
+
+#check1, #check2, #check3, #check4, #check5 {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  display: inline-block;
+  text-align: center;
+}
+
+@keyframes rotate {
+  0% {
+    background-color: red;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  50% {
+    background-color: green;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  75% {
+    background-color: indigo;
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+  100% {
+    background-color: hotpink;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+#bitbybot {
+  position: fixed;
+  height: 20em;
+  width: 20em;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  align-items: center;
+  visibility: hidden;
+}
+#bitbybot.active {
+  animation: rotate 4s infinite;
+}
+#bitbybot img {
+  width: 100%;
   height: 100%;
 }
 
-#options-section {
-  min-height: 20em;
-  padding: 0 1em;
+select {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  margin-bottom: 2px;
 }
 
-div.option-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1em 0 1em 0;
+label {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 1em;
+  line-height: 1.25em;
 }
 
-div.option-wrapper > *:first-child {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+table, th, td {
+  border: 0.0625em solid #38Bfe7;
+  border-collapse: collapse;
 }
 
-div.option-wrapper > *:last-child {
-  -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+th, td {
+  padding: 0.5em;
 }
+
+input {
+  width: 3em;
+}
+
 /*# sourceMappingURL=style.css.map */

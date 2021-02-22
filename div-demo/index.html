@@ -9,18 +9,24 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-box">
-    <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
-      <button id="back-button" title="Back to all demos">
-        <i class="fas fa-arrow-left"></i>
-      </button>
-    </a>
-    <h1 class="flex-col">&ltDIV&gt TAG DEMO</h1>
-    <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">&ltDIV&gt TAG DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
   </div>
   <div class="content">
     <div class="flex-box" style="margin: 1em 0;">
-      <div class="editor-section flex-col section">
+      <div class="editor-section flex-col section" style="margin-right: 0.2em;">
         <div class="editor lang-html"></div>
         <div class="editor-button-overlay">
           <button id="execute-button" title="Execute the code">
@@ -31,7 +37,7 @@
           </button>
         </div>
       </div>
-      <div class="showcase-section flex-col section">
+      <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
         <iframe id="explore-show" src="about:blank">
         </iframe>
       </div>

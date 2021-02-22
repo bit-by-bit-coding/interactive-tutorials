@@ -28,10 +28,10 @@ let interactiveTutorials = {
     content:
       'Margin, border, padding. Every HTML element has these, what do they do?',
   },
-  arrays: {
-    path: 'array-demo',
-    title: 'ARRAY DEMO',
-    content: 'What are arrays and how do you use them in JavaScript?',
+  booleanLogic: {
+    path: 'boolean-logic-demo',
+    title: 'BOOLEAN LOGIC',
+    content: 'How do booleans work? What are operators and statements?',
   },
 };
 

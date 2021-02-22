@@ -10,10 +10,10 @@ body {
 
 button {
   border: none;
-  background: #38Bfe7;
+  background: #38bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  cursor: pointer;
 }
 
 button:hover {
@@ -22,7 +22,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -37,11 +37,10 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
-  display: inline-block;
   margin: 0;
 }
 
@@ -52,7 +51,7 @@ button:active {
 #back-button {
   padding: 0.25em 1em;
   font-size: 1em;
-  height: 100%;
+  height: 48px;
 }
 
 .content {
@@ -61,10 +60,44 @@ button:active {
   margin: 0 auto;
 }
 
+/*Flexbox*/
+.flex-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
+}
+
+.flex-item-header {
+  flex: 1 1 200px;
+}
+
+.flex-item-left {
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
+#top-heading {
+  width: max-content;
+}
+
+#bxb-logo {
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
 }
@@ -77,8 +110,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -92,8 +125,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -109,7 +142,7 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
+  width: calc(100% - 35px - calc(0.625em * 2));
   font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
@@ -132,12 +165,14 @@ button:active {
   overflow: hidden;
 }
 
-#leftcont, #rightcont {
+#leftcont,
+#rightcont {
   padding: 30px;
   height: 400px;
 }
 
-#pre, #post {
+#pre,
+#post {
   border: 3px solid #000000;
   background-color: #fff;
   color: #000;
@@ -164,7 +199,9 @@ button:active {
   margin-right: 30px;
 }
 
-#giveBGColor, #giveColor, #giveBorderColor {
+#giveBGColor,
+#giveColor,
+#giveBorderColor {
   width: 75px;
 }
 
@@ -183,21 +220,21 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ffe1bf;
   color: black;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   padding-bottom: 20px;
 }
 
 #secondcont {
   display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   float: right;
@@ -247,7 +284,8 @@ h1 {
 }
 
 @media (max-width: 1384px) {
-  #pre, #post {
+  #pre,
+  #post {
     width: 150px;
   }
   #rightcont {
@@ -257,8 +295,7 @@ h1 {
     width: 80%;
   }
 }
-
-#header {
+<<<<<<< HEAD #header {
   padding: 1em 2em;
   background-color: #ffffff;
   color: #000;
@@ -270,11 +307,14 @@ h1 {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
 
-@media (max-width: 940px) {
-  #pre, #post {
+=======>>>>>>>25205613dd270d732f97f0c3ad2f8d8cefd9d7ce
+  @media
+  (max-width: 940px) {
+  #pre,
+  #post {
     width: 75px;
   }
   #rightcont {
@@ -293,21 +333,20 @@ h1 {
     font-size: x-small;
   }
 }
-
-body {
+<<<<<<< HEAD body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
 
 button {
   border: none;
-  background: #42C2E8;
+  background: #42c2e8;
   padding: 0.5em 1em;
   -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   color: #fff;
   cursor: pointer;
 }
@@ -318,7 +357,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header > * {
@@ -336,10 +375,10 @@ button:active {
   height: 100%;
 }
 
-#infoText {
+=======>>>>>>>25205613dd270d732f97f0c3ad2f8d8cefd9d7ce #infoText {
   display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   float: left;
@@ -347,7 +386,7 @@ button:active {
   width: 47%;
 }
 
-.content {
+<<<<<<< HEAD .content {
   padding: 1em;
   max-width: 80%;
   margin: 0 auto;
@@ -356,7 +395,7 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   width: 500px;
@@ -364,11 +403,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .flex-box {
@@ -379,8 +418,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0;
 }
 
@@ -394,8 +433,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
 }
 
 #editor-section {
@@ -406,8 +445,8 @@ button:active {
 #editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
-  font-family: "Anonymous Pro", monospace;
+  width: calc(100% - 35px - calc(0.625em * 2));
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -427,9 +466,9 @@ button:active {
   padding: 0;
 }
 
-#arrowIcon {
+=======>>>>>>>25205613dd270d732f97f0c3ad2f8d8cefd9d7ce #arrowIcon {
   font-size: 200px;
-  color: #38Bfe7;
+  color: #38bfe7;
   text-align: center;
   margin: 700px, 0px;
   margin-top: 140px;

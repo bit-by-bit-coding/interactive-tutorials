@@ -1,0 +1,379 @@
+<html>
+<head>
+  <title>Boolean Logic Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">BOOLEAN LOGIC</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class = "flex-box">
+      <div class = "flex-col section">
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Comparison</th>
+            <th>Returns true if...</th>
+          </tr>
+          <tr>
+            <td>===</td>
+            <td>Compares both value and datatype.</td>
+            <td>Returns true if both datatype and value are equal</td>
+          </tr>
+          <tr>
+            <td>!==</td>
+            <td>Compares both value and datatype.</td>
+            <td>Returns true if both datatype and value are <b>not</b> equal</td>
+          </tr>
+          <tr>
+            <td>></td>
+            <td>Compares value.</td>
+            <td>Returns true if first value is greater than the second</td>
+          </tr>
+          <tr>
+            <td> < </td>
+            <td>Compares value.</td>
+            <td>Returns true if first value is less than the second</td>
+          </tr>
+          <tr>
+            <td>>=</td>
+            <td>Compares value.</td>
+            <td>Returns true if first value is greater than or equal to the second</td>
+          </tr>
+          <tr>
+            <td><=</td>
+            <td>Compares value.</td>
+            <td>Returns true if first value is less than or equal to the second</td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>Compares booleans, OR statement</td>
+            <td>Returns true if this value <b>or</b> that value is true</td>
+          </tr>
+          <tr>
+            <td>&&</td>
+            <td>Compares booleans, AND statement</td>
+            <td>Returns true if both values are true</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="instructionsOne" class = "flex-col section">
+        <h3>Instructions:</h3>
+        <p>Choose different numbers and operators to test the different outcomes of operators</p>
+        <p>Also, try adding a second parameter to test the || and && operators</p>
+        <input type = "checkbox" id = "secondOperator" onchange="secondOp()">
+        <label for = "secondOperator">Add Second Parameter<br></label>
+        <label for = "firstValue">if(</label>
+        <input type = "number" value = "1" name = "firstValue" id = "firstValue">
+        <label for = "operation"> </label>
+        <select name = "operation" id = "operation">
+          <option value="===">===</option>
+          <option value="!==">!==</option>
+          <option value=">">></option>
+          <option value="<"><</option>
+          <option value=">=">>=</option>
+          <option value="<="><=</option>
+        </select>
+        <label for = "secondValue"> </label>
+        <input type = "number" value = "1" name = "secondValue" id = "secondValue">
+        <label for = "transition"></label>
+        <select name = "transition" id = "transition">
+          <option value = "and">&&</option>
+          <option value= "or">||</option>
+        </select>
+        <label for = "thirdValue"></label>
+        <input type = "number" value = "1" name = "thirdValue" id = "thirdValue">
+        <label for = "secondOperation"> </label>
+        <select name = "secondOperation" id = "secondOperation">
+          <option value="===">===</option>
+          <option value="!==">!==</option>
+          <option value=">">></option>
+          <option value="<"><</option>
+          <option value=">=">>=</option>
+          <option value="<="><=</option>
+        </select>
+        <label for = "fourthValue"> </label>
+        <input type = "number" value = "1" name = "fourthValue" id = "fourthValue">
+        <label id = "brackets">){}<br></label>
+        <p id = "result"></p>
+      </div>
+    </div>
+    <div id = "partTwo">
+      <div id="instructionsTwo" class="section">
+        <h3>Instructions:</h3>
+        <p>By only changing the value within the variables complete the goals set by each individual box. After completing a task, the next will unlock. The numbered boxes will show your progress. Press the reset button to reset the activity. </p>
+        <p>Once you complete all five a secret might appear :)</p>
+      </div>
+      <div id = "check1">
+        <p>1</p>
+      </div>
+      <div id = "check2">
+        <p>2</p>
+      </div>
+      <div id = "check3">
+        <p>3</p>
+      </div>
+      <div id = "check4">
+        <p>4</p>
+      </div>
+      <div id = "check5">
+        <p>5</p>
+      </div>
+      <button id = "reset" onclick="reset()">Reset</button>
+      <div id="scrollWrapper" class="section">
+        <div id="card1">
+          <p>Goal: Make the div background color Green</p>
+          <label for="pet">let pet = </label>
+          <select id="pet">
+            <option value = "cat">cat</option>
+            <option value = "dog">dog</option>
+            <option value = "turtle">turtle</option>
+            <option value = "fish">fish</option>
+            <option value = "me">me</option>
+            <option value = "you">you</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label for="owner">let owner = </label>
+          <select id="owner">
+            <option value = "cat">cat</option>
+            <option value = "dog">dog</option>
+            <option value = "turtle">turtle</option>
+            <option value = "fish">fish</option>
+            <option value = "me">me</option>
+            <option value = "you">you</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label>if(owner==="dog"){</label>
+          <br>
+          <label>thisDiv.style.backgroundColor = "blue";</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(pet == "fish"){</label>
+          <br>
+          <label>thisDiv.style.backgroundColor = "red";</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(owner == "you"){</label>
+          <br>
+          <label>thisDiv.style.backgroundColor = "green";</label>
+          <br>
+          <label>}</label>
+        </div>
+        <div id="card2">
+          <p>Goal: Make the border color Yellow</p>
+          <label for="balloon">let balloon = </label>
+          <select id="balloon">
+            <option value = "red">red</option>
+            <option value = "blue">blue</option>
+            <option value = "green">green</option>
+            <option value = "yellow">yellow</option>
+            <option value = "purple">purple</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label for="balloonCount">let balloonCount = </label>
+          <select id="balloonCount">
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+            <option value = "6">6</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label>if(balloon != "green" && balloonCount == 5){</label>
+            <br>
+            <label>thisDiv.style.borderColor = "yellow";</label>
+            <br>
+            <label>}</label>
+          <br>
+          <label>if(balloon !="red"){</label>
+          <br>
+          <label>thisDiv.style.borderColor = "green";</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(balloonCount > 3){</label>
+          <br>
+          <label>thisDiv.style.borderColor = "blue";</label>
+          <br>
+          <label>}</label>
+        </div>
+        <div id="card3">
+          <p>Goal: Make the text size 5</p>
+          <label for="car">let car = </label>
+          <select id="car">
+            <option value = "Toyota">Toyota</option>
+            <option value = "Volvo">Volvo</option>
+            <option value = "Nissan">Nissan</option>
+            <option value = "Tesla">Tesla</option>
+            <option value = "Ford">Ford</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label for="numberOfSeats">let numberOfSeats = </label>
+          <select id="numberOfSeats">
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+            <option value = "6">6</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label>if(numberOfSeats === car){</label>
+          <br>
+          <label>thisDiv.style.fontSize = 1;</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(numberOfSeats > 5 || car == "Volvo"){</label>
+          <br>
+          <label>thisDiv.style.fontSize = 25;</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(numberOfSeats >= 3 && numberOfSeats < 5 && car == "Ford"){</label>
+          <br>
+          <label>thisDiv.style.fontSize = 5;</label>
+          <br>
+          <label>}</label>
+        </div>
+        <div id="card4">
+          <p>Goal: Make the text blue</p>
+          <label for="project">let project = </label>
+          <select id="project">
+            <option value = "House">House</option>
+            <option value = "Car">Car</option>
+            <option value = "Robot">Robot</option>
+            <option value = "Game">Game</option>
+            <option value = "Drawing">Drawing</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label for="tool">let tool = </label>
+          <select id="tool">
+            <option value = "Hammer">Hammer</option>
+            <option value = "Screwdriver">Screwdriver</option>
+            <option value = "Wrench">Wrench</option>
+            <option value = "Computer">Computer</option>
+            <option value = "Calculator">Calculator</option>
+            <option value = "Pencil">Pencil</option>
+          </select>
+          <br>
+          <label for="music">let music = </label>
+          <select id="music">
+            <option value = "Rock">Rock</option>
+            <option value = "Rap">Rap</option>
+            <option value = "Pop">Pop</option>
+            <option value = "Jazz">Jazz</option>
+            <option value = "Blues">Blues</option>
+            <option value = "Classical">Classical</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label>if((tool != "Hammer" && project == "Game") || (music == "Jazz" || project == tool)){</label>
+          <br>
+          <label>thisDiv.style.color = "red";</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(tool == "Computer" && project == "Robot" && music == "Pop"){</label>
+          <br>
+          <label>thisDiv.style.color = "green";</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(tool == "Computer" && music != "Rock" && !(project == "Car")){</label>
+          <br>
+          <label>thisDiv.style.color = "blue";</label>
+          <br>
+          <label>}</label>
+        </div>
+        <div id="card5">
+          <p>Goal: Make the width of the div 3000px</p>
+          <label for="drink">let drink = </label>
+          <select id="drink">
+            <option value = "Water">Water</option>
+            <option value = "Milk">Milk</option>
+            <option value = "Protien Shake">Protien Shake</option>
+            <option value = "Soda">Soda</option>
+            <option value = "Energy Drink">Energy Drink</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label for="calories">let calories = </label>
+          <select id="calories">
+            <option value = "0">0</option>
+            <option value = "10">10</option>
+            <option value = "20">20</option>
+            <option value = "30">30</option>
+            <option value = "40">50</option>
+            <option value = "40">40</option>
+          </select>
+          <br>
+          <label for="sugar">let sugar = </label>
+          <select id="sugar">
+            <option value = "0">0</option>
+            <option value = "10">10</option>
+            <option value = "20">20</option>
+            <option value = "30">30</option>
+            <option value = "40">50</option>
+            <option value = "40">40</option>
+          </select>
+          <label>;</label>
+          <br>
+          <label>if((calories < sugar && drink != "Energy Drink") && (sugar > 30 || calories >=20) || drink == "Milk"){</label>
+          <br>
+          <label>thisDiv.style.width = 700;</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(calories >= sugar && calories < 20 && calories > 0 && !(drink != "Protien Shake" && calories == 20)){</label>
+          <br>
+          <label>thisDiv.style.width = 3000;</label>
+          <br>
+          <label>}</label>
+          <br>
+          <label>if(drink == "Soda" || (calories == sugar && drink != "Soda")){</label>
+          <br>
+          <label>thisDiv.style.width = 2000;</label>
+          <br>
+          <label>}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id = "bitbybot">
+    <p>Success</p>
+    <img src = "https://bitbybitcoding.org/imgs/partybot.PNG">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
