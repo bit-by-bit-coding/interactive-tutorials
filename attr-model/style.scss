@@ -1,0 +1,30 @@
+@import "../assets/common.scss";
+
+
+.code {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+#explore-show {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+div.option-wrapper {
+  margin: 0.5em 0 0.5em 0;
+  width: 30%;
+  display: flex;
+  & > *:first-child {
+    flex: 0.7;
+  }
+}
+
+.slider {
+  display: flex;
+  & > *:first-child {
+    flex: 0.11;
+  }
+}
+
