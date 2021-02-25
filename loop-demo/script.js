@@ -63,7 +63,7 @@ function bounceSegments() {
   let addedDivs = document.getElementsByClassName('body-segment');
   if (!bouncing) {
     bounceButton.innerText = 'reset bounce';
-    document.getElementById('change-description').innerHTML = 'Adds a css class to each body segment which activates the bounce animation';
+    document.getElementById('change-description').innerHTML = 'Adds a CSS class to each body segment which activates the bounce animation';
     document.getElementById('code-description').innerHTML = 'bodySegments[i].classList.add(\'bounce\');';
     bouncing = true;
     for (let i = 0; i < addedDivs.length; i++) {
