@@ -30,6 +30,11 @@ let interactiveTutorials = {
     path: 'boolean-logic-demo',
     title: 'BOOLEAN LOGIC',
     content: "How do booleans work? What are operators and statements?"
+  },
+  loopDemo: {
+    path: 'loop-demo',
+    title: 'LOOP DEMO',
+    content: "Explore how the for loop works with a bot-a-pillar!"
   }
 }
 
