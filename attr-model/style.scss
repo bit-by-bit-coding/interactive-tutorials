@@ -21,6 +21,12 @@ div.option-wrapper {
   }
 }
 
+#dest-option {
+  margin: 0.5em 0 0.5em 0;
+  width: 15%;
+  display: flex;
+}
+
 .slider {
   display: flex;
   & > *:first-child {

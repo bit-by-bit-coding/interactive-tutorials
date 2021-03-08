@@ -68,3 +68,37 @@ executeCode();
 imgSrcElement.value = "Snow Bot";
 widthNum.textContent = imgWidth.value;
 heightNum.textContent = imgHeight.value;
+
+
+/* Code for anchor element.*/
+/* Set up the editor for a tag section. */
+let aTageditorElement = document.querySelector("#atageditor");
+let aTagJar = CodeJar(aTageditorElement, withLineNumbers(Prism.highlightElement, {
+  color: '#000',
+  backgroundColor: 'rgb(232, 232, 232)'
+}), {
+  tab: '  '
+});
+
+let webUrlMap = new Map();
+webUrlMap.set("google", "https://www.google.com/");
+webUrlMap.set("facebook", "https://www.facebook.com/");
+webUrlMap.set("bitbybit", "https://bitbybitcoding.org/");
+
+let optionHandlerAtag = (e) => {
+  let newValue = e.options[e.target.value];
+  let aTag = document.getElementById("atag");
+  aTag.setAttribute("href", webUrlMap.get(newValue));
+  aTagJar.updateCode(`<a href="${webUrlMap.get(newValue)}">Click me!</a>`);
+};
+
+let destUrlElement = document.getElementById("url-option");
+createOption(destUrlElement, {
+    "Google": "google",
+    "Facebook" : "facebook",
+    "Bit by Bit": "bitbybit",
+  }, optionHandlerAtag);
+
+/* Default Code for a tag. */
+destUrlElement.value = "Google";
+aTagJar.updateCode(`<a href="https://www.google.com">Click me!</a>`);
