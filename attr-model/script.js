@@ -1,14 +1,14 @@
 /* A hash table that stores image-url mappings. */
 // If you want to change the image, just update both Hash tables and the option menu.
 let urlMap = new Map();
-urlMap.set("snowbot", "https://bitbybitcoding.org/imgs/snowbot.svg");
-urlMap.set("computerbot", "https://bitbybitcoding.org/imgs/FFbot.png");
-urlMap.set("thinkingbot", "https://bitbybitcoding.org/imgs/thinkingbot.png");
+urlMap.set("pikachu", "https://www.kumulos.com/wp-content/uploads/2013/10/pikachu-6.png");
+urlMap.set("cyndaquil", "https://www.pngitem.com/pimgs/m/165-1653295_pokemon-cyndaquil-hd-png-download.png");
+urlMap.set("squirtle", "https://miro.medium.com/max/302/1*KuSu6ZTyLAcRDwOsI9ZzZA.png");
 
 let optionMap = new Map();
-optionMap.set("Snow Bot", "snowbot");
-optionMap.set("Computer Bot", "computerbot");
-optionMap.set("Thinking Bot", "thinkingbot");
+optionMap.set("Pikachu", "pikachu");
+optionMap.set("Cyndaquil", "cyndaquil");
+optionMap.set("Squirtle", "squirtle");
 
 /* Set up the editor. */
 let editorElement = document.querySelector(".editor");
@@ -43,9 +43,9 @@ let optionHandler = (e) => {
 };
 let imgSrcElement = document.getElementById("img-src");
 createOption(imgSrcElement, {
-    "Snow Bot": "snowbot",
-    "Computer Bot" : "computerbot",
-    "Thinking Bot": "thinkingbot",
+    "Pikachu": "pikachu",
+    "Cyndaquil" : "cyndaquil",
+    "Squirtle": "squirtle",
   }, optionHandler);
 
 /* Width and height slider. */
@@ -63,9 +63,9 @@ function sliderUpdate() {
 };
 
 /* Default code. */
-jar.updateCode(`<img src=\"https:\/\/bitbybitcoding.org/imgs/snowbot.svg\"\n width=${imgWidth.value} height=${imgHeight.value}>`);
+jar.updateCode(`<img src=\"https://www.kumulos.com/wp-content/uploads/2013/10/pikachu-6.png\"\n width=${imgWidth.value} height=${imgHeight.value}>`);
 executeCode();
-imgSrcElement.value = "Snow Bot";
+imgSrcElement.value = "Pikachu";
 widthNum.textContent = imgWidth.value;
 heightNum.textContent = imgHeight.value;
 
