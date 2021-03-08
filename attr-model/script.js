@@ -51,10 +51,14 @@ createOption(imgSrcElement, {
 /* Width and height slider. */
 let imgWidth = document.getElementById("img-width");
 let imgHeight = document.getElementById("img-height");
+let widthNum = document.getElementById("width-num");
+let heightNum = document.getElementById("height-num");
 imgWidth.onmousemove = sliderUpdate;
 imgHeight.onmousemove = sliderUpdate;
 function sliderUpdate() {
   jar.updateCode(`<img src=\"${urlMap.get(optionMap.get(imgSrcElement.value))}\"\n width=${imgWidth.value} height=${imgHeight.value}>`);
+  widthNum.textContent = imgWidth.value;
+  heightNum.textContent = imgHeight.value;
   executeCode();
 };
 
@@ -62,3 +66,5 @@ function sliderUpdate() {
 jar.updateCode(`<img src=\"https:\/\/bitbybitcoding.org/imgs/snowbot.svg\"\n width=${imgWidth.value} height=${imgHeight.value}>`);
 executeCode();
 imgSrcElement.value = "Snow Bot";
+widthNum.textContent = imgWidth.value;
+heightNum.textContent = imgHeight.value;

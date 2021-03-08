@@ -199,9 +199,9 @@ div.option-wrapper {
 }
 
 div.option-wrapper > *:first-child {
-  -webkit-box-flex: 0.7;
-      -ms-flex: 0.7;
-          flex: 0.7;
+  -webkit-box-flex: 0.55;
+      -ms-flex: 0.55;
+          flex: 0.55;
 }
 
 .slider {
