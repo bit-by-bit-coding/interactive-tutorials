@@ -223,4 +223,8 @@ div.option-wrapper > *:first-child {
       -ms-flex: 0.11;
           flex: 0.11;
 }
+
+#atageditor {
+  height: 40%;
+}
 /*# sourceMappingURL=style.css.map */
