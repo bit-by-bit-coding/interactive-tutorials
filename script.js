@@ -35,6 +35,11 @@ let interactiveTutorials = {
     path: 'attr-model',
     title: 'ATTRIBUTE DEMO',
     content: "How do attributes affect HTML elements?"
+  },
+  loopDemo: {
+    path: 'loop-demo',
+    title: 'LOOP DEMO',
+    content: "Explore how the for loop works with a bot-a-pillar!"
   }
 }
 
