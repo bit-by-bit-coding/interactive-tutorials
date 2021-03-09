@@ -1,0 +1,208 @@
+/* style.scss */
+/* Import the common styling */
+/* common.scss */
+/* Define all the colors */
+body {
+  margin: 5em 0 0 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background: #38Bfe7;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #19a8d3;
+}
+
+button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#header {
+  padding: 1em 2em;
+  background-color: white;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 3em;
+  z-index: 1000;
+  opacity: 95%;
+  -webkit-box-shadow: 0 2px 2px #eee;
+          box-shadow: 0 2px 2px #eee;
+}
+
+#header > * {
+  margin: 0;
+}
+
+#header button {
+  width: 3em;
+}
+
+#back-button {
+  padding: 0.25em 1em;
+  font-size: 1em;
+  height: 48px;
+}
+
+.content {
+  padding: 1em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/*Flexbox*/
+.flex-container-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-container-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.flex-item-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+}
+
+.flex-item-close {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+#top-heading {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#bxb-logo {
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
+.section {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em;
+}
+
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
+}
+
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
+}
+
+.no-flex-col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+.showcase-section {
+  padding: 0;
+}
+
+.editor-section {
+  position: relative;
+  overflow: scroll;
+  padding: 0;
+}
+
+.editor {
+  margin: 0;
+  height: 20em;
+  width: calc(100% - 35px - calc(0.625em*2));
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  padding: 1px 0.625em;
+}
+
+.editor-button-overlay {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 0;
+}
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+#numberline {
+  border: 10px solid black;
+  border-top-width: 0;
+  border-bottom-width: 20px;
+  /* margin: 0 auto; */
+  width: 90vw;
+  height: 10px;
+  position: absolute;
+  top: 50vh;
+}
+
+div.marker {
+  border: 0px solid black;
+  border-left-width: 5px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+#calculator {
+  height: 200px;
+  border: 0.2em solid #38Bfe7;
+}
+/*# sourceMappingURL=style.css.map */

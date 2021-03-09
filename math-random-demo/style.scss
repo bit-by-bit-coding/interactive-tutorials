@@ -1,0 +1,28 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+#numberline {
+    border: 10px solid black;
+    border-top-width: 0;
+    border-bottom-width: 20px;
+    /* margin: 0 auto; */
+    width: 90vw;
+    height: 10px;
+    position: absolute;
+    top: 50vh;
+  }
+ div.marker {
+    border: 0px solid black;
+    border-left-width: 5px;
+    height: 20px;
+    margin: 0 auto;
+  }
+#calculator{
+    height: 200px;
+    border: 0.2em solid $primary-color;
+    
+}
