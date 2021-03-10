@@ -44,15 +44,31 @@
     </div>
     <div class="flex-box" style="margin: 1em 0;">
       <div class="flex-col section" style="margin-right: 0.5em;">
-        <label for="eventsList">Select event to turn on/off the bulb.</label>
+        <label for="eventType">Select event type.</label>
+        <br>
+        <input type="radio" name="eventType" id="mouseEvents"> Mouse Events
+        <input type="radio" name="eventType" id="keyboardEvents"> Keyboard Events
         <br><br>
-        <input type="checkbox" id="onclick"> onclick
-        <input type="checkbox" id="onmouseover"> onmouseover
-        <input type="checkbox" id="onmouseout"> onmouseout
+
+        <div id="listDiv" style="display: none;">
+          <label for="eventsList">Select event to turn on/off the bulb.</label>
+          <div id="mouseEventsList">
+            <input type="checkbox" id="onclick"> onclick
+            <input type="checkbox" id="onmouseover"> onmouseover
+            <input type="checkbox" id="onmouseout"> onmouseout
+          </div>
+          <div id="keyboardEventsList">
+            <input type="checkbox" id="onkeydown"> onkeydown
+            <input type="checkbox" id="onkeyup"> onkeyup
+          </div>
+        </div>
+
         <p id="eventDescription"></p>
       </div>
       <div class="flex-col section" style="margin-right: 0.5em;">
         <img id="bulbImage" src="bulbon.png" style="display:block;margin:auto;">
+        <button id="powerButton" type="button" style="display: none;">POWER</button>
+        <input id="powerText" type="text" name="Power" style="display: none;">
       </div>
     </div>
   </div>
