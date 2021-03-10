@@ -1,0 +1,116 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+
+.description {
+  display: flex;
+  p {
+    flex: 1;
+  }
+}
+
+.reset-button {
+  font-size: 0.75em;
+}
+
+
+.body-segment {
+  height: 4vw;
+  width: 4vw;
+  background-color: $primary-color;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-segment-number {
+  font-size: 1em;
+  color: white;
+}
+
+.caterpillar-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1.25em;
+  color: $primary-color;
+  .comment {
+    color: $accent-color;
+  }
+}
+
+.bold {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  padding: 5px;
+  font-weight: 800;
+}
+
+.description {
+  padding: 15px;
+}
+
+.option-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: space-evenly;
+    button {
+      padding: 10px;
+      margin: 10px;
+      width: 140px;
+   }
+}
+
+.section {
+  padding: 20px;
+}
+
+.radio-buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bounce {
+  animation:bouncy 1s 1;
+}
+
+@keyframes bouncy { 
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-30px);} 
+  60% {transform: translateY(-15px);} 
+}
+
+input[type="radio"] {
+  margin-left: 20px;
+}
+
+#minus-button {
+  margin-right: 5px;
+}
+
+#min-max-message {
+  height: 0.75em;
+}
+
+#bitbybotterpillar-head {
+  height: 7vw;
+}
+
+#loop-explanation {
+  width: 100%;
+}
+
+#change-description {
+  font-style: italic;
+}
+

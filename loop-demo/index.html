@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loop Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-close">
+      <div class="flex-item-close">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-close">LOOP DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="description">
+        <div>
+          <p>
+            Loops are a way to do an action over and over again, within constraints that you set.<br>
+            It is a good way to alter a bunch of things at once!<br>
+            We are going to learn a second type of loop that is different from a while loop... a<span class="bold">for loop.</span>
+          </p>
+          <img id="loop-explanation" src="../assets/loop-image.png" alt="parts of a for loop"><br>
+          <p>Use the buttons below to add body segments to the BitbyBotapillar, then use the second set
+            to make a change to all the body segments.<br>
+            Usually a loop runs very quickly - so quickly you don't see each change individually!<br>
+            Choose 'Loop Slowly" if you would like to see it run slowly.<br>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="flex-col section">
+        <div>
+          <p>Add body segments:</p>
+          <button type="button" id="minus-button">-1</button>
+          <button type="button" id="plus-button">+1</button>
+          <p>bodySegments.length = <a id="body-segment-count">1</a></p>
+
+
+          <p id="min-max-message"></p>
+        </div>
+        <hr>
+        <div class="radio-buttons">
+          <p>Loop Speed:</p>
+          <input type="radio" name="loop-speed" id="regular-speed" value="regular-speed" checked>
+          <label for="regular-speed">Loop at Regular Speed</label>
+          <input type="radio" name="loop-speed" id="slow-speed" value="slow-speed">
+          <label for="slow-speed">Loop Slowly</label>
+        </div>
+        <hr>
+
+        <div>
+          <p>I want to...</p>
+          <div class="option-buttons">
+
+
+            <button type="button" id="blue-button">make them aqua!</button>
+            <button type="button" id="orange-button">make them orange!</button>
+
+            <button type="button" id="pink-button">make them pink!</button>
+            <button type="button" id="bounce-button">make them bounce!</button>
+          </div>
+        </div>
+      </div>
+      <div id="showcase-section" class="flex-col section caterpillar-container">
+        <img id="bitbybotterpillar-head" src="../assets/bitbybotterpillar-head.png" alt="Bit By Botterpillar Head">
+        <div class="body-segment">
+          <span class="body-segment-number">1</span>
+        </div>
+      </div>
+    </div>
+    <div id="loop-section" class="flex-col section">
+
+      <span class="big-code">
+        <span class="comment">// <em>Finds all Bit-by-Botapillar body segments and stores them in a
+            variable<br></em></span>
+        let bodySegments = document.getElementsByClassName('body-segment');<br><br>
+        <span class="comment">// <em>Loop function<br></em></span>
+        function caterpillarLoop() { <br>
+        &emsp;for (let i=0; i < bodySegments.length; i++) {<br>
+          <span class="comment"> &emsp; // <a id="change-description"></a></span><br>
+          &emsp;<a id="code-description"></a><br>
+          &emsp;}<br>
+          };<br><br>
+          <span class="comment"><em>// Calls the function</em></span><br>
+          caterpillarLoop();</span>
+
+    </div>
+  </div>
+
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/options.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
