@@ -38,8 +38,8 @@ let interactiveTutorials = {
   },
   mathRandom: {
     path: 'math-random-demo',
-    title: 'RANDOM FUNCTION DEMO',
-    content: "How does the random function work? How can it be modified to fit specific needs?"
+    title: 'MATH.RANDOM FUNCTION DEMO',
+    content: "How does the Math.random function work? How can it be modified to fit specific needs?"
   }
 }
 
