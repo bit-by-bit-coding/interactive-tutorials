@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title> Position Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="header" class="flex-box">
+    <div class="flex-item-header flex-container-close">
+      <a href="/interactive-tutorials" class="no-flex-col" style="margin-right: 1em;">
+        <button id="back-button" title="Back to all demos">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+      </a>
+    </div>
+    <h1 class="flex-col">POSITION DEMO</h1>
+    <div class="flex-item-header">
+      <img id="bxb-logo" class="no-flex-col" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <div style="display: flex;">
+        <p style="flex: 1;">
+          The position property sets how an element is positioned in a document. In this demo, you can control and change the position of the Bit by Bot! 
+          We are going to see different position properties based on its movement.  
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="content"> 
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="editor-section flex-col section" style="margin-right: 0.2em;">
+        <div id="display-static">
+          <h2>position: static</h2>
+          The parent element has position: static, and will remain in the natural flow of the page. 
+          It will not act as anchor point for the absolutely positioned child element.
+        </div>
+
+        <div id="display-relative" class="hide">
+          <h2>position: relative</h2>
+          The parent element has position: relative, and will remain in the natural flow of the page. 
+          It will also act as anchor point for the absolutely positioned child element.
+        </div>
+
+        <div id="display-absolute" class="hide">
+          <h2>position: absolute</h2>
+          The parent element has position: absolute, and will not remain in the natural flow of the page. 
+          It will position itself according to the closest positioned ancestor. It will also act as anchor point for the absolutely positioned child element. 
+        </div>
+
+        <div id="display-fixed" class="hide">
+          <h2>position: static</h2>
+          The parent eleent has position: fixed, and will not remain in the natural flow of the page. 
+          It will position itself according to the viewport. It will also act as anchor point for the absolutely positioned child. 
+        </div>
+      </div>
+      <div class="showcase-section flex-col section" style="margin-left: 0.2em;"> 
+        <div class="buttons">
+          <button type="button" onclick="changePositionStatic()"> Static </button>
+          <button type="button" onclick="changePositionRelative()"> Relative </button>
+          <button type="button" onclick="changePositionAbsolute()"> Absolute </button>
+          <button type="button" onclick="changePositionFixed()"> Fixed </button>
+        </div>
+        
+        <div id="parent-static">
+          <div id="parent1">Parent1: position: static.
+            <div id="child1">
+              <div class="bit-by-bot">
+                <img src="https://bitbybitcoding.org/imgs/happybot.PNG">  
+              </div>
+              Bit by Bot:
+              <p>position: absolute,</p>
+              <p>right: 15px,</p>
+              top: 120px
+            </div>
+          </div>
+        </div>
+
+        <div id="parent-relative" class="hide">
+          <div id="parent2">Parent2: position: relative.
+            <div id="child2">
+              <div class="bit-by-bot">
+                <img src="https://bitbybitcoding.org/imgs/happybot.PNG">  
+              </div>
+              Bit by Bot:
+              <p>position: absolute,</p>
+              <p>right: 15px,</p>
+              top: 70px
+            </div>
+          </div>
+        </div>
+
+        <div id="parent-absolute" class="hide">
+          <div id="parent3">Parent3: position: absolute
+            <div id="child3">
+              <div class="bit-by-bot">
+                <img src="https://bitbybitcoding.org/imgs/happybot.PNG">  
+              </div>
+              Bit by Bot:
+              <p>position: absolute,</p>
+              <p>right: 15px,</p>
+              top: 70px
+            </div>
+          </div>
+        </div>
+
+        <div id="parent-fixed" class="hide">
+          <div id="parent4">Parent4: position: fixed, bottom: 300px, left: 0, right: 0.
+            <div id="child4">
+              <div class="bit-by-bot">
+                <img src="https://bitbybitcoding.org/imgs/happybot.PNG">  
+              </div>
+              Bit by Bot:
+              <p>position: absolute,</p>
+              <p>right: 15px,</p>
+              top: 70px
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
