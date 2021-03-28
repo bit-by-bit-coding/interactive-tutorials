@@ -6,20 +6,10 @@ let interactiveTutorials = {
     title: '&ltDIV&gt TAG DEMO',
     content: "How to use the &ltdiv&gt tag and an exploritory tutorial."
   },
-  objectDemo: {
-    path: 'object-demo',
-    title: 'OBJECT DEMO',
-    content: "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!"
-  },
-  domDemo: {
-    path: 'dom-demo',
-    title: 'DOM DEMO',
-    content: "The Document Object Model and how to manipulate it."
-  },
-  functionDemo: {
-    path: 'function-demo',
-    title: 'FUNCTION DEMO',
-    content: "Condensing code and calling upon functions!"
+  attributeDemo: {
+    path: 'attr-model',
+    title: 'ATTRIBUTE DEMO',
+    content: "Learn how attributes work inside tags and the most commonly used ones."
   },
   boxModel: {
     path: 'box-model',
@@ -31,15 +21,35 @@ let interactiveTutorials = {
     title: 'BOOLEAN LOGIC',
     content: "How do booleans work? What are operators and statements?"
   },
+  domDemo: {
+    path: 'dom-demo',
+    title: 'DOM DEMO',
+    content: "The Document Object Model and how to manipulate it."
+  },
+  functionDemo: {
+    path: 'function-demo',
+    title: 'FUNCTION DEMO',
+    content: "Condensing code and calling upon functions!"
+  },
+  objectDemo: {
+    path: 'object-demo',
+    title: 'OBJECT DEMO',
+    content: "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!"
+  },
   loopDemo: {
     path: 'loop-demo',
     title: 'LOOP DEMO',
     content: "Explore how the for loop works with a bot-a-pillar!"
   },
+  eventsDemo: {
+    path: 'events-demo',
+    title: 'EVENTS DEMO',
+    content: "What are events in JavaScript, and how can we use them?"
+  },
   mathRandom: {
     path: 'math-random-demo',
-    title: 'RANDOM FUNCTION DEMO',
-    content: "How does the random function work? How can it be modified to fit specific needs?"
+    title: 'MATH.RANDOM FUNCTION DEMO',
+    content: "How does the Math.random function work? How can it be modified to fit specific needs?"
   }
 }
 
