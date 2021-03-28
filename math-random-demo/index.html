@@ -1,0 +1,128 @@
+<html>
+<head>
+  <title>Random Function Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-close">
+      <div class="flex-item-close">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-close">Random Function Demo</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>
+        Instructions:
+      </h2>
+      <p>Math.random picks a random decimal between 0 and 1. By adding a coefficient you can widen the range that the random number can fall within. Adding a constant can change where the range will fall on the number line. Try both a coefficient and adding a constant in the boxes below.</p>
+      <h2>(Math.random() x <input id="scale" type="number" value="1" min="1">) + <input id="shift" type="number" value="0"></h2>
+    </div>
+    <div class="flex-box"></div>
+
+    <div id="calculator" ></div>
+
+    <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script>
+        var calculatorSettings = {
+            settingsMenu: false,
+            zoomButtons: false,
+            keypad: false,
+            expressionsTopbar: false,
+            border: false,
+            lockViewport: true,
+            expressions: false
+        };
+
+        var calculator = Desmos.GraphingCalculator(
+            document.getElementById('calculator'),
+            calculatorSettings
+        );
+    var scaleInput = document.getElementById("scale");
+    var shiftInput = document.getElementById("shift");
+      
+    calculator.updateSettings({
+      showYAxis: false,
+      showGrid: false
+    });
+
+
+    var points = []
+    
+
+    scaleInput.onchange = update;
+    shiftInput.onchange = update;
+
+    function getScale() {
+      return parseInt(scaleInput.value)
+    }
+
+    function getShift() {
+      return parseInt(shiftInput.value)
+    }
+    //alias for getShift. they are the same value
+    getRandMin = getShift;
+
+    function getRandMax() {
+      return getScale() + getShift()
+    }
+
+    function update() {
+      calculator.removeExpressions(points);
+      points = []
+
+      let padding = .1*getScale()
+      calculator.setMathBounds({
+        left: getRandMin()- padding,
+        right: getRandMax()+ padding,
+        bottom: -1,
+        top: 1
+      });
+
+      let pointObj = {
+        id: "range" + points.length,
+        latex: getRandMin() + " <= x  < " + getRandMax(),
+        color: Desmos.Colors.BLUE
+      };
+
+      points.push(pointObj);
+      // Add an expression
+      calculator.setExpression(pointObj);
+
+
+
+    }
+    function plotRandomPoint() {
+      let point = (Math.random() * getScale()) + getShift()
+      let id = "point" + points.length
+
+      let pointObj = { id: id, latex: '(' + point + ',0)' };
+      points.push(pointObj);
+      // Add an expression
+      calculator.setExpression(pointObj);
+
+
+    }
+
+    update()
+    
+  </script>
+    <!-- The end of the content div is here -->
+  </div>
+  
+</body>
+</html>

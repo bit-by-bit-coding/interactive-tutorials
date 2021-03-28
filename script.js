@@ -40,6 +40,11 @@ let interactiveTutorials = {
     path: 'loop-demo',
     title: 'LOOP DEMO',
     content: "Explore how the for loop works with a bot-a-pillar!"
+  },
+  mathRandom: {
+    path: 'math-random-demo',
+    title: 'RANDOM FUNCTION DEMO',
+    content: "How does the random function work? How can it be modified to fit specific needs?"
   }
 }
 

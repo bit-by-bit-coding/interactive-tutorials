@@ -76,7 +76,7 @@ button:active {
           align-items: center;
 }
 
-.flex-container-left {
+.flex-container-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +97,7 @@ button:active {
           flex: 1 1 200px;
 }
 
-.flex-item-left {
+.flex-item-close {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100px;
           flex: 1 1 100px;
@@ -182,30 +182,27 @@ button:active {
 }
 
 /* The page-specific styling */
-div.grid-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+/* TODO: Put whatever styles you need for just your demo here */
+#numberline {
+  border: 10px solid black;
+  border-top-width: 0;
+  border-bottom-width: 20px;
+  /* margin: 0 auto; */
+  width: 90vw;
+  height: 10px;
+  position: absolute;
+  top: 50vh;
 }
 
-div.grid-item {
-  margin: 1em;
-  border: solid 2px #38Bfe7;
-  padding: 1em 1.5em;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 15em;
-          flex: 0 0 15em;
+div.marker {
+  border: 0px solid black;
+  border-left-width: 5px;
+  height: 20px;
+  margin: 0 auto;
 }
 
-div.grid-item:hover {
-  cursor: pointer;
-  -webkit-box-shadow: #aaaaaa 2px 2px 2px;
-          box-shadow: #aaaaaa 2px 2px 2px;
-  background-color: #fafafa;
+#calculator {
+  height: 200px;
+  border: 0.2em solid #38Bfe7;
 }
 /*# sourceMappingURL=style.css.map */
