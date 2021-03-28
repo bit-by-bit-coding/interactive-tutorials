@@ -31,6 +31,11 @@ let interactiveTutorials = {
     title: 'BOOLEAN LOGIC',
     content: "How do booleans work? What are operators and statements?"
   },
+  attrModel: {
+    path: 'attr-model',
+    title: 'ATTRIBUTE DEMO',
+    content: "How do attributes affect HTML elements?"
+  },
   loopDemo: {
     path: 'loop-demo',
     title: 'LOOP DEMO',

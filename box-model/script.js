@@ -17,19 +17,20 @@ let paddingNum2 = document.getElementById("paddingNum-2");
 let borderNum2 = document.getElementById("borderNum-2");
 let marginNum2 = document.getElementById("marginNum-2");
 
-let CONST_WIDTH = window.getComputedStyle(container1).width;
-let CONST_HEIGHT = window.getComputedStyle(container1).height;
+let CONST_WIDTH = parseInt(window.getComputedStyle(container1).width);
+let CONST_HEIGHT = parseInt(window.getComputedStyle(container1).height);
 
 function changePadding(content, padding, paddingNum) {
     content.style.margin = padding.value;
-    content.style.height = (CONST_HEIGHT - 2 * padding.value) + "px";
+    content.style.width = (CONST_WIDTH - 2 * padding.value);
+    content.style.height = (CONST_HEIGHT - 2 * padding.value);
     paddingNum.textContent = padding.value;
 }
 function changeBorderOrMargin(container, dynamic, border, margin, borderNum, marginNum) {
     dynamic.style.borderWidth = border.value;
     dynamic.style.margin = margin.value;
-    container.style.width = (CONST_WIDTH + 2 * border.value + 2 * margin.value) + "px";
-    container.style.height = (CONST_HEIGHT + 2 * border.value + 2 * margin.value) + "px";
+    container.style.width = (CONST_WIDTH + 2 * border.value + 2 * margin.value);
+    container.style.height = (CONST_HEIGHT + 2 * border.value + 2 * margin.value);
     borderNum.textContent = border.value;
     marginNum.textContent = margin.value;
 }
