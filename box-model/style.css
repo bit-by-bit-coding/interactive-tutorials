@@ -152,6 +152,7 @@ button:active {
   display: inline-block;
   border: 1px solid black;
   background-image: url("https://i.pinimg.com/originals/e1/a9/f9/e1a9f9b1803a305cc54e3d409b63a332.gif");
+  vertical-align: top;
 }
 
 .dynamic {
@@ -167,6 +168,7 @@ button:active {
   background-color: transparent;
   overflow: hidden;
   overflow-wrap: anywhere;
+  position: absolute;
 }
 
 .controls {

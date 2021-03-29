@@ -1,0 +1,157 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+.buttons {
+    z-index: 10;
+}
+
+#parent {
+    border: 1px solid rgb(56, 191, 231);
+    width: 600px;
+    height: 300px;
+    background-color: #1bb1de;
+    text-align: center;
+    overflow: auto;
+}
+
+#child {
+    bottom: 20px;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.bit-by-bot {
+    img { 
+        height: 10em;
+    }
+    margin: 10px;
+    border: 1px solid #ccc;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.inner-div {
+    display: block;
+    padding: 5px;
+    position: relative;
+}
+
+.pos-static-parent {
+    position: static;
+}
+
+.pos-absolute-parent {
+    position: absolute; 
+    width: 300px;
+    top: 750px;
+    right: 15px;
+    //top: 40px;
+    //left: 40px; 
+}
+
+.pos-relative-parent {
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+
+.pos-fixed-parent {
+    position: fixed;  
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pos-static-child {
+    position: static;
+}
+
+.pos-absolute-child {
+    position: absolute; 
+    //top: 40px;
+    //left: 40px; 
+}
+
+.pos-relative-child {
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+
+.pos-fixed-child {
+    position: fixed;  
+}
+
+#parent1 {
+    position: static;
+    margin: 10px;
+    border: 1px solid #38Bfe7;
+    width: 300px;
+    height: 100px;
+  }
+  
+  #child1 {
+    position: absolute;
+    border: 1px solid	#ff8900;
+    top: 120px;
+    right: 15px;
+  }
+  
+  #parent2 {
+    position: relative;
+    border: 1px solid #38Bfe7;
+    width: 300px;
+    height: 100px;
+  }
+  
+  #child2 {
+    position: absolute;
+    border: 1px solid #ff8900;
+    top: 70px;
+    right: 15px;
+  }
+  
+  #parent3 {
+    position: absolute;
+    border: 1px solid #38Bfe7;
+    width: 300px;
+    height: 100px;
+    top: 500px;
+    right: 15px;
+  }
+  
+  #child3 {
+    position: absolute;
+    border: 1px solid 	#ff8900;
+    top: 70px;
+    right: 15px;
+  }
+  
+  #parent4 {
+    position: fixed;
+    border: 1px solid #38Bfe7;
+    background-color: #ffffff;  
+    width: 300px;
+    height: 100px;
+    bottom: 300px;
+    left: 0;
+    right: 0;
+  }
+  
+  #child4 {
+    position: absolute;
+    border: 1px solid 	#ff8900;
+    top: 70px;
+    right: 15px;
+  }
