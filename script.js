@@ -7,18 +7,18 @@ let interactiveTutorials = {
     content: "How to use the &ltdiv&gt tag and an exploritory tutorial."
   },
   attributeDemo: {
-    path: 'attr-model',
+    path: 'attribute-demo',
     title: 'ATTRIBUTE DEMO',
     content: "Learn how attributes work inside tags and the most commonly used ones."
   },
   boxModel: {
-    path: 'box-model',
-    title: 'BOX MODEL',
+    path: 'box-model-demo',
+    title: 'BOX MODEL DEMO',
     content: "Margin, border, padding. Every HTML element has these, what do they do?"
   },
   booleanLogic: {
     path: 'boolean-logic-demo',
-    title: 'BOOLEAN LOGIC',
+    title: 'BOOLEAN LOGIC DEMO',
     content: "How do booleans work? What are operators and statements?"
   },
   domDemo: {
@@ -37,8 +37,8 @@ let interactiveTutorials = {
     content: "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!"
   },
   loopDemo: {
-    path: 'loop-demo',
-    title: 'LOOP DEMO',
+    path: 'while-loop-demo',
+    title: 'WHILE LOOP DEMO',
     content: "Explore how the for loop works with a bot-a-pillar!"
   },
   eventsDemo: {
