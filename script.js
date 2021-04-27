@@ -37,8 +37,8 @@ let interactiveTutorials = {
     content: "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!"
   },
   loopDemo: {
-    path: 'while-loop-demo',
-    title: 'WHILE LOOP DEMO',
+    path: 'for-loop-demo',
+    title: 'FOR LOOP DEMO',
     content: "Explore how the for loop works with a bot-a-pillar!"
   },
   eventsDemo: {
