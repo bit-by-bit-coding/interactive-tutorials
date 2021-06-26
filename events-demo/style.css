@@ -149,4 +149,17 @@ button:active {
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
 
+.codeShown {
+  font-family: Courier;
+}
+
+@keyframes highlight {
+  5% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
