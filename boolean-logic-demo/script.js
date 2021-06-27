@@ -91,7 +91,7 @@ function checkBool() {
   } else {
     result.textContent = return1;
   }
-  if(result.textContent == "true"){
+  if(result.textContent === "true"){
     result.style.color = "green";
   } else {
     result.style.color = "red";
@@ -122,10 +122,10 @@ function quizGame(){
       if(owner.value === "dog"){
           thisDiv.style.backgroundColor = "blue";
       }
-      if(pet.value == "fish"){
+      if(pet.value === "fish"){
           thisDiv.style.backgroundColor = "red";
       }
-      if(owner.value == "you"){
+      if(owner.value === "you"){
           thisDiv.style.backgroundColor = "green";
           check1.style.backgroundColor = "green";
           autoScroll();
@@ -137,7 +137,7 @@ function quizGame(){
       let balloon = document.getElementById("balloon");
       let balloonCount = document.getElementById("balloonCount");
       let thisDiv2 = document.getElementById("card2");
-      if((balloon.value != "green") && (balloonCount.value == 5)){
+      if((balloon.value != "green") && (balloonCount.value === 5)){
           thisDiv2.style.borderColor = "yellow";
           check2.style.backgroundColor = "green";
           autoScroll();
@@ -158,10 +158,10 @@ function quizGame(){
       if(numberOfSeats.value === car.value){
           thisDiv3.style.fontSize = "0.8em";
       }
-      if(numberOfSeats.value > 5 || car.value == "Volvo"){
+      if(numberOfSeats.value > 5 || car.value === "Volvo"){
           thisDiv3.style.fontSize = "1.2em";
       }
-      if( numberOfSeats.value >= 3 && numberOfSeats.value < 5 && car.value == "Ford"){
+      if( numberOfSeats.value >= 3 && numberOfSeats.value < 5 && car.value === "Ford"){
           thisDiv3.style.fontSize = "1em";
           check3.style.backgroundColor = "green";
           autoScroll();
@@ -174,13 +174,13 @@ function quizGame(){
       let music = document.getElementById("music");
       let thisDiv4 = document.getElementById("card4");
 
-      if((tool.value != "Hammer" && project.value == "Game") || (music.value == "Jazz" || project.value == tool.value)){
+      if((tool.value != "Hammer" && project.value === "Game") || (music.value === "Jazz" || project.value === tool.value)){
           thisDiv4.style.color = "red";
       }
-      if(tool.valuee = "Computer" && project.value == "Robot" && music.value == "Pop"){
+      if(tool.valuee = "Computer" && project.value === "Robot" && music.value === "Pop"){
           thisDiv4.style.color = "green";
       }
-      if(tool.value == "Computer" && music.value != "Rock" && !(project.value == "Car")){
+      if(tool.value === "Computer" && music.value != "Rock" && !(project.value === "Car")){
           thisDiv4.style.color = "blue";
           check4.style.backgroundColor = "green";
           autoScroll();
@@ -193,17 +193,17 @@ function quizGame(){
       let sugar = document.getElementById("sugar");
       let calories = document.getElementById("calories");
       let thisDiv5 = document.getElementById("card5");
-      if((calories.value < sugar.value && drink.value != "Energy Drink") && (sugar.value > 30 || calories.value >= 20) || drink.value == "Milk"){
+      if((calories.value < sugar.value && drink.value != "Energy Drink") && (sugar.value > 30 || calories.value >= 20) || drink.value === "Milk"){
           thisDiv5.style.width = 700;
       }
-      if(calories.value >= sugar.value && calories.value < 20 && calories.value > 0 && !(drink.value != "Protien Shake" && calories.value == 20)){
+      if(calories.value >= sugar.value && calories.value < 20 && calories.value > 0 && !(drink.value != "Protien Shake" && calories.value === 20)){
           thisDiv5.style.width = 3000;
           check5.style.backgroundColor = "green";
           bitbybot.style.visibility = "visible";
           bitbybot.classList.add("active")
           break;
       }
-      if(drink.value == "Soda" || calories.value == sugar.value && drink.value != "Soda"){
+      if(drink.value === "Soda" || calories.value === sugar.value && drink.value != "Soda"){
           thisDiv5.style.width = 2000;
       }
       break;

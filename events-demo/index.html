@@ -37,7 +37,7 @@
           Adding an event handler is your way of telling JavaScript, “If this event happens on this element,
           call this function.” <br><br>
 
-          For example, in this demo, if the selected event happens on the bulb, the power function will be called to
+          For example, in this demo, if the selected event happens on the bulb, the power function, <span class="codeShown">switchBulb()</span>, will be called to
           turn on/off the bulb.
           <br>
         </p>
@@ -67,6 +67,31 @@
         <p id="eventDescription"></p>
       </div>
       <div class="flex-col section" style="margin-right: 0.5em;">
+        <span class="codeShown" id="clickCode" style="display:none;">
+          button.<span style="color:blue">onclick</span> = <span style="color:blue">function</span>() {<br>
+            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+          }
+        </span>
+        <span class="codeShown" id="mouseOverCode" style="display:none;">
+          button.<span style="color:blue">onmouseover</span> = <span style="color:blue">function</span>() {<br>
+            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+          }
+        </span>
+        <span class="codeShown" id="mouseOutCode" style="display:none;">
+          button.<span style="color:blue">onmouseout</span> = <span style="color:blue">function</span>() {<br>
+            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+          }
+        </span>
+        <span class="codeShown" id="keyDownCode" style="display:none;">
+          button.<span style="color:blue">onkeydown</span> = <span style="color:blue">function</span>() {<br>
+            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+          }
+        </span>
+        <span class="codeShown" id="keyUpCode" style="display:none;">
+          button.<span style="color:blue">onkeyup</span> = <span style="color:blue">function</span>() {<br>
+            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+          }
+        </span>
         <img id="bulbImage" src="bulbon.png" style="display:block;margin:auto;">
         <button id="powerButton" type="button" style="display: none;">POWER</button>
         <input id="powerText" type="text" name="Power" style="display: none;">

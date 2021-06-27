@@ -1,6 +1,11 @@
 var bulb = document.getElementById("bulbImage");
 var powerButton = document.getElementById("powerButton");
 var powerText = document.getElementById("powerText");
+var clickCode = document.getElementById("clickCode");
+var mouseOverCode = document.getElementById("mouseOverCode");
+var mouseOutCode = document.getElementById("mouseOutCode");
+var keyDownCode = document.getElementById("keyDownCode");
+var keyUpCode = document.getElementById("keyUpCode");
 
 document.body.addEventListener('change', function (e) {
   let target = e.target;
@@ -13,6 +18,8 @@ document.body.addEventListener('change', function (e) {
 
   if(mouseEventsState) {
     disableKeyboardEvents();
+    keyDownCode.style.display = "none";
+    keyUpCode.style.display = "none";
     listDivState.style.display = "block";
     mouseEventsListState.style.display = "block";
     keyboardEventsListState.style.display = "none";
@@ -21,6 +28,9 @@ document.body.addEventListener('change', function (e) {
     powerButton.style.margin = "auto";
   } else if(keyboardEventsState) {
     disableMouseEvents();
+    clickCode.style.display = "none";
+    mouseOverCode.style.display = "none";
+    mouseOutCode.style.display = "none";
     listDivState.style.display = "block";
     mouseEventsListState.style.display = "none";
     keyboardEventsListState.style.display = "block";
@@ -67,36 +77,47 @@ document.body.addEventListener('change', function (e) {
     case 'onclick':
       if (clickState == true) {
         powerButton.addEventListener("click", bulbPower);
+        clickCode.style.display = "block";
+        isClick
       } else {
         powerButton.removeEventListener("click", bulbPower);
+        clickCode.style.display = "none";
       }
       break;
     case 'onmouseover':
       if (mouseoverState == true) {
         powerButton.addEventListener("mouseover", bulbPower);
+        mouseOverCode.style.display = "block";
       } else {
         powerButton.removeEventListener("mouseover", bulbPower);
+        mouseOverCode.style.display = "none";
       }
       break;
     case 'onmouseout':
       if (mouseoutState == true) {
         powerButton.addEventListener("mouseout", bulbPower);
+        mouseOutCode.style.display = "block";
       } else {
         powerButton.removeEventListener("mouseout", bulbPower);
+        mouseOutCode.style.display = "none";
       }
       break;
     case 'onkeydown':
       if (keydownState == true) {
         powerText.addEventListener("keydown", bulbPower);
+        keyDownCode.style.display = "block";
       } else {
         powerText.removeEventListener("keydown", bulbPower);
+        keyDownCode.style.display = "none";
       }
       break;
     case 'onkeyup':
       if (keyupState == true) {
         powerText.addEventListener("keyup", bulbPower);
+        keyUpCode.style.display = "block";
       } else {
         powerText.removeEventListener("keyup", bulbPower);
+        keyUpCode.style.display = "none";
       }
       break;
   }
