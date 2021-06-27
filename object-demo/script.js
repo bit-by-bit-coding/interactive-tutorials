@@ -4,17 +4,20 @@ let car = SVG("#car-svg");
 let easterEgg = SVG("#easter-egg-svg");
 
 let defaultCarObject = {
-  "wheelColor": "green",
-  "bodyColor": "blue",
-  "roofColor": "blue",
-  "outline": "black",
-  "size": "medium"
+  wheelColor: "green",
+  bodyColor: "blue",
+  roofColor: "blue",
+  outline: "black",
+  size: 150
 };
 let carObject = Object.assign({}, defaultCarObject);
 let executeCode = function(e) {
-  var carObject;
+  //var carObject;
   try {
-    carObject = Object.assign({}, defaultCarObject, JSON.parse(jar.toString().substring(10)));
+    //alert(jar.toString().substring(10));
+    //alert(jar.toString().replace(new RegExp('  ', 'g'), '  \"').replace(new RegExp(':', 'g'), '\":').substring(10));
+    //alert(jar.toString().replace(new RegExp('  ', 'g'), '  \"').replace(/:/g, '\":').replace(/(\d+)/g, '\"$1\"').substring(10));
+    carObject = Object.assign({}, defaultCarObject, JSON.parse(jar.toString().replace(new RegExp('  ', 'g'), '  \"').replace(/:/g, '\":').replace(/(\d+)/g, '\"$1\"').substring(10)));
   } catch (e) {
     carObject = Object.assign({}, defaultCarObject);
   }
@@ -39,7 +42,7 @@ let jar = CodeJar(editorElement, withLineNumbers(Prism.highlightElement, {
 }), {
   tab: '  '
 });
-jar.updateCode("let car = " + JSON.stringify(carObject, null, '  '));
+jar.updateCode("let car = " + JSON.stringify(carObject, null, '  ').replace(/"([^"]+)":/g, '$1:').replace(/\"(\d+)\"/g, '$1'));
 jar.onUpdate(code => {
   clearTimeout(autoSaveTimeout);
   autoSaveTimeout = setTimeout(executeCode, autoSaveTime);
@@ -71,6 +74,8 @@ let updateCar = (carObject) => {
   easterEgg.node.style.display = "none";
   for (let property in carObject) {
     if (property === "size") {
+      car.node.style.height = carObject[property] + "px";
+      /*
       switch(carObject[property]) {
         case 'small':
           car.node.style.height = "75%";
@@ -83,7 +88,7 @@ let updateCar = (carObject) => {
           break;
         default:
           car.node.style.height = "100%";
-      }
+      }*/
     } else if (property === "wheelColor") {
       car.find(".car-wheel").fill(carObject[property]);
     } else if (property === "bodyColor") {
@@ -123,7 +128,7 @@ let updateCar = (carObject) => {
 
 let updateObject = (property, value) => {
   carObject[property] = value;
-  jar.updateCode("let car = " + JSON.stringify(carObject, null, '  '));
+  jar.updateCode("let car = " + JSON.stringify(carObject, null, '  ').replace(/"([^"]+)":/g, '$1:').replace(/\"(\d+)\"/g, '$1'));
   updateCar(carObject);
 };
 
@@ -133,7 +138,7 @@ document.getElementById("execute-button").addEventListener('click', (e) => {
 });
 document.getElementById("reset-button").addEventListener('click', (e) => {
   carObject = Object.assign({}, defaultCarObject);
-  jar.updateCode("let car = " + JSON.stringify(carObject, null, '  '));
+  jar.updateCode("let car = " + JSON.stringify(carObject, null, '  ').replace(/"([^"]+)":/g, '$1:').replace(/\"(\d+)\"/g, '$1'));
   updateCar(carObject);
 });
 
@@ -147,11 +152,12 @@ let optionHandler = (e) => {
 };
 
 let sizeOptionElement = document.getElementById("size-option");
-createOption(sizeOptionElement, {
-  "Small": "small",
-  "Medium": "medium",
-  "Large": "large"
-}, optionHandler);
+sizeOptionElement.onchange = function() {
+  let newValue = sizeOptionElement.value;
+  if (newValue !== undefined) {
+    updateObject(carObjectPropertyify("size-option"), newValue);
+  }
+}
 let wheelColorOptionElement = document.getElementById("wheel-color-option");
 createOption(wheelColorOptionElement, {
   "Red": "red",
