@@ -183,7 +183,7 @@
           <label>}</label>
         </div>
         <div id="card2">
-          <p>Goal: Make the border color Yellow</p>
+          <p>Goal: Make the border color yellow</p>
           <label for="balloon">let balloon = </label>
           <select id="balloon">
             <option value = "red">red</option>
@@ -217,7 +217,7 @@
           <br>
           <label>}</label>
           <br>
-          <label>if(balloonCount > 3){</label>
+          <label>if(balloonCount < 3){</label>
           <br>
           <label>thisDiv.style.borderColor = "blue";</label>
           <br>
@@ -285,6 +285,7 @@
             <option value = "Calculator">Calculator</option>
             <option value = "Pencil">Pencil</option>
           </select>
+          <label>;</label>
           <br>
           <label for="music">let music = </label>
           <select id="music">
@@ -297,7 +298,7 @@
           </select>
           <label>;</label>
           <br>
-          <label>if((tool != "Hammer" && project === "Game") || (music === "Jazz" || project === tool)){</label>
+          <label>if((tool !== "Hammer" && project === "Game") || (music === "Jazz" || project === tool)){</label>
           <br>
           <label>thisDiv.style.color = "red";</label>
           <br>
@@ -309,7 +310,7 @@
           <br>
           <label>}</label>
           <br>
-          <label>if(tool === "Computer" && music != "Rock" && !(project === "Car")){</label>
+          <label>if(tool === "Computer" && music !== "Rock" && !(project === "Car")){</label>
           <br>
           <label>thisDiv.style.color = "blue";</label>
           <br>
@@ -321,7 +322,7 @@
           <select id="drink">
             <option value = "Water">Water</option>
             <option value = "Milk">Milk</option>
-            <option value = "Protien Shake">Protien Shake</option>
+            <option value = "Protein Shake">Protein Shake</option>
             <option value = "Soda">Soda</option>
             <option value = "Energy Drink">Energy Drink</option>
           </select>
@@ -336,6 +337,7 @@
             <option value = "40">50</option>
             <option value = "40">40</option>
           </select>
+          <label>;</label>
           <br>
           <label for="sugar">let sugar = </label>
           <select id="sugar">
@@ -348,19 +350,19 @@
           </select>
           <label>;</label>
           <br>
-          <label>if((calories < sugar && drink != "Energy Drink") && (sugar > 30 || calories >=20) || drink === "Milk"){</label>
+          <label>if((calories < sugar && drink !== "Energy Drink") && (sugar > 30 || calories >=20) || drink === "Milk"){</label>
           <br>
           <label>thisDiv.style.width = 700;</label>
           <br>
           <label>}</label>
           <br>
-          <label>if(calories >= sugar && calories < 20 && calories > 0 && !(drink != "Protien Shake" && calories === 20)){</label>
+          <label>if(calories >= sugar && calories < 20 && calories > 0 && !(drink !== "Protein Shake" && calories === 20)){</label>
           <br>
           <label>thisDiv.style.width = 3000;</label>
           <br>
           <label>}</label>
           <br>
-          <label>if(drink === "Soda" || (calories === sugar && drink != "Soda")){</label>
+          <label>if(drink === "Soda" || (calories === sugar && drink !== "Soda")){</label>
           <br>
           <label>thisDiv.style.width = 2000;</label>
           <br>

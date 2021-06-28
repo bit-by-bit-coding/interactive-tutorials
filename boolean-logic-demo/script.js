@@ -36,7 +36,7 @@ transition.addEventListener("change", checkBool);
 thirdValue.addEventListener("change", checkBool);
 secondOperation.addEventListener("change", checkBool);
 fourthValue.addEventListener("change", checkBool);
-scrollWrapper.addEventListener("click", quizGame);
+scrollWrapper.addEventListener("change", quizGame);
 
 function checkBool() {
   switch(operation.value){
@@ -137,7 +137,7 @@ function quizGame(){
       let balloon = document.getElementById("balloon");
       let balloonCount = document.getElementById("balloonCount");
       let thisDiv2 = document.getElementById("card2");
-      if((balloon.value != "green") && (balloonCount.value === 5)){
+      if((balloon.value !== "green") && (balloonCount.value === "5")){
           thisDiv2.style.borderColor = "yellow";
           check2.style.backgroundColor = "green";
           autoScroll();
@@ -147,7 +147,7 @@ function quizGame(){
       if(balloon.value != "red"){
           thisDiv2.style.borderColor = "green";
       }
-      if(balloonCount.value > 3){
+      if(balloonCount.value < 3){
           thisDiv2.style.borderColor = "blue";
       }
       break;
@@ -196,7 +196,7 @@ function quizGame(){
       if((calories.value < sugar.value && drink.value != "Energy Drink") && (sugar.value > 30 || calories.value >= 20) || drink.value === "Milk"){
           thisDiv5.style.width = 700;
       }
-      if(calories.value >= sugar.value && calories.value < 20 && calories.value > 0 && !(drink.value != "Protien Shake" && calories.value === 20)){
+      if(calories.value >= sugar.value && calories.value < 20 && calories.value > 0 && !(drink.value != "Protein Shake" && calories.value === 20)){
           thisDiv5.style.width = 3000;
           check5.style.backgroundColor = "green";
           bitbybot.style.visibility = "visible";
