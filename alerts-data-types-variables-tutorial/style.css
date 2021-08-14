@@ -182,40 +182,118 @@ button:active {
 }
 
 /* The page-specific styling */
-.showcase-section {
+/* TODO: Put whatever styles you need for just your demo here */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -45px;
+}
+
+li {
+  display: inline-block;
+}
+
+.code {
+  display: inline-block;
+  color: #153570;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
+}
+
+.codePartOne {
+  display: inline-block;
+  color: #50c6e9ff;
+}
+
+.codePartTwo {
+  display: inline-block;
+  color: #ffb560ff;
+}
+
+.codePartThree {
+  display: inline-block;
+  color: #236274;
+}
+
+.codeOrange {
+  color: #ffb560ff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
+}
+
+.semicolon {
+  display: inline-block;
+  color: #e0c02e;
+}
+
+.variableStart {
+  display: inline-block;
+}
+
+.hiddenVariable {
+  display: none;
+}
+
+.variableStart:hover + .hiddenVariable {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  padding: 2px 5px 5px 5px;
+  margin: 0;
+  margin-right: 10px;
+  width: 250px;
+  border: black solid 3px;
+  -webkit-box-shadow: black 3px 3px;
+          box-shadow: black 3px 3px;
+}
+
+.gameButton {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 150px;
+  min-height: 40px;
+}
+
+.buildingGameCode {
+  background-color: black;
+  min-height: 20px;
+  padding: 5px;
+  font-family: "Source Code Pro", monospace;
+  color: #50c6e9ff;
+}
+
+.flex-box {
   position: relative;
 }
 
-.showcase-section svg {
+#bit-by-bot-alert {
+  width: 13em;
+  height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 100%;
+  bottom: 15px;
+  right: 180px;
 }
 
-#options-section {
-  min-height: 20em;
-  padding: 0 1em;
+#navQuiz {
+  position: relative;
 }
 
-div.option-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1em 0 1em 0;
-}
-
-div.option-wrapper > *:first-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-div.option-wrapper > *:last-child {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+#bit-by-bot-quiz {
+  width: 20em;
+  height: auto;
+  position: absolute;
+  right: 150px;
+  top: 150px;
 }
 /*# sourceMappingURL=style.css.map */
