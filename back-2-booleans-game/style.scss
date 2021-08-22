@@ -1,0 +1,44 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+.section {
+  position: relative;
+}
+
+#bit-by-bot-welcome {
+  width: 5em;
+  height: auto;
+  position: absolute;
+  right: 50px;
+  top: 8px;
+}
+
+.grid2x2 {
+  margin-top: 50px;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+  justify-items: stretch;
+}
+
+.box {
+  padding: 0.5em;
+  border: 0.2em solid $primary-color;
+  background-color: $background-color;
+  color: $text-color;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  font-size: 200%;
+  text-decoration: none;
+}
