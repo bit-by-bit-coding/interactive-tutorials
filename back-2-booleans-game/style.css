@@ -225,8 +225,16 @@ button:active {
           align-items: center;
 }
 
-a {
+.grid2x2 > div > div > a {
   font-size: 200%;
   text-decoration: none;
+}
+
+.code {
+  display: inline-block;
+  color: #ff8900;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
 }
 /*# sourceMappingURL=style.css.map */
