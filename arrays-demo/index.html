@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Arrays Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">Arrays Demo | Bit by Bit</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <p>
+        Arrays are ways to store many items in one variable. <br /> <br />
+        
+        For example, say you wanted to store the strings "dog", "cat", and "mouse", but you don't want to store them all in separate variables. You can use an array. Here is how you do it. <br /> <br />
+        
+        // This creates an array that is composed of the strings "dog", "cat", and "mouse", and assigns it to a variable called animals <br />
+        let animals = ["dog", "cat", "mouse"]; <br />
+        // Notice the syntax of the array: it starts with an open bracket "[", and ends with a closing bracket "]". All the elements are separated by commas. <br /> <br />
+
+        Now, this is great and all, but how is this any different from just assigning the strings to normal variables? <br /> <br />
+        
+        Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? <br /> <br />
+
+        With arrays, you don't have to do that. All you need to do is use the append method, as shown: <br /> <br />
+
+        let animals = ["dog", "cat", "mouse"]; <br />
+        // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] <br />
+        animals.append("hamster"); <br />
+        // Notice the syntax of the append method: you start with the name of the variable, in this case "animals", then write ".append". Then you enclose the element you want to add (in this case "hamster") in parantheses. <br /> <br />
+
+        Now, whenever you want to store a new animal, you don't need to create a new variable! You can just add it to the same array!
+      </p>
+    </div>
+    <div class="section">
+      <p>
+        Arrays can do much more than store strings of animals, though. In fact, they can store any object - integers, booleans, even other arrays! This makes them extremely powerful. <br /> <br />
+        
+        However, once you have an array, how can you access the items inside of it? You do so using the <em>index</em> of the item. The index of an item in an array is the number assigned to it based on the order it appears in the array. For example, in our previous array, the index of "cat" is less than the index of "hamster" since "cat" is before "hamster" in the array. <br /> <br />
+
+        The first element in an array starts with the index 0 (not 1!). The index increases by 1 for each element after. For example, in our previous array, "dog" has an index of 0, "cat" has an index of 1, "mouse" has an index of 2, and "hamster" has an index of 3. <br /> <br />
+
+        Why does this matter so much? You can retrieve elements from an array using their index, as shown: <br /> <br />
+
+        let animals = ["dog", "cat", "mouse"]; <br />
+        animals.append("hamster"); <br />
+        // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". <br />
+        let firstAnimal = animals[0]; <br />
+        // This assigns the element with index 0 (the first element) in the array animals (in this case "dog") to the variable firstAnimal <br />
+        let coolestAnimal = animals[3]; <br />
+        // This assigns the element with index 3 (the fourth element) in the array animals (in this case "hamster") to the variable coolestAnimal <br />
+        let boringAnimal = animals[1]; <br />
+        // This assigns the element with index 1 (the second element) in the array animals (in this case "cat") to the variable boringAnimal <br /> <br />
+
+        Now, you can store animals and retrieve them from an array!
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
+          Be sure to wrap this in a div containing the "flex-box" class too.
+        </p>
+        <p>
+          This section is likely for the input of the demo.
+          Users will select options, code, or give values to change the result section of the demo.
+        </p>
+      </div>
+      <div class="flex-col section">
+        <p>
+          Here is where the result of the demo goes.
+          This is to show off what the user has "create" by providing values in the input section of the demo.
+          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as.
+        </p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+</body>
+</html>
