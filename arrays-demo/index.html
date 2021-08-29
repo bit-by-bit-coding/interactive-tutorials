@@ -42,15 +42,28 @@
         
         Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? <br /> <br />
 
-        With arrays, you don't have to do that. All you need to do is use the append method, as shown: <br /> <br />
+        With arrays, you don't have to do that. All you need to do is use the push method, as shown: <br /> <br />
 
         let animals = ["dog", "cat", "mouse"]; <br />
         // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] <br />
-        animals.append("hamster"); <br />
-        // Notice the syntax of the append method: you start with the name of the variable, in this case "animals", then write ".append". Then you enclose the element you want to add (in this case "hamster") in parantheses. <br /> <br />
+        animals.push("hamster"); <br />
+        // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". Then you enclose the element you want to add (in this case "hamster") in parantheses. <br /> <br />
 
         Now, whenever you want to store a new animal, you don't need to create a new variable! You can just add it to the same array!
       </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>Add an element to the array!</p>
+        <input id="push-input-1" type="search">
+        <button id="push-button-1">Add to array</button> <br /> <br />
+      </div>
+      <div class="flex-col section">
+        <p>
+          <p id="p-array-1">Array: [dog, cat, mouse]</p>
+          <p id="p-error-1"></p>
+        </p>
+      </div>
     </div>
     <div class="section">
       <p>
@@ -63,7 +76,7 @@
         Why does this matter so much? You can retrieve elements from an array using their index, as shown: <br /> <br />
 
         let animals = ["dog", "cat", "mouse"]; <br />
-        animals.append("hamster"); <br />
+        animals.push("hamster"); <br />
         // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". <br />
         let firstAnimal = animals[0]; <br />
         // This assigns the element with index 0 (the first element) in the array animals (in this case "dog") to the variable firstAnimal <br />
@@ -77,24 +90,24 @@
     </div>
     <div class="flex-box">
       <div class="flex-col section">
-        <p>
-          To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
-          Be sure to wrap this in a div containing the "flex-box" class too.
-        </p>
-        <p>
-          This section is likely for the input of the demo.
-          Users will select options, code, or give values to change the result section of the demo.
-        </p>
+        <p>Add an element to the array!</p>
+        <input id="push-input-2" type="search">
+        <button id="push-button-2">Add to array</button> <br /> <br />
+        <p>Get a certain index from the array</p>
+        <input id="index-input-2" type="number">
+        <button id="index-button-2">Get this index</button> <br />
       </div>
       <div class="flex-col section">
         <p>
-          Here is where the result of the demo goes.
-          This is to show off what the user has "create" by providing values in the input section of the demo.
-          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as.
+          <p id="p-array-2">Array: [dog, cat, mouse]</p>
+          <p id="p-error-2"></p>
+          <p id="index-get-p-2"></p>
         </p>
       </div>
     </div>
     <!-- The end of the content div is here -->
   </div>
+  <script src="script-1.js"></script>
+  <script src="script-2.js"></script>
 </body>
 </html>
