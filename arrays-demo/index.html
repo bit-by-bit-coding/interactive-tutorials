@@ -40,28 +40,38 @@
 
         Now, this is great and all, but how is this any different from just assigning the strings to normal variables? <br /> <br />
         
-        Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? <br /> <br />
+        Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? What if you already defined the array, and you want the program to add more animals while it is running? <br /> <br />
 
         With arrays, you don't have to do that. All you need to do is use the push method, as shown: <br /> <br />
 
         let animals = ["dog", "cat", "mouse"]; <br />
         // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] <br />
         animals.push("hamster"); <br />
-        // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". Then you enclose the element you want to add (in this case "hamster") in parantheses. <br /> <br />
+        // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". <br />
+        // Then you enclose the element you want to add (in this case "hamster") in parantheses. <br /> <br />
 
         Now, whenever you want to store a new animal, you don't need to create a new variable! You can just add it to the same array!
       </p>
     </div>
+    <div class="section">
+      Try out this interactive! First, add elements by typing them normally on the left, then when you feel ready, try using the actual JavaScript push syntax in the middle! The array will update automatically on the right as you add new elements.
+    </div>
     <div class="flex-box">
       <div class="flex-col section">
         <p>Add an element to the array!</p>
-        <input id="push-input-1" type="search">
-        <button id="push-button-1">Add to array</button> <br /> <br />
+        <input id="push-input-1" type="search" placeholder="hamster"> <br /> <br />
+        <button id="push-button-1">Add to array</button>
+      </div>
+      <div class="flex-col section">
+        <p id="p-code-1">let animals = ["dog", "cat", "mouse"];</p>
+        <input id="input-code-1" type="search" placeholder='animals.push("hamster");'> <br /> <br />
+        <button id="button-code-1">Add code</button>
       </div>
       <div class="flex-col section">
         <p>
           <p id="p-array-1">Array: [dog, cat, mouse]</p>
           <p id="p-error-1"></p>
+          <button id="clear-button-1">Clear array</button>
         </p>
       </div>
     </div>
