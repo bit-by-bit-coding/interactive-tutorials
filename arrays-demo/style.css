@@ -153,4 +153,27 @@ button:active {
   width: 100%;
 }
 
+#input-code-2{
+  width: 100%;
+}
+
+#p-error-1{
+  color: red;
+}
+
+#p-error-2{
+  color: red;
+}
+
+::placeholder{ /* For most browsers */
+  opacity: 0.4;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  opacity: 0.4;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  opacity: 0.4;
+}
 /*# sourceMappingURL=style.css.map */

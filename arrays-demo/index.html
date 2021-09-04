@@ -88,30 +88,34 @@
         let animals = ["dog", "cat", "mouse"]; <br />
         animals.push("hamster"); <br />
         // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". <br />
-        let firstAnimal = animals[0]; <br />
-        // This assigns the element with index 0 (the first element) in the array animals (in this case "dog") to the variable firstAnimal <br />
-        let coolestAnimal = animals[3]; <br />
-        // This assigns the element with index 3 (the fourth element) in the array animals (in this case "hamster") to the variable coolestAnimal <br />
-        let boringAnimal = animals[1]; <br />
-        // This assigns the element with index 1 (the second element) in the array animals (in this case "cat") to the variable boringAnimal <br /> <br />
+        console.log(animals[0]); <br />
+        // This takes the element with index 0 (the first element) in the array animals (in this case "dog") and logs it to the console <br />
+        console.log(animals[3]); <br />
+        // This takes the element with index 3 (the fourth element) in the array animals (in this case "hamster") and logs it to the console <br />
+        console.log(animals[1]); <br />
+        // This takes the element with index 1 (the second element) in the array animals (in this case "cat") and logs it to the connsole <br /> <br />
 
         Now, you can store animals and retrieve them from an array!
       </p>
     </div>
     <div class="flex-box">
       <div class="flex-col section">
-        <p>Add an element to the array!</p>
-        <input id="push-input-2" type="search">
-        <button id="push-button-2">Add to array</button> <br /> <br />
         <p>Get a certain index from the array</p>
-        <input id="index-input-2" type="number">
+        <input id="index-input-2" type="number" placeholder="0">
         <button id="index-button-2">Get this index</button> <br />
+      </div>
+      <div class="flex-col section">
+        <p id="p-code-2">let animals = ["dog", "cat", "mouse"];</p>
+        <input id="input-code-2" type="search" placeholder='console.log(animals[0]);'> <br /> <br />
+        <button id="button-code-2">Add code</button>
       </div>
       <div class="flex-col section">
         <p>
           <p id="p-array-2">Array: [dog, cat, mouse]</p>
-          <p id="p-error-2"></p>
+          <button id="clear-button-2">Clear console and errors</button>
           <p id="index-get-p-2"></p>
+          <p id="p-error-2"></p> <br />
+          <p id="console-output-2">Console Output:</p>
         </p>
       </div>
     </div>
