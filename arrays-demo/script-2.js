@@ -1,4 +1,5 @@
 const l2 = ["dog", "cat", "mouse"];
+let prev = [];
 let indexInput2 = document.getElementById('index-input-2');
 let indexButton2 = document.getElementById("index-button-2");
 let pArray2 = document.getElementById("p-array-2");
@@ -18,7 +19,8 @@ indexButton2.onclick = function() {
     } else if (i >= l2.length) {
         pError2.innerText = "The index must be less than the length of the array. (remember that we start counting the index from 0!)";
     } else {
-        consoleOutput2.innerText = consoleOutput2.innerText + '\n' + l2[i];
+        prev.push(l2[i]);
+        consoleOutput2.innerHTML = 'Console Output: <br />' + prev.join('<br />') + '<br />><span class="blink_me">_</span>'
         pError2.innerText = '';
         pCode2.innerText = pCode2.innerText + '\n' + 'console.log(animals[' + i.toString() + ']);';
     }
@@ -55,7 +57,8 @@ buttonCode2.onclick = function() {
             } else if (y >= l2.length) {
                 pError2.innerText = 'Remember that the integer can\'t be greater than or equal to the length of the array!'
             } else {
-                consoleOutput2.innerText = consoleOutput2.innerText + '\n' + l2[y];
+                prev.push(l2[y]);
+                consoleOutput2.innerHTML = 'Console Output: <br />' + prev.join('<br />') + '<br />><span class="blink_me">_</span>'
                 pError2.innerText = '';
                 pCode2.innerText = pCode2.innerText + '\n' + x;
             }
@@ -73,8 +76,7 @@ inputCode2.addEventListener("keyup", function(event) {
 });
 
 clearButton2.onclick = function() {
-    consoleOutput2.innerText = 'Console Output:';
+    consoleOutput2.innerHTML = 'Console Output: <br />><span class="blink_me">_</span>';
     pCode2.innerText = 'let animals = ["dog", "cat", "mouse"];';
-    indexGetP2.innerText = '';
     pError2.innerText = '';
 }

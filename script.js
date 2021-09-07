@@ -1,6 +1,11 @@
 // Edit this object when adding a new Interactive Tutorials!
 
 let interactiveTutorials = {
+  arraysDemo: {
+    path: 'arrays-demo',
+    title: 'ARRAYS DEMO',
+    content: 'Learn how Javascript arrays work'
+  },
   attributeDemo: {
     path: 'attribute-demo',
     title: 'ATTRIBUTE DEMO',

@@ -20,7 +20,7 @@
         </a>
       </div>
       <!-- TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">Arrays Demo | Bit by Bit</h1>
+      <h1 class="flex-item-left">ARRAYS DEMO</h1>
     </div>
     <div class="flex-item-header">
       <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
@@ -29,31 +29,44 @@
   <div class="content">
     <!-- TODO: Fill this content div with all the content of the demo -->
     <div class="section">
+      <h2>Intro to Arrays</h2>
       <p>
         Arrays are ways to store many items in one variable. <br /> <br />
         
         For example, say you wanted to store the strings "dog", "cat", and "mouse", but you don't want to store them all in separate variables. You can use an array. Here is how you do it. <br /> <br />
         
-        // This creates an array that is composed of the strings "dog", "cat", and "mouse", and assigns it to a variable called animals <br />
+        <span class="big-code">
+        <span class="comment">
+        // This creates an array that is composed of the strings "dog", "cat", and "mouse", and assigns it to a variable called animals </span> <br />
         let animals = ["dog", "cat", "mouse"]; <br />
-        // Notice the syntax of the array: it starts with an open bracket "[", and ends with a closing bracket "]". All the elements are separated by commas. <br /> <br />
-
+        <span class="comment">
+        // Notice the syntax of the array: it starts with an open bracket "[", and ends with a closing bracket "]". All the elements are separated by commas. </span>
+        </span><br /> <br />
+      </p>
+    </div>
+    <div class="section">
+      <p>
+        <h2>Adding Elements to Arrays</h2>
         Now, this is great and all, but how is this any different from just assigning the strings to normal variables? <br /> <br />
         
         Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? What if you already defined the array, and you want the program to add more animals while it is running? <br /> <br />
 
         With arrays, you don't have to do that. All you need to do is use the push method, as shown: <br /> <br />
 
+        <span class="big-code">
         let animals = ["dog", "cat", "mouse"]; <br />
-        // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] <br />
+        <span class="comment">
+        // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] </span> <br />
         animals.push("hamster"); <br />
+        <span class="comment">
         // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". <br />
-        // Then you enclose the element you want to add (in this case "hamster") in parantheses. <br /> <br />
+        // Then you enclose the element you want to add (in this case "hamster") in parantheses. </span>
+        </span><br /> <br />
 
         Now, whenever you want to store a new animal, you don't need to create a new variable! You can just add it to the same array!
       </p>
     </div>
-    <div class="section">
+    <div class="section instructions">
       Try out this interactive! First, add elements by typing them normally on the left, then when you feel ready, try using the actual JavaScript push syntax in the middle! The array will update automatically on the right as you add new elements.
     </div>
     <div class="flex-box">
@@ -76,6 +89,7 @@
       </div>
     </div>
     <div class="section">
+      <h2>Indexing Arrays</h2>
       <p>
         Arrays can do much more than store strings of animals, though. In fact, they can store any object - integers, booleans, even other arrays! This makes them extremely powerful. <br /> <br />
         
@@ -85,26 +99,33 @@
 
         Why does this matter so much? You can retrieve elements from an array using their index, as shown: <br /> <br />
 
+        <span class="big-code">
         let animals = ["dog", "cat", "mouse"]; <br />
         animals.push("hamster"); <br />
-        // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". <br />
+        <span class="comment">
+        // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". </span> <br />
         console.log(animals[0]); <br />
-        // This takes the element with index 0 (the first element) in the array animals (in this case "dog") and logs it to the console <br />
+        <span class="comment">
+        // This takes the element with index 0 (the first element) in the array animals (in this case "dog") and logs it to the console </span> <br />
         console.log(animals[3]); <br />
-        // This takes the element with index 3 (the fourth element) in the array animals (in this case "hamster") and logs it to the console <br />
+        <span class="comment">
+        // This takes the element with index 3 (the fourth element) in the array animals (in this case "hamster") and logs it to the console </span> <br />
         console.log(animals[1]); <br />
-        // This takes the element with index 1 (the second element) in the array animals (in this case "cat") and logs it to the connsole <br /> <br />
+        <span class="comment">
+        // This takes the element with index 1 (the second element) in the array animals (in this case "cat") and logs it to the connsole </span> <br /> <br />
+        </span>
 
         Now, you can store animals and retrieve them from an array!
       </p>
+    </div>
+    <div class="section instructions">
+      Try out this interactive! First, try getting elements from the array by just putting in their index. Then, try out the entire command in the input box! The outputs to your commands will appear in the console.
     </div>
     <div class="flex-box">
       <div class="flex-col section">
         <p>Get a certain index from the array</p>
         <input id="index-input-2" type="number" placeholder="0">
-        <button id="index-button-2">Get this index</button> <br />
-      </div>
-      <div class="flex-col section">
+        <button id="index-button-2">Get this index</button> <br /> <br /> <hr class="flex-box-separator">
         <p id="p-code-2">let animals = ["dog", "cat", "mouse"];</p>
         <input id="input-code-2" type="search" placeholder='console.log(animals[0]);'> <br /> <br />
         <button id="button-code-2">Add code</button>
@@ -113,9 +134,11 @@
         <p>
           <p id="p-array-2">Array: [dog, cat, mouse]</p>
           <button id="clear-button-2">Clear console and errors</button>
-          <p id="index-get-p-2"></p>
           <p id="p-error-2"></p> <br />
-          <p id="console-output-2">Console Output:</p>
+        </p>
+      </div>
+      <div class="flex-col section console-output-box">
+        <p id="console-output-2">Console Output: <br />><span class="blink_me">_</span>
         </p>
       </div>
     </div>

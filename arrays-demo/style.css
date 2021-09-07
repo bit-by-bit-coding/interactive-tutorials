@@ -176,4 +176,43 @@ button:active {
 ::-ms-input-placeholder { /* Microsoft Edge */
   opacity: 0.4;
 }
+
+.console-output-box {
+  background-color:black;
+  color:white;
+  border-color:black;
+  border-right-color: #38Bfe7;
+}
+
+.flex-box-separator {
+  height: 3px;
+  background-color: #38Bfe7;
+  width: 100%;
+  border: none;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.big-code {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 14px;
+  color: #38Bfe7;
+}
+.big-code .comment {
+  color: #ff8900;
+}
+
+.instructions {
+  margin-bottom:0;
+  border-bottom:none;
+}
+
 /*# sourceMappingURL=style.css.map */
