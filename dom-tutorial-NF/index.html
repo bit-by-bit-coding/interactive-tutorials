@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- DONE TODO: Change the title of the page to your demo name -->
+  <title>DOM Tutorial | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- DONE TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">DOM TUTORIAL</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <div id="navGame">
+        <div>
+          <h2>Game</h2>
+          <p id="gameCode"></p>
+          <p class="buildingGameCode" id="buildingCodeHTML"></p>
+          <p class="buildingGameCode" id="buildingCodeJavaScript"></p>
+          <button class="gameButton" id="option1">Option 1</button>
+          <button class="gameButton" id="option2">Press to play</button>
+          <button class="gameButton" id="option3">Option 3</button>
+        </div>
+        <h3 id="points">Points: 0</h3>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
