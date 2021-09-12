@@ -126,7 +126,7 @@
         <p>Get a certain index from the array</p>
         <input id="index-input-2" type="number" placeholder="0">
         <button id="index-button-2">Get this index</button> <br /> <br /> <hr class="flex-box-separator">
-        <p id="p-code-2">let animals = ["dog", "cat", "mouse"];</p>
+        <p id="p-code-2"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
         <input id="input-code-2" type="search" placeholder='console.log(animals[0]);'> <br /> <br />
         <button id="button-code-2">Add code</button>
       </div>
@@ -142,9 +142,59 @@
         </p>
       </div>
     </div>
+    <div class="section">
+      <h2>Deleting Elements From Arrays</h2>
+      <p>
+        Now that we know how to define arrays, add elements to arrays, and get elements from arrays, we need to learn how to delete elements from arrays. After all, what happens if you stop liking hamsters, and need to remove it from your array? <br />
+        Luckily, in JavaScript, we have a method called pop. The pop method allows you to delete the last element of an array. The syntax is as follows: <br /> <br />
+        
+        <span class="big-code">
+          let animals = ["dog", "cat", "mouse"]; <br />
+          animals.push("hamster"); <br />
+          console.log(animals[0]); <span class="comment">// Logs "dog" to the console</span> <br />
+          console.log(animals[3]); <span class="comment">// Logs "hamster" to the console</span><br />
+          console.log(animals[1]); <span class="comment">// Logs "cat" to the console</span><br /> <br />
+          <span class="comment">
+          // This command deletes the last element of the array animals, in this case "hamster". <br />
+          // After this command, the array is back to ["dog", "cat", "mouse"] <br /> </span>
+          animals.pop(); <br />
+          <span class="comment">
+          // Notice the syntax of this command. First, you start with the name of the array (in this case "animals"), then you write ".pop();" <br /> <br />
+          // The pop method also allows you to use the element you delete. For example, you can assign it to a variable as shown: <br />
+          </span>
+          let deletedAnimal = animals.pop(); <br />
+          <span class="comment">
+          // This command assigns the last element of the array animals (in this case "mouse") to a variable called deletedAnimal. <br />
+          // It then deletes the last element from the array, so that the new array is just ["dog", "cat"].
+          </span>
+        </span>
+      </p>
+    </div>
+    <div class="section instructions">
+      Try out this interactive! First, delete elements by clicking the pop button on the left, then try out the actual Javascript pop command syntax! The array will update automatically on the right as you add new elements.
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>Delete an element from the array!</p>
+        <button id="pop-button-3">Pop from array</button>
+      </div>
+      <div class="flex-col section">
+        <p id="p-code-3">let animals = ["dog", "cat", "mouse"];</p>
+        <input id="input-code-3" type="search" placeholder='animals.pop();'> <br /> <br />
+        <button id="button-code-3">Add code</button>
+      </div>
+      <div class="flex-col section">
+        <p>
+          <p id="p-array-3">Array: [dog, cat, mouse]</p>
+          <p id="p-error-3"></p>
+          <button id="clear-button-3">Reset</button>
+        </p>
+      </div>
+    </div>
     <!-- The end of the content div is here -->
   </div>
   <script src="script-1.js"></script>
   <script src="script-2.js"></script>
+  <script src="script-3.js"></script>
 </body>
 </html>

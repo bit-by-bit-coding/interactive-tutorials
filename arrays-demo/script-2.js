@@ -1,4 +1,4 @@
-const l2 = ["dog", "cat", "mouse"];
+let l2 = ["dog", "cat", "mouse"];
 let prev = [];
 let indexInput2 = document.getElementById('index-input-2');
 let indexButton2 = document.getElementById("index-button-2");
@@ -22,7 +22,7 @@ indexButton2.onclick = function() {
         prev.push(l2[i]);
         consoleOutput2.innerHTML = 'Console Output: <br />' + prev.join('<br />') + '<br />><span class="blink_me">_</span>'
         pError2.innerText = '';
-        pCode2.innerText = pCode2.innerText + '\n' + 'console.log(animals[' + i.toString() + ']);';
+        pCode2.innerHTML = pCode2.innerHTML + '<br /><span style="color:rgb(156,219,252);">console</span>.<span style="color:rgb(227,227,176);">log</span>(<span style="color:rgb(156,219,252);">animals</span>[<span style="color:rgb(227,227,176);">' + i.toString() + '</span>]);';
     }
 };
 
@@ -60,7 +60,7 @@ buttonCode2.onclick = function() {
                 prev.push(l2[y]);
                 consoleOutput2.innerHTML = 'Console Output: <br />' + prev.join('<br />') + '<br />><span class="blink_me">_</span>'
                 pError2.innerText = '';
-                pCode2.innerText = pCode2.innerText + '\n' + x;
+                pCode2.innerHTML = pCode2.innerHTML + '<br /><span style="color:rgb(156,219,252);">console</span>.<span style="color:rgb(227,227,176);">log</span>(<span style="color:rgb(156,219,252);">animals</span>[<span style="color:rgb(227,227,176);">' + y.toString() + '</span>]);';
             }
         } catch {
             pError2.innerText = 'Remember that you need to pass in an integer between the brackets!'
@@ -77,6 +77,7 @@ inputCode2.addEventListener("keyup", function(event) {
 
 clearButton2.onclick = function() {
     consoleOutput2.innerHTML = 'Console Output: <br />><span class="blink_me">_</span>';
-    pCode2.innerText = 'let animals = ["dog", "cat", "mouse"];';
+    pCode2.innerHTML = '<span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];';
     pError2.innerText = '';
+    prev = [];
 }

@@ -165,6 +165,10 @@ button:active {
   color: red;
 }
 
+#p-error-3{
+  color: red;
+}
+
 ::placeholder{ /* For most browsers */
   opacity: 0.4;
 }
@@ -213,6 +217,11 @@ button:active {
 .instructions {
   margin-bottom:0;
   border-bottom:none;
+}
+
+#p-code-2 {
+  color: white;
+  background-color:rgb(30,30,30);
 }
 
 /*# sourceMappingURL=style.css.map */
