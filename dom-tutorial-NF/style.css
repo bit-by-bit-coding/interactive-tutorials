@@ -1,3 +1,5 @@
+/* style.scss */
+/* Import the common styling */
 /* common.scss */
 /* Define all the colors */
 body {
@@ -179,52 +181,95 @@ button:active {
   padding: 0;
 }
 
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -45px;
+}
+
+li {
+  display: inline-block;
+}
+
 .code {
-  font-family: 'Anonymous Pro', monospace;
+  display: inline-block;
+  color: #153570;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
 }
 
-#explore-show {
-  width: 100%;
-  height: 100%;
+.codePartOne {
+  display: inline-block;
+  color: #50c6e9ff;
+}
+
+.codePartTwo {
+  display: inline-block;
+  color: #ffb560ff;
+}
+
+.codePartThree {
+  display: inline-block;
+  color: #236274;
+}
+
+.codeOrange {
+  color: #ffb560ff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
+}
+
+.semicolon {
+  display: inline-block;
+  color: #e0c02e;
+}
+
+.variableStart {
+  display: inline-block;
+}
+
+.hiddenVariable {
+  display: none;
+}
+
+.variableStart:hover + .hiddenVariable {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  padding: 2px 5px 5px 5px;
   margin: 0;
-  border: none;
+  margin-right: 10px;
+  width: 250px;
+  border: black solid 3px;
+  -webkit-box-shadow: black 3px 3px;
+          box-shadow: black 3px 3px;
 }
 
-div.option-wrapper {
-  margin: 0.5em 0 0.5em 0;
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.gameButton {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 150px;
+  min-height: 40px;
 }
 
-div.option-wrapper > *:first-child {
-  -webkit-box-flex: 0.55;
-      -ms-flex: 0.55;
-          flex: 0.55;
-}
-
-#dest-option {
-  margin: 0.5em 0 0.5em 0;
-  width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.slider > *:first-child {
-  -webkit-box-flex: 0.11;
-      -ms-flex: 0.11;
-          flex: 0.11;
-}
-
-#atageditor {
-  height: 40%;
+.buildingGameCode {
+  background-color: black;
+  min-height: 20px;
+  padding: 5px;
+  font-family: "Source Code Pro", monospace;
+  color: #50c6e9ff;
 }
 /*# sourceMappingURL=style.css.map */

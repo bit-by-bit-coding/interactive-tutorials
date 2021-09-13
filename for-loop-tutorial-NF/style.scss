@@ -1,0 +1,138 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -45px;
+}
+
+nav > li {
+  display: inline-block;
+}
+
+div {
+  padding: 5px 0;
+}
+
+.code {
+  display: inline-block;
+  color: #153570;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
+}
+.codePartOne {
+  display: inline-block;
+  color: #50c6e9ff;
+}
+.codePartTwo {
+  display: inline-block;
+  color: #ff8900ff;
+}
+.codePartThree {
+  display: inline-block;
+  color: #ffb560ff;
+}
+.codePartFour {
+  display: inline-block;
+  color: #ffd29fff;
+  /*text-shadow: black 1px 1px;*/
+}
+.codeOrange {
+  color: #ffb560ff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
+}
+.codeInside {
+  margin-left: 30px;
+  color: rgb(250, 214, 54);
+}
+
+.semicolon {
+  display: inline-block;
+  color: rgb(248, 210, 39);
+}
+
+.marginNone {
+  margin: 0;
+}
+
+.variableStart {
+  display: inline-block;
+}
+
+.hiddenVariable {
+  display: none;
+}
+
+.variableStart:hover + .hiddenVariable {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  padding: 2px 5px 5px 5px;
+  margin: 0;
+  margin-right: 10px;
+  width: 250px;
+  border: black solid 3px;
+  box-shadow: black 3px 3px;
+}
+
+.gameButton {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  padding: 5px;
+  width: max-content;
+  min-width: 150px;
+  min-height: 40px;
+}
+
+.buildingGameCode {
+  background-color: black;
+  min-height: 20px;
+  padding: 5px;
+  font-family: "Source Code Pro", monospace;
+  color: #50c6e9ff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.item {
+  flex: 100px 1 1;
+}
+
+.navFunctions {
+  position: relative;
+}
+
+#inputBuilding {
+  font-size: 14px;
+  background-color: white;
+  border-color: $text-color;
+  border-width: 1px;
+  cursor: text;
+}
+
+#bit-by-bot-loops {
+  width: 18em;
+  height: auto;
+  position: absolute;
+  right: 50px;
+  bottom: 100px;
+}
