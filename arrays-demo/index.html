@@ -4,6 +4,7 @@
   <!-- TODO: Change the title of the page to your demo name -->
   <title>Arrays Demo | Bit by Bit</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.scss">
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
@@ -38,7 +39,7 @@
         <span class="big-code">
         <span class="comment">
         // This creates an array that is composed of the strings "dog", "cat", and "mouse", and assigns it to a variable called animals </span> <br />
-        let animals = ["dog", "cat", "mouse"]; <br />
+        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
         <span class="comment">
         // Notice the syntax of the array: it starts with an open bracket "[", and ends with a closing bracket "]". All the elements are separated by commas. </span>
         </span><br /> <br />
@@ -54,10 +55,10 @@
         With arrays, you don't have to do that. All you need to do is use the push method, as shown: <br /> <br />
 
         <span class="big-code">
-        let animals = ["dog", "cat", "mouse"]; <br />
+        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
         <span class="comment">
         // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] </span> <br />
-        animals.push("hamster"); <br />
+        <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
         <span class="comment">
         // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". <br />
         // Then you enclose the element you want to add (in this case "hamster") in parantheses. </span>
@@ -76,7 +77,7 @@
         <button id="push-button-1">Add to array</button>
       </div>
       <div class="flex-col section">
-        <p id="p-code-1">let animals = ["dog", "cat", "mouse"];</p>
+        <p id="p-code-1"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
         <input id="input-code-1" type="search" placeholder='animals.push("hamster");'> <br /> <br />
         <button id="button-code-1">Add code</button>
       </div>
@@ -100,17 +101,17 @@
         Why does this matter so much? You can retrieve elements from an array using their index, as shown: <br /> <br />
 
         <span class="big-code">
-        let animals = ["dog", "cat", "mouse"]; <br />
-        animals.push("hamster"); <br />
+        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
+        <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
         <span class="comment">
         // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". </span> <br />
-        console.log(animals[0]); <br />
+        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <br />
         <span class="comment">
         // This takes the element with index 0 (the first element) in the array animals (in this case "dog") and logs it to the console </span> <br />
-        console.log(animals[3]); <br />
+        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <br />
         <span class="comment">
         // This takes the element with index 3 (the fourth element) in the array animals (in this case "hamster") and logs it to the console </span> <br />
-        console.log(animals[1]); <br />
+        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">1</span>]); <br />
         <span class="comment">
         // This takes the element with index 1 (the second element) in the array animals (in this case "cat") and logs it to the connsole </span> <br /> <br />
         </span>
@@ -149,20 +150,20 @@
         Luckily, in JavaScript, we have a method called pop. The pop method allows you to delete the last element of an array. The syntax is as follows: <br /> <br />
         
         <span class="big-code">
-          let animals = ["dog", "cat", "mouse"]; <br />
-          animals.push("hamster"); <br />
-          console.log(animals[0]); <span class="comment">// Logs "dog" to the console</span> <br />
-          console.log(animals[3]); <span class="comment">// Logs "hamster" to the console</span><br />
-          console.log(animals[1]); <span class="comment">// Logs "cat" to the console</span><br /> <br />
+          <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
+          <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <span class="comment">// Logs "dog" to the console</span> <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <span class="comment">// Logs "hamster" to the console</span><br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">1</span>]); <span class="comment">// Logs "cat" to the console</span><br /> <br />
           <span class="comment">
           // This command deletes the last element of the array animals, in this case "hamster". <br />
           // After this command, the array is back to ["dog", "cat", "mouse"] <br /> </span>
-          animals.pop(); <br />
+          <span class="variable">animals</span>.<span class="special">pop</span>(); <br />
           <span class="comment">
           // Notice the syntax of this command. First, you start with the name of the array (in this case "animals"), then you write ".pop();" <br /> <br />
           // The pop method also allows you to use the element you delete. For example, you can assign it to a variable as shown: <br />
           </span>
-          let deletedAnimal = animals.pop(); <br />
+          <span class="special">let</span> <span class="variable">deletedAnimal</span> = <span class="variable">animals</span>.<span class="special">pop</span>(); <br />
           <span class="comment">
           // This command assigns the last element of the array animals (in this case "mouse") to a variable called deletedAnimal. <br />
           // It then deletes the last element from the array, so that the new array is just ["dog", "cat"].
@@ -179,7 +180,7 @@
         <button id="pop-button-3">Pop from array</button>
       </div>
       <div class="flex-col section">
-        <p id="p-code-3">let animals = ["dog", "cat", "mouse"];</p>
+        <p id="p-code-3"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
         <input id="input-code-3" type="search" placeholder='animals.pop();'> <br /> <br />
         <button id="button-code-3">Add code</button>
       </div>
@@ -196,5 +197,6 @@
   <script src="script-1.js"></script>
   <script src="script-2.js"></script>
   <script src="script-3.js"></script>
+  <script src="script-4.js"></script>
 </body>
 </html>

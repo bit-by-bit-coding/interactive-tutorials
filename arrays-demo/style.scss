@@ -5,3 +5,102 @@
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+#input-code-1{
+    width: 100%;
+  }
+  
+  #input-code-2{
+    width: 100%;
+  }
+  
+  #p-error-1{
+    color: red;
+  }
+  
+  #p-error-2{
+    color: red;
+  }
+  
+  #p-error-3{
+    color: red;
+  }
+  
+  ::placeholder{ /* For most browsers */
+    opacity: 0.4;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 0.4;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 0.4;
+  }
+  
+  .console-output-box {
+    background-color:black;
+    color:white;
+    border-color:black;
+    border-right-color: #38Bfe7;
+  }
+  
+  .flex-box-separator {
+    height: 3px;
+    background-color: #38Bfe7;
+    width: 100%;
+    border: none;
+  }
+  
+  .blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .big-code {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 14px;
+  }
+  .big-code .comment {
+    color: #2F2D2C;
+  }
+  
+  .instructions {
+    margin-bottom:0;
+    border-bottom:none;
+  }
+
+  #p-code-1 {
+      color: white;
+      background-color: rgb(30,30,30);
+  }
+  
+  #p-code-2 {
+    color: white;
+    background-color:rgb(30,30,30);
+  }
+
+  #p-code-3 {
+      color: white;
+      background-color: rgb(30,30,30);
+  }
+  
+  .big-code .special {
+      color: #153570;
+  }
+  
+  .big-code .variable {
+      color: #38BFE7;
+  }
+
+  .big-code .string {
+      color: #FF8900;
+  }
+
+  .quizTop {
+      border-bottom: none;
+  }

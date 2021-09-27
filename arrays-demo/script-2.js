@@ -49,6 +49,10 @@ buttonCode2.onclick = function() {
         pError2.innerText = 'Remember that you need to close the brackets!';
     } else {
         try {
+            if (20 === x.length - 3) {
+                pError2.innerText = 'Remember that you need to pass an integer between the brackets!';
+                return
+            }
             y = Number(x.slice(20, x.length - 3));
             if (isNaN(y)) {
                 pError2.innerText = 'Remember that you need to pass in an integer between the brackets!';

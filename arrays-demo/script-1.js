@@ -14,10 +14,12 @@ pushButton.onclick = function() {
         pError.innerText = "The new element can't be nothing!";
     } else if (pushInput.value.length > 50) {
         pError.innerText = "Please limit your element length to 50.";
+    } else if (!pushInput.value.match(/^[0-9a-z]+$/)) {
+        pError.innerText = "Please keep the string alphanumeric.";
     } else {
         l.push(pushInput.value);
         pArray.innerText = "Array: [" + l.join(", ") + "]";
-        pCode.innerText = pCode.innerText + '\n' + 'animals.push("' + pushInput.value + '");'
+        pCode.innerHTML = pCode.innerHTML + '<br />' + '<span style="color: rgb(156,219,252);">animals</span>.<span style="color: rgb(86,156,214);">push</span>(<span style="color: rgb(202,142,118);">"' + pushInput.value + '"</span>);'
     }
 };
 
@@ -55,7 +57,7 @@ buttonCode.onclick = function() {
         }
         l.push(x.slice(14,x.length - 3));
         pArray.innerText = "Array: [" + l.join(", ") + "]";
-        pCode.innerText = pCode.innerText + '\n' + x;
+        pCode.innerHTML = pCode.innerHTML + '<br />' + '<span style="color: rgb(156,219,252);">animals</span>.<span style="color: rgb(86,156,214);">push</span>(<span style="color: rgb(202,142,118);">"' + x.slice(14,x.length - 3) + '"</span>);'
     }
 };
 
@@ -68,6 +70,6 @@ inputCode.addEventListener("keyup", function(event) {
 
 clearButton.onclick = function() {
     l = []
-    pCode.innerText = 'let animals = [];'
-    pArray.innerText = 'Array: []'
+    pCode.innerHTML = '<span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [];'
+    pArray.innerText= 'Array: []'
 }

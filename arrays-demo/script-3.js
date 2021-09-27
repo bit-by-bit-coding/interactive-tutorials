@@ -14,7 +14,7 @@ popButton3.onclick = function() {
     }
     l3.pop();
     pArray3.innerText = "Array: [" + l3.join(', ') + ']';
-    pCode3.innerText += '\n animals.pop();';
+    pCode3.innerHTML += '<br /> <span style="color: rgb(156,219,252);">animals</span>.<span style="color: rgb(86,156,214);">pop</span>();';
     pError3.innerText = '';
 };
 
@@ -26,7 +26,7 @@ buttonCode3.onclick = function() {
     } else {
         l3.pop();
         pArray3.innerText = "Array: [" + l3.join(', ') + ']';
-        pCode3.innerText += '\n animals.pop();';
+        pCode3.innerHTML += '<br /> <span style="color: rgb(156,219,252);">animals</span>.<span style="color: rgb(86,156,214);">pop</span>();';
         pError3.innerText = '';
     }
 };
@@ -41,6 +41,6 @@ inputCode3.addEventListener("keyup", function(event) {
 clearButton3.onclick = function() {
     l3 = ["dog", "cat", "mouse"];
     pArray3.innerText = "Array: [dog, cat, mouse]";
-    pCode3.innerText = 'let animals = ["dog", "cat", "mouse"];';
+    pCode3.innerHTML = '<span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];';
     pError3.innerText = '';
 }
