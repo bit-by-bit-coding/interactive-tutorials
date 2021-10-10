@@ -2,12 +2,12 @@
 // If you want to change the image, just update both Hash tables and the option menu.
 let urlMap = new Map();
 urlMap.set("party-bot", "../assets/bit-by-bot-images/two-hands-party-bot.png");
-urlMap.set("cyndaquil", "https://www.pngitem.com/pimgs/m/165-1653295_pokemon-cyndaquil-hd-png-download.png");
+urlMap.set("pumpkin-bot", "../assets/bit-by-bot-images/pumpkin-yellow-bot.png");
 urlMap.set("squirtle", "https://miro.medium.com/max/302/1*KuSu6ZTyLAcRDwOsI9ZzZA.png");
 
 let optionMap = new Map();
 optionMap.set("Party Bot", "party-bot");
-optionMap.set("Cyndaquil", "cyndaquil");
+optionMap.set("Pumpkin Bot", "pumpkin-bot");
 optionMap.set("Squirtle", "squirtle");
 
 /* Set up the editor. */
@@ -44,7 +44,7 @@ let optionHandler = (e) => {
 let imgSrcElement = document.getElementById("img-src");
 createOption(imgSrcElement, {
     "Party Bot": "party-bot",
-    "Cyndaquil" : "cyndaquil",
+    "Pumpkin Bot" : "pumpkin-bot",
     "Squirtle": "squirtle",
   }, optionHandler);
 
