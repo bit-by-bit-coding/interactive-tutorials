@@ -3,12 +3,12 @@
 let urlMap = new Map();
 urlMap.set("party-bot", "../assets/bit-by-bot-images/two-hands-party-bot.png");
 urlMap.set("pumpkin-bot", "../assets/bit-by-bot-images/pumpkin-yellow-bot.png");
-urlMap.set("squirtle", "https://miro.medium.com/max/302/1*KuSu6ZTyLAcRDwOsI9ZzZA.png");
+urlMap.set("snowman-bot", "../assets/bit-by-bot-images/snowman-bot.png");
 
 let optionMap = new Map();
 optionMap.set("Party Bot", "party-bot");
 optionMap.set("Pumpkin Bot", "pumpkin-bot");
-optionMap.set("Squirtle", "squirtle");
+optionMap.set("Snowman Bot", "snowman-bot");
 
 /* Set up the editor. */
 let editorElement = document.querySelector(".editor");
@@ -45,7 +45,7 @@ let imgSrcElement = document.getElementById("img-src");
 createOption(imgSrcElement, {
     "Party Bot": "party-bot",
     "Pumpkin Bot" : "pumpkin-bot",
-    "Squirtle": "squirtle",
+    "Snowman Bot": "snowman-bot",
   }, optionHandler);
 
 /* Width and height slider. */
