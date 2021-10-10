@@ -1,12 +1,12 @@
 /* A hash table that stores image-url mappings. */
 // If you want to change the image, just update both Hash tables and the option menu.
 let urlMap = new Map();
-urlMap.set("pikachu", "https://www.kumulos.com/wp-content/uploads/2013/10/pikachu-6.png");
+urlMap.set("party-bot", "../assets/bit-by-bot-images/two-hands-party-bot.png");
 urlMap.set("cyndaquil", "https://www.pngitem.com/pimgs/m/165-1653295_pokemon-cyndaquil-hd-png-download.png");
 urlMap.set("squirtle", "https://miro.medium.com/max/302/1*KuSu6ZTyLAcRDwOsI9ZzZA.png");
 
 let optionMap = new Map();
-optionMap.set("Pikachu", "pikachu");
+optionMap.set("Party Bot", "party-bot");
 optionMap.set("Cyndaquil", "cyndaquil");
 optionMap.set("Squirtle", "squirtle");
 
@@ -43,7 +43,7 @@ let optionHandler = (e) => {
 };
 let imgSrcElement = document.getElementById("img-src");
 createOption(imgSrcElement, {
-    "Pikachu": "pikachu",
+    "Party Bot": "party-bot",
     "Cyndaquil" : "cyndaquil",
     "Squirtle": "squirtle",
   }, optionHandler);
@@ -63,9 +63,9 @@ function sliderUpdate() {
 };
 
 /* Default code. */
-jar.updateCode(`<img src=\"https://www.kumulos.com/wp-content/uploads/2013/10/pikachu-6.png\"\n width=${imgWidth.value} height=${imgHeight.value}>`);
+jar.updateCode(`<img src=\"../assets/bit-by-bot-images/two-hands-party-bot.png\"\n width=${imgWidth.value} height=${imgHeight.value}>`);
 executeCode();
-imgSrcElement.value = "Pikachu";
+imgSrcElement.value = "Party Bot";
 widthNum.textContent = imgWidth.value;
 heightNum.textContent = imgHeight.value;
 
