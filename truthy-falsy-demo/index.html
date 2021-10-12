@@ -29,6 +29,7 @@
   <div class="content">
     <!-- TODO: Fill this content div with all the content of the demo -->
     <div class="section">
+      <h2>Introduction</h2>
       <p>
         In JavaScript, boolean (true/false) types and comparisons are not the only forms of truthy and falsy
         values. But first, what are truthy and falsy values? <br> <br>
@@ -72,26 +73,38 @@
       </table>
       <p class="center">**NOTE: Values other than the ones listed above are truthy values.**</p>
     </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
-          Be sure to wrap this in a div containing the "flex-box" class too.
-        </p>
-        <p>
-          This section is likely for the input of the demo.
-          Users will select options, code, or give values to change the result section of the demo.
-        </p>
-      </div>
-      <div class="flex-col section">
-        <p>
-          Here is where the result of the demo goes.
-          This is to show off what the user has "create" by providing values in the input section of the demo.
-          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as.
-        </p>
+    <div class="section">
+      <h2>Test it Out!</h2>
+      <p>Go through each example below to see whethor or not they will evaluate to false!</p>
+
+      <div class="flex-box">
+        <div class="flex-col">
+          <p class="type center">false:</p>
+          <div class="code">
+            <div class="codePartOne">let friday</div>
+            =
+            <div class="codePartTwo">false</div>;
+            <br>
+            <div class="codePartOne">if</div>
+            <div class="codePartThree"> (!friday) {</div>
+            <br>
+            <div class="codeInside">alert("Today is not Friday!");</div>
+            <br>
+            <div class="codePartThree">}</div>
+            <br>
+            <br>
+          </div>
+          <div class="center">
+            <button onclick="falseValue()">Run</button>
+          </div>
+        </div>
+        <div class="flex-col">
+          <p class="center">0:</p>
+        </div>
       </div>
     </div>
     <!-- The end of the content div is here -->
   </div>
 </body>
+<script src="script.js"></script>
 </html>

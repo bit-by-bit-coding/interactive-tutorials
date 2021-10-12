@@ -6,6 +6,10 @@
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
 
+h2 {
+  font-size: 1.5em;
+}
+
 table {
   border: 0.0625em solid $primary-color;
   border-collapse: collapse;
@@ -21,4 +25,39 @@ td {
 
 .center {
   text-align: center;
+}
+
+.type {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.code {
+  display: inline-block;
+  color: $text-color;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
+  margin-left: 35px;
+}
+
+.codePartOne {
+  display: inline-block;
+  color: #153570;
+}
+
+.codePartTwo {
+  display: inline-block;
+  color: #ffd30d;
+}
+
+.codePartThree {
+  display: inline-block;
+  color: $primary-color;
+}
+
+.codeInside {
+  display: inline-block;
+  color: $accent-color;
+  margin-left: 2em;
 }
