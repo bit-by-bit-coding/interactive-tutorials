@@ -5,3 +5,20 @@
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+
+table {
+  border: 0.0625em solid $primary-color;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 0.0625em solid $primary-color;
+  border-collapse: collapse;
+  padding: 0.5em 1em;
+}
+
+.center {
+  text-align: center;
+}
