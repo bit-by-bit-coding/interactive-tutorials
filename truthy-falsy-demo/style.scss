@@ -37,6 +37,10 @@ td {
   font-weight: bolder;
 }
 
+.section {
+  position: relative;
+}
+
 .flex-box {
   margin-bottom: 0.5em;
 }
@@ -68,4 +72,20 @@ td {
   display: inline-block;
   color: $accent-color;
   margin-left: 2em;
+}
+
+#bit-by-bot-intro {
+  height: 120px;
+  width: auto;
+  position: absolute;
+  right: 100px;
+  top: 120px;
+}
+
+#bit-by-bot-interactive {
+  height: 100px;
+  width: auto;
+  position: absolute;
+  right: 100px;
+  top: 10px;
 }
