@@ -75,133 +75,133 @@
     </div>
     <div class="section">
       <h2>Test it Out!</h2>
-      <p>Go through each example below to see whethor or not they will evaluate to false!</p>
-      <!-- row 1 of the examples-->
-      <div class="flex-box">
-        <div class="flex-col">
-          <p class="type center">false:</p>
-          <div class="code">
-            <div class="codePartOne">let friday</div>
-            =
-            <div class="codePartTwo">false</div>;
-            <br>
-            <div class="codePartOne">if</div>
-            <div class="codePartThree"> (!friday) {</div>
-            <br>
-            <div class="codeInside">alert("Today is not Friday!");</div>
-            <br>
-            <div class="codePartThree">}</div>
-            <br>
-            <br>
-          </div>
-          <div class="center">
-            <button onclick="falseValue()">Run</button>
-          </div>
+      <p>Go through each example below to see whether or not they will evaluate to false!</p>
+    </div>
+    <!-- row 1 of the examples-->
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p class="type center">false:</p>
+        <div class="code">
+          <div class="codePartOne">let friday</div>
+          =
+          <div class="codePartTwo">false</div>;
+          <br>
+          <div class="codePartOne">if</div>
+          <div class="codePartThree"> (!friday) {</div>
+          <br>
+          <div class="codeInside">alert("Today is not Friday!");</div>
+          <br>
+          <div class="codePartThree">}</div>
+          <br>
+          <br>
         </div>
-        <div class="flex-col">
-          <p class="type center">0:</p>
-          <div class="code">
-            <div class="codePartOne">let grade</div>
-            =
-            <div class="codePartTwo">0</div>;
-            <br>
-            <div class="codePartOne">if</div>
-            <div class="codePartThree"> (!friday) {</div>
-            <br>
-            <div class="codeInside">alert("This is not a valid grade!");</div>
-            <br>
-            <div class="codePartThree">}</div>
-            <br>
-            <br>
-          </div>
-          <div class="center">
-            <button onclick="zero()">Run</button>
-          </div>
+        <div class="center">
+          <button onclick="falseValue()">Run</button>
         </div>
       </div>
-      <!-- row 2 of the examples-->
-      <div class="flex-box">
-        <div class="flex-col">
-          <p class="type center">Empty String:</p>
-          <div class="code">
-            <div class="codePartOne">let sentence</div>
-            =
-            <div class="codePartTwo">""</div>;
-            <br>
-            <div class="codePartOne">if</div>
-            <div class="codePartThree"> (!sentence) {</div>
-            <br>
-            <div class="codeInside">alert("This is a blank string!");</div>
-            <br>
-            <div class="codePartThree">}</div>
-            <br>
-            <br>
-          </div>
-          <div class="center">
-            <button onclick="emptyString()">Run</button>
-          </div>
+      <div class="flex-col section">
+        <p class="type center">0:</p>
+        <div class="code">
+          <div class="codePartOne">let grade</div>
+          =
+          <div class="codePartTwo">0</div>;
+          <br>
+          <div class="codePartOne">if</div>
+          <div class="codePartThree"> (!friday) {</div>
+          <br>
+          <div class="codeInside">alert("This is not a valid grade!");</div>
+          <br>
+          <div class="codePartThree">}</div>
+          <br>
+          <br>
         </div>
-        <div class="flex-col">
-          <p class="type center">null Value:</p>
-          <div class="code">
-            <div class="codePartOne">let rank</div>
-            =
-            <div class="codePartTwo">null</div>;
-            <br>
-            <div class="codePartOne">if</div>
-            <div class="codePartThree"> (!rank) {</div>
-            <br>
-            <div class="codeInside">alert("Your rank is currently unavailable!");</div>
-            <br>
-            <div class="codePartThree">}</div>
-            <br>
-            <br>
-          </div>
-          <div class="center">
-            <button onclick="nullValue()">Run</button>
-          </div>
+        <div class="center">
+          <button onclick="zero()">Run</button>
         </div>
       </div>
-      <!-- row 3 of the examples-->
-      <div class="flex-box">
-        <div class="flex-col">
-          <p class="type center">undefined Value (unassigned value):</p>
-          <div class="code">
-            <div class="codePartOne">let word</div>
-            ;
-            <br>
-            <div class="codePartOne">if</div>
-            <div class="codePartThree"> (!word) {</div>
-            <br>
-            <div class="codeInside">alert("This variable has not been assigned a value yet!");</div>
-            <br>
-            <div class="codePartThree">}</div>
-            <br>
-            <br>
-          </div>
-          <div class="center">
-            <button onclick="undefinedValue()">Run</button>
-          </div>
+    </div>
+    <!-- row 2 of the examples-->
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p class="type center">Empty String:</p>
+        <div class="code">
+          <div class="codePartOne">let sentence</div>
+          =
+          <div class="codePartTwo">""</div>;
+          <br>
+          <div class="codePartOne">if</div>
+          <div class="codePartThree"> (!sentence) {</div>
+          <br>
+          <div class="codeInside">alert("This is a blank string!");</div>
+          <br>
+          <div class="codePartThree">}</div>
+          <br>
+          <br>
         </div>
-        <div class="flex-col">
-          <p class="type center">NaN Value (invalid number):</p>
-          <div class="code">
-            <div class="codePartOne">let food</div>
-            =
-            <div class="codePartTwo">"jelly" / 3</div>;
-            <br>
-            <div class="codePartOne">if</div>
-            <div class="codePartThree"> (!food) {</div>
-            <br>
-            <div class="codeInside">alert("There is a problem with the number!");</div>
-            <br>
-            <div class="codePartThree">}</div>
-            <br>
-            <br>
-          </div>
-          <div class="center">
-            <button onclick="notANumber()">Run</button>
-          </div>
+        <div class="center">
+          <button onclick="emptyString()">Run</button>
+        </div>
+      </div>
+      <div class="flex-col section">
+        <p class="type center">null Value:</p>
+        <div class="code">
+          <div class="codePartOne">let rank</div>
+          =
+          <div class="codePartTwo">null</div>;
+          <br>
+          <div class="codePartOne">if</div>
+          <div class="codePartThree"> (!rank) {</div>
+          <br>
+          <div class="codeInside">alert("Your rank is currently unavailable!");</div>
+          <br>
+          <div class="codePartThree">}</div>
+          <br>
+          <br>
+        </div>
+        <div class="center">
+          <button onclick="nullValue()">Run</button>
+        </div>
+      </div>
+    </div>
+    <!-- row 3 of the examples-->
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p class="type center">undefined Value (unassigned value):</p>
+        <div class="code">
+          <div class="codePartOne">let word</div>
+          ;
+          <br>
+          <div class="codePartOne">if</div>
+          <div class="codePartThree"> (!word) {</div>
+          <br>
+          <div class="codeInside">alert("This variable has not been assigned a value yet!");</div>
+          <br>
+          <div class="codePartThree">}</div>
+          <br>
+          <br>
+        </div>
+        <div class="center">
+          <button onclick="undefinedValue()">Run</button>
+        </div>
+      </div>
+      <div class="flex-col section">
+        <p class="type center">NaN Value (invalid number):</p>
+        <div class="code">
+          <div class="codePartOne">let food</div>
+          =
+          <div class="codePartTwo">"jelly" / 3</div>;
+          <br>
+          <div class="codePartOne">if</div>
+          <div class="codePartThree"> (!food) {</div>
+          <br>
+          <div class="codeInside">alert("There is a problem with the number!");</div>
+          <br>
+          <div class="codePartThree">}</div>
+          <br>
+          <br>
+        </div>
+        <div class="center">
+          <button onclick="notANumber()">Run</button>
         </div>
       </div>
     </div>

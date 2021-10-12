@@ -209,6 +209,10 @@ td {
   font-weight: bolder;
 }
 
+.flex-box {
+  margin-bottom: 0.5em;
+}
+
 .code {
   display: inline-block;
   color: #000;
