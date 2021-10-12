@@ -204,6 +204,11 @@ td {
   text-align: center;
 }
 
+.note {
+  font-size: large;
+  color: #ff8900;
+}
+
 .type {
   font-size: large;
   font-weight: bolder;
@@ -219,7 +224,6 @@ td {
   font-size: 18px;
   font-weight: 600;
   font-family: "Source Code Pro", monospace;
-  margin-left: 35px;
 }
 
 .codePartOne {
