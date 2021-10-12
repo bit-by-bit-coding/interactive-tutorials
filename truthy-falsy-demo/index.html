@@ -30,8 +30,47 @@
     <!-- TODO: Fill this content div with all the content of the demo -->
     <div class="section">
       <p>
-        To create a section that goes across the entire width of the screen, use the "section" class on a div.
+        In JavaScript, boolean (true/false) types and comparisons are not the only forms of truthy and falsy
+        values. But first, what are truthy and falsy values? <br> <br>
+        As the names suggest...
+        <ul>
+          <li>Truthy expressions result in the boolean value true</li>
+          <li>Falsy expressions result in the boolean value false</li>
+        </ul>
+
+        Here are the falsy values:
       </p>
+      <table>
+        <tr>
+          <th>Falsy Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>false</td>
+          <td>If the boolean variable is set to be false, then it will evaluate to false.</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>If the value of the number is 0, then it will be considered as falsy.</td>
+        </tr>
+        <tr>
+          <td>"" or '' (Empty String)</td>
+          <td>If the string is blank, then it will evaluate to false.</td>
+        </tr>
+        <tr>
+          <td>null</td>
+          <td>If there is no value at all, then JavaScript will return a value called null, which will also be considered as falsy.</td>
+        </tr>
+        <tr>
+          <td>undefined</td>
+          <td>If a variable is declared but not assigned a value, then it will return a value called undefined and will also evaluate to false.</td>
+        </tr>
+        <tr>
+          <td>NaN</td>
+          <td>If there is a problem with the number (e.g. divide a string by a number), then NaN (Not a Number) will be returned and will evaluate to false.</td>
+        </tr>
+      </table>
+      <p class="center">Values other than the ones listed above are truthy values.</p>
     </div>
     <div class="flex-box">
       <div class="flex-col section">
