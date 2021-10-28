@@ -1,13 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Change the title of the page to your demo name -->
   <title>CSS Selectors Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>\
+  <script src="script.js"></script>
 </head>
 <body>
-  
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">CSS SELECTORS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <p>
+        To create a section that goes across the entire width of the screen, use the "section" class on a div.
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
+          Be sure to wrap this in a div containing the "flex-box" class too.
+        </p>
+        <p>
+          This section is likely for the input of the demo.
+          Users will select options, code, or give values to change the result section of the demo.
+        </p>
+      </div>
+      <div class="flex-col section">
+        <p>
+          Here is where the result of the demo goes.
+          This is to show off what the user has "create" by providing values in the input section of the demo.
+          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as.
+        </p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
 </body>
-<script src="script.js"></script>
 </html>
+
+<!-- 
+<h1>Hello World!</h1>
+<label for="i1">ID:</label>
+<input id="i1" type="textbox" name="i1"></input>
+<label for="c1">Class:</label>
+<input id="c1" type="textbox" name="c1"></input> -->

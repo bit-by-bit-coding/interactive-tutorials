@@ -1,0 +1,153 @@
+@import "../assets/common.scss";
+#leftcont {
+    float: left;
+}
+#rightcont {
+    float: right;
+    overflow: hidden;
+}
+#leftcont, #rightcont {
+    padding: 30px;
+    height: 400px;
+}
+#pre, #post {
+
+    border: 3px solid #000000;
+    background-color: #fff;
+    color: #000;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 24px;
+    width: 370px;
+    height: 350px;
+    float: left;
+    padding: 10px;
+    padding-top: 0px;
+
+}
+#leftcont {
+    margin-left: 20px;
+}
+#rightcont {
+    margin-right: 20px;
+    width: 610px;
+    display: block;
+}
+#post {
+    margin-right: 30px;
+}
+#giveBGColor, #giveColor, #giveBorderColor {
+    width: 75px;
+}
+#arrow {
+    float: left;
+    width: 169px;
+    height: 400px;
+    display: table;
+    margin: 0 auto;
+}
+#bigcont {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe1bf;
+    color: black;
+    border: 0.2em solid #38Bfe7;
+    padding-bottom: 20px;
+}
+#secondcont {
+  display: block;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
+  float: right;
+  width: 47%;
+}
+#DOMcode {
+    height: flex;
+    min-height: 200px;
+    margin: 20px auto;
+    border: 2px solid gray;
+    font-family: Courier;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+h2 {
+    display: inline-block;
+}
+h1 {
+    text-align: center;
+}
+#slider {
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+#sliderValue{
+    cursor: pointer;
+}
+#arrow img {
+    margin-top: 140px;
+}
+#giveWidth {
+    width: 30px;
+}
+
+#giveID{
+    width: 94%
+}
+
+@media (max-width: 1384px) {
+    #pre, #post {
+        width: 150px;
+    }
+    #rightcont {
+        width: 420px;
+    }
+    #giveID{
+        width: 80%;
+    }
+}
+@media(max-width: 940px){
+
+    #pre, #post {
+        width: 75px;
+    }
+    #rightcont {
+        width: 200px;
+    }
+    #giveID{
+        width: 40%;
+    }
+    #header{
+        font-size: smaller;
+    }
+}
+@media(max-width: 700px){
+
+    #header{
+        font-size: x-small;
+    }
+}
+
+#infoText {
+  display: block;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
+  float: left;
+  margin-top: 20px;
+  width: 47%;
+}
+ #arrowIcon{
+     font-size: 200px;
+     color: #38Bfe7;
+     text-align: center;
+     margin: 700px, 0px;
+     margin-top: 140px;
+ }
