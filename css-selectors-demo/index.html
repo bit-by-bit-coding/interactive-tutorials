@@ -7,8 +7,7 @@
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>\
-  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="header" class="flex-container-header">
@@ -20,7 +19,6 @@
           </button>
         </a>
       </div>
-      <!-- TODO: Change the name of the demo here -->
       <h1 class="flex-item-left">CSS SELECTORS DEMO</h1>
     </div>
     <div class="flex-item-header">
@@ -28,39 +26,47 @@
     </div>
   </div>
   <div class="content">
-    <!-- TODO: Fill this content div with all the content of the demo -->
     <div class="section">
       <p>
-        To create a section that goes across the entire width of the screen, use the "section" class on a div.
+        CSS selectors are used to locate and select the html elements that you would like to style
       </p>
     </div>
     <div class="flex-box">
       <div class="flex-col section">
-        <p>
-          To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
-          Be sure to wrap this in a div containing the "flex-box" class too.
-        </p>
-        <p>
-          This section is likely for the input of the demo.
-          Users will select options, code, or give values to change the result section of the demo.
-        </p>
+            <div class="editor-section flex-col section" style="margin-right: 0.2em;">
+              <div class="editor lang-html"></div>
+              <div class="editor-button-overlay">
+                <button id="execute-button" title="Execute the code">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button id="reset-button" title="Reset the code">
+                  <i class="fas fa-redo-alt"></i>
+                </button>
+              </div>
+            </div>
       </div>
-      <div class="flex-col section">
-        <p>
-          Here is where the result of the demo goes.
-          This is to show off what the user has "create" by providing values in the input section of the demo.
-          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as.
-        </p>
+      <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
+        <iframe id="explore-show" src="about:blank">
+        </iframe>
       </div>
     </div>
-    <!-- The end of the content div is here -->
   </div>
 </body>
+<script src="../assets/prism.js"></script>
+<script src="../assets/codejar.js"></script>
+<script src="../assets/linenumbers.js"></script>
+<script src="script.js"></script>
 </html>
 
+<!-- First box -->
 <!-- 
-<h1>Hello World!</h1>
-<label for="i1">ID:</label>
-<input id="i1" type="textbox" name="i1"></input>
-<label for="c1">Class:</label>
-<input id="c1" type="textbox" name="c1"></input> -->
+To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
+Be sure to wrap this in a div containing the "flex-box" class too. -->
+<!-- 
+This section is likely for the input of the demo.
+Users will select options, code, or give values to change the result section of the demo. -->
+
+<!-- Second box -->
+<!-- Here is where the result of the demo goes.
+          This is to show off what the user has "create" by providing values in the input section of the demo.
+          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as. -->
