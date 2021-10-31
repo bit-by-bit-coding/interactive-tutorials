@@ -183,4 +183,69 @@ button:active {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+table {
+  border: 0.0625em solid #38Bfe7;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 0.0625em solid #38Bfe7;
+  border-collapse: collapse;
+  padding: 0.5em 1em;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex-col {
+  padding: 0;
+}
+
+.editor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.code-lines {
+  margin: 0;
+  padding-top: 0.5em;
+  line-height: 1.5em;
+  background-color: #e2e2e2;
+  width: 2em;
+  text-align: center;
+}
+
+.code {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  display: inline-block;
+  color: #000;
+  line-height: 1.5em;
+}
+
+div.codePartOne {
+  display: inline-block;
+  color: #ff8900;
+}
+
+.codePartTwo {
+  display: inline-block;
+  color: #0077aa;
+  margin-left: 2em;
+}
+
+.codePartThree {
+  display: inline-block;
+  color: #669900;
+}
+
+select,
+input {
+  font-family: "Anonymous Pro", monospace;
+}
 /*# sourceMappingURL=style.css.map */

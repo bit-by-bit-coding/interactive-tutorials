@@ -56,6 +56,7 @@
           <td>Element is positioned either relative or fixed, depending on the user's scroll position</td>
         </tr>
       </table>
+      <p class="center">*Any position except static (relative, absolute, fixed, sticky)</p>
     </div>
     <div class="section">
       <h2>Instructions</h2>
@@ -63,7 +64,90 @@
         changing the values of top/bottom and left/right, you are essentially adding pixels to that side, making
         the image move the other way.</p>
     </div>
-    
+    <div class="flex-box">
+      <div class="flex-col section">
+        <div class="editor">
+          <div class="code-lines">
+            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12
+          </div>
+          <div class="code">
+            <!--bit by bot styling-->
+            <div class="codePartOne">#bit-by-bot</div> {
+            <br>
+            <div class="indent"></div>
+            <div class="codePartTwo">position</div> :
+            <div class="codePartThree">
+              <select name="bot-position" id="bot-position" class="codePartThree" onchange="setBotPositionProperty();">
+                <option value="static">static</option>
+                <option value="relative">relative</option>
+                <option value="absolute">absolute</option>
+                <option value="fixed" selected>fixed</option>
+                <option value="sticky">sticky</option>
+              </select>
+            </div> ;
+            <br>
+              <select name="bot-y-direction" id="bot-y-direction" class="codePartTwo">
+                <option value="top">top</option>
+                <option value="bottom">bottom</option>
+            </select> :
+            <div class="codePartThree">
+              <input type="number" id="bot-y-value" class="codePartThree" min="" max="" value="0">  <!--change min/max and set value to proper value later-->
+              px
+            </div> ;
+            <br>
+              <select name="bot-x-direction" id="bot-x-direction" class="codePartTwo">
+                <option value="left">left</option>
+                <option value="right">right</option>
+            </select> :
+            <div class="codePartThree">
+              <input type="number" id="bot-x-value" class="codePartThree" min="" max="" value="0"> <!--change min/max and set value to proper value later-->
+              px
+            </div> ;
+            <br>
+            }
+            <br>
+            <br>
+            <!-- balloon styling -->
+            <div class="codePartOne">#balloon</div> {
+              <br>
+              <div class="indent"></div>
+              <div class="codePartTwo">position</div> :
+              <div class="codePartThree">
+                <select name="balloon-position" id="balloon-position" class="codePartThree" onchange="setBalloonPositionProperty();">
+                  <option value="static">static</option>
+                  <option value="relative">relative</option>
+                  <option value="absolute">absolute</option>
+                  <option value="fixed" selected>fixed</option>
+                  <option value="sticky">sticky</option>
+                </select>
+              </div> ;
+              <br>
+                <select name="balloon-y-direction" id="balloon-y-direction" class="codePartTwo">
+                  <option value="top">top</option>
+                  <option value="bottom">bottom</option>
+              </select> :
+              <div class="codePartThree">
+                <input type="number" id="balloon-y-value" class="codePartThree" min="" max="" value="0">  <!--change min/max and set value to proper value later-->
+                px
+              </div> ;
+              <br>
+                <select name="balloon-x-direction" id="balloon-x-direction" class="codePartTwo">
+                  <option value="left">left</option>
+                  <option value="right">right</option>
+              </select> :
+              <div class="codePartThree">
+                <input type="number" id="balloon-x-value" class="codePartThree" min="" max="" value="0"> <!--change min/max and set value to proper value later-->
+                px
+              </div> ;
+              <br>
+              }
+          </div>
+        </div>
+      </div>
+      <div class="flex-col section">
+
+      </div>
+    </div>
     <!-- The end of the content div is here -->
   </div>
 </body>
