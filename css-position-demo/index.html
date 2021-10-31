@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>CSS Position Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">CSS POSITION DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>Information</h2>
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>static</td>
+          <td>Default value (follows the regular flow of the document)</td>
+        </tr>
+        <tr>
+          <td>relative</td>
+          <td>Element is positioned relative to itself; does not affect other elemenets</td>
+        </tr>
+        <tr>
+          <td>absolute</td>
+          <td>Element is positioned relative to its closest positioned* ancestor; affects other elements</td>
+        </tr>
+        <tr>
+          <td>fixed</td>
+          <td>Element is positioned relative to the browser window and always stays in the same place</td>
+        </tr>
+        <tr>
+          <td>sticky</td>
+          <td>Element is positioned either relative or fixed, depending on the user's scroll position</td>
+        </tr>
+      </table>
+    </div>
+    <div class="section">
+      <h2>Instructions</h2>
+      <p>Play around with the position properties of Bit by Bot and the balloon. Note that when
+        changing the values of top/bottom and left/right, you are essentially adding pixels to that side, making
+        the image move the other way.</p>
+    </div>
+    
+    <!-- The end of the content div is here -->
+  </div>
+</body>
+</html>
