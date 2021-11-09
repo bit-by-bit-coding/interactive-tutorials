@@ -4,7 +4,7 @@
   <!-- TODO: Change the title of the page to your demo name -->
   <title>Arrays Demo | Bit by Bit</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.scss">
+  <link rel="stylesheet" href="../assets/prism.css">
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
@@ -192,11 +192,129 @@
         </p>
       </div>
     </div>
+    <div class="section">Try out this quiz!</div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          Your goal is for the array to be ["red","green","yellow"] in the end, and for "cyan", "magenta", and "orange" to be outputted to the console, in that order.  <br /> <br />
+          let colors = ["<select id="quiz1-1">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"]; <br />
+          colors.push("<select id="quiz1-2">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          console.log(colors[1]); <br />
+          colors.pop(); <br />
+          colors.push("<select id="quiz1-3">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          colors.push("<select id="quiz1-4">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          console.log(colors.pop()); <br />
+          colors.push("<select id="quiz1-5">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          let coolColor = colors.pop(); <br />
+          console.log(coolColor); <br />
+          colors.push("<select id="quiz1-6">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+        </p>
+        <button id="quiz1">Check Answers</button>
+        <p id="pErrorQuiz1"></p>
+      </div>
+      <div class="flex-col section">
+        <p>
+          Try to predict what the array will be in the end, and what the console output will be! <br /> <br />
+          let flowers = ["rose", "dandelion"]; <br />
+          favoriteFlower = flowers.pop(); <br />
+          flowers.push("tulip"); <br />
+          flowers.push("daffodil"); <br />
+          secondFavoriteFlower = flowers[0]; <br />
+          leastFavoriteFlower = flowers[2]; <br />
+          console.log(secondFavoriteFlower); <br /> <br />
+          What is the flowers array at the end? <br />
+          ["
+          <select id="quiz2-1">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>", "
+          <select id="quiz2-2">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>", "
+          <select id="quiz2-3">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>"] <br /> <br />
+          What is the console output? 
+          <select id="quiz2-4">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>
+        </p>
+        <button id="quiz2">Check Answers</button>
+        <p id="pErrorQuiz2"></p>
+      </div>
+    </div>
     <!-- The end of the content div is here -->
   </div>
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
   <script src="script-1.js"></script>
   <script src="script-2.js"></script>
   <script src="script-3.js"></script>
   <script src="script-4.js"></script>
+  <script src="script-5.js"></script>
 </body>
 </html>
