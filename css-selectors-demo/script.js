@@ -28,12 +28,7 @@
 //     })
 // });
 
-let defaultCode = '<body>\n<div class="orange">\n  <h1>A CSS Selector Demo</h1>\n  <div class="blue">\n    <p>You can select any element within your HTML files</p>\n  </div>\n</div>\n</body>';
-let codeAnimation = [
-  '<body>\n<div class="orange">\n  <h1>A CSS Selector Demo</h1>\n</div>\n</body>',
-  '<body>\n<div class="orange">\n  <h1>A CSS Selector Demo</h1>\n  <div class="blue">\n    <p>You can nest divs inside of divs.</p>\n  </div>\n</div>\n</body>'
-]
-
+let defaultCode = '<body>\n<div>\n  <h1>A CSS Selector Demo</h1>\n  <div>\n    <p>You can select any element within your HTML files using CSS Selectors</p>\n  </div>\n  <div>\n    <p>Try selecting the elements using their element tags</p>\n  </div>\n </div>\n</body>';
 // code for the editor
 let editorElement = document.querySelector(".editor");
 // add the "Cmd+S" or "Ctrl+S" to execute the code.
