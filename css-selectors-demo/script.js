@@ -28,7 +28,7 @@
 //     })
 // });
 
-let defaultCode = '<head>\n  <style>\n    h1{ color: red }\n </style>\n</head> \n<body>\n<div>\n  <h1>CSS Selector Demo</h1>\n  <div>\n    <p>You can select any element within your HTML files using CSS Selectors</p>\n  </div>\n  <div>\n    <p>Try selecting the elements using their element tags</p>\n  </div>\n </div>\n</body>';
+let defaultCode = '<head>\n  <style>\n    h1{ color: gold }\n </style>\n</head> \n<body>\n<div>\n  <h1>CSS Selector Demo</h1>\n  <div>\n    <p>You can select any element within your HTML files using CSS Selectors</p>\n  </div>\n  <div>\n    <p>Try selecting the elements using their element tags</p>\n  </div>\n </div>\n</body>';
 // code for the editor
 let editorElement = document.querySelector(".editor");
 // add the "Cmd+S" or "Ctrl+S" to execute the code.

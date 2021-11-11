@@ -52,21 +52,21 @@
           CSS Selectors are used to target elements within an HTML document. A majority of the CSS selectors you will use look just like HTML elements without the angle brackets.
         </li>
         <li>
-          You can use general selectors such as <em>p, h1, body and div</em> to target every single one of those elements on the page.
+          You can use general selectors such as <em>p, h1, body and div </em> to target every single one of those elements on the page.
           <br/>
           For example:
           <div class='text-example'>
             <textarea disabled>
-  p {
-    color: blue;
-  }
+p {
+  color: blue;
+}
             </textarea>
           </div>
             This is the "p" css selector. Creating this styling will target every single &lt;p&gt; element in the HTML document and change their text color to blue.
             <br/>
-            This is also the correct syntax for CSS inside of a stylesheet: YOUR_SELECTOR { YOUR_STYLINGS }. Every single HTML element can be targeted this way
+            This is also the correct syntax for CSS inside of a stylesheet: YOUR_SELECTOR { YOUR_STYLINGS; }. Every single HTML element can be targeted this way
             <br/>
-            <em>Note that every style must be ended with a semi-colon like in the example</em>
+            <span class='note'><em>Note: Every style must be ended with a semi-colon like in the example when using an external stylesheet</em></span>
         </li>
         <h2>Classes and ID's</h2>
         <li>General stylings are useful, but what if you wanted to target only one paragraph or div? This is where classes and ID's come into play</li>
@@ -87,14 +87,30 @@
           </textarea>
         </div>
         <li>
-          Take note that the syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements.
-        </li>
-        <li>
           In this example we are targeting two different paragraphs. One has a class of "first-p" and the other has an ID of "second-p". This will change one paragraph element blue and the other red.
           <br/>
           Remember, ".blue-p" can be given to other elements to make them blue as well. "#red-p" cannot be assigned to another element and will only affect the element that has been given that ID.
         </li>
+        <li>
+          <span class='note'>
+            <em>Note: The syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements.</em>
+          </span> 
+        </li>
+        <li>
+          <span class='review'>Review: Classes are applied to elements using "class= CLASS_NAME", ID's are applied with "id= ID_NAME"</span>
+        </li>
         <h2>Practice</h2>
+        <li>
+          In the editor above there is an internal style tag located at the top, to allow you to use CSS selectors to target elements on the page. 
+          <br/>
+        </li>
+        <li>
+          Practice targeting the paragraph elements on the page and change their color. Use the "h1" styling that is already present as a reference for the syntax. 
+        </li>
+        <li>
+          Once you have the hang of selecting and styling general elements, try giving elements classes and ID's and try styling them by selecting their class name or ID name.
+        </li>
+        <span class='note'><em>Note: Internal styling in an HTML document is generally considered not good practice, you should use an external stylesheet if you can </em></span>
       </ul>
     </div>
   </div>
