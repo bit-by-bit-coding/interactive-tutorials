@@ -192,27 +192,35 @@ button:active {
   border: none;
 }
 
-.orange {
-  margin: 1em 0;
-  padding: 1em;
-  background-color: #ff8900;
-  color: #fff;
+textarea {
+  resize: none;
+  height: 60px;
 }
 
-.blue {
-  background-color: #1bb1de;
-  color: #fff;
-  padding: 1em;
+.text-example {
+  margin-top: 5px;
 }
 
-.pinkify {
-  background-color: pink;
-  color: #000;
-  padding: 1em;
+.css-top {
+  margin-top: -20px;
 }
 
 ul {
   padding: 0 1em;
+  list-style: none;
+}
+
+.larger-example {
+  height: 120px;
+  width: 200px;
+}
+ul li::before {
+  content: "\2022";
+  color: #FEC14C;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em
 }
 
 .code {

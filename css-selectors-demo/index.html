@@ -45,17 +45,58 @@
     </div>
   </div>
   <div class="content">
-    <div class="section">
+    <div class="section css-top">
       <ul>
-        <li>CSS selectors are used to locate and select the html elements that you would like to style</li>
-        <li>For this lesson we will use inline stylings to demonstrate how specific elements on the page are targeted<br/>(please not that inline stylings are not common convention anymore and an external css stylesheet is commonly used)</li>
+        <h2>What is a CSS Selector?</h2>
+        <li>
+          CSS Selectors are used to target elements within an HTML document. A majority of the CSS selectors you will use look just like HTML elements without the angle brackets.
+        </li>
+        <li>
+          You can use general selectors such as <em>p, h1, body and div</em> to target every single one of those elements on the page.
+          <br/>
+          For example:
+          <div class='text-example'>
+            <textarea disabled>
+  p {
+    color: blue;
+  }
+            </textarea>
+          </div>
+            This is the "p" css selector. Creating this styling will target every single &lt;p&gt; element in the HTML document and change their text color to blue.
+            <br/>
+            This is also the correct syntax for CSS inside of a stylesheet: YOUR_SELECTOR { YOUR_STYLINGS }. Every single HTML element can be targeted this way
+            <br/>
+            <em>Note that every style must be ended with a semi-colon like in the example</em>
+        </li>
+        <h2>Classes and ID's</h2>
+        <li>General stylings are useful, but what if you wanted to target only one paragraph or div? This is where classes and ID's come into play</li>
+        <li>The two main rules that need to be remembered when using classes and ID's:</li>
+        <ul>
+          <li>Classes are identified using a " . ", ID's are identified using a " # "</li>
+          <li>Classes can be applied to multiple elements, ID's can only be applied to one element and must be unique</li>
+        </ul>
+        <div class='text-example'>
+          <textarea class='larger-example' disabled>
+.blue-p {
+  color: blue;
+}
+
+#red-p {
+  color: red;
+}
+          </textarea>
+        </div>
+        <li>
+          Take note that the syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements.
+        </li>
+        <li>
+          In this example we are targeting two different paragraphs. One has a class of "first-p" and the other has an ID of "second-p". This will change one paragraph element blue and the other red.
+          <br/>
+          Remember, ".blue-p" can be given to other elements to make them blue as well. "#red-p" cannot be assigned to another element and will only affect the element that has been given that ID.
+        </li>
+        <h2>Practice</h2>
       </ul>
     </div>
-    <!-- <div class="section">
-      <p>
-        CSS selectors are used to locate and select the html elements that you would like to style
-      </p>
-    </div> -->
   </div>
 </body>
 <script src="../assets/prism.js"></script>
