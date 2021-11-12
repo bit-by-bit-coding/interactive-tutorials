@@ -55,6 +55,11 @@ let interactiveTutorials = {
     path: 'truthy-falsy-demo',
     title: 'TRUTHY AND FALSY VALUES DEMO',
     content: "What are truthy and falsy values in JavaScript? What expressions evaluate to boolean false?"
+  },
+  cssSelectorsDemo: {
+    path: 'css-selectors-demo',
+    title: 'CSS SELECTORS DEMO',
+    content: 'What are CSS selectors and what are some basic ways to use them?'
   }
 };
 
