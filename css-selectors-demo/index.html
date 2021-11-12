@@ -54,7 +54,7 @@
         <li>
           You can use general selectors such as <em>p, h1, body and div </em> to target every single one of those elements on the page.
           <br/>
-          For example:
+          <span class='format'> For example:</span>
           <div class='text-example'>
             <textarea disabled>
 p {
@@ -62,11 +62,15 @@ p {
 }
             </textarea>
           </div>
+          <span class='format'>
             This is the "p" css selector. Creating this styling will target every single &lt;p&gt; element in the HTML document and change their text color to blue.
-            <br/>
+          </span>
+          <br/>
+          <span class='format'>
             This is also the correct syntax for CSS inside of a stylesheet: YOUR_SELECTOR { YOUR_STYLINGS; }. Every single HTML element can be targeted this way
-            <br/>
-            <span class='note'><em>Note: Every style must be ended with a semi-colon like in the example when using an external stylesheet</em></span>
+          </span>
+          <br/>
+          <span class='note format'><em>Note: Every style must be ended with a semi-colon like in the example when using an external stylesheet</em></span>
         </li>
         <h2>Classes and ID's</h2>
         <li>General stylings are useful, but what if you wanted to target only one paragraph or div? This is where classes and ID's come into play</li>
@@ -89,16 +93,15 @@ p {
         <li>
           In this example we are targeting two different paragraphs. One has a class of "first-p" and the other has an ID of "second-p". This will change one paragraph element blue and the other red.
           <br/>
-          Remember, ".blue-p" can be given to other elements to make them blue as well. "#red-p" cannot be assigned to another element and will only affect the element that has been given that ID.
+          <span class='format'>
+            Remember, ".blue-p" can be given to other elements to make them blue as well. "#red-p" cannot be assigned to another element and will only affect the element that has been given that ID.
+          </span>
         </li>
-        <li>
-          <span class='note'>
-            <em>Note: The syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements.</em>
-          </span> 
-        </li>
-        <li>
-          <span class='review'>Review: Classes are applied to elements using "class= CLASS_NAME", ID's are applied with "id= ID_NAME"</span>
-        </li>
+        <span class='note format'>
+          <em>Note: The syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements.</em>
+        </span> 
+        <br/>
+        <span class='review format'>Review: Classes are applied to elements using "class= CLASS_NAME", ID's are applied with "id= ID_NAME"</span>
         <h2>Practice</h2>
         <li>
           In the editor above there is an internal style tag located at the top, to allow you to use CSS selectors to target elements on the page. 
@@ -110,7 +113,7 @@ p {
         <li>
           Once you have the hang of selecting and styling general elements, try giving elements classes and ID's and try styling them by selecting their class name or ID name.
         </li>
-        <span class='note'><em>Note: Internal styling in an HTML document is generally considered not good practice, you should use an external stylesheet if you can </em></span>
+        <span class='note format'><em>Note: Internal styling in an HTML document is generally considered not good practice, you should use an external stylesheet if you can </em></span>
       </ul>
     </div>
   </div>

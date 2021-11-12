@@ -238,3 +238,7 @@ textarea {
   margin: 0;
   border: none;
 }
+
+.format {
+  margin-left: 5px;
+}
