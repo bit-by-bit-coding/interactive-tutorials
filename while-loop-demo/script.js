@@ -26,3 +26,15 @@ function e1onchange(x) {
     e1SliderValue = x;
 
 }
+
+function e3() {
+var pass = "";
+    do {
+        pass = prompt("Please enter the password");
+        if (pass!="password123")
+            alert("Incorrect password");
+    }
+    while(pass!="password123")
+
+    alert("Correct password entered");
+}

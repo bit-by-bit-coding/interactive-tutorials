@@ -122,6 +122,38 @@
         </ul>
       </p>
     </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 3</h2>
+          Try out an application of do while loops below. The purpose of this program is to keep asking for the password until you get it right. It will run the code once to get your first attempt and keep running until you get it right.<br><span style="font-size:smaller;">Hint: The password is "password123".</span><br><br>
+          <div class="center">
+          <button onmousedown="e3()">Try it!</button>
+        </div>
+        </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//Sets an empty string to the password variable.</span><br>
+          var pass = ""; <br>
+          <br><br>
+          <span class="comment">//This function runs when the button is pressed and it asks for the password.</span><br>
+          function askPassword() { <br>
+            <br>
+            &emsp;<span class="comment">//The code is run once to ask for initial password input..</span><br>
+            &emsp;do  { <br>
+              &emsp;&emsp;pass = prompt("Please enter the password"); <br><br>
+              <span class="comment">//This lets the user know if the password is incorrect.</span>
+              &emsp;&emsp;if (pass!="password123") <br>
+              &emsp;&emsp;&emsp; alert("Incorrect password"); <br><br>
+            &emsp;} <br>
+            &emsp;while(pass!="password123") <br><br>
+            <span class="comment">//Lets the user know the correct password was entered</span> <br>
+            &emsp;alert("Correct password entered"); <br>
+          } <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
     <script src="script.js"></script>
   </div>
 </body>
