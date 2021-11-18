@@ -1,0 +1,77 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+.padding-left {
+  padding-left: 60px;
+}
+
+.if-else {
+  &--strong {
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  &__happy-bot {
+    height: 200px;
+    width: auto;
+    margin-left: 50px;
+  }
+
+  &__party-bot {
+    height: 275px;
+    width: auto;
+    margin-right: 50px;
+  }
+
+  &__snowman-bot {
+    height: 300px;
+    width: auto;
+  }
+
+  &__snowman-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__example {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__code {
+    color: #50c6e9ff;
+    font-family: "Source Code Pro";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 2px;
+    margin: 0 0 5px 0;
+
+    &--orange {
+      color: #ffb560ff;
+    }
+
+    &--darkblue {
+      color: #153570;
+    }
+
+    &--pink {
+      color: #faf;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__number {
+    width: 20px;
+  }
+}
