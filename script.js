@@ -55,6 +55,11 @@ let interactiveTutorials = {
     path: 'truthy-falsy-demo',
     title: 'TRUTHY AND FALSY VALUES DEMO',
     content: "What are truthy and falsy values in JavaScript? What expressions evaluate to boolean false?"
+  },
+  whileLoopDemo: {
+    path: 'while-loop-demo',
+    title: 'WHILE LOOP DEMO',
+    content: "What are while loops and do while loops?"
   }
 };
 
