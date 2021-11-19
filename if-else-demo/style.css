@@ -148,6 +148,38 @@ button:active {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(500px);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
 .padding-left {
   padding-left: 60px;
 }
@@ -155,6 +187,11 @@ button:active {
 .if-else--strong {
   font-family: sans-serif;
   font-weight: 600;
+}
+.if-else--small {
+  display: block;
+  font-size: 14px;
+  margin-bottom: -5px;
 }
 .if-else__happy-bot {
   height: 200px;
@@ -174,11 +211,16 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .if-else__example {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.if-else__example--column {
+  flex-direction: column;
+  align-items: center;
 }
 .if-else__code {
   color: #50c6e9ff;
@@ -204,4 +246,16 @@ button:active {
 }
 .if-else__number {
   width: 20px;
+}
+.if-else--spin {
+  animation: spin 3s ease;
+}
+.if-else--disappear {
+  animation: disappear 3s ease;
+}
+.if-else--slideRight {
+  animation: slideRight 3s ease;
+}
+.if-else--slideLeft {
+  animation: slideLeft 3s ease;
 }
