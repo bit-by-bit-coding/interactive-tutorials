@@ -68,3 +68,20 @@ select,
 input {
   font-family: "Anonymous Pro", monospace;
 }
+
+.empty {
+  margin-top: 500px;
+}
+
+#bit-by-bot {
+  width: 10em;
+  height: auto;
+  position: static;
+}
+
+#balloon {
+  width: 8em;
+  height: auto;
+  position: relative;
+  right: 5px;
+}

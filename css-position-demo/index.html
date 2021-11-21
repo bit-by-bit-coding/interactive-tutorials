@@ -78,10 +78,10 @@
             <div class="codePartTwo">position</div> :
             <div class="codePartThree">
               <select name="bot-position" id="bot-position" class="codePartThree" onchange="setBotPositionProperty();">
-                <option value="static">static</option>
+                <option value="static" selected>static</option>
                 <option value="relative">relative</option>
                 <option value="absolute">absolute</option>
-                <option value="fixed" selected>fixed</option>
+                <option value="fixed">fixed</option>
                 <option value="sticky">sticky</option>
               </select>
             </div> ;
@@ -114,10 +114,10 @@
               <div class="codePartTwo">position</div> :
               <div class="codePartThree">
                 <select name="balloon-position" id="balloon-position" class="codePartThree" onchange="setBalloonPositionProperty();">
-                  <option value="static">static</option>
+                  <option value="static" selected>static</option>
                   <option value="relative">relative</option>
                   <option value="absolute">absolute</option>
-                  <option value="fixed" selected>fixed</option>
+                  <option value="fixed">fixed</option>
                   <option value="sticky">sticky</option>
                 </select>
               </div> ;
@@ -145,10 +145,11 @@
         </div>
       </div>
       <div class="flex-col section">
-
+        <iframe src="iframe.html" title="Explore Display" id="explore-display" height="100%" width="100%" frameborder="0"></iframe>
       </div>
     </div>
     <!-- The end of the content div is here -->
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
