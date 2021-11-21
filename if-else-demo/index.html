@@ -68,7 +68,7 @@
             <span class="if-else__code--darkblue">{</span>
             <br />
             alert('<span class="if-else__code--orange"
-              >if condition is false, this alert will run</span
+              >if condition is anything else but true, this alert will run</span
             >
             ') <br />
             <span class="if-else__code--darkblue">}</span>
@@ -93,6 +93,7 @@
               let <span class="if-else__code--orange">correctNumber</span> =
               <input
                 class="if-else__number"
+                id="correctNumber"
                 name="correctNumber"
                 type="number"
               />;
@@ -100,14 +101,15 @@
               let <span class="if-else__code--orange">guessedNumber</span> =
               <input
                 class="if-else__number"
+                id="guessedNumber"
                 name="guessedNumber"
                 type="number"
               />;
             </h4>
-            <button id="runGuessNumber">Run Code</button>
+            <button id="runGuessedNumber">Run Code</button>
           </div>
 
-          <h4 class="if-else__code padding-left">
+          <h4 class="if-else__code if-else--padding-left">
             if (<span class="if-else__code--orange">correctNumber</span> ===
             <span class="if-else__code--orange">guessedNumber</span>)
             <span class="if-else__code--darkblue">{</span> <br />
@@ -177,7 +179,7 @@
             </p>
             <h4 class="if-else__code">
               let <span class="if-else__code--orange">animation</span> =
-              <input type="text" class="if-else__animation" />
+              <input type="text" class="if-else__animation" id="animation" />
             </h4>
             <h4 class="if-else__code">
               if (<span class="if-else__code--orange">animation</span> ===
@@ -211,15 +213,17 @@
               <span class="if-else__code--darkblue">}</span>
               else <span class="if-else__code--darkblue">{</span> <br />
               alert('<span class="if-else__code--orange"
-                >Not a valide choice.</span
+                >Not a valid choice.</span
               >') <br />
               <span class="if-else__code--darkblue">}</span>
             </h4>
-            <button class="if-else__simon-btn">Run Code</button>
+            <button class="if-else__simon-btn" id="runSimonSays">
+              Run Code
+            </button>
           </div>
         </div>
         <div class="if-else__snowman-container flex-col section">
-          <div class="">
+          <div class="" id="snowmanAnimation">
             <img
               src="../assets/bit-by-bot-images/snowman-bot.svg"
               alt="Bit by Bot Snowman"
