@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Animations Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">ANIMATIONS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <p>
+        Animations are used in many T.V. shows and cartoons, and they can also be programmed in JavaScript. All you have to do is write a function, to perform a movement or change in color/shape
+        and call that function with an object.<br><br>
+
+        You can use animations to perform any of these:
+        <ul>
+          <li>Changing the color over a period of time.</li>
+          <li>Changing the position of an object.</li>
+          <li>Merging or seperating two objects.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 1</h2>
+          Press the button below and watch the BxB bot move from one side to the oher. The button is linked to a function that animates the bot to move from one side to the other.
+          <br><br>
+          <button onclick="e1animate()">Animate!</button>
+      </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//Finds the place where "Counter" is located</span><br>
+          var countValue = document.getElementById("Counter"); <br>
+          <span class="comment">//Sets initial count to 0</span><br>
+          var count = 0; <br>
+          <br>
+          <span class="comment">//This function is run when the button is pressed</span><br>
+          function startCount() { <br>
+            <br>
+            &emsp;<span class="comment">//As long as the button is held down, the code is run</span><br>
+            &emsp;while (buttonPressed) { <br>
+              &emsp;&emsp;countValue.innerHTML = Counter + count; <br>
+              &emsp;&emsp;count++; <br>
+              &emsp;} <br>
+          } <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
