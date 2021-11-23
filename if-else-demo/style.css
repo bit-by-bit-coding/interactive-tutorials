@@ -151,6 +151,9 @@ button:active {
 .if-else--padding-left {
   padding-left: 60px;
 }
+.if-else--tab {
+  margin-left: 35px;
+}
 .if-else--strong {
   font-family: sans-serif;
   font-weight: 600;
@@ -191,11 +194,10 @@ button:active {
 }
 .if-else__code {
   color: #50c6e9ff;
-  font-family: "Source Code Pro";
+  font-family: monospace;
   font-size: 20px;
   font-weight: 900;
   line-height: 40px;
-  letter-spacing: 2px;
   margin: 0 0 5px 0;
 }
 .if-else__code--orange {
