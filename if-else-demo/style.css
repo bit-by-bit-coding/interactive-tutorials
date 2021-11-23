@@ -148,69 +148,125 @@ button:active {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
-.bold {
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-weight: 800;
+.if-else--padding-left {
+  padding-left: 60px;
 }
-
-.center {
-  text-align: center;
+.if-else--tab {
+  margin-left: 35px;
 }
-
-.e1 {
-  text-align: center;
-  color: #f19100;
+.if-else--strong {
+  font-family: sans-serif;
+  font-weight: 600;
 }
-
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+.if-else--small {
+  display: block;
+  font-size: 14px;
+  margin-bottom: -5px;
 }
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
+.if-else__happy-bot {
+  height: 200px;
+  width: auto;
+  margin-left: 50px;
+}
+.if-else__party-bot {
+  height: 275px;
+  width: auto;
+  margin-right: 50px;
+}
+.if-else__snowman-bot {
+  height: 300px;
+  width: auto;
+}
+.if-else__snowman-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.if-else__example {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.if-else__example--column {
+  flex-direction: column;
+  align-items: center;
+}
+.if-else__code {
+  color: #50c6e9ff;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 40px;
+  margin: 0 0 5px 0;
+}
+.if-else__code--orange {
+  color: #ffb560ff;
+}
+.if-else__code--darkblue {
+  color: #153570;
+}
+.if-else__code--pink {
+  color: #faf;
+}
+.if-else__code-container {
+  display: flex;
+  justify-content: center;
+}
+.if-else__number {
   width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #38Bfe7;
-  cursor: pointer;
+}
+.if-else--spin {
+  animation: spin 3s ease;
+}
+.if-else--disappear {
+  animation: disappear 3s ease;
+}
+.if-else--slideRight {
+  animation: slideRight 3s ease;
+}
+.if-else--slideLeft {
+  animation: slideLeft 3s ease;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(500px);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500px);
+  }
 }
 
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #38Bfe7;
-  cursor: pointer;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.comment {
-  font-style: italic;
-  color: #0ba06e;
-}
-
-.code {
-  color: #f19100;
-  font-family: "Anonymous Pro", monospace;
-}
-
-.bot {
-  width: 100px;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  opacity: 0;
-}
-
-.bot:hover {
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  opacity: 1;
+input[type=number] {
+  -moz-appearance: textfield;
 }
