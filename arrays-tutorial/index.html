@@ -2,7 +2,7 @@
 <html>
 <head>
   <!-- TODO: Change the title of the page to your demo name -->
-  <title>Arrays Demo | Bit by Bit</title>
+  <title>Arrays Tutorial | Bit by Bit</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../assets/prism.css">
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
@@ -21,7 +21,7 @@
         </a>
       </div>
       <!-- TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">ARRAYS DEMO</h1>
+      <h1 class="flex-item-left">ARRAYS TUTORIAL</h1>
     </div>
     <div class="flex-item-header">
       <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
@@ -197,7 +197,8 @@
       <div class="flex-col section">
         <p>
           Your goal is for the array to be ["red","green","yellow"] in the end, and for "cyan", "magenta", and "orange" to be outputted to the console, in that order.  <br /> <br />
-          let colors = ["<select id="quiz1-1">
+          <span class="big-code">
+          <span class="special">let</span> <span class="variable">colors</span> = ["<select id="quiz1-1">
             <option></option>
             <option value = "red">red</option>
             <option value="green">green</option>
@@ -206,7 +207,7 @@
             <option value="magenta">magenta</option>
             <option value="orange">orange</option>
           </select>"]; <br />
-          colors.push("<select id="quiz1-2">
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-2">
             <option></option>
             <option value = "red">red</option>
             <option value="green">green</option>
@@ -215,9 +216,9 @@
             <option value="magenta">magenta</option>
             <option value="orange">orange</option>
           </select>"); <br />
-          console.log(colors[1]); <br />
-          colors.pop(); <br />
-          colors.push("<select id="quiz1-3">
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>[<span class="special">1</span>]); <br />
+          <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-3">
             <option></option>
             <option value = "red">red</option>
             <option value="green">green</option>
@@ -226,7 +227,7 @@
             <option value="magenta">magenta</option>
             <option value="orange">orange</option>
           </select>"); <br />
-          colors.push("<select id="quiz1-4">
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-4">
             <option></option>
             <option value = "red">red</option>
             <option value="green">green</option>
@@ -235,8 +236,8 @@
             <option value="magenta">magenta</option>
             <option value="orange">orange</option>
           </select>"); <br />
-          console.log(colors.pop()); <br />
-          colors.push("<select id="quiz1-5">
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>.<span class="special">pop</span>()); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-5">
             <option></option>
             <option value = "red">red</option>
             <option value="green">green</option>
@@ -245,9 +246,9 @@
             <option value="magenta">magenta</option>
             <option value="orange">orange</option>
           </select>"); <br />
-          let coolColor = colors.pop(); <br />
-          console.log(coolColor); <br />
-          colors.push("<select id="quiz1-6">
+          <span class="special">let</span> <span class="variable">coolColor</span> = <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">coolColor</span>); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-6">
             <option></option>
             <option value = "red">red</option>
             <option value="green">green</option>
@@ -255,7 +256,7 @@
             <option value="cyan">cyan</option>
             <option value="magenta">magenta</option>
             <option value="orange">orange</option>
-          </select>"); <br />
+          </select>"); </span> <br />
         </p>
         <button id="quiz1">Check Answers</button>
         <p id="pErrorQuiz1"></p>
@@ -263,13 +264,14 @@
       <div class="flex-col section">
         <p>
           Try to predict what the array will be in the end, and what the console output will be! <br /> <br />
-          let flowers = ["rose", "dandelion"]; <br />
-          favoriteFlower = flowers.pop(); <br />
-          flowers.push("tulip"); <br />
-          flowers.push("daffodil"); <br />
-          secondFavoriteFlower = flowers[0]; <br />
-          leastFavoriteFlower = flowers[2]; <br />
-          console.log(secondFavoriteFlower); <br /> <br />
+          <span class="big-code">
+          <span class="special">let</span> <span class="variable">flowers</span> = [<span class="string">"rose"</span>, <span class="string">"dandelion"</span>]; <br />
+          <span class="variable">favoriteFlower</span> = <span class="variable">flowers</span>.<span class="special">pop</span>(); <br />
+          <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"tulip"</span>); <br />
+          <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"daffodil"</span>); <br />
+          <span class="variable">secondFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">0</span>]; <br />
+          <span class="variable">leastFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">2</span>]; <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">secondFavoriteFlower</span>); </span> <br /> <br />
           What is the flowers array at the end? <br />
           ["
           <select id="quiz2-1">

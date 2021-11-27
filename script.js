@@ -2,8 +2,8 @@
 
 let interactiveTutorials = {
   arraysDemo: {
-    path: 'arrays-demo',
-    title: 'ARRAYS DEMO',
+    path: 'arrays-tutorial',
+    title: 'ARRAYS TUTORIAL',
     content: 'Learn how Javascript arrays work'
   },
   attributeDemo: {
