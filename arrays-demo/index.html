@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Arrays Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">ARRAYS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>What are Arrays?</h2>
+      Arrays are a way to store multiple ordered elements in one variable. They can be anything - strings, integers, floats, even other arrays! <br /> <br />
+      <span class="big-code">
+        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <span class="comment">// Defines an array called "animals" with "dog", "cat", and "mouse" in it, in that order</span> <br />
+        <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <span class="comment">// Adds "hamster" to the end of the array</span> <br />
+        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <span class="comment">// Logs "dog" to the console</span> <br />
+        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <span class="comment">// Logs "hamster" to the console</span><br />
+        <span class="variable">animals</span>.<span class="special">pop</span>(); <span class="comment">// Deletes the last element from the array ("hamster")</span> <br />
+        <span class="special">let</span> <span class="variable">deletedAnimal</span> = <span class="variable">animals</span>.<span class="special">pop</span>(); <span class="comment">// Deletes the last element from the array ("mouse") and sets it to a variable "deletedAnimal"</span> <br />
+      </span>
+    </div>
+    <div class="section instructions"><h2>Try out this quiz!</h2></div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          Your goal is for the array to be ["red","green","yellow"] in the end, and for "cyan", "magenta", and "orange" to be outputted to the console, in that order.  <br /> <br />
+          <span class="big-code">
+          <span class="special">let</span> <span class="variable">colors</span> = ["<select id="quiz1-1">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"]; <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-2">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>[<span class="special">1</span>]); <br />
+          <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-3">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-4">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>.<span class="special">pop</span>()); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-5">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); <br />
+          <span class="special">let</span> <span class="variable">coolColor</span> = <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">coolColor</span>); <br />
+          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-6">
+            <option></option>
+            <option value = "red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="orange">orange</option>
+          </select>"); </span> <br />
+        </p>
+        <button id="quiz1">Check Answers</button>
+        <p id="pErrorQuiz1"></p>
+      </div>
+      <div class="flex-col section">
+        <p>
+          Try to predict what the array will be in the end, and what the console output will be! <br /> <br />
+          <span class="big-code">
+          <span class="special">let</span> <span class="variable">flowers</span> = [<span class="string">"rose"</span>, <span class="string">"dandelion"</span>]; <br />
+          <span class="variable">favoriteFlower</span> = <span class="variable">flowers</span>.<span class="special">pop</span>(); <br />
+          <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"tulip"</span>); <br />
+          <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"daffodil"</span>); <br />
+          <span class="variable">secondFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">0</span>]; <br />
+          <span class="variable">leastFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">2</span>]; <br />
+          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">secondFavoriteFlower</span>); </span> <br /> <br />
+          What is the flowers array at the end? <br />
+          ["
+          <select id="quiz2-1">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>", "
+          <select id="quiz2-2">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>", "
+          <select id="quiz2-3">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>"] <br /> <br />
+          What is the console output? 
+          <select id="quiz2-4">
+            <option></option>
+            <option value="rose">rose</option>
+            <option value="dandelion">dandelion</option>
+            <option value="tulip">tulip</option>
+            <option value="daffodil">daffodil</option>
+          </select>
+        </p>
+        <button id="quiz2">Check Answers</button>
+        <p id="pErrorQuiz2"></p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script-4.js"></script>
+  <script src="script-5.js"></script>
+</body>
+</html>
