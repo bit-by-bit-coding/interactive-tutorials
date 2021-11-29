@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- DONE TODO: Change the title of the page to your demo name -->
+  <title>For Loop Tutorial | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- DONE TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">FOR LOOP TUTORIAL</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <div class="navFunctions">
+        <h2>For Loops</h2>
+        <p>
+          <strong>Here is a breakdown of for loop syntax:</strong>
+        </p>
+        <p class="indent">
+          <div class="code">
+            <div class="codePartOne">for</div>(<div class="codePartTwo">let i = <em>*numberOne*</em>;</div>
+            <div class="codePartThree">i < <em>*numberTwo*</em>;</div>
+            <div class="codePartFour">i = i + 1</div>){
+              <div class="codeInside"><em>*repeated code*</em></div>
+            }
+          </div>
+        </p>
+        <p>
+          The first part of the for loop is the word for. This tells
+          the computer that we are creating a for loop. <br>
+          The next part of the for loop is the condition (the thing
+          inside the parentheses). This condition is made up of three 
+          parts:
+          <ol>
+            <li>Declaring a condition variable: <div class="code codePartTwo marginNone">let i = <em>*numberOne*</em>;</div></li>
+            <li>Declaring the condition: <div class="code codePartThree marginNone">i < <em>*numberTwo*</em>;</div></li>
+            <li>Declaring how our condition variable changes each time the for loop runs: <div class="code codePartFour marginNone">i = i + 1</div></li>      
+          </ol>
+        </p>
+        <p>
+          We can tell how many time the code is repeated by 
+          subtracting 
+          <div class="code codePartThree marginNone">*numberOne*</div>
+          by <div class="code codePartTwo marginNone">*numberTwo*</div>
+        </p>
+        <p>
+          <strong>Here are some examples of functions:</strong>
+        </p>
+        <div class="flex-box">
+          <div class="flex-col">
+            <div class="code">
+              <div class="codePartOne">for</div>(<div class="codePartTwo">let i = 0;</div>
+              <div class="codePartThree">i < 3;</div>
+              <div class="codePartFour">i = i + 1</div>){
+                <div class="codeInside">alert("Hello World!");</div>
+              }
+            </div>
+          </div>
+          <div class="flex-col">
+            <br>
+            <button id="forRunHelloWorld">Run Hello World Loop</button> <!-- DIFFERENT -->
+          </div>
+        </div>
+        <div class="flex-box">
+          <div class="flex-col">
+            <div class="code">
+              <div class="codePartOne">for</div>(<div class="codePartTwo">let i = 5;</div>
+              <div class="codePartThree">i < 10;</div>
+              <div class="codePartFour">i = i + 1</div>){
+                <div class="codeInside">alert(i);</div>
+              }
+            </div>
+          </div>
+          <div class="flex-col">
+            <br>
+            <button id="forRunNumbers">Run Number Loop</button> <!-- DIFFERENT -->
+          </div>
+        </div>
+        <div class="flex-box">
+          <div class="flex-col">
+            <div class="code">
+              <div class="codePartOne">for</div>(<div class="codePartTwo">let i = 3;</div>
+              <div class="codePartThree">i >= 0;</div>
+              <div class="codePartFour">i = i - 1</div>){
+                <div class="codeInside">
+                  if(i===0){
+                    <div class="codeInside">alert("Blast off!");</div>
+                  } else {
+                    <div class="codeInside">alert(i);</div>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+          <div class="flex-col">
+            <br>
+            <button id="forRunBlastOff">Run Blast Off Loop</button> <!-- DIFFERENT -->
+          </div>
+        </div>
+        <img id="bit-by-bot-loops" src="../assets/bit-by-bot-images/explosion-bot.svg" alt="Bit by Bot Blast Off">
+      </div>
+    </div>
+    <div class="section">
+      <div>
+        <h2>Building For Loops</h2>
+        <p>
+          Practice building for loops down below:
+        </p>
+        <p id="buildingIntructions">
+          First, start the for loop:
+        </p>
+        <p class="buildingGameCode" id="buildingP">
+        </p>
+        <input class="buildingGameCode" id="inputBuilding" type="text">
+        <button id="buildingButton">Check and next</button>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

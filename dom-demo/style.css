@@ -4,16 +4,16 @@ body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
 button {
   border: none;
-  background: #38Bfe7;
+  background: #38bfe7;
   padding: 0.5em 1em;
   -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
 
@@ -23,7 +23,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -38,7 +38,7 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
@@ -67,11 +67,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .flex-container-left {
@@ -79,11 +79,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -91,14 +91,14 @@ button:active {
 
 .flex-item-header {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+  -ms-flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
 .flex-item-left {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
+  -ms-flex: 1 1 100px;
+  flex: 1 1 100px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -120,7 +120,7 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
 }
@@ -133,8 +133,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -148,8 +148,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -165,8 +165,8 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
-  font-family: 'Anonymous Pro', monospace;
+  width: calc(100% - 35px - calc(0.625em * 2));
+  font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -188,12 +188,14 @@ button:active {
   overflow: hidden;
 }
 
-#leftcont, #rightcont {
+#leftcont,
+#rightcont {
   padding: 30px;
   height: 400px;
 }
 
-#pre, #post {
+#pre,
+#post {
   border: 3px solid #000000;
   background-color: #fff;
   color: #000;
@@ -220,7 +222,9 @@ button:active {
   margin-right: 30px;
 }
 
-#giveBGColor, #giveColor, #giveBorderColor {
+#giveBGColor,
+#giveColor,
+#giveBorderColor {
   width: 75px;
 }
 
@@ -239,21 +243,21 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ffe1bf;
   color: black;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   padding-bottom: 20px;
 }
 
 #secondcont {
   display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   float: right;
@@ -303,7 +307,8 @@ h1 {
 }
 
 @media (max-width: 1384px) {
-  #pre, #post {
+  #pre,
+  #post {
     width: 150px;
   }
   #rightcont {
@@ -315,7 +320,8 @@ h1 {
 }
 
 @media (max-width: 940px) {
-  #pre, #post {
+  #pre,
+  #post {
     width: 75px;
   }
   #rightcont {
@@ -338,7 +344,7 @@ h1 {
 #infoText {
   display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   float: left;
@@ -348,7 +354,7 @@ h1 {
 
 #arrowIcon {
   font-size: 200px;
-  color: #38Bfe7;
+  color: #38bfe7;
   text-align: center;
   margin: 700px, 0px;
   margin-top: 140px;
