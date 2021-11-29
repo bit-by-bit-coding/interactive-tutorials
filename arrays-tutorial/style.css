@@ -6,16 +6,16 @@ body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
 
 button {
   border: none;
-  background: #38bfe7;
+  background: #38Bfe7;
   padding: 0.5em 1em;
   -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
 
@@ -25,7 +25,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 #header {
@@ -40,7 +40,7 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-  box-shadow: 0 2px 2px #eee;
+          box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
@@ -69,11 +69,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-container-left {
@@ -81,11 +81,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -93,14 +93,14 @@ button:active {
 
 .flex-item-header {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 200px;
-  flex: 1 1 200px;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
 }
 
 .flex-item-left {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 100px;
-  flex: 1 1 100px;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -122,7 +122,7 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38bfe7;
+  border: 0.2em solid #38Bfe7;
   background-color: #fff;
   color: #000;
 }
@@ -135,8 +135,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0.5em;
 }
 
@@ -150,8 +150,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .showcase-section {
@@ -167,8 +167,8 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em * 2));
-  font-family: "Anonymous Pro", monospace;
+  width: calc(100% - 35px - calc(0.625em*2));
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -183,26 +183,125 @@ button:active {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
-#numberline {
-  border: 10px solid black;
-  border-top-width: 0;
-  border-bottom-width: 20px;
-  /* margin: 0 auto; */
-  width: 90vw;
-  height: 10px;
-  position: absolute;
-  top: 50vh;
+#input-code-1 {
+  width: 100%;
 }
 
-div.marker {
-  border: 0px solid black;
-  border-left-width: 5px;
-  height: 20px;
-  margin: 0 auto;
+#input-code-2 {
+  width: 100%;
 }
 
-#calculator {
-  height: 200px;
-  border: 0.2em solid #38bfe7;
+#p-error-1 {
+  color: red;
+}
+
+#p-error-2 {
+  color: red;
+}
+
+#p-error-3 {
+  color: red;
+}
+
+::-webkit-input-placeholder {
+  /* For most browsers */
+  opacity: 0.4;
+}
+
+:-ms-input-placeholder {
+  /* For most browsers */
+  opacity: 0.4;
+}
+
+::-ms-input-placeholder {
+  /* For most browsers */
+  opacity: 0.4;
+}
+
+::placeholder {
+  /* For most browsers */
+  opacity: 0.4;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  opacity: 0.4;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  opacity: 0.4;
+}
+
+.console-output-box {
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-right-color: #38Bfe7;
+}
+
+.flex-box-separator {
+  height: 3px;
+  background-color: #38Bfe7;
+  width: 100%;
+  border: none;
+}
+
+.blink_me {
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.big-code {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 14px;
+}
+
+.big-code .comment {
+  color: #2F2D2C;
+}
+
+.instructions {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+#p-code-1 {
+  color: white;
+  background-color: #1e1e1e;
+}
+
+#p-code-2 {
+  color: white;
+  background-color: #1e1e1e;
+}
+
+#p-code-3 {
+  color: white;
+  background-color: #1e1e1e;
+}
+
+.big-code .special {
+  color: #153570;
+}
+
+.big-code .variable {
+  color: #38BFE7;
+}
+
+.big-code .string {
+  color: #FF8900;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,7 @@ body {
 
 button {
   border: none;
-  background: #38Bfe7;
+  background: #38bfe7;
   padding: 0.5em 1em;
   box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
@@ -93,7 +93,7 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
 }
@@ -132,7 +132,7 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
+  width: calc(100% - 35px - calc(0.625em * 2));
   font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
@@ -155,7 +155,7 @@ div.grid-flex {
 
 div.grid-item {
   margin: 1em;
-  border: solid 2px #38Bfe7;
+  border: solid 2px #38bfe7;
   padding: 1em 1.5em;
   flex: 0 0 15em;
 }
@@ -164,3 +164,4 @@ div.grid-item:hover {
   box-shadow: #aaaaaa 2px 2px 2px;
   background-color: #fafafa;
 }
+/*# sourceMappingURL=style.css.map */
