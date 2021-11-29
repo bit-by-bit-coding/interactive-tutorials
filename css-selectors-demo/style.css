@@ -1,12 +1,11 @@
-/* style.scss */
-/* Import the common styling */
+@charset "UTF-8";
 /* common.scss */
 /* Define all the colors */
 body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
@@ -14,18 +13,14 @@ button {
   border: none;
   background: #38Bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #19a8d3;
 }
-
 button:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -39,14 +34,11 @@ button:active {
   max-height: 3em;
   z-index: 1000;
   opacity: 95%;
-  -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
-
 #header > * {
   margin: 0;
 }
-
 #header button {
   width: 3em;
 }
@@ -65,50 +57,28 @@ button:active {
 
 /*Flexbox*/
 .flex-container-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flex-container-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
+  justify-content: space-evenly;
+  align-items: center;
   max-width: max-content;
 }
 
 .flex-item-header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
 .flex-item-left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
+  flex: 1 1 100px;
   max-width: max-content;
 }
 
 #top-heading {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -128,15 +98,11 @@ button:active {
 }
 
 .flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -149,9 +115,7 @@ button:active {
 }
 
 .no-flex-col {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -167,8 +131,8 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
-  font-family: 'Anonymous Pro', monospace;
+  width: calc(100% - 35px - 1.25em);
+  font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -181,17 +145,161 @@ button:active {
   padding: 0;
 }
 
-/* The page-specific styling */
-/* TODO: Put whatever styles you need for just your demo here */
-/*# sourceMappingURL=style.css.map */
+#leftcont {
+  float: left;
+}
 
+#rightcont {
+  float: right;
+  overflow: hidden;
+}
+
+#leftcont, #rightcont {
+  padding: 30px;
+  height: 400px;
+}
+
+#pre, #post {
+  border: 3px solid #000000;
+  background-color: #fff;
+  color: #000;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 24px;
+  width: 370px;
+  height: 350px;
+  float: left;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+#leftcont {
+  margin-left: 20px;
+}
+
+#rightcont {
+  margin-right: 20px;
+  width: 610px;
+  display: block;
+}
+
+#post {
+  margin-right: 30px;
+}
+
+#giveBGColor, #giveColor, #giveBorderColor {
+  width: 75px;
+}
+
+#arrow {
+  float: left;
+  width: 169px;
+  height: 400px;
+  display: table;
+  margin: 0 auto;
+}
+
+#bigcont {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe1bf;
+  color: black;
+  border: 0.2em solid #38Bfe7;
+  padding-bottom: 20px;
+}
+
+#secondcont {
+  display: block;
+  padding: 0.5em;
+  border: 0.2em solid #38Bfe7;
+  background-color: #fff;
+  color: #000;
+  float: right;
+  width: 47%;
+}
+
+#DOMcode {
+  height: flex;
+  min-height: 200px;
+  margin: 20px auto;
+  border: 2px solid gray;
+  font-family: Courier;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+h2 {
+  display: inline-block;
+}
+
+#slider {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#sliderValue {
+  cursor: pointer;
+}
+
+#arrow img {
+  margin-top: 140px;
+}
+
+#giveWidth {
+  width: 30px;
+}
+
+#giveID {
+  width: 94%;
+}
+
+@media (max-width: 1384px) {
+  #pre, #post {
+    width: 150px;
+  }
+
+  #rightcont {
+    width: 420px;
+  }
+
+  #giveID {
+    width: 80%;
+  }
+}
+@media (max-width: 940px) {
+  #pre, #post {
+    width: 75px;
+  }
+
+  #rightcont {
+    width: 200px;
+  }
+
+  #giveID {
+    width: 40%;
+  }
+
+  #header {
+    font-size: smaller;
+  }
+}
+@media (max-width: 700px) {
+  #header {
+    font-size: x-small;
+  }
+}
 ul li::before {
-  content: "\2022";
+  content: "•";
   color: #FEC14C;
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   width: 1em;
-  margin-left: -1em
+  margin-left: -1em;
 }
 
 ul {
@@ -207,10 +315,6 @@ textarea {
 
 .text-example {
   margin-top: 5px;
-}
-
-.css-top {
-  margin-top: -20px;
 }
 
 .larger-example {
@@ -229,7 +333,7 @@ textarea {
 }
 
 .code {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
 }
 
 #explore-show {
@@ -242,3 +346,5 @@ textarea {
 .format {
   margin-left: 5px;
 }
+
+/*# sourceMappingURL=style.css.map */
