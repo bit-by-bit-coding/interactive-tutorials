@@ -1,5 +1,9 @@
+/* style.scss */
+/* Import the common styling */
 /* common.scss */
 /* Define all the colors */
+@import "../assets/common.scss";
+
 body {
   margin: 5em 0 0 0;
   padding: 0;
@@ -178,4 +182,18 @@ button:active {
   right: 1em;
   padding: 0;
 }
-/*# sourceMappingURL=common.css.map */
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+/*# sourceMappingURL=style.css.map */
+
+.input-frame {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+code {
+  font-family: 'Anonymous Pro', monospace;
+}

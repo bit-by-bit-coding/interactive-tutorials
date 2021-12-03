@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Types Demos | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">Input Types Demos</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <p>
+        <h1>Forms</h1>
+          <ul>
+            <li>Forms contains information passes from the user to a server.</li>
+            <li>We use the tag <code>&lt;form&gt;</code> to define the form.</li>
+          </ul>
+        <br>     
+        <h1>Input Types</h1>
+          <ul>
+            <li>We use the tag <code>&lt;input&gt;</code> to define several input data alternatives. </li>
+            <li><code>&lt;input&gt;</code> appears inside of the <code>&lt;form&gt;</code> tag.</li>
+            <li>The general format is <code>&lt;input type="ALTERNATIVES"&gt;</code>, where ALTERNATIVES can be text, radio, checkbox, button, number, color, date or others. </li>
+          </ul>
+      </p>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Text</h2> 
+          <code> &lt;input type="text"&gt; </code> defines a one-line text input fields.
+
+          <br><br>
+
+          <h2>Text Input Example</h2>
+          
+          <div class="section">
+            <iframe id="text-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="text-input-editor"></div> 
+        <div class="editor-button-overlay">
+          <button id="text-reset-button" title="Reset the text code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Radio</h2>
+          <code> &lt;input type="radio"&gt; </code> is used to let the user select exactly one option from a pre-defined set of options.
+
+          <br><br>
+
+          <h2>Radio Input Example</h2>
+
+          <div class="section">
+            <iframe id="radio-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="radio-input-editor"></div>
+        <div class="editor-button-overlay">
+          <button id="radio-reset-button" title="Reset the radio code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>      
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Checkbox</h2>
+          <code> &lt;input type="checkbox"&gt; </code> allows the user to select or unselect one or more option from a pre-defined set of options. 
+
+          <br><br>
+
+          <h2>Checkbox Input Example</h2>
+
+          <div class="section">
+            <iframe id="checkbox-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>   
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="checkbox-input-editor"></div>
+        <div class="editor-button-overlay">
+          <button id="checkbox-reset-button" title="Reset the checkbox code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>   
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Button</h2>
+          <code> &lt;input type="button"&gt; </code> defines a simple push button, which can be programmed to control custom functionality on any event such as, click event.
+
+          <br><br>
+
+          <h2>Button Input Example</h2>
+
+          <div class="section">
+            <iframe id="button-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="button-input-editor"></div>
+        <div class="editor-button-overlay">
+          <button id="button-reset-button" title="Reset the button code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Number</h2>
+          <code> &lt;input type="number"&gt; </code> creates a numeric input. You can also set restrictions on the maximum and minimum number accepted.
+
+          <br><br>
+
+          <h2>Number Input Example</h2>
+
+          <div class="section">
+            <iframe id="number-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="number-input-editor"></div>
+        <div class="editor-button-overlay">
+          <button id="number-reset-button" title="Reset the number code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Color</h2>
+          <code> &lt;input type="color"&gt; </code> creates a color input fields. Depending on browser support, a color picker can appear in the input field.
+
+          <br><br>
+
+          <h2>Color Input Example</h2>
+
+          <div class="section">
+            <iframe id="color-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="color-input-editor"></div>
+        <div class="editor-button-overlay">
+          <button id="color-reset-button" title="Reset the color code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Input Type Date</h2>
+          <code> &lt;input type="text"&gt; </code> creates a date input fields. Depending on browser support, a date picker can appear in the input field.
+
+          <br><br>
+          
+          <h2>Date Input Example</h2>
+
+          <div class="section">
+            <iframe id="date-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="date-input-editor"></div>
+        <div class="editor-button-overlay">
+          <button id="date-reset-button" title="Reset the date code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
