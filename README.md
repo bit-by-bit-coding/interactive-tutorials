@@ -3,53 +3,52 @@
 This repository stores all of the interactive tutorials for Form and Function.
 They are used in class and also outside of class, teaching HTML, CSS, and JavaScript in an intuitive way.
 
------
+---
 
 ### How to Run Repository Locally
 
 ##### With Visual Studio Code
 
- 1. Clone the repository
- 1. Install Live Sass Compiler and Live Server on Visual Studio Code
- 1. Run `npm install` to install dependencies
- 1. Hit Watch Sass in the bottom right
- 1. Click go live in the bottom of Visual Studio Code
- 
+1.  Clone the repository
+1.  Install Live Sass Compiler and Live Server on Visual Studio Code
+1.  Run `npm install` to install dependencies
+1.  Hit Watch Sass in the bottom right
+1.  Click go live in the bottom of Visual Studio Code
 
 ##### With command line interfaces
 
- 1. Clone the repository
- 1. Install SASS and Serve by running `npm install -g serve sass`
- 1. Run `serve` from the root directory and goto `localhost:5000` (note that the port may be different)
+1.  Clone the repository
+1.  Install SASS and Serve by running `npm install -g serve sass`
+1.  Run `serve` from the root directory and goto `localhost:5000` (note that the port may be different)
 
------
+---
 
 ### Creating a New Interactive Tutorial
 
- 1. Duplicate the `template` folder
- 1. Give the folder a descriptive name along which demo you wish to create (note that this must be URL compatible)
- 1. Inside the folder are the following files that make up the page:
-     * `index.html`
-     * `style.scss`
- 1. Create the demo using HTML, CSS, and Javascript, there are also tools listed below for convince.
+1.  Duplicate the `template` folder
+1.  Give the folder a descriptive name along which demo you wish to create (note that this must be URL compatible)
+1.  Inside the folder are the following files that make up the page:
+    - `index.html`
+    - `style.scss`
+1.  Create the demo using HTML, CSS, and Javascript, there are also tools listed below for convince.
 
-------
+---
 
 ### Contributing and Pull Requests
 
 After completing a modification or improvement, you'll want to make those changes visible on the master branch.
 The process for doing this is as follows:
 
- 1. Create a pull request to the `pre-prod` branch, this can be a draft pull request if it's not finished yet
- 1. Describe the new demo or changes with a few sentences inside the details box
- 1. After a successful review and merge, the demo will be added to the master branch by the repository maintainers.
- 
+1.  Create a pull request to the `pre-production` branch, this can be a draft pull request if it's not finished yet
+1.  Describe the new demo or changes with a few sentences inside the details box
+1.  After a successful review and merge, the demo will be added to the master branch by the repository maintainers.
+
 When you should create this pull request is also important.
 Pull requests should be created when the demo is finished, however, creating a draft pull request can happen at any point.
 Inside the pull request, the comments section will be used to discuss the changes and modifications required for the demo.
 Code reviewers will comment and approve these pull requests when complete or when requested.
 
-------
+---
 
 ### What's included in the Common Files?
 
@@ -59,7 +58,7 @@ This file includes the Bit by Bit theme colors, certain element styles, and help
 The theme colors are defined as follows:
 
 | Variable Name         | Color   | Where to use it                                                                             |
-|-----------------------|---------|---------------------------------------------------------------------------------------------|
+| --------------------- | ------- | ------------------------------------------------------------------------------------------- |
 | background-color      | #ffffff | A general light background color.                                                           |
 | background-color-dark | #1bb1de | A darker background color, used to create contrast with elements with the light background. |
 | primary-color         | #38Bfe7 | This should be used to contrast items against the default text color.                       |
@@ -102,7 +101,7 @@ Next, create the Jar inside the Javascript file.
 There are a few options when creating a new Jar as well.
 The recommended options are `tab` and `indentOn`.
 The option `tab` is what the tab key types and what character(s) count as a tab.
-The default is `\t`, the recommended setting is `"  "` (two spaces).
+The default is `\t`, the recommended setting is `" "` (two spaces).
 `indentOn` is when the editor will insert a tab after a new line.
 By default, this is a `{`, `[` or `(` character.
 The recommended for HTML is `/<[a-zA-Z =\"\-]+>$/`.
@@ -115,13 +114,17 @@ With this comes two more options: `color` and `backgroundColor`.
 After all this, this is the code to create a new HTML Jar.
 
 ```js
-let jar = CodeJar(document.getElementById("editor"), withLineNumbers(Prism.highlightElement, {
-  color: '#000',
-  backgroundColor: 'rgb(232, 232, 232)'
-}), {
-  tab: '  ',
-  indentOn: /<[a-zA-Z =\"\-]+>$/
-});
+let jar = CodeJar(
+  document.getElementById("editor"),
+  withLineNumbers(Prism.highlightElement, {
+    color: "#000",
+    backgroundColor: "rgb(232, 232, 232)",
+  }),
+  {
+    tab: "  ",
+    indentOn: /<[a-zA-Z =\"\-]+>$/,
+  }
+);
 ```
 
 A jar has multiple methods as well.
@@ -166,11 +169,15 @@ A completed custom option might look something like this:
 
 ```js
 let sizeOptionElement = document.getElementById("size-option");
-createOption(sizeOptionElement, {
-  "Small": "small",
-  "Medium": "medium",
-  "Large": "large"
-}, optionHandler);
+createOption(
+  sizeOptionElement,
+  {
+    Small: "small",
+    Medium: "medium",
+    Large: "large",
+  },
+  optionHandler
+);
 ```
 
 ##### How to Include a Common
