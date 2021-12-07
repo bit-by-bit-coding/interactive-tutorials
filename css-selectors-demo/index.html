@@ -3,6 +3,7 @@
   <head>
     <title>CSS Selectors Demo | Bit by Bit</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/prism.css">
     <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
@@ -29,8 +30,9 @@
         <ul>
           <h2>What is a CSS Selector?</h2>
           <li>
-            CSS Selectors are used to target elements within an HTML document. A majority of the CSS selectors you will use, look just like HTML elements without the angle brackets.
+            CSS Selectors are used to target elements within an HTML document. These look just like HTML elements without the angle brackets.
           </li>
+          <br/>
           <span class='format'> For example:</span>
           <div class='text-example'>
             <textarea disabled>
@@ -39,39 +41,40 @@ p {
 }
             </textarea>
           </div>
-          <span class='format'>
-            This is the "p" general css selector. This will target every single &lt;p&gt; element and change their text color to blue.
-          </span>
-          <br/>
-          <span class='format'>
+          <li>
             This is the correct syntax for CSS inside of a stylesheet: <span class='note'>YOUR_SELECTOR { YOUR_STYLINGS; }</span>.
-          </span>
-          <br/>
+          </li>
+          <li>
+            This is the "p" general css selector. This will target every single &lt;p&gt; element and change their text color to blue.
+          </li>
           <span class='note format'><em>Note: Every style must be ended with a semi-colon like in the example when using an external stylesheet</em></span>
           <br/>
           <h2>Classes and ID's</h2>
-          <li>General stylings are useful, but what if you wanted to target only one paragraph or div? This is where classes and ID's come into play</li>
-          <li>The two main rules that need to be remembered when using classes and ID's are:</li>
+          <li>What if you wanted to target only one paragraph or div? This is where classes and ID's come in.</li>
+          <li>The two main rules with classes and ID's are:</li>
           <ul>
             <li>Classes are identified using a " . ", ID's are identified using a " # "</li>
-            <li>Classes can be applied to multiple elements, ID's can only be applied to one element and must be uniquely named</li>
+            <li>Classes can be applied to multiple elements, ID's can only be applied to one element</li>
           </ul>
           <div class='text-example'>
             <textarea class='larger-example' disabled>
-  .blue-p {
-    color: blue;
-  }
+.blue-bot {
+  border: 2px blue solid;
+}
 
-  #red-p {
-    color: red;
-  }
+#red-bot {
+  border: 2px red solid;
+}
             </textarea>
+            <img src='./../assets/bit-by-bot-images/two-hands-party-bot.png' alt='party-bot' class='party-bot'>
+            <img src='./../assets/bit-by-bot-images/two-hands-party-bot.png' alt='party-bot' class='party-bot'>
+            <img src='./../assets/bit-by-bot-images/two-hands-party-bot.png' alt='party-bot' class='party-bot' id='red-bot'>
           </div>
           <li>
-            In this example we are targeting two paragraphs. One with a "blue-p" class and the other with a "red-p" ID.
+            In this example we are targeting three robots. Two with a "blue-bot" class and the other with a "red-bot" ID.
             <br/>
             <span class='format'>
-              Remember, ".blue-p" can be given to other elements. "#red-p" cannot be assigned to another element.
+              Remember, ".blue-bot" can be given to multiple robots. "#red-bot" cannot.
             </span>
           </li>
           <span class='note format'>
@@ -80,19 +83,32 @@ p {
           <br/>
           <span class='review format'>Review: Classes are applied to elements using "class= CLASS_NAME", ID's are applied with "id= ID_NAME"</span>
           <br/>
+        </ul>
+        <ul>
           <h2>Practice</h2>
           <li>
-            In the editor below there is an internal style tag located at the top, to allow you to use CSS selectors to target elements on the page. 
+            In the editor below there is a style tag located at the top within the head, this is where your styles will go.
             <br/>
           </li>
-          <li>
-            Practice targeting the paragraph elements on the page and change their color. Use the "h1" styling that is already present as a reference for the syntax. 
-          </li>
-          <li>
-            Once you have the hang of selecting and styling general elements, try giving elements classes and ID's and try styling them by selecting their class name or ID name.
-          </li>
-          <span class='note format'><em>Note: Remember to use a " ; " after each style. You cannot add mutliple styles without it. </em></span>
         </ul>
+        <ol>
+          <li>
+            Try changing the color of the h1 heading to red
+          </li>
+          <li>
+            Give the first paragraph a class of blue text, change the text color to blue using the class
+          </li>
+          <li>Give the second paragraph an ID of red-text, change the text color to blue using the ID</li>
+          <li>
+            See if you can give the pumpkin bot image a purple border
+          </li>
+          <li>
+            Try giving the paragraphs a font-size of 50px
+          </li>
+        </ol>
+        <span class='note format' id='final-note'>
+          <em>Note: Remember to use a " ; " after each style. You cannot add mutliple styles without it. </em>
+        </span>
       </div>
     </div>
     <div class="content" style="padding-top: 0">
