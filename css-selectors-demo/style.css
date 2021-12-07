@@ -307,6 +307,11 @@ ul {
   list-style: none;
 }
 
+ol {
+  padding: 0 2.75em;
+  margin-bottom: 0;
+}
+
 textarea {
   resize: none;
   height: 60px;
@@ -336,15 +341,43 @@ textarea {
   font-family: "Anonymous Pro", monospace;
 }
 
+.format {
+  margin-left: 5px;
+}
+
+.party-bot {
+  max-width: 15%;
+  height: 120px;
+  border: 2px blue solid;
+}
+.party-bot:hover {
+  transform: translateY(-5px);
+}
+
 #explore-show {
   width: 100%;
-  height: 100%;
+  height: 200px;
   margin: 0;
   border: none;
 }
 
-.format {
-  margin-left: 5px;
+#red-bot {
+  border: 2px red solid;
+}
+
+#final-note {
+  margin-left: 28px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .note {
+    font-size: 1.05em;
+  }
+
+  .review {
+    font-size: 1.05em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
