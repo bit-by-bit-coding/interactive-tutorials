@@ -233,12 +233,8 @@ let othersDefaultCode = `<form>\n
     <input type="file" id="myfile" name="myfile">\n
 </form>\n
 <form>\n
-    <label for="bdaymonth">Birthday (month and year):</label>\n
-    <input type="month" id="bdaymonth" name="bdaymonth">\n
-</form>\n
-<form>\n
-    <label for="vol">Volume (between 0 and 50):</label>\n
-    <input type="range" id="vol" name="vol" min="0" max="50">\n
+    <label for="vol">Select volume (between 0 and 100):</label>\n
+    <input type="range" id="vol" name="vol" min="0" max="100">\n
 </form>\n
 <form>\n
     <label for="phone">Enter your phone number:</label>\n
@@ -247,11 +243,7 @@ let othersDefaultCode = `<form>\n
 <form>\n
     <label for="appt">Select a time:</label>\n
     <input type="time" id="appt" name="appt">\n
-</form>\n
-<form>\n
-    <label for="homepage">Add your homepage:</label>\n
-    <input type="url" id="homepage" name="homepage">\n
-</form>`;
+</form>\n`;
 let othersElementId = "others-input-frame";
 
 jar.updateCode(othersDefaultCode);
