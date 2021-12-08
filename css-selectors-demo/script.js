@@ -1,7 +1,7 @@
 let img = document.createElement('img');
 img.src = './../assets/bit-by-bot-images/two-hands-party-bot.png';
 
-let defaultCode = '<head>\n <style>\n    h1{ color: gold }\n </style>\n</head> \n<body>\n <div style="display:flex;align-items:center">\n  <h1>CSS Selector Demo</h1>\n  <div>\n    <p style="text-align:center;">You can select any element within your HTML files using CSS Selectors</p>\n  </div>\n  <div>\n    <p style="text-align:center;">Try selecting the elements using their element tags</p>\n  </div>\n  <img src="./../assets/bit-by-bot-images/pumpkin-yellow-bot.png" width=175 height=175 />\n </div>\n</body>';
+let defaultCode = '<head>\n <style>\n    h1{ color: gold }\n </style>\n</head> \n<body>\n <div>\n  <h1>CSS Selector Demo</h1>\n  <div>\n    <p>\n      You can select any element within your HTML files using CSS Selectors\n    </p>\n  </div>\n  <div>\n    <p>\n      Try selecting the elements using their element tags\n    </p>\n  </div>\n  <img \n    src="./../assets/bit-by-bot-images/pumpkin-yellow-bot.png" \n    width=175 \n    height=175 \n   />\n </div>\n</body>';
 
 // code for the editor
 let editorElement = document.querySelector(".editor");
