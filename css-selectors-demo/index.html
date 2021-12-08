@@ -25,7 +25,7 @@
         <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
       </div>
     </div>
-    <div class="content">
+    <div class="content" style='padding-bottom:0;'>
       <div class="section css-top">
         <ul>
           <h2>What is a CSS Selector?</h2>
@@ -84,8 +84,12 @@ p {
           <span class='review format'>Review: Classes are applied to elements using "class= CLASS_NAME", ID's are applied with "id= ID_NAME"</span>
           <br/>
         </ul>
+      </div>
+    </div>
+    <div class="content" style='padding:0'>
+      <div class="section">
         <ul>
-          <h2>Practice</h2>
+          <h2 id='practice-heading'>Practice</h2>
           <li>
             In the editor below there is a style tag located at the top within the head, this is where your styles will go.
             <br/>
@@ -111,22 +115,19 @@ p {
         </span>
       </div>
     </div>
-    <div class="content" style="padding-top: 0">
-      <div class="flex-box" >
-        <div class="editor-section flex-col section" style="margin-right: 0.2em;">
-          <div class="editor lang-html"></div>
-          <div class="editor-button-overlay">
-            <button id="execute-button" title="Execute the code">
-              <i class="fas fa-play"></i>
-            </button>
-            <button id="reset-button" title="Reset the code">
-              <i class="fas fa-redo-alt"></i>
-            </button>
-          </div>
+    <div class="content" style='padding-top:0;'>
+    <div class="flex-box" style="margin: 1em 0;">
+      <div class="editor-section flex-col section" style="margin-right: 0.2em;">
+        <div class="editor lang-html"></div>
+        <div class="editor-button-overlay">
+          <button id="execute-button" title="Execute the code">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="reset-button" title="Reset the code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
         </div>
       </div>
-    </div>
-    <div class="content">
       <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
         <iframe id="explore-show" src="about:blank">
         </iframe>

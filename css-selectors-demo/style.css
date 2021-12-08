@@ -354,9 +354,13 @@ textarea {
   transform: translateY(-5px);
 }
 
+#practice-heading {
+  margin-top: -30px;
+}
+
 #explore-show {
   width: 100%;
-  height: 200px;
+  height: 100%;
   margin: 0;
   border: none;
 }
