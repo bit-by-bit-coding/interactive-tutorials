@@ -293,23 +293,25 @@ h2 {
     font-size: x-small;
   }
 }
+ul {
+  padding: 0 1.5em;
+  list-style: none;
+}
 ul li::before {
   content: "•";
-  color: #FEC14C;
+  color: #ff8900;
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
 
-ul {
-  padding: 0 1.5em;
-  list-style: none;
-}
-
 ol {
   padding: 0 2.75em;
   margin-bottom: 0;
+}
+ol li::before {
+  content: none;
 }
 
 textarea {
@@ -327,14 +329,13 @@ textarea {
   width: 200px;
 }
 
+.code-editor {
+  height: 460px;
+}
+
 .note {
   font-size: 1.3em;
   color: #38Bfe7;
-}
-
-.review {
-  font-size: 1.3em;
-  color: #df1717;
 }
 
 .code {
@@ -348,7 +349,7 @@ textarea {
 .party-bot {
   max-width: 15%;
   height: 120px;
-  border: 2px blue solid;
+  border: 2px #38Bfe7 solid;
 }
 .party-bot:hover {
   transform: translateY(-5px);
@@ -366,7 +367,7 @@ textarea {
 }
 
 #red-bot {
-  border: 2px red solid;
+  border: 2px #ff8900 solid;
 }
 
 #final-note {

@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="content" style='padding-bottom:0;'>
-      <div class="section css-top">
+      <div class="section css-top" style='padding-bottom:0;'>
         <ul>
           <h2>What is a CSS Selector?</h2>
           <li>
@@ -42,28 +42,29 @@ p {
             </textarea>
           </div>
           <li>
-            This is the correct syntax for CSS inside of a stylesheet: <span class='note'>YOUR_SELECTOR { YOUR_STYLINGS; }</span>.
+            This is the correct syntax for CSS inside of a stylesheet: <span class='note code format'> CSS_SELECTOR {YOUR_STYLINGS;}</span>
           </li>
           <li>
-            This is the "p" general css selector. This will target every single &lt;p&gt; element and change their text color to blue.
+            This is the "p" general css selector. This will target every single <span class='code'>&lt;p&gt;</span> element and change their text color to blue.
           </li>
           <span class='note format'><em>Note: Every style must be ended with a semi-colon like in the example, when using an external stylesheet</em></span>
           <br/>
           <h2>Classes and ID's</h2>
-          <li>What if you wanted to target only one paragraph or div? This is where classes and ID's come in.</li>
-          <li>The two main rules with classes and ID's are:</li>
-          <ul>
-            <li>Classes are identified using a " . ", ID's are identified using a " # "</li>
+          <li>What if you wanted to target only one paragraph or a div? This is where classes and ID's come in.</li>
+          <li>The three main rules with classes and ID's are:</li>
+          <ol>
+            <li>Classes are identified using a " . ", ID's are identified using a " # ". You can see examples in the box below</li>
             <li>Classes can be applied to multiple elements, ID's can only be applied to one element</li>
-          </ul>
+            <li>Classes are applied like this:<span class='code format'>&lt;p class='CLASS_NAME'&gt;</span> and ID's are applied like this:<span class='code format'>&lt;p id='ID_NAME'&gt;</span></li>
+          </ol>
           <div class='text-example'>
             <textarea class='larger-example' disabled>
-.blue-bot {
+.blue-bit-bot {
   border: 2px blue solid;
 }
 
-#red-bot {
-  border: 2px red solid;
+#gold-bit-bot {
+  border: 2px gold solid;
 }
             </textarea>
             <img src='./../assets/bit-by-bot-images/two-hands-party-bot.png' alt='party-bot' class='party-bot'>
@@ -71,18 +72,15 @@ p {
             <img src='./../assets/bit-by-bot-images/two-hands-party-bot.png' alt='party-bot' class='party-bot' id='red-bot'>
           </div>
           <li>
-            In this example we are targeting three robots. Two with a "blue-bot" class and the other with a "red-bot" ID.
+            In this example we are targeting three bit by bots. Two with a ".blue-bit-bot" class and the other with a "#gold-bit-bot" ID.
             <br/>
             <span class='format'>
-              Remember, ".blue-bot" can be given to multiple robots. "#red-bot" cannot.
+              Remember, ".blue-bit-bot" can be given to multiple bit-by-bots. "#gold-bit-bot" cannot.
             </span>
           </li>
           <span class='note format'>
-            <em>Note: The syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements.</em>
+            <em>Note: The syntax for applying styles to classes and ID's is exactly the same as applying stylings to general elements</em>
           </span> 
-          <br/>
-          <span class='review format'>Review: Classes are applied to elements using "class= CLASS_NAME", ID's are applied with "id= ID_NAME"</span>
-          <br/>
         </ul>
       </div>
     </div>
@@ -116,21 +114,22 @@ p {
       </div>
     </div>
     <div class="content" style='padding-top:0;'>
-    <div class="flex-box" style="margin: 1em 0;">
-      <div class="editor-section flex-col section" style="margin-right: 0.2em;">
-        <div class="editor lang-html"></div>
-        <div class="editor-button-overlay">
-          <button id="execute-button" title="Execute the code">
-            <i class="fas fa-play"></i>
-          </button>
-          <button id="reset-button" title="Reset the code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
+      <div class="flex-box" style="margin: 1em 0;">
+        <div class="editor-section flex-col section" style="margin-right: 0.2em;">
+          <div class="editor lang-html code-editor"></div>
+          <div class="editor-button-overlay">
+            <button id="execute-button" title="Execute the code">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="reset-button" title="Reset the code">
+              <i class="fas fa-redo-alt"></i>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
-        <iframe id="explore-show" src="about:blank">
-        </iframe>
+        <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
+          <iframe id="explore-show" src="about:blank">
+          </iframe>
+        </div>
       </div>
     </div>
   </body>

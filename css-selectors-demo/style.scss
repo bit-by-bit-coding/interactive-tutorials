@@ -134,23 +134,27 @@ h2 {
 
 // Page specific styling
 
-ul li::before {
-    content: "\2022";
-    color: #FEC14C;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em
-}
-
 ul {
     padding: 0 1.5em;
     list-style: none;
+
+    li::before {
+        content: "\2022";
+        color: $accent-color;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em
+    }
 }
 
 ol {
     padding: 0 2.75em;
     margin-bottom: 0;
+
+    li::before {
+        content: none;
+    }
 }
 
 textarea {
@@ -168,14 +172,13 @@ textarea {
     width: 200px;
 }
 
-.note {
-    font-size: 1.3em;
-    color: #38Bfe7;
+.code-editor {
+    height: 460px;
 }
 
-.review {
+.note {
     font-size: 1.3em;
-    color: #df1717;
+    color: $primary-color;
 }
 
 .code {
@@ -189,7 +192,7 @@ textarea {
 .party-bot {
     max-width: 15%;
     height: 120px;
-    border: 2px blue solid;
+    border: 2px $primary-color solid;
 
     &:hover {
         transform: translateY(-5px);
@@ -208,7 +211,7 @@ textarea {
 }
 
 #red-bot {
-    border: 2px red solid;
+    border: 2px $accent-color solid;
 }
 
 #final-note {
