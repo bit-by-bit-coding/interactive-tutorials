@@ -1,4 +1,21 @@
-// Edit this object when adding a new Interactive Tutorials!
+demosBox = document.getElementById("demos-box");
+demosBox.addEventListener("click", (e) => {
+  let anchor = document.createElement("a");
+  anchor.href = "/demos/";
+  document.body.appendChild(anchor);
+  anchor.click();
+});
+
+tutorialsBox = document.getElementById("tutorials-box");
+tutorialsBox.addEventListener("click", (e) => {
+  let anchor = document.createElement("a");
+  anchor.href = "/tutorials/";
+  document.body.appendChild(anchor);
+  anchor.click();
+});
+
+
+/*// Edit this object when adding a new Interactive Tutorials!
 
 // When adding an interactive demo, edit this object
 let interactiveDemos = {
@@ -139,3 +156,4 @@ for (let name in interactiveTutorials) {
   item.appendChild(content);
   tutorialsList.appendChild(item);
 }
+*/
