@@ -14,6 +14,29 @@ tutorialsBox.addEventListener("click", (e) => {
   anchor.click();
 });
 
+mainPic1 = document.getElementById("main-pic-1");
+mainPic2 = document.getElementById("main-pic-2");
+window.addEventListener("resize", (e) => {
+  if (window.innerWidth < 1000) {
+    mainPic1.style = "display:none;";
+    mainPic2.style = "display:none;";
+  }
+  if (window.innerWidth >= 1000) {
+    mainPic1.style = "";
+    mainPic2.style = "";
+  }
+});
+
+window.addEventListener("DOMContentLoaded", (e) => {
+  if (window.innerWidth < 1000) {
+    mainPic1.style = "display:none;";
+    mainPic2.style = "display:none;";
+  }
+  if (window.innerWidth >= 1000) {
+    mainPic1.style = "";
+    mainPic2.style = "";
+  }
+});
 
 /*// Edit this object when adding a new Interactive Tutorials!
 
