@@ -81,6 +81,11 @@ let interactiveTutorials = {
     title: "IF ELSE DEMO",
     content: "What is and If / Else Statement",
   },
+  cssOverflowDemo: {
+    path: "css-overflow-demo",
+    title: "CSS OVERFLOW DEMO",
+    content: "Learn how to use the overflow property in CSS.",
+  },
 };
 
 // And that's it! It is added now!

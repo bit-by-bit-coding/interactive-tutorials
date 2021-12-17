@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Overflow Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">CSS OVERFLOW DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="two-col">
+        <div class="col-box">
+          <h2>What is the overflow property?</h2>
+          <p>
+            The overflow property controls how content fits inside of a block-level element.
+          </p>
+          <p>
+            The overflow property does this by using one of the four values below:
+          </p>
+          <ul>
+            <li>Visible</li>
+            <li>Scroll</li>
+            <li>Hidden</li>
+            <li>Auto</li>
+          </ul>
+          <p>
+            The code snippet to the right shows how the content in the blue square below is being rendered.
+            It is important to note, that by default, the overflow property, even when not specified in the CSS, is set to visible.
+          </p>
+          <p>
+            Click on one of the overflow properties below to explore how the code snippet and content inside of the blue square changes with each property.
+          </p>
+        </div>
+        <div class="col-box">
+          <p class="code"><span class="orange">.blue-square</span> {</p>
+            <p class="code indent"><span class="blue">background-color:</span> #1bb1de;</p>
+            <p class="code indent"><span class="blue">height:</span> 320px;</p>
+            <p class="code indent"><span class="blue">width:</span> 320px;</p>
+            <p class="code indent"><span class="blue">overflow:</span> <span id="overflow-property">visible</span>;</p>
+          <p class="code">}</p>
+          <img class="bit-by-bot" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot Using a Computer">
+        </div>
+      </div>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <form class=form-style>
+          <h2>Select an overflow property:</h2>
+          <input type="radio" id="visible-button" name="overflow-property" value="visible" checked>
+          <label for="visible-button">VISIBLE</label>
+          <p>When visible is selected, the extra content "overflows" outside of the blue square.</p>
+          <input type="radio" id="scroll-button" name="overflow-property" value="scroll">
+          <label for="scroll-button">SCROLL</label>
+          <p>When scroll is selected, the extra content is hidden inside of the blue square, and a scrollbar is added to the square in order to access the extra content.</p>
+          <input type="radio" id="hidden-button" name="overflow-property" value="hidden">
+          <label for="hidden-button">HIDDEN</label>
+          <p>When hidden is selected, the extra content is hidden by the blue square and inaccessible.</p>
+          <input type="radio" id="auto-button" name="overflow-property" value="auto">
+          <label for="auto-button">AUTO</label>
+          <p>When auto is selected, if there is extra content, it is hidden inside of the blue square and a scrollbar is added to the square if necessary.</p>
+        </form>
+      </div>
+      <div class="flex-col section">
+        <div id="example-div" class="visible">
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog. 
+          <br>
+          Bit by bit, the bit-by-bot builds its blog.
+          <br>
+          Bit by bit, the bit-by-bot builds its blog.
+          <br>
+          <span>THE END!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/prism.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
