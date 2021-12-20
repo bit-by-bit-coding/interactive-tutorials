@@ -1,82 +1,173 @@
-/* Default Code */
 let textDefaultCode = `
-<form>\n 
+<script>\n 
+    function textClicked() {\n 
+        var firstName = document.getElementById("fname").value;\n
+        var lastName = document.getElementById("lname").value;\n
+        if (firstName === "") {\n
+            alert("Please enter your first name!");\n
+        } else if (lastName === "") {\n
+            alert("Please enter your last name!");\n
+        } else {\n
+            alert("Hello, " + firstName + " " + lastName);\n 
+        }
+    }\n 
+</script>\n 
+<form onsubmit="textClicked(); return false;">\n 
     <label for="fname">Enter your first name:</label><br>\n 
     <input type="text" id="fname" name="fname"><br>\n 
     <label for="lname">Enter your last name:</label><br>\n 
-    <input type="text" id="lname" name="lname">\n 
+    <input type="text" id="lname" name="lname"><br>\n 
+    <br>\n
+    <input type="submit" value="Submit Your Name">\n
 </form>`;
 
 let radioDefaultCode = `
-<form>\n 
+<script>\n 
+    function radioClicked() {\n 
+        var elements = document.getElementsByName("fav_language");\n
+        for (i = 0; i < elements.length; i++) {
+            if (elements[i].checked) {
+                alert("Your favorite language is " + elements[i].value);
+            }
+        }
+    }\n 
+</script>\n
+<form onsubmit="radioClicked(); return false;">\n 
     <p>Select your favorite Web language</p>\n 
     <input type="radio" id="html" name="fav_language" value="HTML">\n 
     <label for="html">HTML</label><br>\n 
     <input type="radio" id="css" name="fav_language" value="CSS">\n 
     <label for="css">CSS</label><br> \n 
     <input type="radio" id="javascript" name="fav_language" value="JavaScript"> \n 
-    <label for="javascript">JavaScript</label> \n 
+    <label for="javascript">JavaScript</label><br>\n 
+    <br>\n
+    <input type="submit" value="Submit">\n
 </form>`;
 
 let checkboxDefaultCode = `
-<form> \n 
+<script>\n 
+    function checkboxClicked() {\n 
+        var elements = document.getElementsByName("course");\n
+        var result = "";
+        for (i = 0; i < elements.length; i++) {
+            if (elements[i].checked) {
+                result += elements[i].value;
+                result += ", ";
+            }
+        }
+        if (result === "") {
+            alert("You didn't select any course!");
+        } else {
+            result = result.slice(0, result.length - 2);
+        alert("Your have selected " + result + ".");
+        }
+    }\n 
+</script>\n
+<form onsubmit="checkboxClicked(); return false;"> \n 
     <p>Select Courses</p> \n 
-    <input type="checkbox" id="course1" name="course1" value="Art"> \n 
+    <input type="checkbox" id="course1" name="course" value="Art"> \n 
     <label for="course1"> Art </label><br> \n 
-    <input type="checkbox" id="course2" name="course2" value="History"> \n 
+    <input type="checkbox" id="course2" name="course" value="History"> \n 
     <label for="course2"> History </label><br> \n 
-    <input type="checkbox" id="course3" name="course3" value="Math"> \n 
+    <input type="checkbox" id="course3" name="course" value="Math"> \n 
     <label for="course3"> Math </label><br> \n 
-    <input type="checkbox" id="course4" name="course4" value="Science"> \n 
+    <input type="checkbox" id="course4" name="course" value="Science"> \n 
     <label for="course4"> Science </label><br> \n 
-    <input type="checkbox" id="course5" name="course5" value="Physics"> \n 
-    <label for="course5"> Physics </label><br> \n 
+    <input type="checkbox" id="course5" name="course" value="Physics"> \n 
+    <label for="course5"> Physics </label><br>\n 
+    <br>\n
+    <input type="submit" value="Submit">\n
 </form>`;
 
-let buttonDefaultCode = `<input type="button" onclick="alert('Hello World!')" value="Click Me!">`;
-
 let numberDefaultCode = `
-<form>\n
-    <p>Pick a number!</p>\n
-    <label for="quantity">Quantity (between 1 and 10):</label>\n
-    <input type="number" id="quantity" name="quantity" min="1" max="10"> \n
+<script>\n 
+    function numberClicked() {\n 
+        var element = document.getElementById("quantity");\n
+        alert("The number you picked is " + element.value + "!");
+    }\n 
+</script>\n
+<form onsubmit="numberClicked(); return false;">\n
+    <label for="quantity">Pick a number between 1 and 10:</label>\n
+    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">\n
+    <br>\n
+    <input type="submit" value="Submit">\n
 </form>`;
 
 let colorDefaultCode = `
-<form>\n
-    <label for="favcolor">Select your favorite color:</label> \n
+<script>\n 
+    function colorClicked() {\n 
+        var element = document.getElementById("favcolor");\n
+        alert("The code of the color you picked is " + element.value + "!");
+    }\n 
+</script>\n
+<form onsubmit="colorClicked(); return false;">\n
+    <label for="favcolor">Select your favorite color:</label>\n
     <input type="color" id="favcolor" name="favcolor">\n
+    <br>\n
+    <input type="submit" value="Submit">\n
 </form>`;
 
 let dateDefaultCode = `
-<form>\n
+<script>\n 
+    function dateClicked() {\n 
+        var element = document.getElementById("randomDate").value;\n
+        if (!Date.parse(element)) {
+            alert("Please pick a date!");
+        } else {
+            alert("You choose the date: " + element.value + "!");
+        }
+    }\n 
+</script>\n
+<form onsubmit="dateClicked(); return false;">\n
     <label for="randomDate">Pick a random date:</label> \n
     <input type="date" id="randomDate" name="randomDate">\n
+    <br>\n
+    <input type="submit" value="Submit">\n
 </form>`;
 
-let othersDefaultCode = `<form>\n
+let emailDefaultCode = `
+<script>\n 
+    function emailClicked() {\n 
+        var element = document.getElementById("email").value;\n
+        if (element === "") {
+            alert("Please enter your email!");
+        } else {
+            alert("Your email is: " + element + "!");
+        }
+    }\n 
+</script>\n
+<form onsubmit="emailClicked(); return false;">\n
     <label for="email">Enter your email:</label> \n
-    <input type="email" id="email">\n
-</form>\n
-<form>\n
-    <label for="myfile">Select a file:</label>\n
-    <input type="file" id="myfile" name="myfile">\n
-</form>\n
-<form>\n
-    <label for="vol">Select volume (between 0 and 100):</label>\n
-    <input type="range" id="vol" name="vol" min="0" max="100">\n
-</form>\n
-<form>\n
-    <label for="phone">Enter your phone number:</label>\n
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> \n
-</form>\n
-<form>\n
-    <label for="appt">Select a time:</label>\n
-    <input type="time" id="appt" name="appt">\n
-</form>\n`;
+    <input type="email" id="email" name="email">\n
+    <br>\n
+    <input type="submit" value="Submit">\n
+</form>`;
 
-/* Text Editor */
-let TextJar = CodeJar(document.getElementById("text-input-editor"), withLineNumbers(Prism.highlightElement, {
+let rangeDefaultCode = `
+<script>\n 
+    function rangeClicked() {\n 
+        var element = document.getElementById("range").value;\n
+        alert("The volume is " + element + "!");
+    }\n 
+</script>\n
+<form onsubmit="rangeClicked(); return false;">\n
+    <label for="range">Volume (choose between 0 and 100):</label> \n
+    <input type="range" id="range" name="volume" min="0" max="100">\n
+    <br>\n
+    <input type="submit" value="Submit">\n
+</form>`;
+
+let textDefn = "The text input type defines a single-line input field.";
+let radioDefn = "The radio input defines a radio button. Users can only select ONE of the choices.";
+let checkboxDefn = "The checkbox input defines a checkbox. Checkboxes allow users to select ZERO or MORE options of a limited number of choices.";
+let numberDefn = "The number input allows users to select a number. You can also specifies the maximum or minimum values."
+let colorDefn = "The color input allows users to select a color."
+let dateDefn = "The date input allows users to select a date."
+let emailDefn = "A field for email input.";
+let rangeDefn = "A control for entering a number whose exact value is not important. It looks like a slider control, defaulting to the middle value. You can also specifies the maximum or minimum values.";
+
+/* Initialize the Jar */
+let Jar = CodeJar(document.getElementById("input-editor"), withLineNumbers(Prism.highlightElement, {
     color: '#000',
     backgroundColor: 'rgb(232, 232, 232)'
 }), {
@@ -84,193 +175,26 @@ let TextJar = CodeJar(document.getElementById("text-input-editor"), withLineNumb
     indentOn: /<[a-zA-Z =\"\-]+>$/
 });
 
-let textElementId = "text-input-frame";
+let frameElementId = "display-input-frame";
+var displayedCode = textDefaultCode;
 
-TextJar.updateCode(textDefaultCode);
-executeCode(textElementId, TextJar);
+Jar.updateCode(displayedCode);
+executeCode(frameElementId, Jar);
 
-TextJar.onUpdate(code => {
-    executeCode(textElementId, TextJar);
+Jar.onUpdate(code => {
+    executeCode(frameElementId, Jar);
 });
 
-let textResetButton = document.getElementById("text-reset-button");
-textResetButton.onclick = function (e) {
-    TextJar.updateCode(textDefaultCode);
-  executeCode(textElementId, TextJar);
+let resetButton = document.getElementById("reset-button");
+resetButton.onclick = function (e) {
+    Jar.updateCode(displayedCode);
+  executeCode(frameElementId, Jar);
 };
-
-/* Radio Editor */
-let RadioJar = CodeJar(document.getElementById("radio-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let radioElementId = "radio-input-frame";
-
-RadioJar.updateCode(radioDefaultCode);
-executeCode(radioElementId, RadioJar);
-
-RadioJar.onUpdate(code => {
-    executeCode(radioElementId, RadioJar);
-});
-
-let radioResetButton = document.getElementById("radio-reset-button");
-radioResetButton.onclick = function (e) {
-    RadioJar.updateCode(radioDefaultCode);
-  executeCode(radioElementId, RadioJar);
-};
-
-/* Checkbox Editor */
-let CheckboxJar = CodeJar(document.getElementById("checkbox-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let checkboxElementId = "checkbox-input-frame";
-
-CheckboxJar.updateCode(checkboxDefaultCode);
-executeCode(checkboxElementId, CheckboxJar);
-
-CheckboxJar.onUpdate(code => {
-    executeCode(checkboxElementId, CheckboxJar);
-});
-
-let checkboxResetButton = document.getElementById("checkbox-reset-button");
-checkboxResetButton.onclick = function (e) {
-    CheckboxJar.updateCode(checkboxDefaultCode);
-  executeCode(checkboxElementId, CheckboxJar);
-};
-
-/* Button Editor */
-let ButtonJar = CodeJar(document.getElementById("button-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let buttonElementId = "button-input-frame";
-
-ButtonJar.updateCode(buttonDefaultCode);
-executeCode(buttonElementId, ButtonJar);
-
-ButtonJar.onUpdate(code => {
-    executeCode(buttonElementId, ButtonJar);
-});
-
-let buttonResetButton = document.getElementById("button-reset-button");
-buttonResetButton.onclick = function (e) {
-    ButtonJar.updateCode(buttonDefaultCode);
-  executeCode(buttonElementId, ButtonJar);
-};
-
-/* Number Editor */
-let NumberJar = CodeJar(document.getElementById("number-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let numberElementId = "number-input-frame";
-
-NumberJar.updateCode(numberDefaultCode);
-executeCode(numberElementId, NumberJar);
-
-NumberJar.onUpdate(code => {
-    executeCode(numberElementId, NumberJar);
-});
-
-let numberResetButton = document.getElementById("number-reset-button");
-numberResetButton.onclick = function (e) {
-    NumberJar.updateCode(numberDefaultCode);
-  executeCode(numberElementId, NumberJar);
-};
-
-/* Color Editor */
-let ColorJar = CodeJar(document.getElementById("color-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let colorElementId = "color-input-frame";
-
-ColorJar.updateCode(colorDefaultCode);
-executeCode(colorElementId, ColorJar);
-
-ColorJar.onUpdate(code => {
-    executeCode(colorElementId, ColorJar);
-});
-
-let colorResetButton = document.getElementById("color-reset-button");
-colorResetButton.onclick = function (e) {
-    ColorJar.updateCode(colorDefaultCode);
-  executeCode(colorElementId, ColorJar);
-};
-
-/* Date Editor */
-let DateJar = CodeJar(document.getElementById("date-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let dateElementId = "date-input-frame";
-
-DateJar.updateCode(dateDefaultCode);
-executeCode(dateElementId, DateJar);
-
-DateJar.onUpdate(code => {
-    executeCode(dateElementId, DateJar);
-});
-
-let dateResetButton = document.getElementById("date-reset-button");
-dateResetButton.onclick = function (e) {
-    DateJar.updateCode(dateDefaultCode);
-  executeCode(dateElementId, DateJar);
-};
-
-/* Others Editor */
-let jar = CodeJar(document.getElementById("others-input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-let othersElementId = "others-input-frame";
-
-jar.updateCode(othersDefaultCode);
-executeCode(othersElementId, jar);
-
-jar.onUpdate(code => {
-    executeCode(othersElementId, jar);
-});
-
-let othersResetButton = document.getElementById("others-reset-button");
-othersResetButton.onclick = function (e) {
-    jar.updateCode(othersDefaultCode);
-  executeCode(othersElementId, jar);
-};
-
 
 /* Helpler Function */
-function executeCode(elementId, jar) {
-    let frame = document.getElementById(elementId);
+/* Run the code in jar and display the result in frame */
+function executeCode(frameElementId, jar) {
+    let frame = document.getElementById(frameElementId);
     let frameDoc =
       frame.contentWindow ||
       frame.contentDocument.document ||
@@ -282,4 +206,57 @@ function executeCode(elementId, jar) {
         "</html>"
     );
     frameDoc.document.close();
+}
+
+function reply_click(button_id) {
+    switch (button_id) {
+        case "text-input" :
+            document.getElementById("definition").innerHTML = textDefn;
+            displayedCode = textDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "radio-input":
+            document.getElementById("definition").innerHTML = radioDefn;
+            displayedCode = radioDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "checkbox-input":
+            document.getElementById("definition").innerHTML = checkboxDefn;
+            displayedCode = checkboxDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "number-input":
+            document.getElementById("definition").innerHTML = numberDefn;
+            displayedCode = numberDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "color-input":
+            document.getElementById("definition").innerHTML = colorDefn;
+            displayedCode = colorDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "date-input":
+            document.getElementById("definition").innerHTML = dateDefn;
+            displayedCode = dateDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "email-input":
+            document.getElementById("definition").innerHTML = emailDefn;
+            displayedCode = emailDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+        case "range-input":
+            document.getElementById("definition").innerHTML = rangeDefn;
+            displayedCode = rangeDefaultCode;
+            Jar.updateCode(displayedCode);
+            executeCode(frameElementId, Jar);
+            break;
+    }
 }

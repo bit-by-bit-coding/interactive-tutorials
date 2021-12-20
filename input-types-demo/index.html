@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Input Types Demos | Bit by Bit</title>
+  <title>Input Types Demo | Bit by Bit</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../assets/prism.css">
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
@@ -31,217 +31,69 @@
         <h1>Forms</h1>
           <ul>
             <li>Forms contains information passes from the user to a server.</li>
-            <li>We use the tag <code>&lt;form&gt;</code> to define the form.</li>
+            <li>We use the tag <code class="codeHighlight">&lt;form&gt;</code> to define the form.</li>
           </ul>
-        <br>     
         <h1>Input Types</h1>
           <ul>
-            <li>We use the tag <code>&lt;input&gt;</code> to define several input data alternatives. </li>
-            <li><code>&lt;input&gt;</code> appears inside of the <code>&lt;form&gt;</code> tag.</li>
-            <li>The general format is <code>&lt;input type="ALTERNATIVES"&gt;</code>, where ALTERNATIVES can be text, radio, checkbox, button, number, color, date or others. </li>
+            <li>We use the tag <code class="codeHighlight">&lt;input&gt;</code> to define several input data alternatives. </li>
+            <li><code class="codeHighlight">&lt;input&gt;</code> appears inside of the <code class="codeHighlight">&lt;form&gt;</code> tag.</li>
           </ul>
       </p>
     </div>
 
+    <div class="section">
+      <h1>General Format</h1>
+      <div class="displayCode">
+        <div class="comment">/* The HTML element <code class="codeNavy">&lt;form&gt;</code> creates a form to collect user input. */</div><br>
+        <div class="comment">/* You can also add an attribute <code class="codeNavy">onsubmit</code> to execute a JavaScript when the form is submitted. */</div><br>
+        <div class="codeOrange"><code>&lt;form&gt;</code></div><br>
+        <br>
+        <div class="comment indentation">/* The HTML element <code class="codeNavy">&lt;label&gt;</code> is used to define labels for input element. */</div><br>
+        <div class="comment indentation">/* The <code class="codeNavy">for</code> attribute should be equal to the <code class="codeNavy">id</code> attribute in <code class="codeNavy">&lt;input&gt;</code> element to bind them together. */</div><br>
+        <div class="codeOrange indentation"><code>&lt;label for="name"&gt;</code>Enter your name:<code class="codeOrange">&lt;/label&gt;</code></div><br>
+        <br>
+        <div class="comment indentation">/* The HTML element <code class="codeNavy">&lt;input&gt;</code> defines input types. */</div><br>
+        <div class="comment indentation">/* Notice that the <code class="codeNavy">id</code> attribute in <code class="codeNavy">&lt;input&gt;</code> element is equal to the <code class="codeNavy">for</code> attribute in <code class="codeNavy">&lt;label&gt;</code> element. */</div><br>
+        <div class="comment indentation">/* Each input field must have a <code class="codeNavy">name</code> attribute to be submitted. */</div><br>
+        <div class="codeOrange indentation"><code>&lt;input type="text" id="name" name="name"&gt;</code></div><br>
+        <br>
+        <div class="comment indentation">/* The HTML element <code class="codeNavy">&lt;input type="submit"&gt;</code> defines a submit button. */</div><br>
+        <div class="comment indentation">/* The <code class="codeNavy">value</code> attribute specifies the default value of <code class="codeNavy">&lt;input&gt;</code> element. */</div><br>
+        <div class="codeOrange indentation"><code>&lt;input type="submit" value="Submit!"&gt;</code></div><br>
+        <br>
+        <div class="codeOrange"><code>&lt;/form&gt;</code></div><br>
+      </div>
+    </div>
+
     <div class="flex-box">
       <div class="flex-col section">
         <p>
-          <h2>Input Type Text</h2> 
-          <code> &lt;input type="text"&gt; </code> defines a one-line text input fields.
+          <h2>Try Different Input Types</h2> 
+          <button type="button" class="input-button" id="text-input" onClick="reply_click(this.id)">Text Input</button>
+          <button type="button" class="input-button" id="radio-input" onClick="reply_click(this.id)">Radio Input</button>
+          <button type="button" class="input-button" id="checkbox-input" onClick="reply_click(this.id)">Checkbox Input</button>
+          <button type="button" class="input-button" id="number-input" onClick="reply_click(this.id)">Number Input</button>
+          <button type="button" class="input-button" id="color-input" onClick="reply_click(this.id)">Color Input</button>
+          <button type="button" class="input-button" id="date-input" onClick="reply_click(this.id)">Date Input</button>
+          <button type="button" class="input-button" id="email-input" onClick="reply_click(this.id)">Email Input</button>
+          <button type="button" class="input-button" id="range-input" onClick="reply_click(this.id)">Range Input</button>
 
-          <br><br>
+          <div id="definition">
+          </div>
 
-          <h2>Text Input Example</h2>
+          <h2>Display of Input Type</h2>
           
           <div class="section">
-            <iframe id="text-input-frame" class="input-frame" src="about:blank">
+            <iframe id="display-input-frame" class="input-frame" src="about:blank">
             </iframe>
           </div>
         </p>
       </div>
       <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="text-input-editor"></div> 
+        <div class="editor lang-html" id="input-editor"></div> 
         <div class="editor-button-overlay">
-          <button id="text-reset-button" title="Reset the text code">
+          <button id="reset-button" title="Reset the text code">
             <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Input Type Radio</h2>
-          <code> &lt;input type="radio"&gt; </code> is used to let the user select exactly one option from a pre-defined set of options.
-
-          <br><br>
-
-          <h2>Radio Input Example</h2>
-
-          <div class="section">
-            <iframe id="radio-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="radio-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="radio-reset-button" title="Reset the radio code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>      
-    </div>
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Input Type Checkbox</h2>
-          <code> &lt;input type="checkbox"&gt; </code> allows the user to select or unselect one or more option from a pre-defined set of options. 
-
-          <br><br>
-
-          <h2>Checkbox Input Example</h2>
-
-          <div class="section">
-            <iframe id="checkbox-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>   
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="checkbox-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="checkbox-reset-button" title="Reset the checkbox code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>   
-    </div>
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Input Type Button</h2>
-          <code> &lt;input type="button"&gt; </code> defines a simple push button, which can be programmed to control custom functionality on any event such as, click event.
-
-          <br><br>
-
-          <h2>Button Input Example</h2>
-
-          <div class="section">
-            <iframe id="button-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="button-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="button-reset-button" title="Reset the button code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Input Type Number</h2>
-          <code> &lt;input type="number"&gt; </code> creates a numeric input. You can also set restrictions on the maximum and minimum number accepted.
-
-          <br><br>
-
-          <h2>Number Input Example</h2>
-
-          <div class="section">
-            <iframe id="number-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="number-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="number-reset-button" title="Reset the number code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Input Type Color</h2>
-          <code> &lt;input type="color"&gt; </code> creates a color input fields. Depending on browser support, a color picker can appear in the input field.
-
-          <br><br>
-
-          <h2>Color Input Example</h2>
-
-          <div class="section">
-            <iframe id="color-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="color-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="color-reset-button" title="Reset the color code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Input Type Date</h2>
-          <code> &lt;input type="text"&gt; </code> creates a date input fields. Depending on browser support, a date picker can appear in the input field.
-
-          <br><br>
-          
-          <h2>Date Input Example</h2>
-
-          <div class="section">
-            <iframe id="date-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="date-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="date-reset-button" title="Reset the date code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          <h2>Try it yourself!</h2>
-          <div class="section">
-            <iframe id="others-input-frame" class="input-frame" src="about:blank">
-            </iframe>
-          </div>
-        </p>
-      </div>
-      <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="others-input-editor"></div>
-        <div class="editor-button-overlay">
-          <button id="others-reset-button" title="Reset the date code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
           </button>
         </div>
       </div>
