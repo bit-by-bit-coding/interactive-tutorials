@@ -32,6 +32,7 @@ They are used in class and also outside of class, teaching HTML, CSS, and JavaSc
      * `index.html`
      * `style.scss`
  1. Create the demo using HTML, CSS, and Javascript, there are also tools listed below for convince.
+ 1. If you're creating a tutorial, go to `/main-tutorials/script.js` and add your tutorial there. If you're creating a demo, go to `/main-demos/script.js` and add your demo there.
 
 ------
 
