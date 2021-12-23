@@ -1,4 +1,10 @@
-// Edit this object when adding a new Interactive Tutorials!
+demosBox = document.getElementById("demos-box");
+demosBox.addEventListener("click", (e) => {
+  let anchor = document.createElement("a");
+  anchor.href = "/main-demos/";
+  document.body.appendChild(anchor);
+  anchor.click();
+});
 
 let interactiveTutorials = {
   arraysDemo: {
@@ -81,31 +87,36 @@ let interactiveTutorials = {
     title: "IF ELSE DEMO",
     content: "What is and If / Else Statement",
   },
-  cssOverflowDemo: {
-    path: "css-overflow-demo",
-    title: "CSS OVERFLOW DEMO",
-    content: "Learn how to use the overflow property in CSS.",
-  },
 };
 
-// And that's it! It is added now!
+tutorialsBox = document.getElementById("tutorials-box");
+tutorialsBox.addEventListener("click", (e) => {
+  let anchor = document.createElement("a");
+  anchor.href = "/main-tutorials/";
+  document.body.appendChild(anchor);
+  anchor.click();
+});
 
-let tutorialsList = document.getElementById("tutorials-list");
-for (let name in interactiveTutorials) {
-  let tutorial = interactiveTutorials[name];
-  let item = document.createElement("div");
-  item.classList.add("grid-item");
-  item.addEventListener("click", (e) => {
-    let anchor = document.createElement("a");
-    anchor.href = tutorial.path + "/";
-    document.body.appendChild(anchor);
-    anchor.click();
-  });
-  let title = document.createElement("h3");
-  title.innerHTML = tutorial.title;
-  let content = document.createElement("p");
-  content.innerHTML = tutorial.content;
-  item.appendChild(title);
-  item.appendChild(content);
-  tutorialsList.appendChild(item);
-}
+mainPic1 = document.getElementById("main-pic-1");
+mainPic2 = document.getElementById("main-pic-2");
+window.addEventListener("resize", (e) => {
+  if (window.innerWidth < 1000) {
+    mainPic1.style = "display:none;";
+    mainPic2.style = "display:none;";
+  }
+  if (window.innerWidth >= 1000) {
+    mainPic1.style = "";
+    mainPic2.style = "";
+  }
+});
+
+window.addEventListener("DOMContentLoaded", (e) => {
+  if (window.innerWidth < 1000) {
+    mainPic1.style = "display:none;";
+    mainPic2.style = "display:none;";
+  }
+  if (window.innerWidth >= 1000) {
+    mainPic1.style = "";
+    mainPic2.style = "";
+  }
+});

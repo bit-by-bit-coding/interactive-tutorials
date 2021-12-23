@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive Demos and Tutorials | Bit by Bit</title>
+  <title>Interactive Demos | Bit by Bit</title>
   <meta name="google-site-verification" content="3ZZBiUXLZjoPG_C2Wdb0t6goBE73uGxwygCi0gwGWOk" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="assets/prism.css">
+  <link rel="stylesheet" href="/../style.css">
+  <link rel="stylesheet" href="/../assets/prism.css">
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
-<body id="body">
+<body>
   <div id="header" class="flex-container-header">
-    <h1 class="flex-item-header" id="top-heading">ALL DEMOS AND TUTORIALS</h1>
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to home page">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">ALL TUTORIALS</h1>
+    </div>
     <div class="flex-item-header">
       <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
     </div>
   </div>
   <br />
-  <h1 style="text-align:center;">Interactive Demos and Tutorials</h1>
-  <div class="content grid-flex">
-    <img src="/assets/bit-by-bot-images/waving-happy-bot.svg" width="10%" id="main-pic-1">
-    <div class="grid-item" id="demos-box">
-      <h3>DEMOS</h3>
-      <p>Check out our interactive demos!</p>
-    </div>
-    <div class="grid-item" id="tutorials-box">
-      <h3>TUTORIALS</h3>
-      <p>Learn HTML, CSS, and Javascript with our interactive tutorials!</p>
-    </div>
-    <img src="/assets/bit-by-bot-images/two-hands-party-bot.svg" width="8%" id="main-pic-2">
-  </div>
+  <h1 style="text-align:center;">Tutorial List</h1>
+  <div id="tutorials-list" class="content grid-flex"></div>
   <footer>
     Bit by Bit Coding is a registered nonprofit<br>
     EIN 84-5025902<br>

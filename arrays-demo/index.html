@@ -13,7 +13,7 @@
   <div id="header" class="flex-container-header">
     <div class="flex-item-header flex-container-left">
       <div class="flex-item-left">
-        <a href="/" style="margin-right: 1em;">
+        <a href="/main-demos/" style="margin-right: 1em;">
           <button id="back-button" title="Back to all demos">
             <i class="fas fa-arrow-left"></i>
           </button>
@@ -28,7 +28,8 @@
   </div>
   <div class="content">
     <!-- TODO: Fill this content div with all the content of the demo -->
-    <div class="section">
+    <div class="section flex-box">
+      <div class="flex-col">
       <h2>What are Arrays?</h2>
       Arrays are a way to store multiple ordered elements in one variable. They can be anything - strings, integers, floats, even other arrays! <br /> <br />
       <span class="big-code">
@@ -39,10 +40,15 @@
         <span class="variable">animals</span>.<span class="special">pop</span>(); <span class="comment">// Deletes the last element from the array ("hamster")</span> <br />
         <span class="special">let</span> <span class="variable">deletedAnimal</span> = <span class="variable">animals</span>.<span class="special">pop</span>(); <span class="comment">// Deletes the last element from the array ("mouse") and sets it to a variable "deletedAnimal"</span> <br />
       </span>
+      </div>
+      <div class="flex-col" style="max-width: 15%;">
+        <img src="/assets/bit-by-bot-images/computer-open-bot.svg" style="margin-top:80%">
+      </div>
     </div>
     <div class="section instructions"><h2>Try out this quiz!</h2></div>
     <div class="flex-box">
-      <div class="flex-col section">
+      <div class="flex-col section flex-box">
+        <div class="flex-col">
         <p>
           Your goal is for the array to be ["red","green","yellow"] in the end, and for "cyan", "magenta", and "orange" to be outputted to the console, in that order.  <br /> <br />
           <span class="big-code">
@@ -108,8 +114,13 @@
         </p>
         <button id="quiz1">Check Answers</button>
         <p id="pErrorQuiz1"></p>
+        </div>
+        <div class="flex-col" style="max-width: 30%;">
+          <img src="/assets/bit-by-bot-images/sound-suspicious-open-bot.svg" style="margin-top:80%;">
+        </div>
       </div>
-      <div class="flex-col section">
+      <div class="flex-col section flex-box">
+        <div class="flex-col">
         <p>
           Try to predict what the array will be in the end, and what the console output will be! <br /> <br />
           <span class="big-code">
@@ -154,6 +165,10 @@
         </p>
         <button id="quiz2">Check Answers</button>
         <p id="pErrorQuiz2"></p>
+        </div>
+        <div class="flex-col" style="max-width:25%;">
+          <img src="/assets/bit-by-bot-images/bulb-surprised-bot.svg" style="margin-top:65%;">
+        </div>
       </div>
     </div>
     <!-- The end of the content div is here -->
