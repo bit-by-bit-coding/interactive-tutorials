@@ -73,12 +73,12 @@ let interactiveDemos = {
     ifElseDemo: {
       path: "if-else-demo",
       title: "IF ELSE DEMO",
-      content: "What is and If / Else Statement",
+      content: "What is an If / Else Statement",
     },
     cssOverflowDemo: {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
-      content: "What is overflow and how do you use it?",
+      content: "What is the overflow property in css and how do you use it?",
     }
 };
 
