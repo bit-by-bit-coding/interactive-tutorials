@@ -78,7 +78,7 @@ let interactiveDemos = {
     cssOverflowDemo: {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
-      content: "What is the overflow property in css and how do you use it?",
+      content: "What is the overflow property in CSS and how do you use it?",
     }
 };
 
