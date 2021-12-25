@@ -79,6 +79,11 @@ let interactiveDemos = {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
       content: "What is the overflow property in CSS and how do you use it?",
+    },
+    htmlTableDemo: {
+      path: "html-table-demo",
+      title: "HTML TABLE DEMO",
+      content: "Learn how to create a data table using HTML!",
     }
 };
 
