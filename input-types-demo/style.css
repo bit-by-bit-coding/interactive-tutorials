@@ -233,3 +233,7 @@ button:active {
   margin-right: 1em;
   margin-left: 1em;
 }
+
+.editor {
+  height: 40em;
+}
