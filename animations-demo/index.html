@@ -45,29 +45,121 @@
       <div class="flex-col section">
         <p>
           <h2>Example 1</h2>
-          Press the button below and watch the BxB bot move from one side to the oher. The button is linked to a function that animates the bot to move from one side to the other.
+          Press the button below and watch the BxB bot move from one side to the other. The button is linked to a function that animates the bot to move from one side to the other.
           <br><br>
-          <button onclick="e1animate()">Animate!</button>
+          <button onclick="e1Example()">Animate!</button><br><br>
+          <img src="../assets/bit-by-bot-images/waving-happy-bot.svg" id="e1Bot" alt="BxB Bot">
       </div>
       <div class="flex-col section">
         <p class="code">
-          <span class="comment">//Finds the place where "Counter" is located</span><br>
-          var countValue = document.getElementById("Counter"); <br>
-          <span class="comment">//Sets initial count to 0</span><br>
-          var count = 0; <br>
-          <br>
-          <span class="comment">//This function is run when the button is pressed</span><br>
-          function startCount() { <br>
-            <br>
-            &emsp;<span class="comment">//As long as the button is held down, the code is run</span><br>
-            &emsp;while (buttonPressed) { <br>
-              &emsp;&emsp;countValue.innerHTML = Counter + count; <br>
-              &emsp;&emsp;count++; <br>
-              &emsp;} <br>
+          <span class="comment">//This is the css declaration for the image of the bot. This is applied via Javascript when the button is pressed.</span><br>
+          #animatedBot { <br>
+          &emsp;width: 20%; <br>
+          &emsp;height: 20%; <br>
+          &emsp;position: relative;
+          &emsp;-webkit-animation:move 2.5s ease-in-out; <br>
           } <br>
+          <br>
+          <span class="comment">//This is the actual animation of the bot</span> <br>
+          @-webkit-keyframes move  { <br>
+          &emsp;from {<br>
+          &emsp;&emsp;left: 0px; <br>
+          &emsp;&emsp;top: 0px; <br>
+          &emsp;}
+          <br>
+          &emsp;to {<br>
+            &emsp;&emsp;left: 300px; <br>
+            &emsp;&emsp;top: 0px; <br>
+            &emsp;} <br> <br>
           <span style="color:black; font-size:smaller;">*Simplified version of code</span>
         </p>
       </div>
+    </div>
+    <br>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 2</h2>
+          Press the button below to watch the BxB bot appear and disappear. Animations can be also set with a <span class="bold">delay</span>, which makes them appear after a period of time.
+          <br><br>
+          <button onclick="e2Example()">Animate!</button><br><br>
+          Delay: <span id="e1SliderAmount"></span><input type="range" min="0.1" step="0.1" max = "10" value = "1" class="slider" id ="e2DelayValue"><br><br>
+          <img src="../assets/bit-by-bot-images/waving-happy-bot.svg" id="e2Bot" alt="BxB Bot">
+      </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//This is the css declaration for the image of the bot. This is applied via Javascript when the button is pressed.</span><br>
+          #animatedBot { <br>
+          &emsp;width: 20%; <br>
+          &emsp;height: 20%; <br>
+          &emsp;position: relative;
+          &emsp;-webkit-animation:appear 2.5 ease-in-out; <br>
+          &emsp;animation-delay: <span class="comment">(delay set by Javascript)</span><br>
+          } <br>
+          <br>
+          <span class="comment">//This is the actual animation of the bot</span> <br>
+          @-webkit-keyframes appear  { <br>
+          &emsp;from {<br>
+          &emsp;&emsp;opacity: 0; <br>
+          &emsp;}
+          <br><br>
+          &emsp;to {<br>
+            &emsp;&emsp;opacity: 1;<br>
+            &emsp;} <br> <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
+    <div class="section">
+      <p>
+        There are many different <span class="bold">properties</span> of animations that could be applied. The table below shows the name and purpose of a few of these properties.
+      </p>
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <th>@keyframes</th>
+          <th>Signifies the animation code</th>
+        </tr>
+        <tr>
+          <th>animation</th>
+          <th>Sets all animation properties to default</th>
+        </tr>
+        <tr>
+          <th>animation-delay</th>
+          <th>Sets delay for animation</th>
+        </tr>
+        <tr>
+          <th>animation-direction</th>
+          <th>Sets the cycle in which the animation should run</th>
+        </tr>
+        <tr>
+          <th>animation-duration</th>
+          <th>Sets the time-period for one animation cycle</th>
+        </tr>
+        <tr>
+          <th>animation-fill-mode</th>
+          <th>Sets style for animation while not running</th>
+        </tr>
+        <tr>
+          <th>animation-iteration-count</th>
+          <th>Specifies the number of times the animation should run</th>
+        </tr>
+        <tr>
+          <th>animation-name</th>
+          <th>Sets the name of the @keyframes animation</th>
+        </tr>
+        <tr>
+          <th>animation-play-state</th>
+          <th>Sets the current status of animation (playing, paused)</th>
+        </tr>
+        <tr>
+          <th>animation-timing-function</th>
+          <th>Specifies the speed of the animation</th>
+        </tr>
+      </table>
     </div>
     <!-- The end of the content div is here -->
   </div>
