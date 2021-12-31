@@ -1,0 +1,28 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.hidden {
+    display: none;
+}
+
+#right-flex-container{
+    display: flex;
+    background-color: #38bfe7;
+}
+
+#right-flex-container > div {
+    background-color: #ffe266;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
