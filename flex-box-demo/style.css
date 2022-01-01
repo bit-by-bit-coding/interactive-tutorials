@@ -183,9 +183,19 @@ button:active {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+@font-face {
+  font-family: "NunitoBold";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+}
+
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  background-color: #38Bfe7;
+}
+
+th {
+  font-family: "NunitoBold";
 }
 
 .hidden {
@@ -196,7 +206,7 @@ table, th, td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #38bfe7;
+  background-color: #38Bfe7;
 }
 
 #right-flex-container > div {
@@ -204,5 +214,9 @@ table, th, td {
   margin: 10px;
   padding: 20px;
   font-size: 30px;
+}
+
+.leftCode {
+  font-family: 'Anonymous Pro', monospace;
 }
 /*# sourceMappingURL=style.css.map */
