@@ -50,8 +50,14 @@
   cursor: pointer;
 }
 
-table, th, td {
-  border:1px solid black;
+
+table, th{
+  border:2px solid #38bfe7;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  border-collapse: collapse;
+  padding: 1%;
 }
 
 #e1Bot {
