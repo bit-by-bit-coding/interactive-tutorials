@@ -1,0 +1,11 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+.codeHighlight {
+    font-family: "Source Code Pro", monospace;
+    color: #153570;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">CANVAS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <h2>Introduction</h2>
+      <p>We use HTML tag <code class="codeHighlight">&lt;canvas&gt;</code> to present graphic on a web page. <br>
+
+        The <code class="codeHighlight">&lt;canvas&gt;</code> element is only a container of graphics. We must use a script to draw on it. <br>
+        
+        <h3> The Grid </h3>
+        Before we get started, let's talk about coordinates or grid.<br>
+        The HTML canvas is a two-dimensional grid.<br>
+        The upper-left corner of the canvas has the coordinates (0,0). <br>
+        Normally, 1 pixel is corresponding to 1 grid. That is,  a graphic at position (x, y) is x pixels from the left and y pixels from the top.<br>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Canvas Template</h2>
+      <p>Let's start with a simple template.</p>
+      <div class="sampleCode">
+        <div>function <div class="codeBlue">draw()</div> {</div><br>
+        <div class="codeComment indentation">/* The code below retrieves the &lt;canvas&gt; element using method document.getElementById() */</div><br>
+        <div class="indentation">var <div class="codeBlue">canvas</div> = <div class="codeBlue">document</div>.getElementById('<div class="codeOrange">canvas</div>');</div><br>
+        
+        <div class="codeComment indentation">/* Some browsers does not support &lt;canvas&gt;. Check for support by testing the presence of getContext() method. */</div>
+        <div class="indentation">if (<div class="codeOrange">canvas.getContext</div>) {</div><br>
+        
+        <div class="codeComment indentation2">/* The &lt;canvas&gt; element has a getContext() function to obtain its content. */<br>
+            /* Use getContext('2d') for a 2D graphic. */</div><br>
+        <div class="indentation2">var <div class="codeBlue">ctx</div> = <div class="codeBlue">canvas</div>.getContext('<div class="codeOrange">2d</div>');</div><br>
+        <div class="indentation2">...</div><br>
+        <div class="indentation">} else {</div><br>
+        <div class="codeComment indentation"> /* Code here if &lt;canvas&gt; is not supported in the browsers. */</div><br><br>
+        <div class="indentation">}</div><br>
+        <div>}</div><br>
+        <div class="codeComment">/* The two attributes width and height defines the size of the canvas. */ <br>
+          /* If they are not defined, the initial canvas will be 300 pixels wide and 150 pixels high. */ <br>
+          /* It is always good to supply an id attribute so the canvas can be easily found. */</div>
+        <div>&lt;canvas <div class="codeBlue">id</div>="<div class="codeOrange">canvas</div>" <div class="codeBlue">width</div>="<div class="codeOrange">450</div>" <div class="codeBlue">height</div>="<div class="codeOrange">250</div>"&gt;&lt;/canvas&gt;</div><br>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Interact with the Canvas</h2>
+        <p> From the following sections, we will learn how to add shapes, lines, and text on canvas. For simplicity, we will embed a script inside HTML. </p>
+        <p>To see how we can draw on canvas, follow the steps below. Click the buttons to add drawing functions and change the parameters to see changings.</p>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2> Draw shapes </h2>
+        <p><code class="codeHighlight">&lt;canvas&gt;</code> can only draw rectangles and paths. But we can draw more complicated shapes by combining one or more paths.</p><br>
+        
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="input-editor"></div> 
+        <div class="editor-button-overlay">
+          <button id="reset-button" title="Reset the text code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
