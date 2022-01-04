@@ -1,14 +1,15 @@
 ## Lean-Mean-Drag-and-Drop
-Lean & Mean Drag and Drop is a small script for dragging, dropping, sorting and reordering html structures  
+
+Lean & Mean Drag and Drop is a small script for dragging, dropping, sorting and reordering html structures
 
 ### Features
 
-- Supports nested structures ('nestable sortables')  
-- Smooth transitions  
-- Auto scroll while dragging  
-- Lightweight (~3.5kb gzipped) With no dependencies  
-- Supports touch events  
-- Super easy to integrate  
+- Supports nested structures ('nestable sortables')
+- Smooth transitions
+- Auto scroll while dragging
+- Lightweight (~3.5kb gzipped) With no dependencies
+- Supports touch events
+- Super easy to integrate
 
 ### Usage
 
@@ -23,12 +24,14 @@ Lean & Mean Drag and Drop is a small script for dragging, dropping, sorting and 
 <script>lmdd.set(document.getElementById('markupID'),{optionsObject});</script>
 ```
 
-### Examples & Instrcutions
+### Examples & Instructions
 
 can be found here: https://supraniti.github.io/Lean-Mean-Drag-and-Drop/
 
 ### Notes
+
 - Bug reports, Feature requests, Questions and any other feedback are welcome
 
 ### License
+
 MIT

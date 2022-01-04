@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- DONE TODO: Change the title of the page to your demo name -->
+  <title>Volleyball Application | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/interactive-tutorials" style="margin-right: 1em;">
+          <button id="back-button" title="Back to main page"> <!-- ADD JS LATER-->
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- DONE TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">VOLLEYBALL APPLICATION</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>Back 2 Booleans!</h2>
+      <p>
+        Welcome to the Volleyball club's application! We require that:    
+      </p>
+      <div class="code">!(grade < 80 && personality==="quiet")</div>
+      <p>First Name: <input type="text"></p>
+      <p>Last Name: <input type="text"></p>
+      <p>What is your current grade? <input type="number"></p>
+      <p>What personality trait best describes you? Pick one below 
+          <select name="personality" id="personality">
+              <option value="quiet/shy">quiet/shy</option>
+              <option value="enthusiastic">enthusiastic</option>
+              <option value="diligent">diligent</option>
+              <option value="kind">kind</option>
+            </select>
+      </p>
+      <button>Click here to submit your application!</button>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+</body>
+</html>
