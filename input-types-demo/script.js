@@ -110,8 +110,8 @@ let colorDefaultCode = `
 let dateDefaultCode = `
 <script>\n 
     function dateClicked() {\n 
-        var element = document.getElementById("randomDate").value;\n
-        if (!Date.parse(element)) {
+        var element = document.getElementById("randomDate");\n
+        if (!Date.parse(element.value)) {
             alert("Please pick a date!");
         } else {
             alert("You choose the date: " + element.value + "!");

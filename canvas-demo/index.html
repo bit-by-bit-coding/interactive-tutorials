@@ -29,9 +29,7 @@
     <div class="section">
       <h2>Introduction</h2>
       <p>We use HTML tag <code class="codeHighlight">&lt;canvas&gt;</code> to present graphic on a web page. <br>
-
         The <code class="codeHighlight">&lt;canvas&gt;</code> element is only a container of graphics. We must use a script to draw on it. <br>
-        
         <h3> The Grid </h3>
         Before we get started, let's talk about coordinates or grid.<br>
         The HTML canvas is a two-dimensional grid.<br>
@@ -47,10 +45,8 @@
         <div>function <div class="codeBlue">draw()</div> {</div><br>
         <div class="codeComment indentation">/* The code below retrieves the &lt;canvas&gt; element using method document.getElementById() */</div><br>
         <div class="indentation">var <div class="codeBlue">canvas</div> = <div class="codeBlue">document</div>.getElementById('<div class="codeOrange">canvas</div>');</div><br>
-        
         <div class="codeComment indentation">/* Some browsers does not support &lt;canvas&gt;. Check for support by testing the presence of getContext() method. */</div>
         <div class="indentation">if (<div class="codeOrange">canvas.getContext</div>) {</div><br>
-        
         <div class="codeComment indentation2">/* The &lt;canvas&gt; element has a getContext() function to obtain its content. */<br>
             /* Use getContext('2d') for a 2D graphic. */</div><br>
         <div class="indentation2">var <div class="codeBlue">ctx</div> = <div class="codeBlue">canvas</div>.getContext('<div class="codeOrange">2d</div>');</div><br>
@@ -76,7 +72,10 @@
       <div class="flex-col section">
         <h2> Draw shapes </h2>
         <p><code class="codeHighlight">&lt;canvas&gt;</code> can only draw rectangles and paths. But we can draw more complicated shapes by combining one or more paths.</p><br>
-        
+      </div>
+      <div class="flex-col section">
+        <h2> Draw shapes </h2>
+        <p><code class="codeHighlight">&lt;canvas&gt;</code> can only draw rectangles and paths. But we can draw more complicated shapes by combining one or more paths.</p><br>
       </div>
       <div class="editor-section flex-col section">
         <div class="editor lang-html" id="input-editor"></div> 
