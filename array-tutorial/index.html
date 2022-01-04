@@ -10,294 +10,320 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/interactive-tutorials" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
+  <div id="page-container">
+    <div id="content-wrap">
+      <div id="header" class="flex-container-header">
+        <div class="flex-item-header flex-container-left">
+          <div class="flex-item-left">
+            <a href="/interactive-tutorials" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
+          </div>
+          <!-- DONE TODO: Change the name of the demo here -->
+          <h1 class="flex-item-left">ARRAY TUTORIAL</h1>
+        </div>
+        <div class="flex-item-header">
+          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+        </div>
       </div>
-      <!-- DONE TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">ARRAY TUTORIAL</h1>
-    </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-    </div>
-  </div>
-  <div class="content">
-    <!-- DONE TODO: Fill this content div with all the content of the demo -->
-   <div class="section flex-box">
-      <div id="navArray flex-col">
-        <h2>Creating an Array</h2>
-        <p>
-          <strong>Here is a breakdown of arrays:</strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let arrayName</div> = [
-            <div class="codePartTwo">arrayValue1, arrayValue2, arrayValue3</div> ];
+      <div class="content">
+        <!-- DONE TODO: Fill this content div with all the content of the demo -->
+       <div class="section flex-box">
+          <div id="navArray flex-col">
+            <h2>Creating an Array</h2>
+            <p>
+              <strong>Here is a breakdown of arrays:</strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="codePartOne">let arrayName</div> = [
+                <div class="codePartTwo">arrayValue1, arrayValue2, arrayValue3</div> ];
+              </div>
+            </p>
+            <p>
+              <strong>Here are some examples of arrays:</strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="codePartOne">let shoppingList</div> = [
+                <div class="codePartTwo">"eggs", "milk", "bread", "apples"</div> ];
+              </div>
+              <br><br>
+          
+              <div class="code">
+                <div class="codePartOne">let oodNumbersLessThanTen</div> = [
+                <div class="codePartTwo">1, 3, 5, 7, 9</div> ];
+              </div>
+              <br><br>
+        
+              <div class="code">
+                <div class="codePartOne">let isItWorking</div> = [
+                <div class="codePartTwo">true, false, true</div> ];
+              </div>
+            </p>
+            <button id="runArrays">Alert arrays above</button>
           </div>
-        </p>
-        <p>
-          <strong>Here are some examples of arrays:</strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let shoppingList</div> = [
-            <div class="codePartTwo">"eggs", "milk", "bread", "apples"</div> ];
+          <div class="flex-col">
+            <img id="bit-by-bot-happy" src="../assets/bit-by-bot-images/computer-sound-open-bot.svg" alt="Happy Bit by Bot">
           </div>
-          <br><br>
-      
-          <div class="code">
-            <div class="codePartOne">let oodNumbersLessThanTen</div> = [
-            <div class="codePartTwo">1, 3, 5, 7, 9</div> ];
+        </div>
+        <div class="section">
+          <div id="navIndexing">
+            <h2>Indexing Arrays</h2>
+            <p>
+              <strong>Indexing array syntax:</strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="whiteSpace">let arrayName = [</div>
+                <div class="codePartTwo">
+                  <div class="whiteSpace">array</div>0<div class="whiteSpace">alue1, array</div>1<div class="whiteSpace">alue2, array</div>2<div class="whiteSpace">alue3</div>
+                </div>
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">let arrayName</div> = [        
+                <div class="codePartTwo">arrayValue1, arrayValue2, arrayValue3</div> ];
+              </div>
+              <br><br>
+              To obtain arrayValue1: <br>
+              <div class="code">
+                <div class="codePartOne">arrayName</div>[
+                <div class="codePartTwo">0</div> ];
+              </div>
+              <br>
+              To obtain arrayValue2: <br>
+              <div class="code">
+                <div class="codePartOne">arrayName</div>[
+                <div class="codePartTwo">1</div> ];
+              </div>
+              <br>
+              To obtain arrayValue3: <br>
+              <div class="code">
+                <div class="codePartOne">arrayName</div>[
+                <div class="codePartTwo">2</div> ];
+              </div>
+            </p>
+            <p>
+              <strong>
+                Here are some examples of indexing arrays:
+              </strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="codePartOne">let perfectSquareNumbers</div> = [
+                <div class="codePartTwo">1, 4, 9, 16, 25, 36, 49, 64, 81, 100</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">perfectSquareNumbers</div>[
+                <div class="codePartTwo">5</div> ];
+              </div>
+              <br><br>
+        
+              <div class="code">
+                <div class="codePartOne">let greaterThanThree</div> = [
+                <div class="codePartTwo">false, false, false, true, true</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">greaterThanThree</div>[
+                <div class="codePartTwo">2</div> ];
+              </div>
+              <br><br>
+            
+              <div class="code">
+                <div class="codePartOne">let colors</div> = [
+                <div class="codePartTwo">"red", "orange", "yellow", "green", "blue", "purple"</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">colors</div>[
+                <div class="codePartTwo">0</div> ];
+              </div>
+            </p>
+            <button id="indexRun">Alert indexed arrays</button>
+            <br>
+            <br>
+            <p>
+              <strong>
+                Practice indexing arrays:
+              </strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="codePartOne">let answerCheck</div> = [
+                <div class="codePartTwo">true, false, true, false, false</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">answerCheck</div>[
+                <div class="codePartTwo"><input id="acAnswer" type="number"></input></div> ];
+              </div>
+              <button class="indexButton" id="acButton">Run code</button>
+              <br>
+            
+              <div class="code">
+                <div class="codePartOne">let flowerTypes</div> = [
+                <div class="codePartTwo">"daffodils", "daisies", "roses", "tulips", "hydrangeas"</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">flowerTypes</div>[
+                <div class="codePartTwo"><input id="ftAnswer" type="number"></input></div> ];
+              </div>
+              <button class="indexButton" id="ftButton">Run code</button>
+              <br>
+        
+              <div class="code">
+                <div class="codePartOne">let multiplesOfThree</div> = [
+                <div class="codePartTwo">3, 6, 9, 12, 15, 18, 21, 24, 27, 30</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">multiplesOfThree</div>[
+                <div class="codePartTwo"><input id="m3Answer" type="number"></input></div> ];
+              </div>
+              <button class="indexButton" id="m3Button">Run code</button>
+            </p>
           </div>
-          <br><br>
-    
-          <div class="code">
-            <div class="codePartOne">let isItWorking</div> = [
-            <div class="codePartTwo">true, false, true</div> ];
-          </div>
-        </p>
-        <button id="runArrays">Alert arrays above</button>
-      </div>
-      <div class="flex-col">
-        <img id="bit-by-bot-happy" src="../assets/bit-by-bot-images/computer-sound-open-bot.svg" alt="Happy Bit by Bot">
-      </div>
-    </div>
-    <div class="section">
-      <div id="navIndexing">
-        <h2>Indexing Arrays</h2>
-        <p>
-          <strong>Indexing array syntax:</strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="whiteSpace">let arrayName = [</div>
-            <div class="codePartTwo">
-              <div class="whiteSpace">array</div>0<div class="whiteSpace">alue1, array</div>1<div class="whiteSpace">alue2, array</div>2<div class="whiteSpace">alue3</div>
+        </div>
+        <div class="section flex-box">
+          <div id="navChanging flex-col">
+            <h2>Changing Arrays</h2>
+            <p>
+              <strong>Here is a breakdown of changing arrays:</strong>
+            </p>
+            <div class="code">
+              <div class="codePartOne">let arrayName</div> = [        
+              <div class="codePartTwo">arrayValue1, arrayValue2, arrayValue3</div> ];
             </div>
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">let arrayName</div> = [        
-            <div class="codePartTwo">arrayValue1, arrayValue2, arrayValue3</div> ];
-          </div>
-          <br><br>
-          To obtain arrayValue1: <br>
-          <div class="code">
-            <div class="codePartOne">arrayName</div>[
-            <div class="codePartTwo">0</div> ];
-          </div>
-          <br>
-          To obtain arrayValue2: <br>
-          <div class="code">
-            <div class="codePartOne">arrayName</div>[
-            <div class="codePartTwo">1</div> ];
-          </div>
-          <br>
-          To obtain arrayValue3: <br>
-          <div class="code">
-            <div class="codePartOne">arrayName</div>[
-            <div class="codePartTwo">2</div> ];
-          </div>
-        </p>
-        <p>
-          <strong>
-            Here are some examples of indexing arrays:
-          </strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let perfectSquareNumbers</div> = [
-            <div class="codePartTwo">1, 4, 9, 16, 25, 36, 49, 64, 81, 100</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">perfectSquareNumbers</div>[
-            <div class="codePartTwo">5</div> ];
-          </div>
-          <br><br>
-    
-          <div class="code">
-            <div class="codePartOne">let greaterThanThree</div> = [
-            <div class="codePartTwo">false, false, false, true, true</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">greaterThanThree</div>[
-            <div class="codePartTwo">2</div> ];
-          </div>
-          <br><br>
+            <br><br>
+            <div class="code">
+              <div class="codePartOne">arrayName</div><div class="codePartThree">.push(
+                <div class="codePartTwo">arrayValue4</div>
+              )</div>;
+            </div>
+      
+            <p>
+              <strong>Here is some examples for changing arrays:</strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="codePartOne">let sodaBrands</div> = [
+                <div class="codePartTwo">"Coke", "Mountain Dew", "Fanta", "Dr Pepper"</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">sodaBrands</div><div class="codePartThree">.push(
+                  <div class="codePartTwo">"Pepsi"</div>
+                )</div>;
+              </div>
+              <br><br>
         
-          <div class="code">
-            <div class="codePartOne">let colors</div> = [
-            <div class="codePartTwo">"red", "orange", "yellow", "green", "blue", "purple"</div> ];
+              <div class="code">
+                <div class="codePartOne">let numberOfBeanCans</div> = [
+                <div class="codePartTwo">2, 6, 3, 1, 7, 5, 8</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">numberOfBeanCans</div><div class="codePartThree">.push(
+                  <div class="codePartTwo">4</div>
+                )</div>;
+              </div>
+              <br><br>
+            
+              <div class="code">
+                <div class="codePartOne">let bestGame</div> = [
+                <div class="codePartTwo">true, false, true, true</div> ];
+              </div>
+              <br>
+              <div class="code">
+                <div class="codePartOne">bestGame</div><div class="codePartThree">.push(
+                  <div class="codePartTwo">true</div>
+                )</div>;
+              </div>
+            </p>
+            <button id="changeRun">Alert changed arrays</button>
           </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">colors</div>[
-            <div class="codePartTwo">0</div> ];
+          <div class="flex-col">
+            <img id="bit-by-bot-changing" src="../assets/bit-by-bot-images/bulb-surprised-bot.svg" alt="Bit by Bot Changing Arrays">
           </div>
-        </p>
-        <button id="indexRun">Alert indexed arrays</button>
-        <br>
-        <br>
-        <p>
-          <strong>
-            Practice indexing arrays:
-          </strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let answerCheck</div> = [
-            <div class="codePartTwo">true, false, true, false, false</div> ];
+        </div>
+        <div class="section">
+          <div id="navGame">
+            <h2>Game</h2>
+            <p>
+              Practice building and indexing arrays to master the concept!
+            </p>
+            <div>
+              <h3>Building Arrays</h3>
+              <p id="gameCode"></p>
+              <p class="buildingGameCode" id="buildingCode"></p>
+              <button class="gameButton" id="option1">Option 1</button>
+              <button class="gameButton" id="option2">Press to play</button>
+              <button class="gameButton" id="option3">Option 3</button>
+            </div>
+            <div>
+              <h3>Indexing Arrays</h3>
+              <p id="gameCode2"></p>
+              <p class="buildingGameCode" id="buildingCode2"></p>
+              <button class="gameButton" id="option4">Option 1</button>
+              <button class="gameButton" id="option5">Press to play</button>
+              <button class="gameButton" id="option6">Option 3</button>
+            </div>
+            <div>
+              <h3>Changing Arrays</h3>
+              <p id="gameCode3"></p>
+              <p class="buildingGameCode" id="buildingCode3"></p>
+              <button class="gameButton" id="option7">Option 1</button>
+              <button class="gameButton" id="option8">Press to play</button>
+              <button class="gameButton" id="option9">Option 3</button>
+            </div>
+            <h3 id="points">Points: 0</h3>
           </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">answerCheck</div>[
-            <div class="codePartTwo"><input id="acAnswer" type="number"></input></div> ];
+        </div>
+        <div id="navQuiz" class="section flex-box">
+          <div class="flex-col">
+            <h2>Quiz time:</h2>
+            <p>
+              Take this quiz to check your understanding!
+            </p>
+            <a href="https://forms.gle/sta36aybRqAB6WM5A" target="_blank">
+              <button>Quiz Button</button>
+            </a>
           </div>
-          <button class="indexButton" id="acButton">Run code</button>
-          <br>
-        
-          <div class="code">
-            <div class="codePartOne">let flowerTypes</div> = [
-            <div class="codePartTwo">"daffodils", "daisies", "roses", "tulips", "hydrangeas"</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">flowerTypes</div>[
-            <div class="codePartTwo"><input id="ftAnswer" type="number"></input></div> ];
-          </div>
-          <button class="indexButton" id="ftButton">Run code</button>
-          <br>
-    
-          <div class="code">
-            <div class="codePartOne">let multiplesOfThree</div> = [
-            <div class="codePartTwo">3, 6, 9, 12, 15, 18, 21, 24, 27, 30</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">multiplesOfThree</div>[
-            <div class="codePartTwo"><input id="m3Answer" type="number"></input></div> ];
-          </div>
-          <button class="indexButton" id="m3Button">Run code</button>
-        </p>
+          <div class="flex-col">
+            <img id="bit-by-bot-quiz" src="../assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" alt="Bit by Bot">
+          </div> 
+        </div>
       </div>
     </div>
-    <div class="section flex-box">
-      <div id="navChanging flex-col">
-        <h2>Changing Arrays</h2>
-        <p>
-          <strong>Here is a breakdown of changing arrays:</strong>
-        </p>
-        <div class="code">
-          <div class="codePartOne">let arrayName</div> = [        
-          <div class="codePartTwo">arrayValue1, arrayValue2, arrayValue3</div> ];
-        </div>
-        <br><br>
-        <div class="code">
-          <div class="codePartOne">arrayName</div><div class="codePartThree">.push(
-            <div class="codePartTwo">arrayValue4</div>
-          )</div>;
-        </div>
-  
-        <p>
-          <strong>Here is some examples for changing arrays:</strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let sodaBrands</div> = [
-            <div class="codePartTwo">"Coke", "Mountain Dew", "Fanta", "Dr Pepper"</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">sodaBrands</div><div class="codePartThree">.push(
-              <div class="codePartTwo">"Pepsi"</div>
-            )</div>;
-          </div>
-          <br><br>
-    
-          <div class="code">
-            <div class="codePartOne">let numberOfBeanCans</div> = [
-            <div class="codePartTwo">2, 6, 3, 1, 7, 5, 8</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">numberOfBeanCans</div><div class="codePartThree">.push(
-              <div class="codePartTwo">4</div>
-            )</div>;
-          </div>
-          <br><br>
-        
-          <div class="code">
-            <div class="codePartOne">let bestGame</div> = [
-            <div class="codePartTwo">true, false, true, true</div> ];
-          </div>
-          <br>
-          <div class="code">
-            <div class="codePartOne">bestGame</div><div class="codePartThree">.push(
-              <div class="codePartTwo">true</div>
-            )</div>;
-          </div>
-        </p>
-        <button id="changeRun">Alert changed arrays</button>
+
+    <footer>
+      <div class="footer-home">
+        <h4>Visit our main page</h4>
+        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
       </div>
-      <div class="flex-col">
-        <img id="bit-by-bot-changing" src="../assets/bit-by-bot-images/bulb-surprised-bot.svg" alt="Bit by Bot Changing Arrays">
+      <div class="footer-socials">
+        <h4>Follow us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
       </div>
-    </div>
-    <div class="section">
-      <div id="navGame">
-        <h2>Game</h2>
-        <p>
-          Practice building and indexing arrays to master the concept!
-        </p>
-        <div>
-          <h3>Building Arrays</h3>
-          <p id="gameCode"></p>
-          <p class="buildingGameCode" id="buildingCode"></p>
-          <button class="gameButton" id="option1">Option 1</button>
-          <button class="gameButton" id="option2">Press to play</button>
-          <button class="gameButton" id="option3">Option 3</button>
-        </div>
-        <div>
-          <h3>Indexing Arrays</h3>
-          <p id="gameCode2"></p>
-          <p class="buildingGameCode" id="buildingCode2"></p>
-          <button class="gameButton" id="option4">Option 1</button>
-          <button class="gameButton" id="option5">Press to play</button>
-          <button class="gameButton" id="option6">Option 3</button>
-        </div>
-        <div>
-          <h3>Changing Arrays</h3>
-          <p id="gameCode3"></p>
-          <p class="buildingGameCode" id="buildingCode3"></p>
-          <button class="gameButton" id="option7">Option 1</button>
-          <button class="gameButton" id="option8">Press to play</button>
-          <button class="gameButton" id="option9">Option 3</button>
-        </div>
-        <h3 id="points">Points: 0</h3>
+      <div class="footer-info">
+        <p>Bit by Bit Coding is a registered nonprofit</p>
+        <p>EIN 84-5025902</p>
+        <p>© 2021 Bit by Bit Coding</p>
       </div>
-    </div>
-    <div id="navQuiz" class="section flex-box">
-      <div class="flex-col">
-        <h2>Quiz time:</h2>
-        <p>
-          Take this quiz to check your understanding!
-        </p>
-        <a href="https://forms.gle/sta36aybRqAB6WM5A" target="_blank">
-          <button>Quiz Button</button>
-        </a>
-      </div>
-      <div class="flex-col">
-        <img id="bit-by-bot-quiz" src="../assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" alt="Bit by Bot">
-      </div> 
-    </div>
+    </footer>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
