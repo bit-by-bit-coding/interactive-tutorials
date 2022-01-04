@@ -10,73 +10,93 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/main-demos/" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
-      </div>
-      <h1 class="flex-item-left">&ltDIV&gt TAG DEMO</h1>
-    </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-    </div>
-  </div>
-  <div class="content">
-    <div class="flex-box" style="margin: 1em 0;">
-      <div class="editor-section flex-col section" style="margin-right: 0.2em;">
-        <div class="editor lang-html"></div>
-        <div class="editor-button-overlay">
-          <button id="execute-button" title="Execute the code">
-            <i class="fas fa-play"></i>
-          </button>
-          <button id="reset-button" title="Reset the code">
-            <i class="fas fa-redo-alt"></i>
-          </button>
+  <div id="page-container">
+    <div id="content-wrap">
+      <div id="header" class="flex-container-header">
+        <div class="flex-item-header flex-container-left">
+          <div class="flex-item-left">
+            <a href="/main-demos/" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
+          </div>
+          <h1 class="flex-item-left">&ltDIV&gt TAG DEMO</h1>
+        </div>
+        <div class="flex-item-header">
+          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
         </div>
       </div>
-      <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
-        <iframe id="explore-show" src="about:blank">
-        </iframe>
+      <div class="content">
+        <div class="flex-box" style="margin: 1em 0;">
+          <div class="editor-section flex-col section" style="margin-right: 0.2em;">
+            <div class="editor lang-html"></div>
+            <div class="editor-button-overlay">
+              <button id="execute-button" title="Execute the code">
+                <i class="fas fa-play"></i>
+              </button>
+              <button id="reset-button" title="Reset the code">
+                <i class="fas fa-redo-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="showcase-section flex-col section" style="margin-left: 0.2em;">
+            <iframe id="explore-show" src="about:blank">
+            </iframe>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Boxes inside Boxes</h3>
+          <p>
+            Div tags are essentially boxes that you can put things in.
+            The process of putting something in a box in HTML is called <strong>nesting</strong>.
+            Here, each div has a different background color which shows where each box (or div) is.
+            To view an animation of creating the divs, <a id="animate" href="#">click here</a>.
+            Use the code editor above and the play button to create your own divs.
+            A list of usable classes are below. Don't worry if you don't know what these are.
+          </p>
+        </div>
+        <div class="section">
+          <h3>Possible Classes</h3>
+          <ul>
+            <li>
+              <span class="code">section</span>: white background with a blue border.
+            </li>
+            <li>
+              <span class="code">orange</span>: orange background with white text.
+            </li>
+            <li>
+              <span class="code">blue</span>: blue background with white text.
+            </li>
+            <li>
+              <span class="code">pinkify</span>: pink background with black text.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="section">
-      <h3>Boxes inside Boxes</h3>
-      <p>
-        Div tags are essentially boxes that you can put things in.
-        The process of putting something in a box in HTML is called <strong>nesting</strong>.
-        Here, each div has a different background color which shows where each box (or div) is.
-        To view an animation of creating the divs, <a id="animate" href="#">click here</a>.
-        Use the code editor above and the play button to create your own divs.
-        A list of usable classes are below. Don't worry if you don't know what these are.
-      </p>
-    </div>
-    <div class="section">
-      <h3>Possible Classes</h3>
-      <ul>
-        <li>
-          <span class="code">section</span>: white background with a blue border.
-        </li>
-        <li>
-          <span class="code">orange</span>: orange background with white text.
-        </li>
-        <li>
-          <span class="code">blue</span>: blue background with white text.
-        </li>
-        <li>
-          <span class="code">pinkify</span>: pink background with black text.
-        </li>
-      </ul>
-    </div>
+
+    <footer>
+      <div class="footer-home">
+        <h4>Visit our main page</h4>
+        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+      </div>
+      <div class="footer-socials">
+        <h4>Follow us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <p>Bit by Bit Coding is a registered nonprofit</p>
+        <p>EIN 84-5025902</p>
+        <p>© 2021 Bit by Bit Coding</p>
+      </div>
+    </footer>
+
   </div>
-  <footer>
-    Bit by Bit Coding is a registered nonprofit<br>
-    EIN 84-5025902<br>
-    © 2021 Bit by Bit Coding<br>
-  </footer>
 
   <script src="../assets/prism.js"></script>
   <script src="../assets/codejar.js"></script>
