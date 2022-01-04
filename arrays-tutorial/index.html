@@ -11,328 +11,354 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/main-tutorials/" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
+  <div id="page-container">
+    <div id="content-wrap">
+      <div id="header" class="flex-container-header">
+        <div class="flex-item-header flex-container-left">
+          <div class="flex-item-left">
+            <a href="/main-tutorials/" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
+          </div>
+          <!-- TODO: Change the name of the demo here -->
+          <h1 class="flex-item-left">ARRAYS TUTORIAL</h1>
+        </div>
+        <div class="flex-item-header">
+          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+        </div>
       </div>
-      <!-- TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">ARRAYS TUTORIAL</h1>
+      <div class="content">
+        <!-- TODO: Fill this content div with all the content of the demo -->
+        <div class="flex-box section">
+          <div class="flex-col">
+          <h2>Intro to Arrays</h2>
+          <p>
+            Arrays are ways to store many items in one variable. <br /> <br />
+            
+            For example, say you wanted to store the strings "dog", "cat", and "mouse", but you don't want to store them all in separate variables. You can use an array. Here is how you do it. <br /> <br />
+            
+            <span class="big-code">
+            <span class="comment">
+            // This creates an array that is composed of the strings "dog", "cat", and "mouse", and assigns it to a variable called animals </span> <br />
+            <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
+            <span class="comment">
+            // Notice the syntax of the array: it starts with an open bracket "[", and ends with a closing bracket "]". All the elements are separated by commas. </span>
+            </span>
+          </p>
+          </div>
+          <div class="flex-col" style="max-width:20%">
+            <img src="/assets/bit-by-bot-images/computer-open-bot.svg">
+          </div>
+        </div>
+        <div class="flex-box section">
+          <div class="flex-col">
+          <p>
+            <h2>Adding Elements to Arrays</h2>
+            Now, this is great and all, but how is this any different from just assigning the strings to normal variables? <br /> <br />
+            
+            Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? What if you already defined the array, and you want the program to add more animals while it is running? <br /> <br />
+    
+            With arrays, you don't have to do that. All you need to do is use the push method, as shown: <br /> <br />
+    
+            <span class="big-code">
+            <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
+            <span class="comment">
+            // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] </span> <br />
+            <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
+            <span class="comment">
+            // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". <br />
+            // Then you enclose the element you want to add (in this case "hamster") in parantheses. </span>
+            </span><br /> <br />
+    
+            Now, whenever you want to store a new animal, you don't need to create a new variable! You can just add it to the same array!
+          </p>
+          </div>
+          <div class="flex-col" style="max-width:12%;">
+            <img src="/assets/bit-by-bot-images/suspicious-open-bot.svg">
+          </div>
+        </div>
+        <div class="section instructions">
+          Try out this interactive! First, add elements by typing them normally on the left, then when you feel ready, try using the actual JavaScript push syntax in the middle! The array will update automatically on the right as you add new elements.
+        </div>
+        <div class="flex-box">
+          <div class="flex-col section">
+            <p>Add an element to the array!</p>
+            <input id="push-input-1" type="search" placeholder="hamster"> <br /> <br />
+            <button id="push-button-1">Add to array</button>
+          </div>
+          <div class="flex-col section">
+            <p id="p-code-1"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
+            <input id="input-code-1" type="search" placeholder='animals.push("hamster");'> <br /> <br />
+            <button id="button-code-1">Add code</button>
+          </div>
+          <div class="flex-col section">
+            <p>
+              <p id="p-array-1">Array: [dog, cat, mouse]</p>
+              <p id="p-error-1"></p>
+              <button id="clear-button-1">Clear array</button>
+            </p>
+          </div>
+        </div>
+        <div class="section flex-box">
+          <div class="flex-col">
+          <h2>Indexing Arrays</h2>
+          <p>
+            Arrays can do much more than store strings of animals, though. In fact, they can store any object - integers, booleans, even other arrays! This makes them extremely powerful. <br /> <br />
+            
+            However, once you have an array, how can you access the items inside of it? You do so using the <em>index</em> of the item. The index of an item in an array is the number assigned to it based on the order it appears in the array. For example, in our previous array, the index of "cat" is less than the index of "hamster" since "cat" is before "hamster" in the array. <br /> <br />
+    
+            The first element in an array starts with the index 0 (not 1!). The index increases by 1 for each element after. For example, in our previous array, "dog" has an index of 0, "cat" has an index of 1, "mouse" has an index of 2, and "hamster" has an index of 3. <br /> <br />
+    
+            Why does this matter so much? You can retrieve elements from an array using their index, as shown: <br /> <br />
+    
+            <span class="big-code">
+            <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
+            <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
+            <span class="comment">
+            // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". </span> <br />
+            <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <br />
+            <span class="comment">
+            // This takes the element with index 0 (the first element) in the array animals (in this case "dog") and logs it to the console </span> <br />
+            <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <br />
+            <span class="comment">
+            // This takes the element with index 3 (the fourth element) in the array animals (in this case "hamster") and logs it to the console </span> <br />
+            <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">1</span>]); <br />
+            <span class="comment">
+            // This takes the element with index 1 (the second element) in the array animals (in this case "cat") and logs it to the console </span> <br /> <br />
+            </span>
+    
+            Now, you can store animals and retrieve them from an array!
+          </p>
+          </div>
+          <div class="flex-col" style="max-width: 12%;">
+            <img src="/assets/bit-by-bot-images/two-hands-happy-bot.svg" style="margin-bottom:90%;">
+            <img src="/assets/bit-by-bot-images/bulb-surprised-bot.svg">
+          </div>
+        </div>
+        <div class="section instructions">
+          Try out this interactive! First, try getting elements from the array by just putting in their index. Then, try out the entire command in the input box! The outputs to your commands will appear in the console.
+        </div>
+        <div class="flex-box">
+          <div class="flex-col section">
+            <p>Get a certain index from the array</p>
+            <input id="index-input-2" type="number" placeholder="0">
+            <button id="index-button-2">Get this index</button> <br /> <br /> <hr class="flex-box-separator">
+            <p id="p-code-2"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
+            <input id="input-code-2" type="search" placeholder='console.log(animals[0]);'> <br /> <br />
+            <button id="button-code-2">Add code</button>
+          </div>
+          <div class="flex-col section">
+            <p>
+              <p id="p-array-2">Array: [dog, cat, mouse]</p>
+              <button id="clear-button-2">Clear console and errors</button>
+              <p id="p-error-2"></p> <br />
+            </p>
+          </div>
+          <div class="flex-col section console-output-box">
+            <p id="console-output-2">Console Output: <br />><span class="blink_me">_</span>
+            </p>
+          </div>
+        </div>
+        <div class="section flex-box">
+          <div class="flex-col">
+          <h2>Deleting Elements From Arrays</h2>
+          <p>
+            Now that we know how to define arrays, add elements to arrays, and get elements from arrays, we need to learn how to delete elements from arrays. After all, what happens if you stop liking hamsters, and need to remove it from your array? <br />
+            Luckily, in JavaScript, we have a method called pop. The pop method allows you to delete the last element of an array. The syntax is as follows: <br /> <br />
+            
+            <span class="big-code">
+              <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
+              <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <span class="comment">// Logs "dog" to the console</span> <br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <span class="comment">// Logs "hamster" to the console</span><br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">1</span>]); <span class="comment">// Logs "cat" to the console</span><br /> <br />
+              <span class="comment">
+              // This command deletes the last element of the array animals, in this case "hamster". <br />
+              // After this command, the array is back to ["dog", "cat", "mouse"] <br /> </span>
+              <span class="variable">animals</span>.<span class="special">pop</span>(); <br />
+              <span class="comment">
+              // Notice the syntax of this command. First, you start with the name of the array (in this case "animals"), then you write ".pop();" <br /> <br />
+              // The pop method also allows you to use the element you delete. For example, you can assign it to a variable as shown: <br />
+              </span>
+              <span class="special">let</span> <span class="variable">deletedAnimal</span> = <span class="variable">animals</span>.<span class="special">pop</span>(); <br />
+              <span class="comment">
+              // This command assigns the last element of the array animals (in this case "mouse") to a variable called deletedAnimal. <br />
+              // It then deletes the last element from the array, so that the new array is just ["dog", "cat"].
+              </span>
+            </span>
+          </p>
+          </div>
+          <div class="flex-col" style="max-width: 15%;">
+            <img src="/assets/bit-by-bot-images/explosion-bot.svg">
+          </div>
+        </div>
+        <div class="section instructions">
+          Try out this interactive! First, delete elements by clicking the pop button on the left, then try out the actual Javascript pop command syntax! The array will update automatically on the right as you add new elements.
+        </div>
+        <div class="flex-box">
+          <div class="flex-col section">
+            <p>Delete an element from the array!</p>
+            <button id="pop-button-3">Pop from array</button>
+          </div>
+          <div class="flex-col section">
+            <p id="p-code-3"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
+            <input id="input-code-3" type="search" placeholder='animals.pop();'> <br /> <br />
+            <button id="button-code-3">Add code</button>
+          </div>
+          <div class="flex-col section">
+            <p>
+              <p id="p-array-3">Array: [dog, cat, mouse]</p>
+              <p id="p-error-3"></p>
+              <button id="clear-button-3">Reset</button>
+            </p>
+          </div>
+        </div>
+        <div class="section instructions" style="text-align:center">
+          <h2>Try out this quiz!</h2>
+        </div>
+        <div class="flex-box">
+          <div class="flex-col section">
+            <p>
+              Your goal is for the array to be ["red","green","yellow"] in the end, and for "cyan", "magenta", and "orange" to be outputted to the console, in that order.  <br /> <br />
+              <span class="big-code">
+              <span class="special">let</span> <span class="variable">colors</span> = ["<select id="quiz1-1">
+                <option></option>
+                <option value = "red">red</option>
+                <option value="green">green</option>
+                <option value="yellow">yellow</option>
+                <option value="cyan">cyan</option>
+                <option value="magenta">magenta</option>
+                <option value="orange">orange</option>
+              </select>"]; <br />
+              <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-2">
+                <option></option>
+                <option value = "red">red</option>
+                <option value="green">green</option>
+                <option value="yellow">yellow</option>
+                <option value="cyan">cyan</option>
+                <option value="magenta">magenta</option>
+                <option value="orange">orange</option>
+              </select>"); <br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>[<span class="special">1</span>]); <br />
+              <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
+              <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-3">
+                <option></option>
+                <option value = "red">red</option>
+                <option value="green">green</option>
+                <option value="yellow">yellow</option>
+                <option value="cyan">cyan</option>
+                <option value="magenta">magenta</option>
+                <option value="orange">orange</option>
+              </select>"); <br />
+              <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-4">
+                <option></option>
+                <option value = "red">red</option>
+                <option value="green">green</option>
+                <option value="yellow">yellow</option>
+                <option value="cyan">cyan</option>
+                <option value="magenta">magenta</option>
+                <option value="orange">orange</option>
+              </select>"); <br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>.<span class="special">pop</span>()); <br />
+              <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-5">
+                <option></option>
+                <option value = "red">red</option>
+                <option value="green">green</option>
+                <option value="yellow">yellow</option>
+                <option value="cyan">cyan</option>
+                <option value="magenta">magenta</option>
+                <option value="orange">orange</option>
+              </select>"); <br />
+              <span class="special">let</span> <span class="variable">coolColor</span> = <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">coolColor</span>); <br />
+              <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-6">
+                <option></option>
+                <option value = "red">red</option>
+                <option value="green">green</option>
+                <option value="yellow">yellow</option>
+                <option value="cyan">cyan</option>
+                <option value="magenta">magenta</option>
+                <option value="orange">orange</option>
+              </select>"); </span> <br />
+            </p>
+            <button id="quiz1">Check Answers</button>
+            <p id="pErrorQuiz1"></p>
+          </div>
+          <div class="flex-col section">
+            <p>
+              Try to predict what the array will be in the end, and what the console output will be! <br /> <br />
+              <span class="big-code">
+              <span class="special">let</span> <span class="variable">flowers</span> = [<span class="string">"rose"</span>, <span class="string">"dandelion"</span>]; <br />
+              <span class="variable">favoriteFlower</span> = <span class="variable">flowers</span>.<span class="special">pop</span>(); <br />
+              <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"tulip"</span>); <br />
+              <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"daffodil"</span>); <br />
+              <span class="variable">secondFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">0</span>]; <br />
+              <span class="variable">leastFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">2</span>]; <br />
+              <span class="special">console</span>.<span class="special">log</span>(<span class="variable">secondFavoriteFlower</span>); </span> <br /> <br />
+              What is the flowers array at the end? <br />
+              ["
+              <select id="quiz2-1">
+                <option></option>
+                <option value="rose">rose</option>
+                <option value="dandelion">dandelion</option>
+                <option value="tulip">tulip</option>
+                <option value="daffodil">daffodil</option>
+              </select>", "
+              <select id="quiz2-2">
+                <option></option>
+                <option value="rose">rose</option>
+                <option value="dandelion">dandelion</option>
+                <option value="tulip">tulip</option>
+                <option value="daffodil">daffodil</option>
+              </select>", "
+              <select id="quiz2-3">
+                <option></option>
+                <option value="rose">rose</option>
+                <option value="dandelion">dandelion</option>
+                <option value="tulip">tulip</option>
+                <option value="daffodil">daffodil</option>
+              </select>"] <br /> <br />
+              What is the console output? 
+              <select id="quiz2-4">
+                <option></option>
+                <option value="rose">rose</option>
+                <option value="dandelion">dandelion</option>
+                <option value="tulip">tulip</option>
+                <option value="daffodil">daffodil</option>
+              </select>
+            </p>
+            <button id="quiz2">Check Answers</button>
+            <p id="pErrorQuiz2"></p>
+          </div>
+        </div>
+        <!-- The end of the content div is here -->
+      </div>
     </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-    </div>
+
+    <footer>
+      <div class="footer-home">
+        <h4>Visit our main page</h4>
+        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+      </div>
+      <div class="footer-socials">
+        <h4>Follow us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <p>Bit by Bit Coding is a registered nonprofit</p>
+        <p>EIN 84-5025902</p>
+        <p>© 2021 Bit by Bit Coding</p>
+      </div>
+    </footer>
+
   </div>
-  <div class="content">
-    <!-- TODO: Fill this content div with all the content of the demo -->
-    <div class="flex-box section">
-      <div class="flex-col">
-      <h2>Intro to Arrays</h2>
-      <p>
-        Arrays are ways to store many items in one variable. <br /> <br />
-        
-        For example, say you wanted to store the strings "dog", "cat", and "mouse", but you don't want to store them all in separate variables. You can use an array. Here is how you do it. <br /> <br />
-        
-        <span class="big-code">
-        <span class="comment">
-        // This creates an array that is composed of the strings "dog", "cat", and "mouse", and assigns it to a variable called animals </span> <br />
-        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
-        <span class="comment">
-        // Notice the syntax of the array: it starts with an open bracket "[", and ends with a closing bracket "]". All the elements are separated by commas. </span>
-        </span>
-      </p>
-      </div>
-      <div class="flex-col" style="max-width:20%">
-        <img src="/assets/bit-by-bot-images/computer-open-bot.svg">
-      </div>
-    </div>
-    <div class="flex-box section">
-      <div class="flex-col">
-      <p>
-        <h2>Adding Elements to Arrays</h2>
-        Now, this is great and all, but how is this any different from just assigning the strings to normal variables? <br /> <br />
-        
-        Well, say you woke up the next morning, and decided you want to store the word "hamster". If you were using normal variables, and assigning strings to variables as we normally do, then you would have to create a new variable each time you wanted to add a new animal. What if you went to the zoo, and wanted to store a hundred animals? What if you already defined the array, and you want the program to add more animals while it is running? <br /> <br />
 
-        With arrays, you don't have to do that. All you need to do is use the push method, as shown: <br /> <br />
-
-        <span class="big-code">
-        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
-        <span class="comment">
-        // This adds "hamster" to the array, so the new array is ["dog", "cat", "mouse", "hamster"] </span> <br />
-        <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
-        <span class="comment">
-        // Notice the syntax of the push method: you start with the name of the variable, in this case "animals", then write ".push". <br />
-        // Then you enclose the element you want to add (in this case "hamster") in parantheses. </span>
-        </span><br /> <br />
-
-        Now, whenever you want to store a new animal, you don't need to create a new variable! You can just add it to the same array!
-      </p>
-      </div>
-      <div class="flex-col" style="max-width:12%;">
-        <img src="/assets/bit-by-bot-images/suspicious-open-bot.svg">
-      </div>
-    </div>
-    <div class="section instructions">
-      Try out this interactive! First, add elements by typing them normally on the left, then when you feel ready, try using the actual JavaScript push syntax in the middle! The array will update automatically on the right as you add new elements.
-    </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>Add an element to the array!</p>
-        <input id="push-input-1" type="search" placeholder="hamster"> <br /> <br />
-        <button id="push-button-1">Add to array</button>
-      </div>
-      <div class="flex-col section">
-        <p id="p-code-1"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
-        <input id="input-code-1" type="search" placeholder='animals.push("hamster");'> <br /> <br />
-        <button id="button-code-1">Add code</button>
-      </div>
-      <div class="flex-col section">
-        <p>
-          <p id="p-array-1">Array: [dog, cat, mouse]</p>
-          <p id="p-error-1"></p>
-          <button id="clear-button-1">Clear array</button>
-        </p>
-      </div>
-    </div>
-    <div class="section flex-box">
-      <div class="flex-col">
-      <h2>Indexing Arrays</h2>
-      <p>
-        Arrays can do much more than store strings of animals, though. In fact, they can store any object - integers, booleans, even other arrays! This makes them extremely powerful. <br /> <br />
-        
-        However, once you have an array, how can you access the items inside of it? You do so using the <em>index</em> of the item. The index of an item in an array is the number assigned to it based on the order it appears in the array. For example, in our previous array, the index of "cat" is less than the index of "hamster" since "cat" is before "hamster" in the array. <br /> <br />
-
-        The first element in an array starts with the index 0 (not 1!). The index increases by 1 for each element after. For example, in our previous array, "dog" has an index of 0, "cat" has an index of 1, "mouse" has an index of 2, and "hamster" has an index of 3. <br /> <br />
-
-        Why does this matter so much? You can retrieve elements from an array using their index, as shown: <br /> <br />
-
-        <span class="big-code">
-        <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
-        <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
-        <span class="comment">
-        // Notice the syntax when you retrieve an element from an array. You start with the name of the array, then you open brackets "[", put the index of the element you want to retrieve, then close brackets "]". </span> <br />
-        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <br />
-        <span class="comment">
-        // This takes the element with index 0 (the first element) in the array animals (in this case "dog") and logs it to the console </span> <br />
-        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <br />
-        <span class="comment">
-        // This takes the element with index 3 (the fourth element) in the array animals (in this case "hamster") and logs it to the console </span> <br />
-        <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">1</span>]); <br />
-        <span class="comment">
-        // This takes the element with index 1 (the second element) in the array animals (in this case "cat") and logs it to the console </span> <br /> <br />
-        </span>
-
-        Now, you can store animals and retrieve them from an array!
-      </p>
-      </div>
-      <div class="flex-col" style="max-width: 12%;">
-        <img src="/assets/bit-by-bot-images/two-hands-happy-bot.svg" style="margin-bottom:90%;">
-        <img src="/assets/bit-by-bot-images/bulb-surprised-bot.svg">
-      </div>
-    </div>
-    <div class="section instructions">
-      Try out this interactive! First, try getting elements from the array by just putting in their index. Then, try out the entire command in the input box! The outputs to your commands will appear in the console.
-    </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>Get a certain index from the array</p>
-        <input id="index-input-2" type="number" placeholder="0">
-        <button id="index-button-2">Get this index</button> <br /> <br /> <hr class="flex-box-separator">
-        <p id="p-code-2"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
-        <input id="input-code-2" type="search" placeholder='console.log(animals[0]);'> <br /> <br />
-        <button id="button-code-2">Add code</button>
-      </div>
-      <div class="flex-col section">
-        <p>
-          <p id="p-array-2">Array: [dog, cat, mouse]</p>
-          <button id="clear-button-2">Clear console and errors</button>
-          <p id="p-error-2"></p> <br />
-        </p>
-      </div>
-      <div class="flex-col section console-output-box">
-        <p id="console-output-2">Console Output: <br />><span class="blink_me">_</span>
-        </p>
-      </div>
-    </div>
-    <div class="section flex-box">
-      <div class="flex-col">
-      <h2>Deleting Elements From Arrays</h2>
-      <p>
-        Now that we know how to define arrays, add elements to arrays, and get elements from arrays, we need to learn how to delete elements from arrays. After all, what happens if you stop liking hamsters, and need to remove it from your array? <br />
-        Luckily, in JavaScript, we have a method called pop. The pop method allows you to delete the last element of an array. The syntax is as follows: <br /> <br />
-        
-        <span class="big-code">
-          <span class="special">let</span> <span class="variable">animals</span> = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"mouse"</span>]; <br />
-          <span class="variable">animals</span>.<span class="special">push</span>(<span class="string">"hamster"</span>); <br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">0</span>]); <span class="comment">// Logs "dog" to the console</span> <br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">3</span>]); <span class="comment">// Logs "hamster" to the console</span><br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">animals</span>[<span class="special">1</span>]); <span class="comment">// Logs "cat" to the console</span><br /> <br />
-          <span class="comment">
-          // This command deletes the last element of the array animals, in this case "hamster". <br />
-          // After this command, the array is back to ["dog", "cat", "mouse"] <br /> </span>
-          <span class="variable">animals</span>.<span class="special">pop</span>(); <br />
-          <span class="comment">
-          // Notice the syntax of this command. First, you start with the name of the array (in this case "animals"), then you write ".pop();" <br /> <br />
-          // The pop method also allows you to use the element you delete. For example, you can assign it to a variable as shown: <br />
-          </span>
-          <span class="special">let</span> <span class="variable">deletedAnimal</span> = <span class="variable">animals</span>.<span class="special">pop</span>(); <br />
-          <span class="comment">
-          // This command assigns the last element of the array animals (in this case "mouse") to a variable called deletedAnimal. <br />
-          // It then deletes the last element from the array, so that the new array is just ["dog", "cat"].
-          </span>
-        </span>
-      </p>
-      </div>
-      <div class="flex-col" style="max-width: 15%;">
-        <img src="/assets/bit-by-bot-images/explosion-bot.svg">
-      </div>
-    </div>
-    <div class="section instructions">
-      Try out this interactive! First, delete elements by clicking the pop button on the left, then try out the actual Javascript pop command syntax! The array will update automatically on the right as you add new elements.
-    </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>Delete an element from the array!</p>
-        <button id="pop-button-3">Pop from array</button>
-      </div>
-      <div class="flex-col section">
-        <p id="p-code-3"><span style="color: rgb(86,156,214);">let</span> <span style="color: rgb(156,219,252);">animals</span> = [<span style="color: rgb(202,142,118);">"dog"</span>, <span style="color: rgb(202,142,118);">"cat"</span>, <span style="color: rgb(202,142,118);">"mouse"</span>];</p>
-        <input id="input-code-3" type="search" placeholder='animals.pop();'> <br /> <br />
-        <button id="button-code-3">Add code</button>
-      </div>
-      <div class="flex-col section">
-        <p>
-          <p id="p-array-3">Array: [dog, cat, mouse]</p>
-          <p id="p-error-3"></p>
-          <button id="clear-button-3">Reset</button>
-        </p>
-      </div>
-    </div>
-    <div class="section instructions" style="text-align:center">
-      <h2>Try out this quiz!</h2>
-    </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          Your goal is for the array to be ["red","green","yellow"] in the end, and for "cyan", "magenta", and "orange" to be outputted to the console, in that order.  <br /> <br />
-          <span class="big-code">
-          <span class="special">let</span> <span class="variable">colors</span> = ["<select id="quiz1-1">
-            <option></option>
-            <option value = "red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="magenta">magenta</option>
-            <option value="orange">orange</option>
-          </select>"]; <br />
-          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-2">
-            <option></option>
-            <option value = "red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="magenta">magenta</option>
-            <option value="orange">orange</option>
-          </select>"); <br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>[<span class="special">1</span>]); <br />
-          <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
-          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-3">
-            <option></option>
-            <option value = "red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="magenta">magenta</option>
-            <option value="orange">orange</option>
-          </select>"); <br />
-          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-4">
-            <option></option>
-            <option value = "red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="magenta">magenta</option>
-            <option value="orange">orange</option>
-          </select>"); <br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">colors</span>.<span class="special">pop</span>()); <br />
-          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-5">
-            <option></option>
-            <option value = "red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="magenta">magenta</option>
-            <option value="orange">orange</option>
-          </select>"); <br />
-          <span class="special">let</span> <span class="variable">coolColor</span> = <span class="variable">colors</span>.<span class="special">pop</span>(); <br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">coolColor</span>); <br />
-          <span class="variable">colors</span>.<span class="special">push</span>("<select id="quiz1-6">
-            <option></option>
-            <option value = "red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="magenta">magenta</option>
-            <option value="orange">orange</option>
-          </select>"); </span> <br />
-        </p>
-        <button id="quiz1">Check Answers</button>
-        <p id="pErrorQuiz1"></p>
-      </div>
-      <div class="flex-col section">
-        <p>
-          Try to predict what the array will be in the end, and what the console output will be! <br /> <br />
-          <span class="big-code">
-          <span class="special">let</span> <span class="variable">flowers</span> = [<span class="string">"rose"</span>, <span class="string">"dandelion"</span>]; <br />
-          <span class="variable">favoriteFlower</span> = <span class="variable">flowers</span>.<span class="special">pop</span>(); <br />
-          <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"tulip"</span>); <br />
-          <span class="variable">flowers</span>.<span class="special">push</span>(<span class="string">"daffodil"</span>); <br />
-          <span class="variable">secondFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">0</span>]; <br />
-          <span class="variable">leastFavoriteFlower</span> = <span class="variable">flowers</span>[<span class="special">2</span>]; <br />
-          <span class="special">console</span>.<span class="special">log</span>(<span class="variable">secondFavoriteFlower</span>); </span> <br /> <br />
-          What is the flowers array at the end? <br />
-          ["
-          <select id="quiz2-1">
-            <option></option>
-            <option value="rose">rose</option>
-            <option value="dandelion">dandelion</option>
-            <option value="tulip">tulip</option>
-            <option value="daffodil">daffodil</option>
-          </select>", "
-          <select id="quiz2-2">
-            <option></option>
-            <option value="rose">rose</option>
-            <option value="dandelion">dandelion</option>
-            <option value="tulip">tulip</option>
-            <option value="daffodil">daffodil</option>
-          </select>", "
-          <select id="quiz2-3">
-            <option></option>
-            <option value="rose">rose</option>
-            <option value="dandelion">dandelion</option>
-            <option value="tulip">tulip</option>
-            <option value="daffodil">daffodil</option>
-          </select>"] <br /> <br />
-          What is the console output? 
-          <select id="quiz2-4">
-            <option></option>
-            <option value="rose">rose</option>
-            <option value="dandelion">dandelion</option>
-            <option value="tulip">tulip</option>
-            <option value="daffodil">daffodil</option>
-          </select>
-        </p>
-        <button id="quiz2">Check Answers</button>
-        <p id="pErrorQuiz2"></p>
-      </div>
-    </div>
-    <!-- The end of the content div is here -->
-  </div>
   <script src="../assets/prism.js"></script>
   <script src="../assets/codejar.js"></script>
   <script src="../assets/linenumbers.js"></script>

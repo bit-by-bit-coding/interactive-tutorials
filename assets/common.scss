@@ -152,6 +152,15 @@ button {
 }
 
 /* Footer */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 14rem;
+}
+
 footer {
   background: #153570;
   color: #fff;
@@ -169,7 +178,7 @@ footer {
 
   h4 {
     text-align: center;
-    font-weight: 900; // why not working?
+    font-weight: 900; // make bold later
   }
 
   .footer-home {

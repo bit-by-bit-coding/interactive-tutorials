@@ -12,97 +12,117 @@
 </head>
 
 <body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/main-demos/" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
-      </div>
-      <h1 class="flex-item-left">EVENTS DEMO</h1>
-    </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-    </div>
-  </div>
-  <div class="content">
-    <div class="section" style="margin-right: 0.5em;">
-      <div style="display: flex; margin-left: 1em;">
-        <img style="flex: 0; height: 10em;" src="https://bitbybitcoding.org/imgs/happybot.PNG">
-        <p style="flex: 1; margin-left: 1em;">
-          An event is the browser’s way of saying, “This thing happened!” <br>
-          You can listen to these events by adding an event handler to the element. <br>
-          Adding an event handler is your way of telling JavaScript, “If this event happens on this element,
-          call this function.” <br><br>
-
-          For example, in this demo, if the selected event happens on the bulb, the power function, <span class="codeShown">switchBulb()</span>, will be called to
-          turn on/off the bulb.
-          <br>
-        </p>
-      </div>
-    </div>
-    <div class="flex-box" style="margin: 1em 0;">
-      <div class="flex-col section" style="margin-right: 0.5em;">
-        <label for="eventType">Select event type.</label>
-        <br>
-        <input type="radio" name="eventType" id="mouseEvents"> Mouse Events
-        <input type="radio" name="eventType" id="keyboardEvents"> Keyboard Events
-        <br><br>
-
-        <div id="listDiv" style="display: none;">
-          <label for="eventsList">Select event to turn on/off the bulb.</label>
-          <div id="mouseEventsList">
-            <input type="checkbox" id="onclick"> onclick
-            <input type="checkbox" id="onmouseover"> onmouseover
-            <input type="checkbox" id="onmouseout"> onmouseout
+  <div id="page-container">
+    <div id="content-wrap">
+      <div id="header" class="flex-container-header">
+        <div class="flex-item-header flex-container-left">
+          <div class="flex-item-left">
+            <a href="/main-demos/" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
           </div>
-          <div id="keyboardEventsList">
-            <input type="checkbox" id="onkeydown"> onkeydown
-            <input type="checkbox" id="onkeyup"> onkeyup
+          <h1 class="flex-item-left">EVENTS DEMO</h1>
+        </div>
+        <div class="flex-item-header">
+          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+        </div>
+      </div>
+      <div class="content">
+        <div class="section" style="margin-right: 0.5em;">
+          <div style="display: flex; margin-left: 1em;">
+            <img style="flex: 0; height: 10em;" src="https://bitbybitcoding.org/imgs/happybot.PNG">
+            <p style="flex: 1; margin-left: 1em;">
+              An event is the browser’s way of saying, “This thing happened!” <br>
+              You can listen to these events by adding an event handler to the element. <br>
+              Adding an event handler is your way of telling JavaScript, “If this event happens on this element,
+              call this function.” <br><br>
+    
+              For example, in this demo, if the selected event happens on the bulb, the power function, <span class="codeShown">switchBulb()</span>, will be called to
+              turn on/off the bulb.
+              <br>
+            </p>
           </div>
         </div>
-
-        <p id="eventDescription"></p>
-      </div>
-      <div class="flex-col section" style="margin-right: 0.5em;">
-        <span class="codeShown" id="clickCode" style="display:none;">
-          button.<span style="color:blue">onclick</span> = <span style="color:blue">function</span>() {<br>
-            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
-          }
-        </span>
-        <span class="codeShown" id="mouseOverCode" style="display:none;">
-          button.<span style="color:blue">onmouseover</span> = <span style="color:blue">function</span>() {<br>
-            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
-          }
-        </span>
-        <span class="codeShown" id="mouseOutCode" style="display:none;">
-          button.<span style="color:blue">onmouseout</span> = <span style="color:blue">function</span>() {<br>
-            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
-          }
-        </span>
-        <span class="codeShown" id="keyDownCode" style="display:none;">
-          button.<span style="color:blue">onkeydown</span> = <span style="color:blue">function</span>() {<br>
-            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
-          }
-        </span>
-        <span class="codeShown" id="keyUpCode" style="display:none;">
-          button.<span style="color:blue">onkeyup</span> = <span style="color:blue">function</span>() {<br>
-            &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
-          }
-        </span>
-        <img id="bulbImage" src="bulbon.png" style="display:block;margin:auto;">
-        <button id="powerButton" type="button" style="display: none;">POWER</button>
-        <input id="powerText" type="text" name="Power" style="display: none;">
+        <div class="flex-box" style="margin: 1em 0;">
+          <div class="flex-col section" style="margin-right: 0.5em;">
+            <label for="eventType">Select event type.</label>
+            <br>
+            <input type="radio" name="eventType" id="mouseEvents"> Mouse Events
+            <input type="radio" name="eventType" id="keyboardEvents"> Keyboard Events
+            <br><br>
+    
+            <div id="listDiv" style="display: none;">
+              <label for="eventsList">Select event to turn on/off the bulb.</label>
+              <div id="mouseEventsList">
+                <input type="checkbox" id="onclick"> onclick
+                <input type="checkbox" id="onmouseover"> onmouseover
+                <input type="checkbox" id="onmouseout"> onmouseout
+              </div>
+              <div id="keyboardEventsList">
+                <input type="checkbox" id="onkeydown"> onkeydown
+                <input type="checkbox" id="onkeyup"> onkeyup
+              </div>
+            </div>
+    
+            <p id="eventDescription"></p>
+          </div>
+          <div class="flex-col section" style="margin-right: 0.5em;">
+            <span class="codeShown" id="clickCode" style="display:none;">
+              button.<span style="color:blue">onclick</span> = <span style="color:blue">function</span>() {<br>
+                &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+              }
+            </span>
+            <span class="codeShown" id="mouseOverCode" style="display:none;">
+              button.<span style="color:blue">onmouseover</span> = <span style="color:blue">function</span>() {<br>
+                &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+              }
+            </span>
+            <span class="codeShown" id="mouseOutCode" style="display:none;">
+              button.<span style="color:blue">onmouseout</span> = <span style="color:blue">function</span>() {<br>
+                &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+              }
+            </span>
+            <span class="codeShown" id="keyDownCode" style="display:none;">
+              button.<span style="color:blue">onkeydown</span> = <span style="color:blue">function</span>() {<br>
+                &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+              }
+            </span>
+            <span class="codeShown" id="keyUpCode" style="display:none;">
+              button.<span style="color:blue">onkeyup</span> = <span style="color:blue">function</span>() {<br>
+                &nbsp;&nbsp;&nbsp;<span style="color:rgb(130, 50, 1)">switchBulb</span>();<br>
+              }
+            </span>
+            <img id="bulbImage" src="bulbon.png" style="display:block;margin:auto;">
+            <button id="powerButton" type="button" style="display: none;">POWER</button>
+            <input id="powerText" type="text" name="Power" style="display: none;">
+          </div>
+        </div>
       </div>
     </div>
+
+    <footer>
+      <div class="footer-home">
+        <h4>Visit our main page</h4>
+        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+      </div>
+      <div class="footer-socials">
+        <h4>Follow us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <p>Bit by Bit Coding is a registered nonprofit</p>
+        <p>EIN 84-5025902</p>
+        <p>© 2021 Bit by Bit Coding</p>
+      </div>
+    </footer>
+
   </div>
-  <footer>
-    Bit by Bit Coding is a registered nonprofit<br>
-    EIN 84-5025902<br>
-    © 2021 Bit by Bit Coding<br>
-  </footer>
 
   <script src="../assets/prism.js"></script>
   <script src="../assets/codejar.js"></script>
