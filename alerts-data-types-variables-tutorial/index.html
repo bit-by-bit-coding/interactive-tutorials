@@ -10,347 +10,373 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/main-tutorials/" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
-      </div>
-      <!-- DONE TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">ALERT, DATA TYPE, VARIABLE TUTORIAL</h1> 
-    </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-    </div>
-  </div>
-  <div class="content">
-    <!-- DONE TODO: Fill this content div with all the content of the demo -->
-    <div class="section">
-      <div>
-        <h2 id="navAlert">Alerts</h2>
-        <p>
-          Alerts are helpful in understanding code at its beginnings 
-          and also when looking for errors in code. 
-          Alerts, when run, create a popup containing text which tells 
-          the user something. Alerts in JavaScript are written as so: 
-          <div class="code"><div class="codePartOne">alert</div> ( <em class="codePartTwo">*Thing alerted*</em> )<div class="semicolon">;</div></div>
-        </p>
-        <p>
-          Let's break this down. The first part of the alert is the 
-          word alert. This tells the computer that we have created an 
-          alert.
-        </p>
-        <p>
-          The next part of the alert are the parentheses. These are 
-          the brackets that surround the things that are alerted.
-        </p>
-        <p>
-          Inside the parentheses are the things that are alerted. To 
-          learn more about how these things turn out, go to the data types section.
-        </p>
-        <p>
-          The last part of the alert is the semicolon which signifies 
-          the end of the line of code.
-        </p>
-        <div class="flex-box">
-          <div class="flex-col">
-            <p>
-              <strong>Here are some examples of alerts:</strong>
-            </p>
-            <p>
-              <div class="code">
-                <div class="codePartOne variableStart">alert</div> 
-                <p class="hiddenVariable">
-                  First, we have the word alert which speacifies that
-                  we want to create an alert
-                </p> 
-                (<div class="codePartTwo">"Hello World!"</div>) 
-                <div class="semicolon">;</div> 
-              </div><br><br>
-        
-              <div class="code">
-                <div class="codePartOne">alert</div> 
-                <div class="variableStart">(</div><p class="hiddenVariable">
-                  Next, we have parentheses that surround the alerted message
-                </p><div class="codePartTwo">5</div>) 
-                <div class="semicolon">;</div> 
-              </div><br><br>
-              
-              <div class="code">
-                <div class="codePartOne">alert</div> 
-                (<div class="codePartTwo variableStart">true</div><p class="hiddenVariable">
-                  The final part of an alert is the thing that is alerted
-                </p>) 
-                <div class="semicolon">;</div> 
-              </div>
-            </p>
-            <button id="alert">Run code above</button>
+  <div id="page-container">
+    <div id="content-wrap">
+      <div id="header" class="flex-container-header">
+        <div class="flex-item-header flex-container-left">
+          <div class="flex-item-left">
+            <a href="/main-tutorials/" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
           </div>
-          <div class="flex-col">
-            <img id="bit-by-bot-alert" src="../assets/bit-by-bot-images/sound-suspicious-closed-bot.svg" alt="Bit by Bot">
-          </div>
+          <!-- DONE TODO: Change the name of the demo here -->
+          <h1 class="flex-item-left">ALERT, DATA TYPE, VARIABLE TUTORIAL</h1> 
+        </div>
+        <div class="flex-item-header">
+          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
         </div>
       </div>
-    </div>
-    <div class="section">
-      <div>
-        <h2 id="navDataTypes" name="navDataTypes">Data types</h2>
-        <p>
-          There are three different data types that we learn 
-          in Hello World. They are Strings, Numbers, and Boolean values.
-        </p>
-      </div>
-      <div>
-        <h3>Strings</h3>
-        <p>
-          Strings are just words. They are text and they always appear 
-          as they are written. You can tell things are strings as they 
-          have quotation marks around them.
-        </p>
-        <p>
-          There are two parts of strings. The quotation marks that 
-          surround the string and the words/stuff inside the string. 
-          The stuff inside the quotation marks are what show up 
-          when things are alerted.
-        </p>
-        <p>
-          <strong>Here are some examples of strings:</strong>
-        </p>
-        <p class="codeOrange">
-          "Hello World!" <br><br>
-          "This is a string. It is words. Isn't it amazing" <br><br>
-          "This is string number 3. It can have numbers and the words 
-          true or false"
-        </p>
-        <p>
-          <strong>Here are those examples as alerts:</strong>
-        </p>
-        <p class="indent">
-          <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">"Hello World!"</div>) <div class="semicolon">;</div> </div><br><br>
-          <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">"This is a string. It is words. Isn't it amazing"</div>) <div class="semicolon">;</div> </div><br><br>
-          <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">"This is string number 3. It can have numbers and the words true or false"</div>) <div class="semicolon">;</div> </div>
-        </p>
-        <button id="strings">Run code above</button>
-      </div>
-      <div class="flex-box">
-        <div class="flex-col">
-          <h3>Numbers</h3>
-          <p>
-            Just like their name suggests, the numbers data type refers to 
-            things with numbers in them. Numbers also include different 
-            opperators, or things you can find in math like + , - , / , 
-            * , and more.
-          </p>
-          <p>
-            You can tell that a data type is numbers if there are numbers 
-            and/or operators (+ , - , / , *) with no quotation marks 
-            around them.
-          </p>
-          <p>
-            <strong>Here are some examples of numbers:</strong>
-          </p>
-          <p class="codeOrange">
-            25 <br><br>
-            7 * 3 <br><br>
-            5 + 4 / 2
-          </p>
-          <p>
-            <strong>Here are those examples as alerts:</strong>
-          </p>
-          <p>
-            <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">25</div>) <div class="semicolon">;</div> </div><br><br>
-            <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">7 * 3</div>) <div class="semicolon">;</div> </div><br><br>
-            <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">5 + 4 / 2</div>) <div class="semicolon">;</div> </div>
-          </p>
-          <button id="numbers">Run code above</button>
-        </div>
-        <div class=flex-col>
-          <h3>Boolean values</h3>
-          <p>
-            Boolean values are just true or false. Though they are words, 
-            they aren't strings. Instead, they represent whether something 
-            is true, like 2 > 1, or false, like 1 > 2.
-          </p>
-          <p>
-            You can tell if things are a boolean value in two ways: 
-            <br>
-            1) they are just the word true or false without quotation 
-            marks around them. <br>
-            2) there is a comparison operator such as < or > (we'll learn more later!)
-          </p>
-          <p>
-            <strong>Here are some examples of boolean values:</strong>
-          </p>
-          <p class="codeOrange">
-            true <br><br>
-            1 > 2 <br><br>
-            25 < 78
-          </p>
-          <p>
-            <strong>Here are those examples as alerts:</strong>
-          </p>
-          <p class="indent">
-              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">true</div>) <div class="semicolon">;</div> </div><br><br>
-              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">1 > 2</div>) <div class="semicolon">;</div> </div><br><br>
-              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">25 < 78</div>) <div class="semicolon">;</div> </div>
-          </p>
-          <button id="boolean">Run code above</button>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div>
-        <h2 id="navVariables">Variables</h2>
-        <div class="flex-box">
-          <div class="flex-col">
+      <div class="content">
+        <!-- DONE TODO: Fill this content div with all the content of the demo -->
+        <div class="section">
+          <div>
+            <h2 id="navAlert">Alerts</h2>
             <p>
-              Variables are all about storing data types in a container that 
-              is labeled by a word or letter, just like math. For example, if
-              I have 2 apples, John has 10 apples, and Susan has twice as 
-              many apples as the difference between John's apples and mine, 
-              how would I find out how many apples Susan has? I would use 
-              variables to represent the number of apples Susan has until I can
-              find the answer.
+              Alerts are helpful in understanding code at its beginnings 
+              and also when looking for errors in code. 
+              Alerts, when run, create a popup containing text which tells 
+              the user something. Alerts in JavaScript are written as so: 
+              <div class="code"><div class="codePartOne">alert</div> ( <em class="codePartTwo">*Thing alerted*</em> )<div class="semicolon">;</div></div>
             </p>
             <p>
-              My apples = m <br>
-              John's apples = j <br>
-              Sunsan's apples = s <br> <br>
-              s = 2(j - m) <br>
-              m = 2 <br>
-              s = 2(j - 2) <br>
-              j = 10 <br>
-              s = 2(10 - 2) <br>
-              s = 2(8) <br>
-              s = 16 <br>
+              Let's break this down. The first part of the alert is the 
+              word alert. This tells the computer that we have created an 
+              alert.
             </p>
             <p>
-              From this example, we can see that m, j, and s are all variables
-              that store/represent a value/data type which, in this case, is 
-              numbers.
-            </p>
-          </div>
-          <div class="flex-col">
-            <p>
-              In JavaScript, variables are used to store a data type or a 
-              piece of information that might change over time or that
-              we want to use several times. <br>
-              Variables in JavaScript look like this: <br>
-              <div class="code"><div class="codePartOne">let</div> <div class="codePartThree">variableName</div> = <em class="codePartTwo">data type</em><div class="semicolon">;</div> </div>    
+              The next part of the alert are the parentheses. These are 
+              the brackets that surround the things that are alerted.
             </p>
             <p>
-              <strong>Here are some examples of variables:</strong>
+              Inside the parentheses are the things that are alerted. To 
+              learn more about how these things turn out, go to the data types section.
             </p>
             <p>
-              <div class="code">
-                <div class="codePartOne variableStart">let</div>
-                <p class="hiddenVariable">
-                  We first write the word "let" to start a variable
-                </p> 
-                <div class="codePartThree">greeting</div> = 
-                <div class="codePartTwo">"Hello! Nice to meet you"</div>
-                <div class="semicolon">;</div> 
-              </div><br><br>
-              
-              <div class="code">
-                <div class="codePartOne">let</div> 
-                <div class="codePartThree variableStart">appleNumber</div>
-                <p class="hiddenVariable">
-                  Next, we write the name of our variable. We use this to 
-                  call upon the variable later
+              The last part of the alert is the semicolon which signifies 
+              the end of the line of code.
+            </p>
+            <div class="flex-box">
+              <div class="flex-col">
+                <p>
+                  <strong>Here are some examples of alerts:</strong>
                 </p>
-                 = 
-                <div class="codePartTwo">10</div>
-                <div class="semicolon">;</div> 
-              </div><br><br>
-              
-              <div class="code">
-                <div class="codePartOne">let</div> 
-                <div class="codePartThree">bigDog</div> = 
-                <div class="codePartTwo variableStart">false</div>
-                <p class="hiddenVariable">
-                  Lastly, we give the variable a value which should be a 
-                  data type
+                <p>
+                  <div class="code">
+                    <div class="codePartOne variableStart">alert</div> 
+                    <p class="hiddenVariable">
+                      First, we have the word alert which speacifies that
+                      we want to create an alert
+                    </p> 
+                    (<div class="codePartTwo">"Hello World!"</div>) 
+                    <div class="semicolon">;</div> 
+                  </div><br><br>
+            
+                  <div class="code">
+                    <div class="codePartOne">alert</div> 
+                    <div class="variableStart">(</div><p class="hiddenVariable">
+                      Next, we have parentheses that surround the alerted message
+                    </p><div class="codePartTwo">5</div>) 
+                    <div class="semicolon">;</div> 
+                  </div><br><br>
+                  
+                  <div class="code">
+                    <div class="codePartOne">alert</div> 
+                    (<div class="codePartTwo variableStart">true</div><p class="hiddenVariable">
+                      The final part of an alert is the thing that is alerted
+                    </p>) 
+                    <div class="semicolon">;</div> 
+                  </div>
                 </p>
-                <div class="semicolon">;</div> 
+                <button id="alert">Run code above</button>
               </div>
-              
+              <div class="flex-col">
+                <img id="bit-by-bot-alert" src="../assets/bit-by-bot-images/sound-suspicious-closed-bot.svg" alt="Bit by Bot">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div>
+            <h2 id="navDataTypes" name="navDataTypes">Data types</h2>
+            <p>
+              There are three different data types that we learn 
+              in Hello World. They are Strings, Numbers, and Boolean values.
+            </p>
+          </div>
+          <div>
+            <h3>Strings</h3>
+            <p>
+              Strings are just words. They are text and they always appear 
+              as they are written. You can tell things are strings as they 
+              have quotation marks around them.
+            </p>
+            <p>
+              There are two parts of strings. The quotation marks that 
+              surround the string and the words/stuff inside the string. 
+              The stuff inside the quotation marks are what show up 
+              when things are alerted.
+            </p>
+            <p>
+              <strong>Here are some examples of strings:</strong>
+            </p>
+            <p class="codeOrange">
+              "Hello World!" <br><br>
+              "This is a string. It is words. Isn't it amazing" <br><br>
+              "This is string number 3. It can have numbers and the words 
+              true or false"
             </p>
             <p>
               <strong>Here are those examples as alerts:</strong>
             </p>
             <p class="indent">
-              <div class="code"><div class="codePartOne variableStart">let</div> <div class="codePartThree">greeting</div> = <div class="codePartTwo">"Hello! Nice to meet you"</div><div class="semicolon">;</div> </div><br>
-              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartThree">greeting</div>) <div class="semicolon">;</div> </div><br><br> 
-              
-              <div class="code"><div class="codePartOne variableStart">let</div> <div class="codePartThree">appleNumber</div> = <div class="codePartTwo">10</div><div class="semicolon">;</div> </div><br>
-              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartThree">appleNumber</div>) <div class="semicolon">;</div> </div><br><br>
-              
-              <div class="code"><div class="codePartOne variableStart">let</div> <div class="codePartThree">bigDog</div> = <div class="codePartTwo">false</div><div class="semicolon">;</div> </div><br>
-              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartThree">bigDog</div>) <div class="semicolon">;</div> </div>
-        
+              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">"Hello World!"</div>) <div class="semicolon">;</div> </div><br><br>
+              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">"This is a string. It is words. Isn't it amazing"</div>) <div class="semicolon">;</div> </div><br><br>
+              <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">"This is string number 3. It can have numbers and the words true or false"</div>) <div class="semicolon">;</div> </div>
             </p>
-            <button id="variable">Run code above</button>
+            <button id="strings">Run code above</button>
+          </div>
+          <div class="flex-box">
+            <div class="flex-col">
+              <h3>Numbers</h3>
+              <p>
+                Just like their name suggests, the numbers data type refers to 
+                things with numbers in them. Numbers also include different 
+                opperators, or things you can find in math like + , - , / , 
+                * , and more.
+              </p>
+              <p>
+                You can tell that a data type is numbers if there are numbers 
+                and/or operators (+ , - , / , *) with no quotation marks 
+                around them.
+              </p>
+              <p>
+                <strong>Here are some examples of numbers:</strong>
+              </p>
+              <p class="codeOrange">
+                25 <br><br>
+                7 * 3 <br><br>
+                5 + 4 / 2
+              </p>
+              <p>
+                <strong>Here are those examples as alerts:</strong>
+              </p>
+              <p>
+                <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">25</div>) <div class="semicolon">;</div> </div><br><br>
+                <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">7 * 3</div>) <div class="semicolon">;</div> </div><br><br>
+                <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">5 + 4 / 2</div>) <div class="semicolon">;</div> </div>
+              </p>
+              <button id="numbers">Run code above</button>
+            </div>
+            <div class=flex-col>
+              <h3>Boolean values</h3>
+              <p>
+                Boolean values are just true or false. Though they are words, 
+                they aren't strings. Instead, they represent whether something 
+                is true, like 2 > 1, or false, like 1 > 2.
+              </p>
+              <p>
+                You can tell if things are a boolean value in two ways: 
+                <br>
+                1) they are just the word true or false without quotation 
+                marks around them. <br>
+                2) there is a comparison operator such as < or > (we'll learn more later!)
+              </p>
+              <p>
+                <strong>Here are some examples of boolean values:</strong>
+              </p>
+              <p class="codeOrange">
+                true <br><br>
+                1 > 2 <br><br>
+                25 < 78
+              </p>
+              <p>
+                <strong>Here are those examples as alerts:</strong>
+              </p>
+              <p class="indent">
+                  <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">true</div>) <div class="semicolon">;</div> </div><br><br>
+                  <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">1 > 2</div>) <div class="semicolon">;</div> </div><br><br>
+                  <div class="code"><div class="codePartOne">alert</div> (<div class="codePartTwo">25 < 78</div>) <div class="semicolon">;</div> </div>
+              </p>
+              <button id="boolean">Run code above</button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="flex-box">
-      <div class="section flex-col">
-        <div id="navGame">
-          <h2>Game</h2>
-          <p>
-            Try to create what is asked of you by clicking the correct
-            buttons. Once you have sucessfully made the code, it will
-            be run so that you can see how it works.
-          </p>
+        <div class="section">
           <div>
-            <h3>Alerts</h3>
-            <p id="gameCode"></p>
-            <p class="buildingGameCode" id="buildingCode"></p>
-            <button class="gameButton" id="option1">Option 1</button>
-            <button class="gameButton" id="option2">Press to play</button>
-            <button class="gameButton" id="option3">Option 3</button>
+            <h2 id="navVariables">Variables</h2>
+            <div class="flex-box">
+              <div class="flex-col">
+                <p>
+                  Variables are all about storing data types in a container that 
+                  is labeled by a word or letter, just like math. For example, if
+                  I have 2 apples, John has 10 apples, and Susan has twice as 
+                  many apples as the difference between John's apples and mine, 
+                  how would I find out how many apples Susan has? I would use 
+                  variables to represent the number of apples Susan has until I can
+                  find the answer.
+                </p>
+                <p>
+                  My apples = m <br>
+                  John's apples = j <br>
+                  Sunsan's apples = s <br> <br>
+                  s = 2(j - m) <br>
+                  m = 2 <br>
+                  s = 2(j - 2) <br>
+                  j = 10 <br>
+                  s = 2(10 - 2) <br>
+                  s = 2(8) <br>
+                  s = 16 <br>
+                </p>
+                <p>
+                  From this example, we can see that m, j, and s are all variables
+                  that store/represent a value/data type which, in this case, is 
+                  numbers.
+                </p>
+              </div>
+              <div class="flex-col">
+                <p>
+                  In JavaScript, variables are used to store a data type or a 
+                  piece of information that might change over time or that
+                  we want to use several times. <br>
+                  Variables in JavaScript look like this: <br>
+                  <div class="code"><div class="codePartOne">let</div> <div class="codePartThree">variableName</div> = <em class="codePartTwo">data type</em><div class="semicolon">;</div> </div>    
+                </p>
+                <p>
+                  <strong>Here are some examples of variables:</strong>
+                </p>
+                <p>
+                  <div class="code">
+                    <div class="codePartOne variableStart">let</div>
+                    <p class="hiddenVariable">
+                      We first write the word "let" to start a variable
+                    </p> 
+                    <div class="codePartThree">greeting</div> = 
+                    <div class="codePartTwo">"Hello! Nice to meet you"</div>
+                    <div class="semicolon">;</div> 
+                  </div><br><br>
+                  
+                  <div class="code">
+                    <div class="codePartOne">let</div> 
+                    <div class="codePartThree variableStart">appleNumber</div>
+                    <p class="hiddenVariable">
+                      Next, we write the name of our variable. We use this to 
+                      call upon the variable later
+                    </p>
+                     = 
+                    <div class="codePartTwo">10</div>
+                    <div class="semicolon">;</div> 
+                  </div><br><br>
+                  
+                  <div class="code">
+                    <div class="codePartOne">let</div> 
+                    <div class="codePartThree">bigDog</div> = 
+                    <div class="codePartTwo variableStart">false</div>
+                    <p class="hiddenVariable">
+                      Lastly, we give the variable a value which should be a 
+                      data type
+                    </p>
+                    <div class="semicolon">;</div> 
+                  </div>
+                  
+                </p>
+                <p>
+                  <strong>Here are those examples as alerts:</strong>
+                </p>
+                <p class="indent">
+                  <div class="code"><div class="codePartOne variableStart">let</div> <div class="codePartThree">greeting</div> = <div class="codePartTwo">"Hello! Nice to meet you"</div><div class="semicolon">;</div> </div><br>
+                  <div class="code"><div class="codePartOne">alert</div> (<div class="codePartThree">greeting</div>) <div class="semicolon">;</div> </div><br><br> 
+                  
+                  <div class="code"><div class="codePartOne variableStart">let</div> <div class="codePartThree">appleNumber</div> = <div class="codePartTwo">10</div><div class="semicolon">;</div> </div><br>
+                  <div class="code"><div class="codePartOne">alert</div> (<div class="codePartThree">appleNumber</div>) <div class="semicolon">;</div> </div><br><br>
+                  
+                  <div class="code"><div class="codePartOne variableStart">let</div> <div class="codePartThree">bigDog</div> = <div class="codePartTwo">false</div><div class="semicolon">;</div> </div><br>
+                  <div class="code"><div class="codePartOne">alert</div> (<div class="codePartThree">bigDog</div>) <div class="semicolon">;</div> </div>
+            
+                </p>
+                <button id="variable">Run code above</button>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3>Data types</h3>
-            <p id="gameCode2"></p>
-            <p class="buildingGameCode" id="buildingCode2"></p>
-            <button class="gameButton" id="option4">Option 1</button>
-            <button class="gameButton" id="option5">Press to play</button>
-            <button class="gameButton" id="option6">Option 3</button>
-          </div>
-          <div>
-            <h3>Variables</h3>
-            <p id="gameCode3"></p>
-            <p class="buildingGameCode" id="buildingCode3"></p>
-            <button class="gameButton" id="option7">Option 1</button>
-            <button class="gameButton" id="option8">Press to play</button>
-            <button class="gameButton" id="option9">Option 3</button>
-          </div>
-          <h3 id="points">Points: 0</h3>
         </div>
-      </div>
-      <div class="section flex-col">
-        <div id="navQuiz">
-          <h2>Quiz time:</h2>
-          <p>
-            Take this quiz to check your understanding!
-          </p>
-          <a href="https://forms.gle/kVsCxypT3hDu8VL78" target="_blank">
-            <button>Quiz Button</button>
-          </a>
-          <img id="bit-by-bot-quiz" src="../assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" alt="Bit by Bot Taking Quiz">
+        <div class="flex-box">
+          <div class="section flex-col">
+            <div id="navGame">
+              <h2>Game</h2>
+              <p>
+                Try to create what is asked of you by clicking the correct
+                buttons. Once you have sucessfully made the code, it will
+                be run so that you can see how it works.
+              </p>
+              <div>
+                <h3>Alerts</h3>
+                <p id="gameCode"></p>
+                <p class="buildingGameCode" id="buildingCode"></p>
+                <button class="gameButton" id="option1">Option 1</button>
+                <button class="gameButton" id="option2">Press to play</button>
+                <button class="gameButton" id="option3">Option 3</button>
+              </div>
+              <div>
+                <h3>Data types</h3>
+                <p id="gameCode2"></p>
+                <p class="buildingGameCode" id="buildingCode2"></p>
+                <button class="gameButton" id="option4">Option 1</button>
+                <button class="gameButton" id="option5">Press to play</button>
+                <button class="gameButton" id="option6">Option 3</button>
+              </div>
+              <div>
+                <h3>Variables</h3>
+                <p id="gameCode3"></p>
+                <p class="buildingGameCode" id="buildingCode3"></p>
+                <button class="gameButton" id="option7">Option 1</button>
+                <button class="gameButton" id="option8">Press to play</button>
+                <button class="gameButton" id="option9">Option 3</button>
+              </div>
+              <h3 id="points">Points: 0</h3>
+            </div>
+          </div>
+          <div class="section flex-col">
+            <div id="navQuiz">
+              <h2>Quiz time:</h2>
+              <p>
+                Take this quiz to check your understanding!
+              </p>
+              <a href="https://forms.gle/kVsCxypT3hDu8VL78" target="_blank">
+                <button>Quiz Button</button>
+              </a>
+              <img id="bit-by-bot-quiz" src="../assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" alt="Bit by Bot Taking Quiz">
+            </div>
+            <br>
+          </div>
         </div>
-        <br>
+    
+        <!-- The end of the content div is here -->
       </div>
     </div>
 
-    <!-- The end of the content div is here -->
+    <footer>
+      <div class="footer-home">
+        <h4>Visit our main page</h4>
+        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+      </div>
+      <div class="footer-socials">
+        <h4>Follow us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <p>Bit by Bit Coding is a registered nonprofit</p>
+        <p>EIN 84-5025902</p>
+        <p>© 2021 Bit by Bit Coding</p>
+      </div>
+    </footer>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
