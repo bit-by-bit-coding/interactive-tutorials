@@ -10,265 +10,291 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/main-tutorials/" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
-      </div>
-      <!-- DONE TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">FUNCTIONS AND PARAMETERS TUTORIAL</h1>
-    </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-    </div>
-  </div>
-  <div class="content">
-    <!-- TODO: Fill this content div with all the content of the demo -->
-    <div class="section">
-      <div id="navFunctions">
-        <h2>Functions</h2>
-        <p>
-          Functions are a fundemental part of JavaScript. They allow us 
-          to store lines of code to use later. Unlike variables, 
-          functions can store multiple lines of code including: alerts, 
-          variables, prompts, and much more!
-        </p>
-        <p>
-          There are three different parts of a function: the function
-          name, declaring the function, and the contained code.
-        </p>
-        <p>
-          <strong>Here is a breakdown of function syntax:</strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let functionName</div> =
-            <div class="codePartTwo">function()</div>{ <br>
-            <em class="codeInside">code</em> <br>
-            }
+  <div id="page-container">
+    <div id="content-wrap">
+      <div id="header" class="flex-container-header">
+        <div class="flex-item-header flex-container-left">
+          <div class="flex-item-left">
+            <a href="/main-tutorials/" style="margin-right: 1em;">
+              <button id="back-button" title="Back to all demos">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </a>
           </div>
-        </p>
-        <p>
-          <strong>Here are some examples of functions:</strong>
-        </p>
-        <div class="container">
-          <p class="indent">
-            <div class="item">
+          <!-- DONE TODO: Change the name of the demo here -->
+          <h1 class="flex-item-left">FUNCTIONS AND PARAMETERS TUTORIAL</h1>
+        </div>
+        <div class="flex-item-header">
+          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+        </div>
+      </div>
+      <div class="content">
+        <!-- TODO: Fill this content div with all the content of the demo -->
+        <div class="section">
+          <div id="navFunctions">
+            <h2>Functions</h2>
+            <p>
+              Functions are a fundemental part of JavaScript. They allow us 
+              to store lines of code to use later. Unlike variables, 
+              functions can store multiple lines of code including: alerts, 
+              variables, prompts, and much more!
+            </p>
+            <p>
+              There are three different parts of a function: the function
+              name, declaring the function, and the contained code.
+            </p>
+            <p>
+              <strong>Here is a breakdown of function syntax:</strong>
+            </p>
+            <p class="indent">
               <div class="code">
-                <div class="codePartOne">let morning</div> =
+                <div class="codePartOne">let functionName</div> =
                 <div class="codePartTwo">function()</div>{ <br>
-                <div class="codeInside">
-                  alert("Good morning! Have a lovely day");
-              </div>
+                <em class="codeInside">code</em> <br>
                 }
               </div>
-              <br><br>
-          
+            </p>
+            <p>
+              <strong>Here are some examples of functions:</strong>
+            </p>
+            <div class="container">
+              <p class="indent">
+                <div class="item">
+                  <div class="code">
+                    <div class="codePartOne">let morning</div> =
+                    <div class="codePartTwo">function()</div>{ <br>
+                    <div class="codeInside">
+                      alert("Good morning! Have a lovely day");
+                  </div>
+                    }
+                  </div>
+                  <br><br>
+              
+                  <div class="code">
+                    <div class="codePartOne">let vibeCheck</div> =
+                    <div class="codePartTwo">function()</div>{ <br>
+                    <div class="codeInside">
+                      if(vibe==="good"){<br>
+                      <div class="codeInside">alert("There are good vibes");</div>
+                      } else {<br>
+                      <div class="codeInside">alert("Bad vibes");</div>
+                      }
+                    </div>
+                    }
+                  </div>
+                  <br><br>
+                </div>
+        
+                <div class="code item">
+                  <div class="codePartOne">let questionFunction</div> =
+                  <div class="codePartTwo">function()</div>{ <br>
+                  <div class="codeInside">
+                    let question = prompt("What is 2 * 9?"); <br>
+                    if(question==="18"){<br>
+                    <div class="codeInside">alert("You are correct!");</div>
+                    } else if (question===""){<br>
+                    <div class="codeInside">alert("No response given :(");</div>
+                    } else {<br>
+                    <div class="codeInside">alert("That is incorrect.");</div>
+                    }
+                  </div>
+                  }
+                </div>
+              </p>
+            </div>
+            <button id="functionExample">Run code above</button>
+            <p>
+              To run a function you must write the name of the function,
+              two parentheses and a semicolon. Since functions only store
+              code, they need to be called upon so that the code inside them
+              actually runs. <br>
+              This means that the button above just runs these lines of code:
+            </p>
+            <p class="indent">
               <div class="code">
-                <div class="codePartOne">let vibeCheck</div> =
-                <div class="codePartTwo">function()</div>{ <br>
+                <div class="codePartOne">morning</div>( )<div class="semicolon">;</div> 
+              </div><br>
+              
+              <div class="code">
+                <div class="codePartOne">vibeCheck</div>( )<div class="semicolon">;</div> 
+              </div><br>
+              
+              <div class="code">
+                <div class="codePartOne">questionFunction</div>( )<div class="semicolon">;</div> 
+              </div>
+            </p>
+          </div>
+        </div>
+        <div class="section">
+          <div id="navParameters">
+            <h2>Parameters</h2>
+            <p>
+              Parameters are another more complex part of functions. 
+              They are basically variables that are made specifically for the function.
+              These parameters are declared inside parentheses. 
+              The value of these parameters are then assigned when calling/running the function 
+              once again, inside the parentheses.
+            </p>
+            <p>
+              You can make as many parameters as you want, they just need 
+              to be inside the parentheses, and separted by a comma.
+            </p>
+            <p>
+              <strong>Parameter syntax:</strong>
+            </p>
+            <p class="indent">
+              <div class="code">
+                <div class="codePartOne">let functionName</div> =
+                <div class="codePartTwo">function(
+                  <div class="codePartThree">parameter1, parameter2, parameter3</div> )
+                </div>{ <br>
+                <em class="codeInside">code</em> <br>
+                }
+              </div>
+            </p>
+        
+            <p>
+              <strong>
+                Here are some examples of functions with parameters:
+              </strong>
+            </p>
+            <div class="flex-box">
+              <div class="code flex-col">
+                <div class="codePartOne">let mathEquation</div> =
+                <div class="codePartTwo">function(<div class="codePartThree">x</div>)</div>{ <br>
                 <div class="codeInside">
-                  if(vibe==="good"){<br>
-                  <div class="codeInside">alert("There are good vibes");</div>
+                  let y = 3 * x + 5; <br>
+                  alert(y);
+                </div>
+                }
+              </div>
+              <div class="flex-col"> 
+                <p><strong>mathEquation function options:</strong></p>
+                <button class="gameButton" id="me4">mathEquation(4);</button>
+                <button class="gameButton" id="me0">mathEquation(0);</button>
+                <button class="gameButton" id="me1">mathEquation(1);</button>
+              </div>
+            </div>
+            <div class="flex-box">
+              <div class="code flex-col">
+                <div class="codePartOne">let questionFunction</div> =
+                <div class="codePartTwo">function(<div class="codePartThree">x</div>)</div>{ <br>
+                <div class="codeInside">
+                  let y = 4 * x + 2; <br>
+                  let question = prompt("What is x if 4x + 2 = " + y + " ?"); <br>
+                  if(question===x){<br>
+                  <div class="codeInside">alert("You are correct!");</div>
                   } else {<br>
-                  <div class="codeInside">alert("Bad vibes");</div>
+                  <div class="codeInside">alert("Wrong, try again");</div>
                   }
                 </div>
                 }
               </div>
-              <br><br>
+              <div class="flex-col">
+                <p><strong>questionFunction function options:</strong></p>
+                <button class="gameButton" id="qf0">questionFunction(0);</button>
+                <button class="gameButton" id="qf5">questionFunction(5);</button>
+                <button class="gameButton" id="qf2">questionFunction(2);</button>
+              </div>
             </div>
-    
-            <div class="code item">
-              <div class="codePartOne">let questionFunction</div> =
-              <div class="codePartTwo">function()</div>{ <br>
-              <div class="codeInside">
-                let question = prompt("What is 2 * 9?"); <br>
-                if(question==="18"){<br>
-                <div class="codeInside">alert("You are correct!");</div>
-                } else if (question===""){<br>
-                <div class="codeInside">alert("No response given :(");</div>
-                } else {<br>
-                <div class="codeInside">alert("That is incorrect.");</div>
+            <div class="flex-box">
+              <div class="code flex-col">
+                <div class="codePartOne">let weatherCheck</div> =
+                <div class="codePartTwo">function(<div class="codePartThree">cloudyCheck, temperature</div>)</div>{ <br>
+                <div class="codeInside">
+                  if(cloudyCheck===false && temperature > 50){<br>
+                  <div class="codeInside">alert("The weather is good");</div>
+                  } else if (temperature > 50){<br>
+                  <div class="codeInside">alert("Cloudy but not cold");</div>
+                  } else if (cloudyCheck===false){<br>
+                  <div class="codeInside">alert("Not cloudy but cold");</div>
+                  } else {<br>
+                  <div class="codeInside">alert("It's both cloudy and cold");</div>
+                  }
+                </div>
                 }
               </div>
-              }
+              <div class="flex-col">
+                <p><strong>weatherCheck function options:</strong></p>
+                <button class="gameButton" id="wc25">weatherCheck(true, 25);</button>
+                <button class="gameButton" id="wc50">weatherCheck(false, 50);</button>
+                <button class="gameButton" id="wc80">weatherCheck(true, 80);</button>
+              </div>
             </div>
-          </p>
+          </div>
         </div>
-        <button id="functionExample">Run code above</button>
-        <p>
-          To run a function you must write the name of the function,
-          two parentheses and a semicolon. Since functions only store
-          code, they need to be called upon so that the code inside them
-          actually runs. <br>
-          This means that the button above just runs these lines of code:
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">morning</div>( )<div class="semicolon">;</div> 
-          </div><br>
-          
-          <div class="code">
-            <div class="codePartOne">vibeCheck</div>( )<div class="semicolon">;</div> 
-          </div><br>
-          
-          <div class="code">
-            <div class="codePartOne">questionFunction</div>( )<div class="semicolon">;</div> 
+        <div class="flex-box">
+          <div id="navGame" class="section flex-col">
+            <h2>Game</h2>
+            <p>
+              Practice building and calling functions to master these
+              complex concepts.
+            </p>
+            <div>
+              <h3>Building Functions</h3>
+              <p id="gameCode"></p>
+              <p class="buildingGameCode" id="buildingCode"></p>
+              <button class="gameButton" id="option1">Option 1</button>
+              <button class="gameButton" id="option2">Press to play</button>
+              <button class="gameButton" id="option3">Option 3</button>
+            </div>
+            <div>
+              <h3>Functions with Parameters</h3>
+              <p id="gameCode2"></p>
+              <p class="buildingGameCode" id="buildingCode2"></p>
+              <button class="gameButton" id="option4">Option 1</button>
+              <button class="gameButton" id="option5">Press to play</button>
+              <button class="gameButton" id="option6">Option 3</button>
+            </div>
+            <div>
+              <h3>Calling Functions</h3>
+              <p id="gameCode3"></p>
+              <p class="buildingGameCode" id="buildingCode3"></p>
+              <button class="gameButton" id="option7">Option 1</button>
+              <button class="gameButton" id="option8">Press to play</button>
+              <button class="gameButton" id="option9">Option 3</button>
+            </div>
+            <h3 id="points">Points: 0</h3>
           </div>
-        </p>
-      </div>
-    </div>
-    <div class="section">
-      <div id="navParameters">
-        <h2>Parameters</h2>
-        <p>
-          Parameters are another more complex part of functions. 
-          They are basically variables that are made specifically for the function.
-          These parameters are declared inside parentheses. 
-          The value of these parameters are then assigned when calling/running the function 
-          once again, inside the parentheses.
-        </p>
-        <p>
-          You can make as many parameters as you want, they just need 
-          to be inside the parentheses, and separted by a comma.
-        </p>
-        <p>
-          <strong>Parameter syntax:</strong>
-        </p>
-        <p class="indent">
-          <div class="code">
-            <div class="codePartOne">let functionName</div> =
-            <div class="codePartTwo">function(
-              <div class="codePartThree">parameter1, parameter2, parameter3</div> )
-            </div>{ <br>
-            <em class="codeInside">code</em> <br>
-            }
+          <div id="navQuiz" class="section flex-col">
+            <h2>Quiz time:</h2>
+            <p>
+              Take this quiz to check your understanding!
+            </p>
+            <a href="https://forms.gle/h4DZf6n3jRSdH5Vq8" target="_blank">
+              <button>Quiz Button</button>
+            </a>
+            <img id="bit-by-bot-quiz" src="../assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" alt="Bit by Bot Taking Quiz">
           </div>
-        </p>
+        </div>
     
-        <p>
-          <strong>
-            Here are some examples of functions with parameters:
-          </strong>
-        </p>
-        <div class="flex-box">
-          <div class="code flex-col">
-            <div class="codePartOne">let mathEquation</div> =
-            <div class="codePartTwo">function(<div class="codePartThree">x</div>)</div>{ <br>
-            <div class="codeInside">
-              let y = 3 * x + 5; <br>
-              alert(y);
-            </div>
-            }
-          </div>
-          <div class="flex-col"> 
-            <p><strong>mathEquation function options:</strong></p>
-            <button class="gameButton" id="me4">mathEquation(4);</button>
-            <button class="gameButton" id="me0">mathEquation(0);</button>
-            <button class="gameButton" id="me1">mathEquation(1);</button>
-          </div>
-        </div>
-        <div class="flex-box">
-          <div class="code flex-col">
-            <div class="codePartOne">let questionFunction</div> =
-            <div class="codePartTwo">function(<div class="codePartThree">x</div>)</div>{ <br>
-            <div class="codeInside">
-              let y = 4 * x + 2; <br>
-              let question = prompt("What is x if 4x + 2 = " + y + " ?"); <br>
-              if(question===x){<br>
-              <div class="codeInside">alert("You are correct!");</div>
-              } else {<br>
-              <div class="codeInside">alert("Wrong, try again");</div>
-              }
-            </div>
-            }
-          </div>
-          <div class="flex-col">
-            <p><strong>questionFunction function options:</strong></p>
-            <button class="gameButton" id="qf0">questionFunction(0);</button>
-            <button class="gameButton" id="qf5">questionFunction(5);</button>
-            <button class="gameButton" id="qf2">questionFunction(2);</button>
-          </div>
-        </div>
-        <div class="flex-box">
-          <div class="code flex-col">
-            <div class="codePartOne">let weatherCheck</div> =
-            <div class="codePartTwo">function(<div class="codePartThree">cloudyCheck, temperature</div>)</div>{ <br>
-            <div class="codeInside">
-              if(cloudyCheck===false && temperature > 50){<br>
-              <div class="codeInside">alert("The weather is good");</div>
-              } else if (temperature > 50){<br>
-              <div class="codeInside">alert("Cloudy but not cold");</div>
-              } else if (cloudyCheck===false){<br>
-              <div class="codeInside">alert("Not cloudy but cold");</div>
-              } else {<br>
-              <div class="codeInside">alert("It's both cloudy and cold");</div>
-              }
-            </div>
-            }
-          </div>
-          <div class="flex-col">
-            <p><strong>weatherCheck function options:</strong></p>
-            <button class="gameButton" id="wc25">weatherCheck(true, 25);</button>
-            <button class="gameButton" id="wc50">weatherCheck(false, 50);</button>
-            <button class="gameButton" id="wc80">weatherCheck(true, 80);</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex-box">
-      <div id="navGame" class="section flex-col">
-        <h2>Game</h2>
-        <p>
-          Practice building and calling functions to master these
-          complex concepts.
-        </p>
-        <div>
-          <h3>Building Functions</h3>
-          <p id="gameCode"></p>
-          <p class="buildingGameCode" id="buildingCode"></p>
-          <button class="gameButton" id="option1">Option 1</button>
-          <button class="gameButton" id="option2">Press to play</button>
-          <button class="gameButton" id="option3">Option 3</button>
-        </div>
-        <div>
-          <h3>Functions with Parameters</h3>
-          <p id="gameCode2"></p>
-          <p class="buildingGameCode" id="buildingCode2"></p>
-          <button class="gameButton" id="option4">Option 1</button>
-          <button class="gameButton" id="option5">Press to play</button>
-          <button class="gameButton" id="option6">Option 3</button>
-        </div>
-        <div>
-          <h3>Calling Functions</h3>
-          <p id="gameCode3"></p>
-          <p class="buildingGameCode" id="buildingCode3"></p>
-          <button class="gameButton" id="option7">Option 1</button>
-          <button class="gameButton" id="option8">Press to play</button>
-          <button class="gameButton" id="option9">Option 3</button>
-        </div>
-        <h3 id="points">Points: 0</h3>
-      </div>
-      <div id="navQuiz" class="section flex-col">
-        <h2>Quiz time:</h2>
-        <p>
-          Take this quiz to check your understanding!
-        </p>
-        <a href="https://forms.gle/h4DZf6n3jRSdH5Vq8" target="_blank">
-          <button>Quiz Button</button>
-        </a>
-        <img id="bit-by-bot-quiz" src="../assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" alt="Bit by Bot Taking Quiz">
+          <br>
+        <!-- The end of the content div is here -->
       </div>
     </div>
 
-      <br>
-    <!-- The end of the content div is here -->
+    <footer>
+      <div class="footer-home">
+        <h4>Visit our main page</h4>
+        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+      </div>
+      <div class="footer-socials">
+        <h4>Follow us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <p>Bit by Bit Coding is a registered nonprofit</p>
+        <p>EIN 84-5025902</p>
+        <p>© 2021 Bit by Bit Coding</p>
+      </div>
+    </footer>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
