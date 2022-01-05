@@ -10,122 +10,102 @@
   <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="page-container">
-    <div id="content-wrap">
-      <div id="header" class="flex-container-header">
-        <div class="flex-item-header flex-container-left">
-          <div class="flex-item-left">
-            <a href="/main-demos/" style="margin-right: 1em;">
-              <button id="back-button" title="Back to all demos">
-                <i class="fas fa-arrow-left"></i>
-              </button>
-            </a>
-          </div>
-          <h1 class="flex-item-left">OBJECT DEMO</h1>
-        </div>
-        <div class="flex-item-header">
-          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-        </div>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/main-demos/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
       </div>
-      <div class="content">
-        <div class="section">
-          <div style="display: flex;">
-            <p style="flex: 1;">
-              Objects store data in them!
-              Just like CSS, there is a property (or key) and a value pair.
-              Each is seperated by a colon but each statement ends with a comma instead.
-              <br><br>
-              Use the input boxes below to change the car's attributes.
-              This will also change the object code below.
-              When you are ready, try modifying the code instead of the dropdown.
-              Remember, you can always reset the code by hitting the reset (
-              <i class="fas fa-redo-alt" style="font-size: 0.75em;"></i>
-              ) button.
-            </p>
-            <img style="flex: 0; height: 10em;" src="https://bitbybitcoding.org/imgs/happybot.PNG">
-          </div>
-        </div>
-        <div class="flex-box" style="margin: 1em 0;">
-          <div id="options-section" class="flex-col section" style="margin-right: 0.5em;">
-            <div class="option-wrapper">
-              <span>Wheel Color:</span>
-              <input id="wheel-color-option" class="option">
-            </div>
-            <div class="option-wrapper">
-              <span>Body Color:</span>
-              <input id="body-color-option" class="option">
-            </div>
-            <div class="option-wrapper">
-              <span>Roof Color:</span>
-              <input id="roof-color-option" class="option">
-            </div>
-            <div class="option-wrapper">
-              <span>Outline Color:</span>
-              <input id="outline-option" class="option">
-            </div>
-            <div class="option-wrapper">
-              <span>Size (Press ENTER):</span>
-              <input id="size-option" class="option">
-            </div>
-          </div>
-          <div class="showcase-section flex-col section">
-            <svg id="car-svg" src="car.svg" viewBox="0 0 512 512">
-              <path class="car-body" stroke="#000000" stroke-width="2" d="M86.4056+221.888C108.093+201.329+132.441+204.788+132.441+204.788L392.221+204.788C392.221+204.788+418.832+209.145+432.766+234.751C446.699+260.357+447.955+307.212+447.955+307.212L64.0455+307.212C64.0455+307.212+58.4555+282.863+64.0455+261.532C69.6355+240.201+70.2817+237.173+86.4056+221.888Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              <path class="car-wheel" stroke="#000000" stroke-width="2" d="M105.585+317.99C105.585+300.317+119.912+285.99+137.585+285.99C155.258+285.99+169.585+300.317+169.585+317.99C169.585+335.663+155.258+349.99+137.585+349.99C119.912+349.99+105.585+335.663+105.585+317.99Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              <path class="car-wheel" stroke="#000000" stroke-width="2" d="M339.649+317.99C339.649+300.317+353.976+285.99+371.649+285.99C389.322+285.99+403.649+300.317+403.649+317.99C403.649+335.663+389.322+349.99+371.649+349.99C353.976+349.99+339.649+335.663+339.649+317.99Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              <path class="car-roof" stroke="#000000" stroke-width="2" d="M169.676+164.992C191.363+144.433+215.711+147.892+215.711+147.892L316.413+147.892C316.413+147.892+332.299+150.759+342.94+165.057C353.582+179.356+358.98+205.086+358.98+205.086L147.316+205.086C147.316+205.086+153.552+180.277+169.676+164.992Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-            </svg>
-            <svg id="easter-egg-svg" viewBox="0 0 512 512" style="display: none;">
-              <path class="egg egg-top" stroke="#000000" stroke-width="1" d="M256+118.062C189.265+118.063+135.031+193.342+132.594+287.469L177.875+262.656L221.188+286.344L256+263.812L300.969+286.625L340.312+264.281L379.375+286.375C376.545+192.762+322.476+118.062+256+118.062Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              <path class="egg egg-bottom" stroke="#000000" stroke-width="1" d="M177.875+280.375L132.719+304.219C136.512+394.9+190.174+445.438+256+445.438C321.765+445.438+375.4+394.994+379.281+304.469L340.312+283.969L300.969+306.625L256+283.312L221.188+304.969L177.875+280.375Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              <g class="stars" opacity="1">
-                <path stroke="#000000" stroke-width="1" d="M256+144.281L264.031+160.562L282.031+163.188L269.031+175.875L272.094+193.781L256+185.344L239.906+193.781L242.969+175.875L229.969+163.188L247.969+160.562L256+144.281Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-                <path stroke="#000000" stroke-width="1" d="M210.688+362.406L218.719+378.688L236.719+381.312L223.719+394L226.781+411.906L210.688+403.469L194.594+411.906L197.656+394L184.656+381.312L202.656+378.688L210.688+362.406Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-                <path stroke="#000000" stroke-width="1" d="M301.312+362.406L309.344+378.688L327.344+381.312L314.344+394L317.406+411.906L301.312+403.469L285.219+411.906L288.281+394L275.281+381.312L293.281+378.688L301.312+362.406Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              </g>
-              <g class="dots" opacity="1">
-                <path stroke="#000000" stroke-width="1" d="M187.165+232.722C187.165+221.888+195.948+213.105+206.783+213.105C217.617+213.105+226.4+221.888+226.4+232.722C226.4+243.557+217.617+252.34+206.783+252.34C195.948+252.34+187.165+243.557+187.165+232.722Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-                <path stroke="#000000" stroke-width="1" d="M285.6+232.722C285.6+221.888+294.383+213.105+305.217+213.105C316.052+213.105+324.835+221.888+324.835+232.722C324.835+243.557+316.052+252.34+305.217+252.34C294.383+252.34+285.6+243.557+285.6+232.722Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-                <path stroke="#000000" stroke-width="1" d="M236.383+336.52C236.383+325.686+245.166+316.903+256+316.903C266.834+316.903+275.617+325.686+275.617+336.52C275.617+347.355+266.834+356.138+256+356.138C245.166+356.138+236.383+347.355+236.383+336.52Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="editor-section flex-item section">
-          <div class="editor lang-js"></div>
-          <div class="editor-button-overlay">
-            <button id="execute-button" title="Execute the code">
-              <i class="fas fa-play"></i>
-            </button>
-            <button id="reset-button" title="Reset the code">
-              <i class="fas fa-redo-alt"></i>
-            </button>
-          </div>
-        </div>
+      <h1 class="flex-item-left">OBJECT DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div style="display: flex;">
+        <p style="flex: 1;">
+          Objects store data in them!
+          Just like CSS, there is a property (or key) and a value pair.
+          Each is seperated by a colon but each statement ends with a comma instead.
+          <br><br>
+          Use the input boxes below to change the car's attributes.
+          This will also change the object code below.
+          When you are ready, try modifying the code instead of the dropdown.
+          Remember, you can always reset the code by hitting the reset (
+          <i class="fas fa-redo-alt" style="font-size: 0.75em;"></i>
+          ) button.
+        </p>
+        <img style="flex: 0; height: 10em;" src="https://bitbybitcoding.org/imgs/happybot.PNG">
       </div>
     </div>
-
-    <footer>
-      <div class="footer-home">
-        <h4>Visit our main page</h4>
-        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+    <div class="flex-box" style="margin: 1em 0;">
+      <div id="options-section" class="flex-col section" style="margin-right: 0.5em;">
+        <div class="option-wrapper">
+          <span>Wheel Color:</span>
+          <input id="wheel-color-option" class="option">
+        </div>
+        <div class="option-wrapper">
+          <span>Body Color:</span>
+          <input id="body-color-option" class="option">
+        </div>
+        <div class="option-wrapper">
+          <span>Roof Color:</span>
+          <input id="roof-color-option" class="option">
+        </div>
+        <div class="option-wrapper">
+          <span>Outline Color:</span>
+          <input id="outline-option" class="option">
+        </div>
+        <div class="option-wrapper">
+          <span>Size (Press ENTER):</span>
+          <input id="size-option" class="option">
+        </div>
       </div>
-      <div class="footer-socials">
-        <h4>Follow us</h4>
-        <ul class="socials">
-          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
+      <div class="showcase-section flex-col section">
+        <svg id="car-svg" src="car.svg" viewBox="0 0 512 512">
+          <path class="car-body" stroke="#000000" stroke-width="2" d="M86.4056+221.888C108.093+201.329+132.441+204.788+132.441+204.788L392.221+204.788C392.221+204.788+418.832+209.145+432.766+234.751C446.699+260.357+447.955+307.212+447.955+307.212L64.0455+307.212C64.0455+307.212+58.4555+282.863+64.0455+261.532C69.6355+240.201+70.2817+237.173+86.4056+221.888Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          <path class="car-wheel" stroke="#000000" stroke-width="2" d="M105.585+317.99C105.585+300.317+119.912+285.99+137.585+285.99C155.258+285.99+169.585+300.317+169.585+317.99C169.585+335.663+155.258+349.99+137.585+349.99C119.912+349.99+105.585+335.663+105.585+317.99Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          <path class="car-wheel" stroke="#000000" stroke-width="2" d="M339.649+317.99C339.649+300.317+353.976+285.99+371.649+285.99C389.322+285.99+403.649+300.317+403.649+317.99C403.649+335.663+389.322+349.99+371.649+349.99C353.976+349.99+339.649+335.663+339.649+317.99Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          <path class="car-roof" stroke="#000000" stroke-width="2" d="M169.676+164.992C191.363+144.433+215.711+147.892+215.711+147.892L316.413+147.892C316.413+147.892+332.299+150.759+342.94+165.057C353.582+179.356+358.98+205.086+358.98+205.086L147.316+205.086C147.316+205.086+153.552+180.277+169.676+164.992Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+        </svg>
+        <svg id="easter-egg-svg" viewBox="0 0 512 512" style="display: none;">
+          <path class="egg egg-top" stroke="#000000" stroke-width="1" d="M256+118.062C189.265+118.063+135.031+193.342+132.594+287.469L177.875+262.656L221.188+286.344L256+263.812L300.969+286.625L340.312+264.281L379.375+286.375C376.545+192.762+322.476+118.062+256+118.062Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          <path class="egg egg-bottom" stroke="#000000" stroke-width="1" d="M177.875+280.375L132.719+304.219C136.512+394.9+190.174+445.438+256+445.438C321.765+445.438+375.4+394.994+379.281+304.469L340.312+283.969L300.969+306.625L256+283.312L221.188+304.969L177.875+280.375Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          <g class="stars" opacity="1">
+            <path stroke="#000000" stroke-width="1" d="M256+144.281L264.031+160.562L282.031+163.188L269.031+175.875L272.094+193.781L256+185.344L239.906+193.781L242.969+175.875L229.969+163.188L247.969+160.562L256+144.281Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+            <path stroke="#000000" stroke-width="1" d="M210.688+362.406L218.719+378.688L236.719+381.312L223.719+394L226.781+411.906L210.688+403.469L194.594+411.906L197.656+394L184.656+381.312L202.656+378.688L210.688+362.406Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+            <path stroke="#000000" stroke-width="1" d="M301.312+362.406L309.344+378.688L327.344+381.312L314.344+394L317.406+411.906L301.312+403.469L285.219+411.906L288.281+394L275.281+381.312L293.281+378.688L301.312+362.406Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          </g>
+          <g class="dots" opacity="1">
+            <path stroke="#000000" stroke-width="1" d="M187.165+232.722C187.165+221.888+195.948+213.105+206.783+213.105C217.617+213.105+226.4+221.888+226.4+232.722C226.4+243.557+217.617+252.34+206.783+252.34C195.948+252.34+187.165+243.557+187.165+232.722Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+            <path stroke="#000000" stroke-width="1" d="M285.6+232.722C285.6+221.888+294.383+213.105+305.217+213.105C316.052+213.105+324.835+221.888+324.835+232.722C324.835+243.557+316.052+252.34+305.217+252.34C294.383+252.34+285.6+243.557+285.6+232.722Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+            <path stroke="#000000" stroke-width="1" d="M236.383+336.52C236.383+325.686+245.166+316.903+256+316.903C266.834+316.903+275.617+325.686+275.617+336.52C275.617+347.355+266.834+356.138+256+356.138C245.166+356.138+236.383+347.355+236.383+336.52Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+          </g>
+        </svg>
       </div>
-      <div class="footer-info">
-        <p>Bit by Bit Coding is a registered nonprofit</p>
-        <p>EIN 84-5025902</p>
-        <p>© 2021 Bit by Bit Coding</p>
+    </div>
+    <div class="editor-section flex-item section">
+      <div class="editor lang-js"></div>
+      <div class="editor-button-overlay">
+        <button id="execute-button" title="Execute the code">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="reset-button" title="Reset the code">
+          <i class="fas fa-redo-alt"></i>
+        </button>
       </div>
-    </footer>
-
+    </div>
   </div>
+  <footer>
+    Bit by Bit Coding is a registered nonprofit<br>
+    EIN 84-5025902<br>
+    © 2021 Bit by Bit Coding<br>
+  </footer>
 
   <script src="../assets/prism.js"></script>
   <script src="../assets/codejar.js"></script>

@@ -9,166 +9,146 @@
     <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="page-container">
-      <div id="content-wrap">
-        <div id="header" class="flex-container-header">
-          <div class="flex-item-header flex-container-left">
-            <div class="flex-item-left">
-              <a href="/main-demos/" style="margin-right: 1em;">
-                <button id="back-button" title="Back to all demos">
-                  <i class="fas fa-arrow-left"></i>
-                </button>
-              </a>
-            </div>
-            <h1 class="flex-item-left">BOX MODEL DEMO</h1>
+    <div id="header" class="flex-container-header">
+      <div class="flex-item-header flex-container-left">
+        <div class="flex-item-left">
+          <a href="/main-demos/" style="margin-right: 1em;">
+            <button id="back-button" title="Back to all demos">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+          </a>
+        </div>
+        <h1 class="flex-item-left">BOX MODEL DEMO</h1>
+      </div>
+      <div class="flex-item-header">
+        <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+      </div>
+    </div>
+    <div class="content">
+      <div class="section center-wrapper">
+        <div style="flex: 1;">
+          <h2>INSTRUCTIONS</h2>
+          <p>
+            The boxes represents some divs with some silly sentences inside.
+            Change its padding, border, and margin to see how the box changes and how it interacts with the other div.
+            Note that the lined grey-white area is normally invisible.
+          </p>
+        </div>
+        <div class="center-content">
+          <div id="controls-1" class="controls">
+            <p>
+              div1 {
+              <p class="slider">
+                <span>padding:</span>
+                <input id="padding-1" type="range" min="0" max="100" value="15">
+                <span id="paddingNum-1"></span>
+                <span>px;</span>
+              </p>
+              <p class="slider">
+                <span>border-width:</span>
+                <input id="border-1" type="range" min="0" max="50" value="3">
+                <span id="borderNum-1"></span>
+                <span>px</span>;
+              </p>
+              <p class="slider">
+                <span>margin:</span>
+                <input id="margin-1" type="range" min="0" max="100" value="20">
+                <span id="marginNum-1"></span>
+                <span>px</span>;
+              </p>
+              }
+            </p>
           </div>
-          <div class="flex-item-header">
-            <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+          <div id="controls-2" class="controls">
+            <p>
+              div2 {
+              <p class="slider">
+                <span>padding:</span>
+                <input id="padding-2" type="range" min="0" max="100" value="15">
+                <span id="paddingNum-2"></span>
+                <span>px;</span>
+              </p>
+              <p class="slider">
+                <span>border-width:</span>
+                <input id="border-2" type="range" min="0" max="50" value="3">
+                <span id="borderNum-2"></span>
+                <span>px</span>;
+              </p>
+              <p class="slider">
+                <span>margin:</span>
+                <input id="margin-2" type="range" min="0" max="100" value="20">
+                <span id="marginNum-2"></span>
+                <span>px</span>;
+              </p>
+              }
+            </p>
           </div>
         </div>
-        <div class="content">
-          <div class="section center-wrapper">
-            <div style="flex: 1;">
-              <h2>INSTRUCTIONS</h2>
-              <p>
-                The boxes represents some divs with some silly sentences inside.
-                Change its padding, border, and margin to see how the box changes and how it interacts with the other div.
-                Note that the lined grey-white area is normally invisible.
-              </p>
-            </div>
-            <div class="center-content">
-              <div id="controls-1" class="controls">
-                <p>
-                  div1 {
-                  <p class="slider">
-                    <span>padding:</span>
-                    <input id="padding-1" type="range" min="0" max="100" value="15">
-                    <span id="paddingNum-1"></span>
-                    <span>px;</span>
-                  </p>
-                  <p class="slider">
-                    <span>border-width:</span>
-                    <input id="border-1" type="range" min="0" max="50" value="3">
-                    <span id="borderNum-1"></span>
-                    <span>px</span>;
-                  </p>
-                  <p class="slider">
-                    <span>margin:</span>
-                    <input id="margin-1" type="range" min="0" max="100" value="20">
-                    <span id="marginNum-1"></span>
-                    <span>px</span>;
-                  </p>
-                  }
-                </p>
-              </div>
-              <div id="controls-2" class="controls">
-                <p>
-                  div2 {
-                  <p class="slider">
-                    <span>padding:</span>
-                    <input id="padding-2" type="range" min="0" max="100" value="15">
-                    <span id="paddingNum-2"></span>
-                    <span>px;</span>
-                  </p>
-                  <p class="slider">
-                    <span>border-width:</span>
-                    <input id="border-2" type="range" min="0" max="50" value="3">
-                    <span id="borderNum-2"></span>
-                    <span>px</span>;
-                  </p>
-                  <p class="slider">
-                    <span>margin:</span>
-                    <input id="margin-2" type="range" min="0" max="100" value="20">
-                    <span id="marginNum-2"></span>
-                    <span>px</span>;
-                  </p>
-                  }
-                </p>
+      </div>
+      <div class="section center-wrapper">
+        <div class="center-content">
+          <div id="container-1" class="container">
+            <div id="dynamic-1" class="dynamic">
+              <div id="content-1" class="div-content">
+                Why do potatoes make great detectives? Because they always keep their eyes peeled.
+                <br>
+                What do you use to carry potatoes? A tater tote.
+                <br>
+                Which day of the week do potatoes dread the most? Fry-day.
+                <br>
+                What do you call a lazy spud? A couch potato.
+                <br>
+                Why did the potato salad blush? Because it saw the salad dressing.
+                <br>
+                Why can't a farmer keep secrets on her farm? Because the corn has ears, the potatoes have eyes and the beans stalk.
+                <br>
+                How do you know a potato is in a bad mood? When they’re acting salty.
+                <br>
+                What do you call potatoes with right angles? Square roots.
+                <br>
+                What do you say to a baked potato that's angry? Anything you like, just butter it up.
+                <br>
+                What do you call a baby potato? Small fry.
+                <br>
+                Why did the potato cross the road? He saw a fork up ahead.
               </div>
             </div>
           </div>
-          <div class="section center-wrapper">
-            <div class="center-content">
-              <div id="container-1" class="container">
-                <div id="dynamic-1" class="dynamic">
-                  <div id="content-1" class="div-content">
-                    Why do potatoes make great detectives? Because they always keep their eyes peeled.
-                    <br>
-                    What do you use to carry potatoes? A tater tote.
-                    <br>
-                    Which day of the week do potatoes dread the most? Fry-day.
-                    <br>
-                    What do you call a lazy spud? A couch potato.
-                    <br>
-                    Why did the potato salad blush? Because it saw the salad dressing.
-                    <br>
-                    Why can't a farmer keep secrets on her farm? Because the corn has ears, the potatoes have eyes and the beans stalk.
-                    <br>
-                    How do you know a potato is in a bad mood? When they’re acting salty.
-                    <br>
-                    What do you call potatoes with right angles? Square roots.
-                    <br>
-                    What do you say to a baked potato that's angry? Anything you like, just butter it up.
-                    <br>
-                    What do you call a baby potato? Small fry.
-                    <br>
-                    Why did the potato cross the road? He saw a fork up ahead.
-                  </div>
-                </div>
-              </div>
-              <div id="container-2" class="container">
-                <div id="dynamic-2" class="dynamic">
-                  <div id="content-2" class="div-content">
-                    Why do potatoes make great detectives? Because they always keep their eyes peeled.
-                    <br>
-                    What do you use to carry potatoes? A tater tote.
-                    <br>
-                    Which day of the week do potatoes dread the most? Fry-day.
-                    <br>
-                    What do you call a lazy spud? A couch potato.
-                    <br>
-                    Why did the potato salad blush? Because it saw the salad dressing.
-                    <br>
-                    Why can't a farmer keep secrets on her farm? Because the corn has ears, the potatoes have eyes and the beans stalk.
-                    <br>
-                    How do you know a potato is in a bad mood? When they’re acting salty.
-                    <br>
-                    What do you call potatoes with right angles? Square roots.
-                    <br>
-                    What do you say to a baked potato that's angry? Anything you like, just butter it up.
-                    <br>
-                    What do you call a baby potato? Small fry.
-                    <br>
-                    Why did the potato cross the road? He saw a fork up ahead.
-                  </div>
-                </div>
+          <div id="container-2" class="container">
+            <div id="dynamic-2" class="dynamic">
+              <div id="content-2" class="div-content">
+                Why do potatoes make great detectives? Because they always keep their eyes peeled.
+                <br>
+                What do you use to carry potatoes? A tater tote.
+                <br>
+                Which day of the week do potatoes dread the most? Fry-day.
+                <br>
+                What do you call a lazy spud? A couch potato.
+                <br>
+                Why did the potato salad blush? Because it saw the salad dressing.
+                <br>
+                Why can't a farmer keep secrets on her farm? Because the corn has ears, the potatoes have eyes and the beans stalk.
+                <br>
+                How do you know a potato is in a bad mood? When they’re acting salty.
+                <br>
+                What do you call potatoes with right angles? Square roots.
+                <br>
+                What do you say to a baked potato that's angry? Anything you like, just butter it up.
+                <br>
+                What do you call a baby potato? Small fry.
+                <br>
+                Why did the potato cross the road? He saw a fork up ahead.
               </div>
             </div>
           </div>
         </div>
       </div>
-  
-      <footer>
-        <div class="footer-home">
-          <h4>Visit our main page</h4>
-          <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
-        </div>
-        <div class="footer-socials">
-          <h4>Follow us</h4>
-          <ul class="socials">
-            <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-        <div class="footer-info">
-          <p>Bit by Bit Coding is a registered nonprofit</p>
-          <p>EIN 84-5025902</p>
-          <p>© 2021 Bit by Bit Coding</p>
-        </div>
-      </footer>
-  
     </div>
+    <footer>
+      Bit by Bit Coding is a registered nonprofit<br>
+      EIN 84-5025902<br>
+      © 2021 Bit by Bit Coding<br>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
