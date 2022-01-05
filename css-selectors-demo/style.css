@@ -404,14 +404,9 @@ th {
   font-weight: bolder !important;
 }
 
-@media only screen and (max-width: 1200px) {
-  .note {
-    font-size: 1.05em;
-  }
-
-  .review {
-    font-size: 1.05em;
-  }
+.mono {
+  font-family: monospace;
+  font-size: 1.3em;
 }
 
 /*# sourceMappingURL=style.css.map */
