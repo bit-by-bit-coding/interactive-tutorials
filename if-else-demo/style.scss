@@ -1,0 +1,155 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+.if-else {
+  &--padding-left {
+    padding-left: 60px;
+  }
+
+  &--tab {
+    margin-left: 35px;
+  }
+
+  &--strong {
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  &--small {
+    display: block;
+    font-size: 14px;
+    margin-bottom: -5px;
+  }
+
+  &__happy-bot {
+    height: 200px;
+    width: auto;
+    margin-left: 50px;
+  }
+
+  &__party-bot {
+    height: 275px;
+    width: auto;
+    margin-right: 50px;
+  }
+
+  &__snowman-bot {
+    height: 300px;
+    width: auto;
+  }
+
+  &__snowman-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__example {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &--column {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__code {
+    color: #50c6e9ff;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 40px;
+    margin: 0 0 5px 0;
+
+    &--orange {
+      color: #ffb560ff;
+    }
+
+    &--darkblue {
+      color: #153570;
+    }
+
+    &--pink {
+      color: #faf;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__number {
+    width: 20px;
+  }
+
+  &--spin {
+    animation: spin 3s ease;
+  }
+
+  &--disappear {
+    animation: disappear 3s ease;
+  }
+
+  &--slideRight {
+    animation: slideRight 3s ease;
+  }
+
+  &--slideLeft {
+    animation: slideLeft 3s ease;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes disappear {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(500px);
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-500px);
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
