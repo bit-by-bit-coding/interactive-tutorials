@@ -6,31 +6,22 @@ body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.75em;
 }
 
 button {
   border: none;
   background: #38Bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #19a8d3;
 }
-
 button:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -44,14 +35,11 @@ button:active {
   max-height: 3em;
   z-index: 1000;
   opacity: 95%;
-  -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
-
 #header > * {
   margin: 0;
 }
-
 #header button {
   width: 3em;
 }
@@ -70,50 +58,28 @@ button:active {
 
 /*Flexbox*/
 .flex-container-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flex-container-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
+  justify-content: space-evenly;
+  align-items: center;
   max-width: max-content;
 }
 
 .flex-item-header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
 .flex-item-left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
+  flex: 1 1 100px;
   max-width: max-content;
 }
 
 #top-heading {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -133,15 +99,11 @@ button:active {
 }
 
 .flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -154,9 +116,7 @@ button:active {
 }
 
 .no-flex-col {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -172,8 +132,8 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em*2));
-  font-family: 'Anonymous Pro', monospace;
+  width: calc(100% - 35px - 1.25em);
+  font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -220,7 +180,7 @@ button:active {
 }
 
 #spinner {
-  opacity: 0.0;
+  opacity: 0;
 }
 
 #danceArena {
@@ -269,7 +229,6 @@ button:active {
   cursor: pointer;
   background-color: red;
   color: white;
-  -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 
@@ -288,8 +247,7 @@ button:active {
   padding: 10px;
   border: 0.2em solid #FF8900;
   background-color: white;
-  -webkit-box-shadow: 8px 8px 5px #888888;
-          box-shadow: 8px 8px 5px #888888;
+  box-shadow: 8px 8px 5px #888888;
 }
 
 .ui-widget-header {
@@ -298,163 +256,64 @@ button:active {
 
 /* Bit by Bot Dancing animations */
 /* The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence. */
-@-webkit-keyframes headbop {
-  /* The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled and skewed.*/
-  0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  50% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-  }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
 @keyframes headbop {
   /* The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled and skewed.*/
   0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   50% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
-
-@-webkit-keyframes wave-rarm {
-  0% {
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
-  }
-  100% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-  }
-}
-
 @keyframes wave-rarm {
   0% {
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
   }
   100% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 }
-
-@-webkit-keyframes wave-larm {
-  0% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-  }
-  100% {
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
-  }
-}
-
 @keyframes wave-larm {
   0% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
   }
   100% {
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
   }
 }
-
-@-webkit-keyframes walk {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  33% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-  66% {
-    -webkit-transform: translateY(-35px);
-            transform: translateY(-35px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
 @keyframes walk {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   33% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    transform: translateX(-100px);
   }
   66% {
-    -webkit-transform: translateY(-35px);
-            transform: translateY(-35px);
+    transform: translateY(-35px);
   }
   100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
-
-@-webkit-keyframes stomp-rfoot {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-}
-
 @keyframes stomp-rfoot {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    transform: translateY(-6px);
   }
 }
-
-@-webkit-keyframes stomp-lfoot {
-  0% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
 @keyframes stomp-lfoot {
   0% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    transform: translateY(-6px);
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
-
 .robot {
   position: relative;
   width: 8em;
@@ -463,8 +322,7 @@ button:active {
 .robot .head {
   position: absolute;
   left: 105px;
-  -webkit-animation: headbop 1s infinite alternate;
-          animation: headbop 1s infinite alternate;
+  animation: headbop 1s infinite alternate;
 }
 
 .robot .body {
@@ -475,40 +333,35 @@ button:active {
 }
 
 .robot .larm {
-  -webkit-animation: wave-larm 1s infinite alternate;
-          animation: wave-larm 1s infinite alternate;
+  animation: wave-larm 1s infinite alternate;
   position: absolute;
   z-index: 100;
-  -webkit-transform-origin: 80% 60%;
-          transform-origin: 80% 60%;
+  transform-origin: 80% 60%;
   top: 132px;
   left: 50px;
 }
 
 .robot .rarm {
-  -webkit-animation: wave-rarm 1s infinite alternate;
-          animation: wave-rarm 1s infinite alternate;
+  animation: wave-rarm 1s infinite alternate;
   position: absolute;
   z-index: 100;
-  -webkit-transform-origin: 80% 60%;
-          transform-origin: 80% 60%;
+  transform-origin: 80% 60%;
   top: 132px;
   left: 240px;
 }
 
 .robot .lfoot {
-  -webkit-animation: stomp-lfoot 0.5s infinite alternate;
-          animation: stomp-lfoot 0.5s infinite alternate;
+  animation: stomp-lfoot 0.5s infinite alternate;
   position: absolute;
   top: 270px;
   left: 110px;
 }
 
 .robot .rfoot {
-  -webkit-animation: stomp-rfoot 0.5s infinite alternate;
-          animation: stomp-rfoot 0.5s infinite alternate;
+  animation: stomp-rfoot 0.5s infinite alternate;
   position: absolute;
   top: 270px;
   left: 182px;
 }
+
 /*# sourceMappingURL=style.css.map */
