@@ -112,6 +112,7 @@
     </div>
     <div class="flex-box">
       <div class="flex-col section" style="max-width:30%;">
+        <h3>Number of items:</h3> <input id="num-items" type="number" value="3"> <br /> <br /> <button id="button-num-items">Change Number of Items (resets parameters)</button> <br /> <br /> <hr />
         <h3>Flex-Box Container:</h3>
         <p>
           <span class='leftCode'>flex-direction:</span>
@@ -158,9 +159,8 @@
             <option value="flex-end">flex-end</option>
           </select> <br />
         </p>
-        <button id="left-button-container">Update Flex-Box Container</button> <br />
+        <button id="left-button-container">Update Flex-Box Container</button> <br /> <br /> <hr />
         <h3>Flex-Box Items:</h3>
-        <p>Number of items: <input id="num-items" type="number"> <br /> <br /> <button id="button-num-items">Change Number of Items</button></p> <br />
         <div id="left-items">
           <button onclick="showDiv(1)" id="button-item-1">Item 1</button> <br />
           <div id="left-item-1" class="hidden">
@@ -210,7 +210,7 @@
         </div>
         <p id="num-items-tracker" style="display: none">3</p>
         <button id="left-button-items">Update Flex Items</button> <br /> <br /> <br />
-        <button id="left-button-everything">Update Everything</button>
+        <button id="left-button-everything">Update Container and Flex Items</button>
       </div>
       <div class="flex-col section">
         <div id="right-flex-container">

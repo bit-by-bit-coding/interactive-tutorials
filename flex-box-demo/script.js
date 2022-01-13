@@ -63,5 +63,4 @@ leftButtonItems.onclick = function(){
 leftButtonEverything.onclick = function(){
     leftButtonContainer.click();
     leftButtonItems.click();
-    buttonNumItems.click();
 };
