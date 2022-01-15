@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- TODO: Change the title of the page to your demo name -->
-  <title>Template for Demos | Bit by Bit</title>
+  <title>HTML Table Demo | Bit by Bit</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
@@ -19,40 +18,191 @@
           </button>
         </a>
       </div>
-      <!-- TODO: Change the name of the demo here -->
-      <h1 class="flex-item-left">TEMPLATE FOR DEMOS</h1>
+      <h1 class="flex-item-left">HTML TABLE DEMO</h1>
     </div>
     <div class="flex-item-header">
       <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
     </div>
   </div>
   <div class="content">
-    <!-- TODO: Fill this content div with all the content of the demo -->
     <div class="section">
-      <p>
-        To create a section that goes across the entire width of the screen, use the "section" class on a div.
-      </p>
+      <h2>What is an HTML table?</h2>
+      <p>The &lttable&gt element in HTML allows data to be represented by a two-dimensional table of rows and columns. The intersection of a table's rows and columns form table cells, and these cells contain the data displayed in the table.</p>
+      <p>To define a table cell, place the data between a &lttd&gt and a &lt/td&gt tag.</p>
+      <p>Once you have defined a table cell, place this cell between a table row's &lttr&gt and &lt/tr&gt tags. Note, you can have multiple rows in a table, just make sure that the number of cells in each row are the same!</p>
+      <p>Finally, place your table row or rows between a &lttable&gt and a &lt/table&gt tag to form a complete table.</p>
+      <p>As a bonus, if you'd like your table to have headers, create and place another table row before all other table rows in your table. In this newly created table row, place a &ltth&gt and a &lt/th&gt tag with the title of the heading inbetween. Note, make sure that the number of &ltth&gt tags is the same as the number of &lttd&gt in each table row! This will ensure that each column has a heading.</p>
+    </div>
+    <div class="section">
+      <h2>Table Examples</h2>
+      <div class="table-examples">
+        <div class="table-example">
+          <div class="table-example-example">
+            <h3>Example 1</h3>
+            <p>The HTML to the right creates a table with one row, hence the single &lttr&gt, a two columns. Each &lttd&gt inside the &lttr&gt represents a separate column.</p>
+            <div class="bit-by-bot-flex">
+              <img class="bit-by-bot" src="/assets/bit-by-bot-images/sound-suspicious-open-bot.svg" alt="Bit by Bot thinking">
+            </div>
+          </div>
+          <div class="table-example-html">
+            <h3>HTML</h3>
+            <p>&lttable&gt</p>
+            <p>&lttr&gt</p>
+            <p>&lttd&gtRow 1 Column 1&lt/td&gt</p>
+            <p>&lttd&gtRow 1 Column 2&lt/td&gt</p>
+            <p>&lt/tr&gt</p>
+            <p>&lt/table&gt</p>
+          </div>
+          <div class="table-example-table">
+            <h3>Outputted Table</h3>
+            <table>
+              <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br>
+        <div class="table-example">
+          <div class="table-example-example">
+            <h3>Example 2</h3>
+            <p>If you wanted to add another row to the table in Example 1, then simply add another &lttr&gt with a same amout of &lttd&gt tags as the first &lttr&gt inside of the &lttable&gt.</p>
+            <p>If you wanted to add another column to the table, then add another &lttd&gt in each &lttr&gt.</p>
+            <div class="bit-by-bot-flex">
+              <img class="bit-by-bot" src="/assets/bit-by-bot-images/bulb-surprised-bot.svg" alt="Bit by Bot having an idea">
+            </div>
+          </div>
+          <div class="table-example-html">
+            <h3>HTML</h3>
+            <p>&lttable&gt</p>
+            <p>&lttr&gt</p>
+            <p>&lttd&gtRow 1 Column 1&lt/td&gt</p>
+            <p>&lttd&gtRow 1 Column 2&lt/td&gt</p>
+            <p>&lttd&gtRow 1 Column 3&lt/td&gt</p>
+            <p>&lt/tr&gt</p>
+            <p>&lttr&gt</p>
+            <p>&lttd&gtRow 2 Column 1&lt/td&gt</p>
+            <p>&lttd&gtRow 2 Column 2&lt/td&gt</p>
+            <p>&lttd&gtRow 2 Column 3&lt/td&gt</p>
+            <p>&lt/tr&gt</p>
+            <p>&lt/table&gt</p>
+          </div>
+          <div class="table-example-table">
+            <h3>Outputted Table</h3>
+            <table>
+              <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+                <td>Row 1 Column 3</td>
+              </tr>
+              <tr>
+                <td>Row 2 Column 1</td>
+                <td>Row 2 Column 2</td>
+                <td>Row 2 Column 3</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br>
+        <div class="table-example">
+          <div class="table-example-example">
+            <h3>Example 3</h3>
+            <p>If you wanted to add table headings to Example 2, then you would simply create another table row before all other table rows in your table. In this newly created table row, place a &ltth&gt and a &lt/th&gt tag with the title of the heading inbetween, and make sure that the number of &ltth&gt tags matches the number of &lttd&gt in each table row.</p>
+            <p>Hooray! The final outputted table is shown to the right!</p>
+            <div class="bit-by-bot-flex">
+              <img class="bit-by-bot" src="/assets/bit-by-bot-images/two-hands-party-bot.svg" alt="Bit by Bot wearing a party hat">
+            </div>
+          </div>
+          <div class="table-example-html">
+            <h3>HTML</h3>
+            <p>&lttable&gt</p>
+            <p>&lttr&gt</p>
+            <p>&ltth&gtHeading 1&lt/th&gt</p>
+            <p>&ltth&gtHeading 2&lt/th&gt</p>
+            <p>&ltth&gtHeading 3&lt/th&gt</p>
+            <p>&lt/tr&gt</p>
+            <p>&lttr&gt</p>
+            <p>&lttd&gtRow 1 Column 1&lt/td&gt</p>
+            <p>&lttd&gtRow 1 Column 2&lt/td&gt</p>
+            <p>&lttd&gtRow 1 Column 3&lt/td&gt</p>
+            <p>&lt/tr&gt</p>
+            <p>&lttr&gt</p>
+            <p>&lttd&gtRow 2 Column 1&lt/td&gt</p>
+            <p>&lttd&gtRow 2 Column 2&lt/td&gt</p>
+            <p>&lttd&gtRow 2 Column 3&lt/td&gt</p>
+            <p>&lt/tr&gt</p>
+            <p>&lt/table&gt</p>
+          </div>
+          <div class="table-example-table">
+            <h3>Outputted Table</h3>
+            <table>
+              <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+              </tr>
+              <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+                <td>Row 1 Column 3</td>
+              </tr>
+              <tr>
+                <td>Row 2 Column 1</td>
+                <td>Row 2 Column 2</td>
+                <td>Row 2 Column 3</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="flex-box">
-      <div class="flex-col section">
-        <p>
-          To create two or more sections next to each other, use the "flex-col" class and the "section" class on a div.
-          Be sure to wrap this in a div containing the "flex-box" class too.
-        </p>
-        <p>
-          This section is likely for the input of the demo.
-          Users will select options, code, or give values to change the result section of the demo.
-        </p>
+      <div class="flex-col section button-center">
+        <h2>Try it yourself!</h2>
+        <p>Add additional rows and columns to the table on the right using the buttons below. The number next to each 'R' represents the row number in each cell while the number next to each 'C' represents the column number. You can even add or remove the table headings.</p>
+        <p>Currently, the resulting table consists of <span id="table-key-heading"><span class="table-key-cols">#</span> &ltth&gt tag(s) inside of 1 &lttr&gt tag and </span><span id="table-key-rows">#</span> &lttr&gt tag(s) with <span class="table-key-cols">#</span> &lttd&gt tag(s) inside.</p>
+        <div class="button-flex-container">
+          <img class="bit-by-bot computer" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot using a computer">
+          <form class=form-style>
+            <input type="radio" id="on-button" name="heading-property" value="on" checked>
+            <label for="on-button">ON</label>
+            <p>HEADING</p>
+            <input type="radio" id="off-button" name="heading-property" value="off">
+            <label for="off-button">OFF</label>
+          </form>
+          <div class="button-flex">
+            <button id="plusRow" class="table-button triangle-up">+</button>
+            <p>ROWS</p>
+            <button id="minusRow" class="table-button triangle-down">-</button>
+          </div>
+          <br>
+          <div class="button-flex">
+            <button id="plusCol" class="table-button triangle-up">+</button>
+            <p>COLUMNS</p>
+            <button id="minusCol" class="table-button triangle-down">-</button>
+          </div>
+        </div>
       </div>
       <div class="flex-col section">
-        <p>
-          Here is where the result of the demo goes.
-          This is to show off what the user has "create" by providing values in the input section of the demo.
-          For example, the input may be a piece of code, and this is the iframe that displays what the code executes as.
-        </p>
+        <table>
+          <thead id="tableHead">
+            <tr>
+              <th>Heading 1</th>
+            </tr>
+        </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td>R1 | C1</th>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <!-- The end of the content div is here -->
   </div>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/prism.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
