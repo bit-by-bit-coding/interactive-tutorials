@@ -75,6 +75,11 @@ let interactiveDemos = {
       title: "IF ELSE DEMO",
       content: "What is and If / Else Statement",
     },
+    flexBox: {
+      path: 'flex-box-demo',
+      title: 'FLEX-BOX DEMO',
+      content: "Learn about CSS flex-boxes!"
+    }
 };
 
 let demosList = document.getElementById("demos-list");
