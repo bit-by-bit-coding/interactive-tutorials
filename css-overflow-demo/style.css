@@ -147,39 +147,60 @@ button:active {
 }
 
 /* The page-specific styling */
-.showcase-section {
-  position: relative;
-}
-.showcase-section svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-}
-
-#options-section {
-  min-height: 20em;
-  padding: 0 1em;
-}
-
-div.option-wrapper {
+/* TODO: Put whatever styles you need for just your demo here */
+.two-col {
   display: flex;
-  margin: 1em 0 1em 0;
 }
-div.option-wrapper > *:first-child {
-  flex: 1;
+.two-col .col-box {
+  width: 50%;
 }
-div.option-wrapper > *:last-child {
-  flex: 2;
-}
-
-footer {
-  text-align: center;
+.two-col .col-box:last-child {
+  margin-left: 30px;
 }
 
-#warning-p {
-  color: #ff0000;
+.code {
+  font-family: monospace;
+  font-size: 24px;
+}
+.code.indent {
+  margin-left: 30px;
+}
+.code .blue {
+  color: #50c6e9ff;
+}
+.code .orange {
+  color: #ffb560ff;
+}
+
+.bit-by-bot {
+  height: 150px;
+  width: auto;
+  position: absolute;
+  right: 200px;
+  top: 350px;
+}
+
+#example-div {
+  background-color: #1bb1de;
+  width: 20em;
+  height: 20em;
+  margin: 20px auto 0;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.auto {
+  overflow: auto;
+}
+
+.visible {
+  overflow: visible;
 }
 
 /*# sourceMappingURL=style.css.map */

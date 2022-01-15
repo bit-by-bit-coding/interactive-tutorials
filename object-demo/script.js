@@ -154,8 +154,11 @@ let optionHandler = (e) => {
 let sizeOptionElement = document.getElementById("size-option");
 sizeOptionElement.onchange = function() {
   let newValue = sizeOptionElement.value;
-  if (newValue !== undefined) {
+  if (newValue !== undefined && newValue <= 750) {
     updateObject(carObjectPropertyify("size-option"), newValue);
+    document.getElementById('warning-p').textContent = '';
+  } else {
+    document.getElementById('warning-p').textContent = 'Please enter a valid amount. It must be a number equal to or below 750';
   }
 }
 let wheelColorOptionElement = document.getElementById("wheel-color-option");
