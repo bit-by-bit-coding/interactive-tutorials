@@ -5,6 +5,11 @@
 
 /* The page-specific styling */
 
+footer {
+  position: unset;
+  width: 100%;
+}
+
 .description {
   display: flex;
   p {
@@ -40,7 +45,7 @@
 }
 
 .big-code {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: "Anonymous Pro", 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1.25em;
   color: $primary-color;
   .comment {
@@ -49,7 +54,7 @@
 }
 
 .bold {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: "Anonymous Pro", 'Andale Mono', 'Ubuntu Mono', monospace;
   padding: 5px;
   font-weight: 800;
 }
@@ -64,11 +69,11 @@
   margin-top: 25px;
   align-items: center;
   justify-content: space-evenly;
-    button {
-      padding: 10px;
-      margin: 10px;
-      width: 140px;
-   }
+  button {
+    padding: 10px;
+    margin: 10px;
+    width: 140px;
+  }
 }
 
 .section {
