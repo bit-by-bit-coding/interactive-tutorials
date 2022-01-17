@@ -152,6 +152,10 @@ button:active {
   margin-left: 20px;
 }
 
+footer {
+  text-align: center;
+}
+
 .line {
   font-size: 1em;
 }
@@ -202,6 +206,7 @@ button:active {
 #dancer {
   position: relative;
   top: 200px;
+  width: 10%;
 }
 
 #easterEggVerdict {

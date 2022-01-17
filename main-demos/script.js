@@ -47,6 +47,11 @@ let interactiveDemos = {
       title: "EVENTS DEMO",
       content: "What are events in JavaScript, and how can we use them?",
     },
+    flexBox: {
+      path: 'flex-box-demo',
+      title: 'FLEX-BOX DEMO',
+      content: "Learn about CSS flex-boxes!"
+    },
     functionDemo: {
       path: "function-demo",
       title: "FUNCTION DEMO",
