@@ -48,7 +48,7 @@
   <div class="content">
     <!-- TODO: Fill this content div with all the content of the demo -->
     <div class="section">
-      <h2>The concept of Nested For Loops</h2>
+      <h2>Introduction</h2>
       <p>
         A for loop executes the code block inside its body during each cycle of the loop. 
       </p>
@@ -58,36 +58,41 @@
       <p>
         For a pair of nested for loops, the inner for loop completely runs itself during each cycle of the outer loop. 
       </p>
-      <img class="img-bot" src="/assets/bit-by-bot-images/waving-happy-bot.svg">
     </div>
     <div class="flex-box">
       <div class="flex-col section">
         <h2>Example</h2>
-        <img class="img-bot" src="/assets/bit-by-bot-images/snowman-bot.svg">
         <p>
-          Imagine a class of 12, sitting in 3 rows and 4 columns and their teacher wants to know the favorite movie of each student. 
-          One of the most straight forward ways to accomplish this goal is to start from the first column, ask the students sitting in each row, 
-          then move on to the next column, until we have recorded the favorite movies of every student. 
+          Imagine if we want to know the favorite movie of each bit by bot below. 
+          One of the most straight forward ways to accomplish this goal is to start from the first column, ask the bots sitting in each row, 
+          then move on to the next column, until we have recorded the favorite movies of every bot. 
+        </p>
+        <img src="/assets/nested-for-loops.jpg" width="650">
+      </div>
+      <div class="flex-col section">
+        <h2>Example Code</h2>
+        <p>
+          Let's try to capture this method in code. Since, on the big picture, we ask the bots column by column, 
+          the outer for loop should correspond to the number of columns, which is 4. 
         </p>
         <p>
-          Let's try to capture this method in code. Since, on the big picture, the teacher carries out this method column by column, 
-          the outer for loop should correspond to the number of columns, which is 4. Then for each column, the teacher asks each student row by row, 
-          so the inner for loop corresponds to the number of rows, which is 3. The code block of the inner loop is where the teacher asks the student sitting at that position. 
+          Then for each column, we ask each bot row by row, 
+          so the inner for loop corresponds to the number of rows, which is 3. 
+          The code block of the inner loop is where we ask the bot sitting at that position. 
 
         </p>
         <span class="big-code">
-          for (let i = 0; i < 4; i++) {<br>
-            &emsp; for (let j = 0; j < 3; j++) {<br><br></span>
+          for (<span class="values">let i = 0; i < 4; i++</span>) {<br>
+            &emsp; for (<span class="values">let j = 0; j < 3; j++</span>) {<br><br>
         <span class="comment"> &emsp; &emsp; // Here is the code block that does the<br>
           &emsp; &emsp; action of asking the student, who sits at<br>
           &emsp; &emsp; this position, what is their favorite movie</span><br><br>
-        <span class="big-code">
           &emsp; }<br>
           }</span>
       </div>
-      <div class="flex-col section">
+    </div>
+    <div class="section">
         <h2>Quick exercise</h2>
-        <img class="img-bot" src="/assets/bit-by-bot-images/computer-suspicious-closed-bot.svg">
         <p>
           Nested for loops sometimes can consist more than 2 for loops. 
           But as long as you pay attention to the hierarchy of the construct, they are not more difficult to understand. 
@@ -98,25 +103,31 @@
             try computing the answer using mathematical tricks!  
           </em>
         </p>
+        <div class="flex-box">
+        <div class="flex-col">
         <span class="big-code">
-        function exercise() {<br>
-          &emsp; let answer = 0;<br>
-          &emsp; for (let i = 1; i < 3; i++) {<br>
-          &emsp; &emsp; for (let j = 1; j < 3; j++) {<br>
-          &emsp; &emsp; &emsp; for (let k = 1; k < 4; k++) {<br>
-          &emsp; &emsp; &emsp; &emsp; answer += i * j * k;<br>
+        function <span class="identifier">exercise()</span> {<br>
+          &emsp; let <span class="identifier">answer =</span> <span class="values">0</span>;<br>
+          &emsp; for (<span class="values">let i = 1; i < 3; i++</span>) {<br>
+          &emsp; &emsp; for (<span class="values">let j = 1; j < 3; j++</span>) {<br>
+          &emsp; &emsp; &emsp; for (<span class="values">let k = 1; k < 4; k++</span>) {<br>
+          &emsp; &emsp; &emsp; &emsp; <span class="identifier">answer +=</span> i * j * k;<br>
           &emsp; &emsp; &emsp; }<br>
           &emsp; &emsp; }<br>
           &emsp; }<br>
-          &emsp; return answer;<br>
+          &emsp; return <span class="identifier">answer</span>;<br>
           }<br>
-          console.log(exercise());</span>
+          console.log(<span class="identifier">exercise()</span>);</span>
+        </div>
+        <div class="flex-col">
           <form action="" name="f1" onsubmit >
           answer = <input type="password" name="answer" size="20">
           <br>
           <br>
           <input type="button" value="Check" onClick="checkAnswers()">
         </form>
+        <img src="/assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" width="300">
+      </div>
       </div>
     </div>
     <!-- The end of the content div is here -->

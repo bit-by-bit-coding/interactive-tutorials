@@ -188,10 +188,18 @@ button:active {
 .big-code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1.25em;
-  color: #2F2D2C;
+  color: #153570;
 }
 
 .big-code .comment {
+  color: #2F2D2C;
+}
+
+.big-code .values {
+  color: #FF8900;
+}
+
+.big-code .identifier {
   color: #38BFE7;
 }
 
