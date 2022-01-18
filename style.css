@@ -272,6 +272,11 @@ footer .footer-info {
   padding: 1em;
 }
 
+@font-face {
+  font-family: "NunitoBold";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+}
+
 /* The page-specific styling */
 div.grid-flex {
   display: -webkit-box;
