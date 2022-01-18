@@ -5,62 +5,57 @@
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
-
-.section {
-  position: relative;
-}
-
 .two-col {
-  display: flex;
-  .col-box {
-    width: 50%;
-  }
-  .col-box:last-child {
-    margin-left: 30px;
-  }
+    display: flex;
+    .col-box {
+        width: 50%;
+    }
+    .col-box:last-child {
+        margin-left: 30px;
+    }
 }
 
 .code {
-  font-family: monospace;
-  font-size: 24px;
-  &.indent {
-    margin-left: 30px;
-  }
-  .blue {
-    color: #50c6e9ff;
-  }
-  .orange {
-    color: #ffb560ff;
-  }
+    font-family: monospace;
+    font-size: 24px;
+    &.indent {
+        margin-left: 30px;
+    }
+    .blue {
+        color: #50c6e9ff;
+    }
+    .orange {
+        color: #ffb560ff;
+    }
 }
 
 .bit-by-bot {
-  height: 150px;
-  width: auto;
-  position: absolute;
-  right: 80px;
-  bottom: 20px;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    right: 200px;
+    top: 350px;
 }
 
 #example-div {
-  background-color: #1bb1de;
-  width: 20em;
-  height: 20em;
-  margin: 20px auto 0;
+    background-color: #1bb1de;
+    width: 20em;
+    height: 20em;
+    margin: 20px auto 0;
 }
 
 .scroll {
-  overflow: scroll;
+    overflow: scroll;
 }
 
 .hidden {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .auto {
-  overflow: auto;
+    overflow: auto;
 }
 
 .visible {
-  overflow: visible;
+    overflow: visible;
 }

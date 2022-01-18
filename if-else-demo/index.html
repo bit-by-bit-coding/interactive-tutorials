@@ -23,263 +23,237 @@
     ></script>
   </head>
   <body>
-    <div id="page-container">
-      <div id="content-wrap">
-        <div id="header" class="if-else flex-container-header">
-          <div class="flex-item-header flex-container-left">
-            <div class="flex-item-left">
-              <a href="/main-demos/" style="margin-right: 1em">
-                <button id="back-button" title="Back to all demos">
-                  <i class="fas fa-arrow-left"></i>
-                </button>
-              </a>
-            </div>
-            <!-- TODO: Change the name of the demo here -->
-            <h1 class="flex-item-left">IF / ELSE DEMO</h1>
+    <div id="header" class="if-else flex-container-header">
+      <div class="flex-item-header flex-container-left">
+        <div class="flex-item-left">
+          <a href="/main-demos/" style="margin-right: 1em">
+            <button id="back-button" title="Back to all demos">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+          </a>
+        </div>
+        <!-- TODO: Change the name of the demo here -->
+        <h1 class="flex-item-left">IF / ELSE DEMO</h1>
+      </div>
+      <div class="flex-item-header">
+        <img
+          id="bxb-logo"
+          src="https://bitbybitcoding.org/imgs/Logo.svg"
+          alt="Logo"
+        />
+      </div>
+    </div>
+    <div class="content">
+      <!-- TODO: Fill this content div with all the content of the demo -->
+      <div class="if-else__section section">
+        <div class="if-else__definition">
+          <h2>What is an If / Else Statement?</h2>
+          <p>
+            It allows you to create a condition based on some information. If
+            that information is TRUE, it will run something. If that information
+            is FALSE it will run something else.
+          </p>
+        </div>
+        <h2>Example</h2>
+        <div class="if-else__example">
+          <h4 class="if-else__code">
+            if (<span class="if-else__code--orange">true</span>)
+            <span class="if-else__code--darkblue">{</span>
+            <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >if condition is true, this alert will run</span
+            >");
+            <br />
+            <span class="if-else__code--darkblue">}</span> else
+            <span class="if-else__code--darkblue">{</span>
+            <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >if condition is anything else but true, this alert will run</span
+            >
+            "); <br />
+            <span class="if-else__code--darkblue">}</span>
+          </h4>
+          <img
+            class="if-else__happy-bot"
+            src="../assets/bit-by-bot-images/two-hands-happy-bot.svg"
+            alt="Bit by Bot Happy"
+          />
+        </div>
+      </div>
+      <div class="if-else__section section">
+        <h2>Guess My Number Game</h2>
+        <p>
+          Let's create a game that guesses a number between 1 and 10 using the
+          if / else statement.
+        </p>
+        <div class="if-else__code-container">
+          <div class="if-else__content">
+            <p class="if-else--small">*choose a number between 1-10</p>
+            <h4 class="if-else__code">
+              let <span class="if-else__code--orange">correctNumber</span> =
+              <input
+                class="if-else__number"
+                id="correctNumber"
+                name="correctNumber"
+                type="number"
+              />;
+              <br />
+              let <span class="if-else__code--orange">guessedNumber</span> =
+              <input
+                class="if-else__number"
+                id="guessedNumber"
+                name="guessedNumber"
+                type="number"
+              />;
+            </h4>
+            <button id="runGuessedNumber">Run Code</button>
           </div>
-          <div class="flex-item-header">
+
+          <h4 class="if-else__code if-else--padding-left">
+            if (<span class="if-else__code--orange">correctNumber</span> ===
+            <span class="if-else__code--orange">guessedNumber</span>)
+            <span class="if-else__code--darkblue">{</span> <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >Congrats! You guessed the right number!</span
+            >"); <br />
+            <span class="if-else__code--darkblue">}</span> else
+            <span class="if-else__code--darkblue">{</span> <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >Nice try. Guess again.</span
+            >");
+            <br />
+            <span class="if-else__code--darkblue">}</span>
+          </h4>
+        </div>
+      </div>
+      <div class="if-else__section section">
+        <h2>What if we need more than 2 conditions?</h2>
+        <p>
+          Sometimes you want your code to have more than a true and false
+          condition. So then what? If you need more than 2 conditions, you can
+          add an <span class="if-else--strong">else if</span> statement.
+        </p>
+        <h2>Example</h2>
+        <div class="if-else__example">
+          <img
+            src="../assets/bit-by-bot-images/two-hands-party-bot.svg"
+            alt="Bit by Bot Party"
+            class="if-else__party-bot"
+          />
+          <h4 class="if-else__code">
+            if (<span class="if-else__code--orange">favoriteColor</span> ===
+            <span class="if-else__code--orange">"blue"</span>)
+            <span class="if-else__code--darkblue">{</span> <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >Your favorite color is blue.</span
+            >"); <br />
+            <span class="if-else__code--darkblue">}</span> else if (<span
+              class="if-else__code--orange"
+              >favoriteColor</span
+            >
+            === <span class="if-else__code--orange">"purple"</span>)
+            <span class="if-else__code--darkblue">{</span> <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >Your favorite color is purple.</span
+            >"); <br />
+            <span class="if-else__code--darkblue">}</span> else
+            <span class="if-else__code--darkblue">{</span> <br />
+            <span class="if-else--tab"></span>alert("<span
+              class="if-else__code--orange"
+              >Your favorite color is something other than blue or purple.</span
+            >");
+            <br />
+            <span class="if-else__code--darkblue">}</span>
+          </h4>
+        </div>
+      </div>
+      <div class="flex-box">
+        <div class="if-else__simon-says flex-col section">
+          <h2>Simon Says Game</h2>
+          <p>
+            For this game, we're going to animate the snowman bot depending on
+            the information we give it.
+          </p>
+          <div class="if-else__example if-else__example--column">
+            <p class="if-else--small">
+              *choices: spin, disappear, slideRight, slideLeft
+            </p>
+            <h4 class="if-else__code">
+              let <span class="if-else__code--orange">animation</span> =
+              <input type="text" class="if-else__animation" id="animation" />
+            </h4>
+            <h4 class="if-else__code">
+              if (<span class="if-else__code--orange">animation</span> ===
+              <span class="if-else__code--orange">"spin"</span>)
+              <span class="if-else__code--darkblue">{</span> <br />
+              <span class="if-else__code--pink"
+                ><span class="if-else--tab"></span>spin();</span
+              >
+              <br />
+              <span class="if-else__code--darkblue">}</span> else if (<span
+                class="if-else__code--orange"
+                >animation</span
+              >
+              === <span class="if-else__code--orange">"disappear"</span>)
+              <span class="if-else__code--darkblue">{</span>
+              <br />
+              <span class="if-else__code--pink"
+                ><span class="if-else--tab"></span>disappear();</span
+              >
+              <br />
+              <span class="if-else__code--darkblue">}</span> else if (<span
+                class="if-else__code--orange"
+                >animation</span
+              >
+              === <span class="if-else__code--orange">"slideRight"</span>)
+              <span class="if-else__code--darkblue">{</span>
+              <br />
+              <span class="if-else__code--pink"
+                ><span class="if-else--tab"></span>slideRight();</span
+              >
+              <br />
+              <span class="if-else__code--darkblue">}</span> else if (<span
+                class="if-else__code--orange"
+                >animation</span
+              >
+              === <span class="if-else__code--orange">"slideLeft"</span>)
+              <span class="if-else__code--darkblue">{</span>
+              <br />
+              <span class="if-else__code--pink"
+                ><span class="if-else--tab"></span>slideLeft();</span
+              >
+              <br />
+              <span class="if-else__code--darkblue">}</span>
+              else <span class="if-else__code--darkblue">{</span> <br />
+              <span class="if-else--tab"></span>alert("<span
+                class="if-else__code--orange"
+                >Not a valid choice.</span
+              >"); <br />
+              <span class="if-else__code--darkblue">}</span>
+            </h4>
+            <button class="if-else__simon-btn" id="runSimonSays">
+              Run Code
+            </button>
+          </div>
+        </div>
+        <div class="if-else__snowman-container flex-col section">
+          <div class="" id="snowmanAnimation">
             <img
-              id="bxb-logo"
-              src="https://bitbybitcoding.org/imgs/Logo.svg"
-              alt="Logo"
+              src="../assets/bit-by-bot-images/snowman-bot.svg"
+              alt="Bit by Bot Snowman"
+              class="if-else__snowman-bot"
             />
           </div>
         </div>
-        <div class="content">
-          <!-- TODO: Fill this content div with all the content of the demo -->
-          <div class="if-else__section section">
-            <div class="if-else__definition">
-              <h2>What is an If / Else Statement?</h2>
-              <p>
-                It allows you to create a condition based on some information. If
-                that information is TRUE, it will run something. If that information
-                is FALSE it will run something else.
-              </p>
-            </div>
-            <h2>Example</h2>
-            <div class="if-else__example">
-              <h4 class="if-else__code">
-                if (<span class="if-else__code--orange">true</span>)
-                <span class="if-else__code--darkblue">{</span>
-                <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >if condition is true, this alert will run</span
-                >");
-                <br />
-                <span class="if-else__code--darkblue">}</span> else
-                <span class="if-else__code--darkblue">{</span>
-                <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >if condition is anything else but true, this alert will run</span
-                >
-                "); <br />
-                <span class="if-else__code--darkblue">}</span>
-              </h4>
-              <img
-                class="if-else__happy-bot"
-                src="../assets/bit-by-bot-images/two-hands-happy-bot.svg"
-                alt="Bit by Bot Happy"
-              />
-            </div>
-          </div>
-          <div class="if-else__section section">
-            <h2>Guess My Number Game</h2>
-            <p>
-              Let's create a game that guesses a number between 1 and 10 using the
-              if / else statement.
-            </p>
-            <div class="if-else__code-container">
-              <div class="if-else__content">
-                <p class="if-else--small">*choose a number between 1-10</p>
-                <h4 class="if-else__code">
-                  let <span class="if-else__code--orange">correctNumber</span> =
-                  <input
-                    class="if-else__number"
-                    id="correctNumber"
-                    name="correctNumber"
-                    type="number"
-                  />;
-                  <br />
-                  let <span class="if-else__code--orange">guessedNumber</span> =
-                  <input
-                    class="if-else__number"
-                    id="guessedNumber"
-                    name="guessedNumber"
-                    type="number"
-                  />;
-                </h4>
-                <button id="runGuessedNumber">Run Code</button>
-              </div>
-    
-              <h4 class="if-else__code if-else--padding-left">
-                if (<span class="if-else__code--orange">correctNumber</span> ===
-                <span class="if-else__code--orange">guessedNumber</span>)
-                <span class="if-else__code--darkblue">{</span> <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >Congrats! You guessed the right number!</span
-                >"); <br />
-                <span class="if-else__code--darkblue">}</span> else
-                <span class="if-else__code--darkblue">{</span> <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >Nice try. Guess again.</span
-                >");
-                <br />
-                <span class="if-else__code--darkblue">}</span>
-              </h4>
-            </div>
-          </div>
-          <div class="if-else__section section">
-            <h2>What if we need more than 2 conditions?</h2>
-            <p>
-              Sometimes you want your code to have more than a true and false
-              condition. So then what? If you need more than 2 conditions, you can
-              add an <span class="if-else--strong">else if</span> statement.
-            </p>
-            <h2>Example</h2>
-            <div class="if-else__example">
-              <img
-                src="../assets/bit-by-bot-images/two-hands-party-bot.svg"
-                alt="Bit by Bot Party"
-                class="if-else__party-bot"
-              />
-              <h4 class="if-else__code">
-                if (<span class="if-else__code--orange">favoriteColor</span> ===
-                <span class="if-else__code--orange">"blue"</span>)
-                <span class="if-else__code--darkblue">{</span> <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >Your favorite color is blue.</span
-                >"); <br />
-                <span class="if-else__code--darkblue">}</span> else if (<span
-                  class="if-else__code--orange"
-                  >favoriteColor</span
-                >
-                === <span class="if-else__code--orange">"purple"</span>)
-                <span class="if-else__code--darkblue">{</span> <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >Your favorite color is purple.</span
-                >"); <br />
-                <span class="if-else__code--darkblue">}</span> else
-                <span class="if-else__code--darkblue">{</span> <br />
-                <span class="if-else--tab"></span>alert("<span
-                  class="if-else__code--orange"
-                  >Your favorite color is something other than blue or purple.</span
-                >");
-                <br />
-                <span class="if-else__code--darkblue">}</span>
-              </h4>
-            </div>
-          </div>
-          <div class="flex-box">
-            <div class="if-else__simon-says flex-col section">
-              <h2>Simon Says Game</h2>
-              <p>
-                For this game, we're going to animate the snowman bot depending on
-                the information we give it.
-              </p>
-              <div class="if-else__example if-else__example--column">
-                <p class="if-else--small">
-                  *choices: spin, disappear, slideRight, slideLeft
-                </p>
-                <h4 class="if-else__code">
-                  let <span class="if-else__code--orange">animation</span> =
-                  <input type="text" class="if-else__animation" id="animation" />
-                </h4>
-                <h4 class="if-else__code">
-                  if (<span class="if-else__code--orange">animation</span> ===
-                  <span class="if-else__code--orange">"spin"</span>)
-                  <span class="if-else__code--darkblue">{</span> <br />
-                  <span class="if-else__code--pink"
-                    ><span class="if-else--tab"></span>spin();</span
-                  >
-                  <br />
-                  <span class="if-else__code--darkblue">}</span> else if (<span
-                    class="if-else__code--orange"
-                    >animation</span
-                  >
-                  === <span class="if-else__code--orange">"disappear"</span>)
-                  <span class="if-else__code--darkblue">{</span>
-                  <br />
-                  <span class="if-else__code--pink"
-                    ><span class="if-else--tab"></span>disappear();</span
-                  >
-                  <br />
-                  <span class="if-else__code--darkblue">}</span> else if (<span
-                    class="if-else__code--orange"
-                    >animation</span
-                  >
-                  === <span class="if-else__code--orange">"slideRight"</span>)
-                  <span class="if-else__code--darkblue">{</span>
-                  <br />
-                  <span class="if-else__code--pink"
-                    ><span class="if-else--tab"></span>slideRight();</span
-                  >
-                  <br />
-                  <span class="if-else__code--darkblue">}</span> else if (<span
-                    class="if-else__code--orange"
-                    >animation</span
-                  >
-                  === <span class="if-else__code--orange">"slideLeft"</span>)
-                  <span class="if-else__code--darkblue">{</span>
-                  <br />
-                  <span class="if-else__code--pink"
-                    ><span class="if-else--tab"></span>slideLeft();</span
-                  >
-                  <br />
-                  <span class="if-else__code--darkblue">}</span>
-                  else <span class="if-else__code--darkblue">{</span> <br />
-                  <span class="if-else--tab"></span>alert("<span
-                    class="if-else__code--orange"
-                    >Not a valid choice.</span
-                  >"); <br />
-                  <span class="if-else__code--darkblue">}</span>
-                </h4>
-                <button class="if-else__simon-btn" id="runSimonSays">
-                  Run Code
-                </button>
-              </div>
-            </div>
-            <div class="if-else__snowman-container flex-col section">
-              <div class="" id="snowmanAnimation">
-                <img
-                  src="../assets/bit-by-bot-images/snowman-bot.svg"
-                  alt="Bit by Bot Snowman"
-                  class="if-else__snowman-bot"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- The end of the content div is here -->
-        </div>
       </div>
-  
-      <footer>
-        <div class="footer-home">
-          <h4>Visit our main page</h4>
-          <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
-        </div>
-        <div class="footer-socials">
-          <h4>Follow us</h4>
-          <ul class="socials">
-            <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-        <div class="footer-info">
-          <p>Bit by Bit Coding is a registered nonprofit</p>
-          <p>EIN 84-5025902</p>
-          <p>© 2021 Bit by Bit Coding</p>
-        </div>
-      </footer>
-  
+      <!-- The end of the content div is here -->
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

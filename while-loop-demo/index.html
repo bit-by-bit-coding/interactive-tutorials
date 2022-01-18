@@ -10,179 +10,153 @@
 
 </head>
 <body>
-  <div id="page-container">
-    <div id="content-wrap">
-      <div id="header" class="flex-container-header">
-        <div class="flex-item-header flex-container-left">
-          <div class="flex-item-left">
-            <a href="/main-demos/" style="margin-right: 1em;">
-              <button id="back-button" title="Back to all demos">
-                <i class="fas fa-arrow-left"></i>
-              </button>
-            </a>
-          </div>
-          <h1 class="flex-item-left">WHILE LOOP DEMO</h1>
-        </div>
-        <div class="flex-item-header">
-          <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
-        </div>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/main-demos/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
       </div>
-      <div class="content">
-        <div class="section">
-          <p>
-            <h1>While Loops</h1>
-            Loops are a way to iterate a piece of code for as long as you want it to be run. <span class="bold">While loops</span> are a type of loop that run code as long as the given condition is <b>true</b>.
-            These loops are useful when you want to run code for an <span class="bold">unknown</span> number of times, until a condition is no longer true, or while a condition is being met.
-            <br><br>
-            Some uses of while loops include:
-            <ul>
-              <li>Running code <span class="bold">while</span> a button is pressed.</li>
-              <li>Showing an image <span class="bold">while</span> it is being hovered over.</li>
-              <li>Moving a character <span class="bold">while</span> a button is pressed.</li>
-              <li>Running code <span class="bold">while</span> a condition is not met.</li>
-            </ul>
-          </p>
-        </div>
-        <div class="flex-box">
-          <div class="flex-col section">
-            <p>
-              <h2>Example 1</h2>
-              Hold down the button to start the timer, and let go to stop the timer. The counter goes up only <span class="bold">while</span> the button is pressed. Once you let go of the button, the condition is no longer met, and the counter stops counting. Use the slider to change the interval between increments of the counter.
-              <br><br>
-              <div class="center">
-                <button onmousedown="e1start()" onmouseup="e1stop()" >Hold me!</button><br><br>
-                Count Gap: <span id="e1SliderAmount"></span><input type="range" min="0.1" step="0.1" max = "10" value = "1" class="slider" id ="e1TimerValue">
-              </div>
-            </p>
-            <h3 id="e1" class="e1">
-              Counter: 0
-            </h3>
+      <h1 class="flex-item-left">WHILE LOOP DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <p>
+        <h1>While Loops</h1>
+        Loops are a way to iterate a piece of code for as long as you want it to be run. <span class="bold">While loops</span> are a type of loop that run code as long as the given condition is <b>true</b>.
+        These loops are useful when you want to run code for an <span class="bold">unknown</span> number of times, until a condition is no longer true, or while a condition is being met.
+        <br><br>
+        Some uses of while loops include:
+        <ul>
+          <li>Running code <span class="bold">while</span> a button is pressed.</li>
+          <li>Showing an image <span class="bold">while</span> it is being hovered over.</li>
+          <li>Moving a character <span class="bold">while</span> a button is pressed.</li>
+          <li>Running code <span class="bold">while</span> a condition is not met.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 1</h2>
+          Hold down the button to start the timer, and let go to stop the timer. The counter goes up only <span class="bold">while</span> the button is pressed. Once you let go of the button, the condition is no longer met, and the counter stops counting. Use the slider to change the interval between increments of the counter.
+          <br><br>
+          <div class="center">
+            <button onmousedown="e1start()" onmouseup="e1stop()" >Hold me!</button><br><br>
+            Count Gap: <span id="e1SliderAmount"></span><input type="range" min="0.1" step="0.1" max = "10" value = "1" class="slider" id ="e1TimerValue">
           </div>
-          <div class="flex-col section">
-            <p class="code">
-              <span class="comment">//Brings the tag with the id Counter into the JavaScript.</span><br>
-              let countValue = document.getElementById("Counter"); <br>
-              <span class="comment">//Sets initial count to 0.</span><br>
-              let count = 0; <br>
-              <br>
-              <span class="comment">//Creates a function that will run when the button is pressed.</span><br>
-              function startCount() { <br>
-                <br>
-                &emsp;<span class="comment">//As long as the button is held down, the code will run.</span><br>
-                &emsp;while (buttonPressed) { <br>
-                  &emsp;&emsp;countValue.innerHTML = Counter + count; <br>
-                  &emsp;&emsp;count++; <br>
-                  &emsp;} <br>
-              } <br>
-              <span style="color:black; font-size:smaller;">*Simplified version of code</span>
-            </p>
-          </div>
-        </div>
-        <br>
-        <div class="flex-box">
-          <div class="flex-col section">
-            <p>
-              <h2>Example 2</h2>
-              Hover over the space below to view the BxB bots. The images will only show up <span class="bold">while</span> the mouse is hovering over them. Once you move your mouse off the images, they will no longer be visible.<br><br>
-              <img src="../assets/bit-by-bot-images/waving-happy-bot.svg" class="bot">
-              <img src="../assets/bit-by-bot-images/two-hands-party-bot.svg" class="bot">
-              <img src="../assets/bit-by-bot-images/snowman-bot.svg" class="bot">
-              <img src="../assets/bit-by-bot-images/pumpkin-yellow-bot.svg" class="bot">
-              <img src="../assets/bit-by-bot-images/suspicious-closed-bot.svg" class="bot">
-              <img src="../assets/bit-by-bot-images/computer-open-bot.svg" class="bot" style="width:150px;">
-          </div>
-          <div class="flex-col section">
-            <p class="code">
-              <span class="comment">//Finds the place where the BxB bot is located.</span><br>
-              let botImage = document.getElementById("bot"); <br>
-              <span class="comment">//Sets initial opacity to 0, making it invisible.</span> <br>
-              botImage.style.opacity = "0"; 
-              <br><br>
-              <span class="comment">//This function is run only while the image is being hovered over.</span><br>
-              function changeVisibility() { <br>
-                <br>
-                &emsp;<span class="comment">//While the mouse is hovering over the image, the opacity is changed to 1.</span><br>
-                &emsp;while (botImage.hovered === true) { <br>
-                  &emsp;&emsp;botImage.style.opacity = "1"; <br>
-                  &emsp;} <br>
-              } <br>
-              <span style="color:black; font-size:smaller;">*Simplified version of code</span>
-            </p>
-          </div>
-        </div>
-        <div class="section">
-          <p>
-            <h1>Do While Loops</h1>
-            Do while loops are a type of while loops. They have the same function as while loops, but they run <span class="bold">one time</span> before even checking the condition of the while loop. In other words, 
-            it runs the code one time and then checks to see if it should keep running.
-            <br><br>
-            Some uses of do while loops include:
-            <ul>
-              <li>Asking for a password and rerunning until it is correct.</li>
-              <li>Deciding if the code should be rerun depending on input from do while loop.</li>
-              <li>If a certain piece of code needs to be run at least once, and more times depending on the condition.</li>
-            </ul>
-          </p>
-        </div>
-        <div class="flex-box">
-          <div class="flex-col section">
-            <p>
-              <h2>Example 3</h2>
-              Try out an application of do while loops below. The purpose of this program is to keep asking for the password until you get it right. It will run the code once to get your first attempt and keep running until you get it right.<br><span style="font-size:smaller;">Hint: The password is "password123".</span><br><br>
-              <div class="center">
-              <button onmousedown="e3()">Try it!</button>
-            </div>
-            </div>
-          <div class="flex-col section">
-            <p class="code">
-              <span class="comment">//Sets the variable pass equal to an empty string.</span><br>
-              let pass = ""; <br>
-              <br><br>
-              <span class="comment">//Starts the function askPassword.</span><br>
-              function askPassword() { <br>
-                <br>
-                <span class="comment">//Begins the do loop and asks for the user to type the password.</span><br>
-                &emsp;do { <br>
-                  &emsp;&emsp;pass = prompt("Please enter the password"); <br><br>
-                  <span class="comment">//Informs the user if the password is incorrect.</span> <br>
-                  &emsp;&emsp;if (pass!=="password123"){ <br>
-                  &emsp;&emsp;&emsp; alert("Incorrect password"); <br> &emsp;&emsp;}<br>
-                &emsp;} <br> <br>
-                <span class="comment">//Will continue the do loop as long as the variable pass does not equal password123.</span> <br>
-    
-                &emsp;while(pass!=="password123"); <br><br>
-                <span class="comment">//Lets the user know the correct password was entered</span> <br>
-                &emsp;alert("Correct password entered"); <br>
-              } <br>
-              <span style="color:black; font-size:smaller;">*Simplified version of code</span>
-            </p>
-          </div>
-        </div>
+        </p>
+        <h3 id="e1" class="e1">
+          Counter: 0
+        </h3>
+      </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//Brings the tag with the id Counter into the JavaScript.</span><br>
+          let countValue = document.getElementById("Counter"); <br>
+          <span class="comment">//Sets initial count to 0.</span><br>
+          let count = 0; <br>
+          <br>
+          <span class="comment">//Creates a function that will run when the button is pressed.</span><br>
+          function startCount() { <br>
+            <br>
+            &emsp;<span class="comment">//As long as the button is held down, the code will run.</span><br>
+            &emsp;while (buttonPressed) { <br>
+              &emsp;&emsp;countValue.innerHTML = Counter + count; <br>
+              &emsp;&emsp;count++; <br>
+              &emsp;} <br>
+          } <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
       </div>
     </div>
-
-    <footer>
-      <div class="footer-home">
-        <h4>Visit our main page</h4>
-        <a href="https://bitbybitcoding.org" target="_blank">https://bitbybitcoding.org</a>
+    <br>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 2</h2>
+          Hover over the space below to view the BxB bots. The images will only show up <span class="bold">while</span> the mouse is hovering over them. Once you move your mouse off the images, they will no longer be visible.<br><br>
+          <img src="../assets/bit-by-bot-images/waving-happy-bot.svg" class="bot">
+          <img src="../assets/bit-by-bot-images/two-hands-party-bot.svg" class="bot">
+          <img src="../assets/bit-by-bot-images/snowman-bot.svg" class="bot">
+          <img src="../assets/bit-by-bot-images/pumpkin-yellow-bot.svg" class="bot">
+          <img src="../assets/bit-by-bot-images/suspicious-closed-bot.svg" class="bot">
+          <img src="../assets/bit-by-bot-images/computer-open-bot.svg" class="bot" style="width:150px;">
       </div>
-      <div class="footer-socials">
-        <h4>Follow us</h4>
-        <ul class="socials">
-          <li><a href="https://www.facebook.com/BitByBitCoding" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/_bitxbit_" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/bit-by-bit-coding" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//Finds the place where the BxB bot is located.</span><br>
+          let botImage = document.getElementById("bot"); <br>
+          <span class="comment">//Sets initial opacity to 0, making it invisible.</span> <br>
+          botImage.style.opacity = "0"; 
+          <br><br>
+          <span class="comment">//This function is run only while the image is being hovered over.</span><br>
+          function changeVisibility() { <br>
+            <br>
+            &emsp;<span class="comment">//While the mouse is hovering over the image, the opacity is changed to 1.</span><br>
+            &emsp;while (botImage.hovered === true) { <br>
+              &emsp;&emsp;botImage.style.opacity = "1"; <br>
+              &emsp;} <br>
+          } <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
+    <div class="section">
+      <p>
+        <h1>Do While Loops</h1>
+        Do while loops are a type of while loops. They have the same function as while loops, but they run <span class="bold">one time</span> before even checking the condition of the while loop. In other words, 
+        it runs the code one time and then checks to see if it should keep running.
+        <br><br>
+        Some uses of do while loops include:
+        <ul>
+          <li>Asking for a password and rerunning until it is correct.</li>
+          <li>Deciding if the code should be rerun depending on input from do while loop.</li>
+          <li>If a certain piece of code needs to be run at least once, and more times depending on the condition.</li>
         </ul>
-      </div>
-      <div class="footer-info">
-        <p>Bit by Bit Coding is a registered nonprofit</p>
-        <p>EIN 84-5025902</p>
-        <p>© 2021 Bit by Bit Coding</p>
-      </div>
-    </footer>
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 3</h2>
+          Try out an application of do while loops below. The purpose of this program is to keep asking for the password until you get it right. It will run the code once to get your first attempt and keep running until you get it right.<br><span style="font-size:smaller;">Hint: The password is "password123".</span><br><br>
+          <div class="center">
+          <button onmousedown="e3()">Try it!</button>
+        </div>
+        </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//Sets the variable pass equal to an empty string.</span><br>
+          let pass = ""; <br>
+          <br><br>
+          <span class="comment">//Starts the function askPassword.</span><br>
+          function askPassword() { <br>
+            <br>
+            <span class="comment">//Begins the do loop and asks for the user to type the password.</span><br>
+            &emsp;do { <br>
+              &emsp;&emsp;pass = prompt("Please enter the password"); <br><br>
+              <span class="comment">//Informs the user if the password is incorrect.</span> <br>
+              &emsp;&emsp;if (pass!=="password123"){ <br>
+              &emsp;&emsp;&emsp; alert("Incorrect password"); <br> &emsp;&emsp;}<br>
+            &emsp;} <br> <br>
+            <span class="comment">//Will continue the do loop as long as the variable pass does not equal password123.</span> <br>
 
-  </div>
-
+            &emsp;while(pass!=="password123"); <br><br>
+            <span class="comment">//Lets the user know the correct password was entered</span> <br>
+            &emsp;alert("Correct password entered"); <br>
+          } <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
     <script src="script.js"></script>
+  </div>
 </body>
 </html>

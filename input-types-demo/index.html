@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Types Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/prism.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">Input Types Demos</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div style="display: flex;">
+        <div style="margin-right: 3em;">
+          <p>
+            <h2>Forms</h2>
+              <ul>
+                <li>Forms contains information passes from the user to a server.</li>
+                <li>We use the tag <code class="codeHighlight">&lt;form&gt;</code> to define the form.</li>
+              </ul>
+          </p>
+        </div>
+        <div>
+          <p>
+            <h2>Input Types</h2>
+            <ul>
+              <li>We use the tag <code class="codeHighlight">&lt;input&gt;</code> to define several input data alternatives. </li>
+              <li><code class="codeHighlight">&lt;input&gt;</code> appears inside of the <code class="codeHighlight">&lt;form&gt;</code> tag.</li>
+            </ul>
+          </p>
+        </div>
+        <div style="margin-left: 3em;">
+          <img style="flex: 0; height: 15em;" src="../assets/bit-by-bot-images/computer-open-bot.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>General Format</h2>
+      <div class="displayCode">
+        <div class="comment">/* The HTML element <code class="codeNavy">&lt;form&gt;</code> creates a form to collect user input. */</div><br>
+        <div class="comment">/* You can also add an attribute <code class="codeNavy">onsubmit</code> to execute a JavaScript when the form is submitted. */</div><br>
+        <div class="codeOrange"><code>&lt;form&gt;</code></div><br>
+        <br>
+        <div class="comment indentation">/* The HTML element <code class="codeNavy">&lt;label&gt;</code> is used to define labels for input element. */</div><br>
+        <div class="comment indentation">/* The <code class="codeNavy">for</code> attribute should be equal to the <code class="codeNavy">id</code> attribute in <code class="codeNavy">&lt;input&gt;</code> element to bind them together. */</div><br>
+        <div class="codeOrange indentation"><code>&lt;label for="name"&gt;</code>Enter your name:<code class="codeOrange">&lt;/label&gt;</code></div><br>
+        <br>
+        <div class="comment indentation">/* The HTML element <code class="codeNavy">&lt;input&gt;</code> defines input types. */</div><br>
+        <div class="comment indentation">/* Notice that the <code class="codeNavy">id</code> attribute in <code class="codeNavy">&lt;input&gt;</code> element is equal to the <code class="codeNavy">for</code> attribute in <code class="codeNavy">&lt;label&gt;</code> element. */</div><br>
+        <div class="comment indentation">/* Each input field must have a <code class="codeNavy">name</code> attribute to be submitted. */</div><br>
+        <div class="codeOrange indentation"><code>&lt;input type="text" id="name" name="name"&gt;</code></div><br>
+        <br>
+        <div class="comment indentation">/* The HTML element <code class="codeNavy">&lt;input type="submit"&gt;</code> defines a submit button. */</div><br>
+        <div class="comment indentation">/* The <code class="codeNavy">value</code> attribute specifies the default value of <code class="codeNavy">&lt;input&gt;</code> element. */</div><br>
+        <div class="codeOrange indentation"><code>&lt;input type="submit" value="Submit!"&gt;</code></div><br>
+        <br>
+        <div class="codeOrange"><code>&lt;/form&gt;</code></div><br>
+      </div>
+    </div>
+
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Try Different Input Types</h2> 
+          <button type="button" class="input-button" id="text-input" onClick="reply_click(this.id)">Text Input</button>
+          <button type="button" class="input-button" id="radio-input" onClick="reply_click(this.id)">Radio Input</button>
+          <button type="button" class="input-button" id="checkbox-input" onClick="reply_click(this.id)">Checkbox Input</button>
+          <button type="button" class="input-button" id="number-input" onClick="reply_click(this.id)">Number Input</button>
+          <button type="button" class="input-button" id="color-input" onClick="reply_click(this.id)">Color Input</button>
+          <button type="button" class="input-button" id="date-input" onClick="reply_click(this.id)">Date Input</button>
+          <button type="button" class="input-button" id="email-input" onClick="reply_click(this.id)">Email Input</button>
+          <button type="button" class="input-button" id="range-input" onClick="reply_click(this.id)">Range Input</button>
+
+          <div id="definition">
+          </div>
+
+          <h2>Display of Input Type</h2>
+          
+          <div class="section">
+            <iframe id="display-input-frame" class="input-frame" src="about:blank">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      <div class="editor-section flex-col section">
+        <div class="editor lang-html" id="input-editor"></div> 
+        <div class="editor-button-overlay">
+          <button id="reset-button" title="Reset the text code">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/prism.js"></script>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
