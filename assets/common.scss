@@ -151,83 +151,83 @@ button {
   padding: 0;
 }
 
-/* Footer */
-footer {
-  background: #153570;
-  color: #fff;
-  width: 100vw;
-  padding: 30px 0;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+// /* Footer */
+// footer {
+//   background: #153570;
+//   color: #fff;
+//   width: 100vw;
+//   padding: 30px 0;
+//   position: absolute;
+//   bottom: 0;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
 
-  a {
-    color: #fff;
-  }
+//   a {
+//     color: #fff;
+//   }
 
-  h4 {
-    text-align: center;
-    font-weight: 900; // why not working?
-  }
+//   h4 {
+//     text-align: center;
+//     font-weight: 900; // why not working?
+//   }
 
-  .footer-home {
-    width: 315px;
-    h4 {
-      text-align: left;
-    }
-  }
+//   .footer-home {
+//     width: 315px;
+//     h4 {
+//       text-align: left;
+//     }
+//   }
 
-  .footer-socials {
-    align-self: center;
+//   .footer-socials {
+//     align-self: center;
 
-    h4 {
-      text-align: center;
-    }
+//     h4 {
+//       text-align: center;
+//     }
 
-    .socials {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      margin: 1rem 0 3rem 0;
+//     .socials {
+//       list-style: none;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       padding: 0;
+//       margin: 1rem 0 3rem 0;
 
-      li {
-        display: inline-block;
-        width: 1.5em;
-        height: 1.5em;
-        margin: 0 5px;
-        text-align: center;
-        line-height: 1.5em;
-        font-size: 1.8em;
-        border-radius: 50%;
-        background-color: #fff;
+//       li {
+//         display: inline-block;
+//         width: 1.5em;
+//         height: 1.5em;
+//         margin: 0 5px;
+//         text-align: center;
+//         line-height: 1.5em;
+//         font-size: 1.8em;
+//         border-radius: 50%;
+//         background-color: #fff;
 
-        a {
-          color: #153570;
-        }
+//         a {
+//           color: #153570;
+//         }
 
-        &:hover {
-          background-color: #153570;
+//         &:hover {
+//           background-color: #153570;
 
-          a {
-            color: #fff;
-          }
-        }
-      }
-    }
-  }
+//           a {
+//             color: #fff;
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .footer-info {
-    text-align: right;
-    line-height: 0.8em;
-    padding: 1em;
-  }
-}
+//   .footer-info {
+//     text-align: right;
+//     line-height: 0.8em;
+//     padding: 1em;
+//   }
+// }
 
 @font-face {
   font-family: "NunitoBold";
-  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap');
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
 }
