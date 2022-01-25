@@ -1,0 +1,39 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+.codeComment {
+    display: inline-block;
+    color: #2F2D2C;
+    font: 1em;
+}
+
+.codeHighlight {
+    display: inline-block;
+    color: #153570;
+    font: 1em;
+}
+
+.codeBlue {
+    display: inline-block;
+    color: #38Bfe7;
+    font: 1em;
+}
+
+.codeOrange {
+    display: inline-block;
+    color: #FF8900;
+    font: 1em;
+}
+
+.sampleCode {
+    display: inline-block;
+    color: #153570;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Source Code Pro", monospace;
+}
