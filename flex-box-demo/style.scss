@@ -1,0 +1,37 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: $primary-color;
+}
+
+th {
+    font-family: "NunitoBold";
+}
+
+.hidden {
+    display: none;
+}
+
+#right-flex-container{
+    display: flex;
+    background-color: $primary-color;
+}
+
+#right-flex-container > div {
+    background-color: #ffe266;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.leftCode {
+    font-family: 'Anonymous Pro', monospace;
+}

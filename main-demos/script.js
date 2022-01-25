@@ -47,6 +47,16 @@ let interactiveDemos = {
       title: "EVENTS DEMO",
       content: "What are events in JavaScript, and how can we use them?",
     },
+    flexBox: {
+      path: 'flex-box-demo',
+      title: 'FLEX-BOX DEMO',
+      content: "Learn about CSS flex-boxes!"
+    },
+    forLoopDemo: {
+      path: "for-loop-demo",
+      title: "FOR LOOP DEMO",
+      content: "Explore how the for loop works with a bot-a-pillar!",
+    },
     functionDemo: {
       path: "function-demo",
       title: "FUNCTION DEMO",
@@ -56,11 +66,6 @@ let interactiveDemos = {
       path: "if-else-demo",
       title: "IF ELSE DEMO",
       content: "What is an If / Else Statement",
-    },
-    loopDemo: {
-      path: "for-loop-demo",
-      title: "FOR LOOP DEMO",
-      content: "Explore how the for loop works with a bot-a-pillar!",
     },
     mathRandom: {
       path: "math-random-demo",

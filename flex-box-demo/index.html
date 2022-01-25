@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Flex-Box Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/main-demos/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">FLEX-BOX DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2>Flex-Box Containers</h2>
+        <p>
+          In order to make a flex-box container, simply set the "display" CSS property of a div tag to "flex". Here is a summary of the CSS properties associated with a flex-box container:
+        </p>
+        <table>
+          <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Values</th>
+          </tr>
+          <tr>
+            <td>flex-direction</td>
+            <td>Defines which direction the container stacks the items</td>
+            <td>column, column-reverse, row, row-reverse</td>
+          </tr>
+          <tr>
+            <td>flex-wrap</td>
+            <td>Defines whether the flex items should wrap</td>
+            <td>wrap, nowrap, wrap-reverse</td>
+          </tr>
+          <tr>
+            <td>justify-content</td>
+            <td>Aligns the items along the primary axis (aligns horizontally if flex-direction is row and aligns vertically if flex-direction is column)</td>
+            <td>center, flex-start, flex-end, space-around, space-between</td>
+          </tr>
+          <tr>
+            <td>align-items</td>
+            <td>Aligns items along the secondary axis (aligns vertically if flex-direction is row and aligns horizontally if flex-direction is column)</td>
+            <td>center, flex-start, flex-end, stretch, baseline</td>
+          </tr>
+          <tr>
+            <td>align-content</td>
+            <td>Used to align the flex lines (the rows/columns of flex items)</td>
+            <td>space-between, space-around, stretch, center, flex-start, flex-end</td>
+          </tr>
+        </table>
+      </div>
+      <div class="flex-col section">
+        <h2>Flex-Box Items</h2>
+        <p>
+          Any div tags inside the flex container become flex items. You can adjust the individual flex properties of each flex item using these properties:
+        </p>
+        <table>
+          <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Values</th>
+          </tr>
+          <tr>
+            <td>order</td>
+            <td>Specifies the order the flex items are shown in</td>
+            <td>Any integer</td>
+          </tr>
+          <tr>
+            <td>flex-grow</td>
+            <td>Specifies how fast a flex item will grow relative to the other flex items</td>
+            <td>Any positive number</td>
+          </tr>
+          <tr>
+            <td>flex-shrink</td>
+            <td>Specifies how fast a flex item will shrink relative to the other flex items</td>
+            <td>Any positive number</td>
+          </tr>
+          <tr>
+            <td>flex-basis</td>
+            <td>Specifies the initial length of a flex item</td>
+            <td>Any positive integer number of pixels</td>
+          </tr>
+          <tr>
+            <td>align-self</td>
+            <td>Specifies the alignment for a specific flex item. Overrides the default align-items property in the container</td>
+            <td>center, flex-start, flex-end, stretch, baseline</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Final Interactive</h2>
+      <p>Try manipulating the variables on the left, and see how it affects the result on the right!</p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section" style="max-width:30%;">
+        <h3>Number of items:</h3> <input id="num-items" type="number" value="3"> <br /> <br /> <button id="button-num-items">Change Number of Items (resets parameters)</button> <br /> <br /> <hr />
+        <h3>Flex-Box Container:</h3>
+        <p>
+          <span class='leftCode'>flex-direction:</span>
+          <select id="left-flex-direction">
+            <option></option>
+            <option value="column">column</option>
+            <option value="column-reverse">column-reverse</option>
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+          </select> <br />
+          <span class='leftCode'>flex-wrap:</span>
+          <select id="left-flex-wrap">
+            <option></option>
+            <option value="wrap">wrap</option>
+            <option value="nowrap">nowrap</option>
+            <option value="wrap-reverse">wrap-reverse</option>
+          </select> <br />
+          <span class='leftCode'>justify-content:</span>
+          <select id="left-justify-content">
+            <option></option>
+            <option value="center">center</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="space-around">space-around</option>
+            <option value="space-between">space-between</option>
+          </select> <br />
+          <span class='leftCode'>align-items:</span>
+          <select id="left-align-items">
+            <option></option>
+            <option value="center">center</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="stretch">stretch</option>
+            <option value="baseline">baseline</option>
+          </select> <br />
+          <span class='leftCode'>align-content:</span>
+          <select id="left-align-content">
+            <option></option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="stretch">stretch</option>
+            <option value="center">center</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+          </select> <br />
+        </p>
+        <button id="left-button-container">Update Flex-Box Container</button> <br /> <br /> <hr />
+        <h3>Flex-Box Items:</h3>
+        <div id="left-items">
+          <button onclick="showDiv(1)" id="button-item-1">Item 1</button> <br />
+          <div id="left-item-1" class="hidden">
+            <p><span class='leftCode'>order:</span> <input type="number" id="order-item-1"></p>
+            <p><span class='leftCode'>flex-grow:</span> <input type="number" id="flex-grow-item-1"></p>
+            <p><span class='leftCode'>flex-shrink:</span> <input type="number" id="flex-shrink-item-1"></p>
+            <p><span class='leftCode'>flex-basis:</span> <input type="number" id="flex-basis-item-1"> px</p>
+            <p><span class='leftCode'>align-self:</span> <select id="align-self-1">
+              <option></option>
+              <option value="center">center</option>
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+              <option value="stretch">stretch</option>
+              <option value="baseline">baseline</option>
+            </select></p>
+          </div> <br />
+          <button onclick="showDiv(2)" id="button-item-2">Item 2</button> <br />
+          <div id="left-item-2" class="hidden">
+            <p><span class='leftCode'>order:</span> <input type="number" id="order-item-2"></p>
+            <p><span class='leftCode'>flex-grow:</span> <input type="number" id="flex-grow-item-2"></p>
+            <p><span class='leftCode'>flex-shrink:</span> <input type="number" id="flex-shrink-item-2"></p>
+            <p><span class='leftCode'>flex-basis:</span> <input type="number" id="flex-basis-item-2"> px</p>
+            <p><span class='leftCode'>align-self:</span> <select id="align-self-2">
+              <option></option>
+              <option value="center">center</option>
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+              <option value="stretch">stretch</option>
+              <option value="baseline">baseline</option>
+            </select></p>
+          </div> <br />
+          <button onclick="showDiv(3)" id="button-item-3">Item 3</button> <br />
+          <div id="left-item-3" class="hidden">
+            <p><span class='leftCode'>order:</span> <input type="number" id="order-item-3"></p>
+            <p><span class='leftCode'>flex-grow:</span> <input type="number" id="flex-grow-item-3"></p>
+            <p><span class='leftCode'>flex-shrink:</span> <input type="number" id="flex-shrink-item-3"></p>
+            <p><span class='leftCode'>flex-basis:</span> <input type="number" id="flex-basis-item-3"> px</p>
+            <p><span class='leftCode'>align-self:</span> <select id="align-self-3">
+              <option></option>
+              <option value="center">center</option>
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+              <option value="stretch">stretch</option>
+              <option value="baseline">baseline</option>
+            </select></p>
+          </div> <br />
+        </div>
+        <p id="num-items-tracker" style="display: none">3</p>
+        <button id="left-button-items">Update Flex Items</button> <br /> <br /> <br />
+        <button id="left-button-everything">Update Container and Flex Items</button>
+      </div>
+      <div class="flex-col section">
+        <div id="right-flex-container">
+          <div id="right-item-1">1</div>
+          <div id="right-item-2">2</div>
+          <div id="right-item-3">3</div>
+        </div>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
