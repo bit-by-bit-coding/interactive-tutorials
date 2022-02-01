@@ -341,14 +341,21 @@ let instruction_8 = `
 `
 
 let functionFillRect = `
-<div class="contentDiv">
 <h2> fillRect(x, y, width, height) </h2>
 <p> This method draw a rectangle. x and y indicate starting point of the rectangle. width and height determine the size. </p>
 <p> For example: fillRect(50, 60, 100, 200) </p>
 <p> This method draw a rectangle which has a starting point at (50, 60). </p>
 <p> This rectangle has a width of 100 and a height of 200. </p>
 <button id="back-button" onClick="backButtonClicked()">Back</button>
-</div>
+`
+
+let functionStrokeRect = `
+<h2> strokeRect(x, y, width, height) </h2>
+<p> This method draw a filled rectangle. x and y indicate starting point of the rectangle. Width and height determine the size. </p>
+<p> For example: strokeRect(50, 60, 100, 200) </p>
+<p> This method draw a filled rectangle which has a starting point at (50, 60). </p>
+<p> This filled rectangle has a width of 100 and a height of 200. </p>
+<button id="back-button" onClick="backButtonClicked()">Back</button>
 `
 
 
