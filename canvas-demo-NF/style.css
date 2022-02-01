@@ -224,6 +224,10 @@ button:active {
   margin-left: 4em;
 }
 
+.contentDiv {
+  margin-bottom: 5em;
+}
+
 #page {
   position: relative;
 }
@@ -238,4 +242,10 @@ button:active {
   position: absolute;
   bottom: 1em;
   left: 1em;
+}
+
+#back-button {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
 }

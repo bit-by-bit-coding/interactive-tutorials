@@ -7,12 +7,20 @@ let defaultCanvasCode = '<canvas id="canvas" width="700" height="300"></canvas>\
  * Value: default code
  */
 const CodeMap = new Map();
+
 /**
  * Map that stores instructions
  * Key: page number
  * Value: instructions
  */
 const InstructionMap = new Map();
+
+/**
+ * Map that stores function details
+ * Key: function name 
+ * Value: function usage
+ */
+ const FunctionMap = new Map();
 
 /**
  * Sample Code for each page
@@ -256,7 +264,7 @@ let instruction_1 = `
 <h2> Drawing Shapes / Drawing Rectangles</h2>
 <p> There are three ways to draw a rectangle. </p>
 <ol>
-  <li> <button id="fillRect-button"> fillRect(x, y, width, height) </button> </li> <br>
+  <li> <button id="fillRect-button" onClick="showFunctionDetail(this.id)"> fillRect(x, y, width, height) </button> </li> <br>
   <li> <button id="strokeRect-button"> strokeRect(x, y, width, height) </button> </li> <br>
   <li> <button id="clearRect-button"> clearRect(x, y, width, height) </button> </li>
 </ol>
@@ -327,10 +335,22 @@ let instruction_8 = `
 <ol>
   <li> <button id="font-button"> font = value </button> </li> <br> 
   <li> <button id="textAlign-button"> textAlign = value </button> </li> <br>
-  <li> <button id="textBaseline-button"> textBaseline = value </button> </li> <br>
+  <li> <button id="textBaseline-button"> textBaseline = value </button> </li> <br> 
   <li> <button id="direction-button"> direction = value </button> </li>
 </ol>
 `
+
+let functionFillRect = `
+<div class="contentDiv">
+<h2> fillRect(x, y, width, height) </h2>
+<p> This method draw a rectangle. x and y indicate starting point of the rectangle. width and height determine the size. </p>
+<p> For example: fillRect(50, 60, 100, 200) </p>
+<p> This method draw a rectangle which has a starting point at (50, 60). </p>
+<p> This rectangle has a width of 100 and a height of 200. </p>
+<button id="back-button" onClick="backButtonClicked()">Back</button>
+</div>
+`
+
 
 /* Build CodeMap and Instuction Map */
 CodeMap.set(0, sampleCode_0);
@@ -444,4 +464,20 @@ function update() {
   displayedCode = defaultCanvasCode + CodeMap.get(pageNum);
   Jar.updateCode(displayedCode);
   executeCode(Jar);
+}
+
+function showFunctionDetail(functionId) {
+  if (functionId == "fillRect-button") {
+    document.getElementById("instructionContent").innerHTML = functionFillRect;
+
+    document.getElementById("prev-button").style.visibility = "hidden";
+    document.getElementById("next-button").style.visibility = "hidden";
+  }
+}
+
+function backButtonClicked() {
+  document.getElementById("prev-button").style.visibility = "visible";
+  document.getElementById("next-button").style.visibility = "visible";
+
+  update()
 }
