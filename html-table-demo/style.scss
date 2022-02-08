@@ -6,13 +6,13 @@ body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
 
 button {
   border: none;
-  background: #38Bfe7;
+  background: #38bfe7;
   padding: 0.5em 1em;
   box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
@@ -97,7 +97,7 @@ button:active {
 .section {
   margin: 1em 0;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
 }
@@ -137,7 +137,7 @@ button:active {
   margin: 0;
   height: 20em;
   width: calc(100% - 35px - 1.25em);
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -158,7 +158,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid black;
   text-align: left;
   padding: 8px;
@@ -200,6 +201,30 @@ button:disabled {
   background-color: lightgray;
 }
 
+.table-tag {
+  color: darkorchid;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.th-tag {
+  color: mediumseagreen;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.tr-tag {
+  color: orange;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.td-tag {
+  color: dodgerblue;
+  font-family: monospace;
+  font-size: 16px;
+}
+
 .table-examples {
   display: flex;
   flex-direction: column;
@@ -218,6 +243,10 @@ button:disabled {
 
 .table-example-html {
   width: 20%;
+  p {
+    font-family: monospace;
+    font-size: 16px;
+  }
 }
 
 .table-example-table {
@@ -230,9 +259,9 @@ button:disabled {
 }
 
 .bit-by-bot {
-    max-width: 150px;
-    height: auto;
-    &.computer {
-        margin-right: 30px;
-    }
+  max-width: 150px;
+  height: auto;
+  &.computer {
+    margin-right: 30px;
+  }
 }
