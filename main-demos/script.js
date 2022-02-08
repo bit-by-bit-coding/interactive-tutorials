@@ -94,6 +94,7 @@ let interactiveDemos = {
       path: "while-loop-demo",
       title: "WHILE LOOP DEMO",
       content: "What are while loops and do while loops?"
+    }
 };
 
 let demosList = document.getElementById("demos-list");
