@@ -305,30 +305,55 @@ footer .footer-info {
 }
 
 /* The page-specific styling */
-div.grid-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+/* TODO: Put whatever styles you need for just your demo here */
+.input-frame {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
 }
 
-div.grid-item {
-  margin: 1em;
-  border: solid 2px #38bfe7;
-  padding: 1em 1.5em;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 15em;
-          flex: 0 0 15em;
+.displayCode {
+  display: inline-block;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Code Pro", monospace;
 }
 
-div.grid-item:hover {
-  cursor: pointer;
-  -webkit-box-shadow: #aaaaaa 2px 2px 2px;
-          box-shadow: #aaaaaa 2px 2px 2px;
-  background-color: #fafafa;
+.codeHighlight {
+  color: #ff8900;
+  font-family: "Source Code Pro", monospace;
+}
+
+.codeOrange {
+  color: #ff8900;
+  display: inline-block;
+}
+
+.codeNavy {
+  display: inline-block;
+  color: #153570;
+}
+
+.comment {
+  display: inline-block;
+  color: #38Bfe7;
+  font: 1em;
+}
+
+.indentation {
+  margin-left: 2em;
+}
+
+.input-button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.editor {
+  height: 40em;
 }
 /*# sourceMappingURL=style.css.map */

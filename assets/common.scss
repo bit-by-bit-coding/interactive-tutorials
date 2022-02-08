@@ -3,16 +3,17 @@
 /* Define all the colors */
 $background-color: #fff;
 $background-color-dark: #1bb1de;
-$primary-color: #38Bfe7;
+$primary-color: #38bfe7;
 $accent-color: #ff8900;
 $text-color: #000;
 $text-color-dark: #fff;
+$footer-color: #153570;
 
 body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: $background-color;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
@@ -50,7 +51,6 @@ button {
   }
 }
 
-
 #back-button {
   padding: 0.25em 1em;
   font-size: 1em;
@@ -86,11 +86,11 @@ button {
   max-width: max-content;
 }
 
-#top-heading{
+#top-heading {
   width: max-content;
 }
 
-#bxb-logo{
+#bxb-logo {
   max-height: 3em;
   display: block;
   text-align: left;
@@ -124,7 +124,6 @@ button {
   flex: 0;
 }
 
-
 .showcase-section {
   padding: 0;
 }
@@ -139,8 +138,8 @@ button {
   height: 20em;
   // calculate the width by the folloing equation:
   // 100% - line_gutter_width - padding*2
-  width: calc(100% - 35px - calc(0.625em*2));
-  font-family: 'Anonymous Pro', monospace;
+  width: calc(100% - 35px - calc(0.625em * 2));
+  font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -151,4 +150,113 @@ button {
   bottom: 1em;
   right: 1em;
   padding: 0;
+}
+
+@font-face {
+  font-family: "NunitoBold";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+}
+
+.code {
+  // for the container
+  display: inline-block;
+  color: $text-color;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.code-gray {
+  display: inline-block;
+  color: #2f2d2c;
+}
+
+.code-orange {
+  display: inline-block;
+  color: $accent-color;
+}
+
+.code-light-blue {
+  display: inline-block;
+  color: $primary-color;
+}
+
+.code-dark-blue {
+  display: inline-block;
+  color: $footer-color;
+}
+
+/* Footer */
+footer {
+  background: $footer-color;
+  color: #fff;
+  width: 100vw;
+  padding: 0.5vh 2vw;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  a {
+    color: #fff;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: "NunitoBold", sans-serif;
+  }
+
+  .footer-home {
+    width: 315px;
+    h4 {
+      text-align: left;
+    }
+  }
+
+  .footer-socials {
+    align-self: center;
+
+    h4 {
+      text-align: center;
+    }
+
+    .socials {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 1rem 0 3rem 0;
+
+      li {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        margin: 0 5px;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: 1.8em;
+        border-radius: 50%;
+        background-color: #fff;
+
+        a {
+          color: $footer-color;
+        }
+
+        &:hover {
+          background-color: $footer-color;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-info {
+    text-align: right;
+    line-height: 0.8em;
+    padding: 1em;
+  }
 }

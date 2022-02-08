@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Nested For Loops Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+  <script>
+      function checkAnswers(){
+          input_answer = document.querySelector('[name="answer"]').value
+          correct_answer = 54
+  
+          if (input_answer.length == 0) {
+              alert("Please type your answer. ");
+              return false;
+          }
+  
+          if (input_answer == correct_answer) {
+              alert("That is correct! The easiest way to compute this, as you may have found out, is to notice that the long sum is just (1 + 2) x (1 + 2) x (1 + 2 + 3) = 3 x 3 x 6 = 54. ");
+          } 
+          else {
+              alert("Oops, be careful with your calculations! ");
+          }
+  
+      }
+      </script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">NESTED FOR LOOPS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>Introduction</h2>
+      <p>
+        A for loop executes the code block inside its body during each cycle of the loop. 
+      </p>
+      <p>
+        We may let the code block be whatever we want depending on the task at hand; sometimes the code block may contain another for loop, this is called <em>nested for loops</em>.
+      </p>
+      <p>
+        For a pair of nested for loops, the inner for loop completely runs itself during each cycle of the outer loop. 
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2>Example</h2>
+        <p>
+          Imagine if we want to know the favorite movie of each bit by bot below. 
+          One of the most straight forward ways to accomplish this goal is to start from the first column, ask the bots sitting in each row, 
+          then move on to the next column, until we have recorded the favorite movies of every bot. 
+        </p>
+        <img src="/assets/nested-for-loops.jpg" width="650">
+      </div>
+      <div class="flex-col section">
+        <h2>Example Code</h2>
+        <p>
+          Let's try to capture this method in code. Since, on the big picture, we ask the bots column by column, 
+          the outer for loop should correspond to the number of columns, which is 4. 
+        </p>
+        <p>
+          Then for each column, we ask each bot row by row, 
+          so the inner for loop corresponds to the number of rows, which is 3. 
+          The code block of the inner loop is where we ask the bot sitting at that position. 
+
+        </p>
+        <span class="big-code">
+          for (<span class="values">let i = 0; i < 4; i++</span>) {<br>
+            &emsp; for (<span class="values">let j = 0; j < 3; j++</span>) {<br><br>
+        <span class="comment"> &emsp; &emsp; // Here is the code block that does the<br>
+          &emsp; &emsp; action of asking the student, who sits at<br>
+          &emsp; &emsp; this position, what is their favorite movie</span><br><br>
+          &emsp; }<br>
+          }</span>
+      </div>
+    </div>
+    <div class="section">
+        <h2>Quick exercise</h2>
+        <p>
+          Nested for loops sometimes can consist more than 2 for loops. 
+          But as long as you pay attention to the hierarchy of the construct, they are not more difficult to understand. 
+        </p>
+        <p>
+          See if you can figure out the console output of the following code. <br>
+          <em>Hint: once you completely understand what the code is intended to do, 
+            try computing the answer using mathematical tricks!  
+          </em>
+        </p>
+        <div class="flex-box">
+        <div class="flex-col">
+        <span class="big-code">
+        function <span class="identifier">exercise()</span> {<br>
+          &emsp; let <span class="identifier">answer =</span> <span class="values">0</span>;<br>
+          &emsp; for (<span class="values">let i = 1; i < 3; i++</span>) {<br>
+          &emsp; &emsp; for (<span class="values">let j = 1; j < 3; j++</span>) {<br>
+          &emsp; &emsp; &emsp; for (<span class="values">let k = 1; k < 4; k++</span>) {<br>
+          &emsp; &emsp; &emsp; &emsp; <span class="identifier">answer +=</span> i * j * k;<br>
+          &emsp; &emsp; &emsp; }<br>
+          &emsp; &emsp; }<br>
+          &emsp; }<br>
+          &emsp; return <span class="identifier">answer</span>;<br>
+          }<br>
+          console.log(<span class="identifier">exercise()</span>);</span>
+        </div>
+        <div class="flex-col">
+          <form action="" name="f1" onsubmit >
+          answer = <input type="password" name="answer" size="20">
+          <br>
+          <br>
+          <input type="button" value="Check" onClick="checkAnswers()">
+        </form>
+        <img src="/assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" width="300">
+      </div>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+</body>
+</html>

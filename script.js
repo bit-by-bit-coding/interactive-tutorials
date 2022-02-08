@@ -6,6 +6,11 @@ demosBox.addEventListener("click", (e) => {
   anchor.click();
 });
 
+/* NOTE: THIS FILE ISN'T USED ANYMORE
+ * DEMOS SHOULD GO IN THE JS FILE OF THE "main-demos" FOLDER
+ * TUTORIALS SHOULD GO IN THE JS FILE OF THE "main-tutorials" FOLDER
+*/
+
 let interactiveTutorials = {
   arraysDemo: {
     path: 'arrays-demo',
@@ -72,10 +77,14 @@ let interactiveTutorials = {
       "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!",
   },
   truthyFalsyDemo: {
-    path: "truthy-falsy-demo",
-    title: "TRUTHY AND FALSY VALUES DEMO",
-    content:
-      "What are truthy and falsy values in JavaScript? What expressions evaluate to boolean false?",
+    path: 'truthy-falsy-demo',
+    title: 'TRUTHY AND FALSY VALUES DEMO',
+    content: "What are truthy and falsy values in JavaScript? What expressions evaluate to boolean false?"
+  },
+  cssSelectorsDemo: {
+    path: 'css-selectors-demo',
+    title: 'CSS SELECTORS DEMO',
+    content: 'What are CSS selectors and what are some basic ways to use them?'
   },
   whileLoopDemo: {
     path: "while-loop-demo",
