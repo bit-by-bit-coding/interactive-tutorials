@@ -12,18 +12,14 @@ button {
   border: none;
   background: #38bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #19a8d3;
 }
-
 button:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -37,14 +33,11 @@ button:active {
   max-height: 3em;
   z-index: 1000;
   opacity: 95%;
-  -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
-
 #header > * {
   margin: 0;
 }
-
 #header button {
   width: 3em;
 }
@@ -63,50 +56,28 @@ button:active {
 
 /*Flexbox*/
 .flex-container-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flex-container-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
+  justify-content: space-evenly;
+  align-items: center;
   max-width: max-content;
 }
 
 .flex-item-header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
 .flex-item-left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
+  flex: 1 1 100px;
   max-width: max-content;
 }
 
 #top-heading {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -126,15 +97,11 @@ button:active {
 }
 
 .flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -147,9 +114,7 @@ button:active {
 }
 
 .no-flex-col {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -165,7 +130,7 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em * 2));
+  width: calc(100% - 35px - 1.25em);
   font-family: "Anonymous Pro", monospace;
   font-size: 0.875em;
   line-height: 1.25em;
@@ -183,7 +148,6 @@ button:active {
   font-family: "NunitoBold";
   src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
 }
-
 .code {
   display: inline-block;
   color: #000;
@@ -219,59 +183,37 @@ footer {
   width: 100vw;
   padding: 0.5vh 2vw;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
 footer a {
   color: #fff;
 }
-
 footer h4 {
   text-align: center;
   font-family: "NunitoBold", sans-serif;
 }
-
 footer .footer-home {
   width: 315px;
 }
-
 footer .footer-home h4 {
   text-align: left;
 }
-
 footer .footer-socials {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 footer .footer-socials h4 {
   text-align: center;
 }
-
 footer .footer-socials .socials {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 1rem 0 3rem 0;
 }
-
 footer .footer-socials .socials li {
   display: inline-block;
   width: 1.5em;
@@ -283,37 +225,32 @@ footer .footer-socials .socials li {
   border-radius: 50%;
   background-color: #fff;
 }
-
 footer .footer-socials .socials li a {
   color: #153570;
 }
-
 footer .footer-socials .socials li:hover {
   background-color: #153570;
 }
-
 footer .footer-socials .socials li:hover a {
   color: #fff;
 }
-
 footer .footer-info {
   text-align: right;
   line-height: 0.8em;
   padding: 1em;
 }
 
+.default-container {
+  display: flex;
+  justify-content: center;
+}
+
 #leftcont {
   float: left;
 }
 
-#rightcont {
-  float: right;
-  overflow: hidden;
-}
-
 #leftcont, #rightcont {
-  padding: 30px;
-  height: 400px;
+  padding: 10px;
 }
 
 #pre, #post {
@@ -322,11 +259,15 @@ footer .footer-info {
   color: #000;
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 24px;
-  width: 370px;
   height: 350px;
   float: left;
   padding: 10px;
-  padding-top: 0px;
+}
+
+#spancont {
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
 }
 
 #leftcont {
@@ -336,11 +277,20 @@ footer .footer-info {
 #rightcont {
   margin-right: 20px;
   width: 610px;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 #post {
-  margin-right: 30px;
+  margin-right: 10px;
+}
+
+#pre {
+  width: 200px;
+}
+
+#iDText {
+  margin-top: 0px;
 }
 
 #giveBGColor, #giveColor, #giveBorderColor {
@@ -356,21 +306,12 @@ footer .footer-info {
 }
 
 #bigcont {
-  height: 450px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffe1bf;
+  justify-content: center;
+  align-items: center;
   color: black;
-  border: 0.2em solid #38Bfe7;
   padding-bottom: 20px;
+  margin: 20px 100px 0px 100px;
 }
 
 #secondcont {
@@ -379,20 +320,19 @@ footer .footer-info {
   border: 0.2em solid #38Bfe7;
   background-color: #fff;
   color: #000;
-  float: right;
-  width: 47%;
+  width: 1200px;
+  margin-bottom: 20px;
 }
 
 #DOMcode {
-  height: flex;
   min-height: 200px;
-  margin: 20px auto;
+  width: 650px;
+  margin: 20px 20px;
   border: 2px solid gray;
   font-family: Courier;
   font-size: 24px;
   background-color: black;
   color: white;
-  padding: 10px;
 }
 
 h2 {
@@ -425,55 +365,22 @@ h1 {
   width: 94%;
 }
 
-@media (max-width: 1384px) {
-  #pre, #post {
-    width: 150px;
-  }
-  #rightcont {
-    width: 420px;
-  }
-  #giveID {
-    width: 80%;
-  }
-}
-
-@media (max-width: 940px) {
-  #pre, #post {
-    width: 75px;
-  }
-  #rightcont {
-    width: 200px;
-  }
-  #giveID {
-    width: 40%;
-  }
-  #header {
-    font-size: smaller;
-  }
-}
-
-@media (max-width: 700px) {
-  #header {
-    font-size: x-small;
-  }
+.default-border {
+  border: 0.2em solid #38Bfe7;
+  margin: 20px 100px 0px 100px;
 }
 
 #infoText {
-  display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
-  background-color: #fff;
   color: #000;
-  float: left;
-  margin-top: 20px;
-  width: 47%;
 }
 
 #arrowIcon {
   font-size: 200px;
-  color: #38Bfe7;
+  color: #FF8900;
   text-align: center;
   margin: 700px, 0px;
   margin-top: 140px;
 }
+
 /*# sourceMappingURL=style.css.map */
