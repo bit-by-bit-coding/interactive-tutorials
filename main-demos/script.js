@@ -11,10 +11,10 @@ let interactiveDemos = {
       content:
         "Learn how attributes work inside tags and the most commonly used ones.",
     },
-    divDemo: {
-      path: "div-demo",
-      title: "&ltDIV&gt TAG DEMO",
-      content: "How to use the &ltdiv&gt tag and an exploritory tutorial.",
+    booleanLogic: {
+      path: "boolean-logic-demo",
+      title: "BOOLEAN LOGIC DEMO",
+      content: "How do booleans work? What are operators and statements?",
     },
     boxModel: {
       path: "box-model-demo",
@@ -22,20 +22,45 @@ let interactiveDemos = {
       content:
         "Margin, border, padding. Every HTML element has these, what do they do?",
     },
-    booleanLogic: {
-      path: "boolean-logic-demo",
-      title: "BOOLEAN LOGIC DEMO",
-      content: "How do booleans work? What are operators and statements?",
+    cssOverflowDemo: {
+      path: "css-overflow-demo",
+      title: "CSS OVERFLOW DEMO",
+      content: "What is the overflow property in CSS and how do you use it?",
+    }, 
+    cssSelectorsDemo: {
+      path: 'css-selectors-demo',
+      title: 'CSS SELECTORS DEMO',
+      content: 'What are CSS selectors and what are some basic ways to use them?'
+    },
+    divDemo: {
+      path: "div-demo",
+      title: "&ltDIV&gt TAG DEMO",
+      content: "How to use the &ltdiv&gt tag and an exploritory tutorial.",
     },
     domDemo: {
       path: "dom-demo",
       title: "DOM DEMO",
       content: "The Document Object Model and how to manipulate it.",
     },
+    eventsDemo: {
+      path: "events-demo",
+      title: "EVENTS DEMO",
+      content: "What are events in JavaScript, and how can we use them?",
+    },
+    flexBox: {
+      path: 'flex-box-demo',
+      title: 'FLEX-BOX DEMO',
+      content: "Learn about CSS flex-boxes!"
+    },
     functionDemo: {
       path: "function-demo",
       title: "FUNCTION DEMO",
       content: "Condensing code and calling upon functions!",
+    },
+    ifElseDemo: {
+      path: "if-else-demo",
+      title: "IF ELSE DEMO",
+      content: "What is an If / Else Statement",
     },
     loopDemo: {
       path: "for-loop-demo",
@@ -47,11 +72,6 @@ let interactiveDemos = {
       title: "MATH.RANDOM FUNCTION DEMO",
       content:
         "How does the Math.random function work? How can it be modified to fit specific needs?",
-    },
-    eventsDemo: {
-      path: "events-demo",
-      title: "EVENTS DEMO",
-      content: "What are events in JavaScript, and how can we use them?",
     },
     objectDemo: {
       path: "object-demo",
@@ -69,16 +89,6 @@ let interactiveDemos = {
       path: "while-loop-demo",
       title: "WHILE LOOP DEMO",
       content: "What are while loops and do while loops?",
-    },
-    ifElseDemo: {
-      path: "if-else-demo",
-      title: "IF ELSE DEMO",
-      content: "What is an If / Else Statement",
-    },
-    cssOverflowDemo: {
-      path: "css-overflow-demo",
-      title: "CSS OVERFLOW DEMO",
-      content: "What is the overflow property in CSS and how do you use it?",
     }
 };
 
