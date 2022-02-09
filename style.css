@@ -181,13 +181,45 @@ button:active {
   padding: 0;
 }
 
+@font-face {
+  font-family: "NunitoBold";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+}
+
+.code {
+  display: inline-block;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.code-gray {
+  display: inline-block;
+  color: #2f2d2c;
+}
+
+.code-orange {
+  display: inline-block;
+  color: #ff8900;
+}
+
+.code-light-blue {
+  display: inline-block;
+  color: #38bfe7;
+}
+
+.code-dark-blue {
+  display: inline-block;
+  color: #153570;
+}
+
 /* Footer */
 footer {
   background: #153570;
   color: #fff;
   width: 100vw;
-  padding: 30px 0;
-  position: absolute;
+  padding: 0.5vh 2vw;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,7 +238,7 @@ footer a {
 
 footer h4 {
   text-align: center;
-  font-weight: 900;
+  font-family: "NunitoBold", sans-serif;
 }
 
 footer .footer-home {

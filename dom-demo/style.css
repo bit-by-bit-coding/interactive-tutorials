@@ -13,7 +13,7 @@ button {
   background: #38bfe7;
   padding: 0.5em 1em;
   -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
 
@@ -23,7 +23,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #header {
@@ -38,7 +38,7 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-          box-shadow: 0 2px 2px #eee;
+  box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
@@ -67,11 +67,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .flex-container-left {
@@ -79,11 +79,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -91,14 +91,14 @@ button:active {
 
 .flex-item-header {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+  -ms-flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
 .flex-item-left {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
+  -ms-flex: 1 1 100px;
+  flex: 1 1 100px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -133,8 +133,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0.5em;
 }
 
@@ -148,8 +148,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
 }
 
 .showcase-section {
@@ -189,22 +189,55 @@ button:active {
   padding-bottom: 14rem;
 }
 
+@font-face {
+  font-family: "NunitoBold";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+}
+
+.code {
+  display: inline-block;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.code-gray {
+  display: inline-block;
+  color: #2f2d2c;
+}
+
+.code-orange {
+  display: inline-block;
+  color: #ff8900;
+}
+
+.code-light-blue {
+  display: inline-block;
+  color: #38bfe7;
+}
+
+.code-dark-blue {
+  display: inline-block;
+  color: #153570;
+}
+
+/* Footer */
 footer {
   background: #153570;
   color: #fff;
   width: 100vw;
-  padding: 30px 0;
-  position: absolute;
+  padding: 0.5vh 2vw;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 footer a {
@@ -213,7 +246,7 @@ footer a {
 
 footer h4 {
   text-align: center;
-  font-weight: 900;
+  font-family: "NunitoBold", sans-serif;
 }
 
 footer .footer-home {
@@ -226,8 +259,8 @@ footer .footer-home h4 {
 
 footer .footer-socials {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 footer .footer-socials h4 {
@@ -240,11 +273,11 @@ footer .footer-socials .socials {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0;
   margin: 1rem 0 3rem 0;
 }
@@ -288,12 +321,14 @@ footer .footer-info {
   overflow: hidden;
 }
 
-#leftcont, #rightcont {
+#leftcont,
+#rightcont {
   padding: 30px;
   height: 400px;
 }
 
-#pre, #post {
+#pre,
+#post {
   border: 3px solid #000000;
   background-color: #fff;
   color: #000;
@@ -320,7 +355,9 @@ footer .footer-info {
   margin-right: 30px;
 }
 
-#giveBGColor, #giveColor, #giveBorderColor {
+#giveBGColor,
+#giveColor,
+#giveBorderColor {
   width: 75px;
 }
 
@@ -339,21 +376,21 @@ footer .footer-info {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ffe1bf;
   color: black;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   padding-bottom: 20px;
 }
 
 #secondcont {
   display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   float: right;
@@ -403,7 +440,8 @@ h1 {
 }
 
 @media (max-width: 1384px) {
-  #pre, #post {
+  #pre,
+  #post {
     width: 150px;
   }
   #rightcont {
@@ -415,7 +453,8 @@ h1 {
 }
 
 @media (max-width: 940px) {
-  #pre, #post {
+  #pre,
+  #post {
     width: 75px;
   }
   #rightcont {
@@ -438,7 +477,7 @@ h1 {
 #infoText {
   display: block;
   padding: 0.5em;
-  border: 0.2em solid #38Bfe7;
+  border: 0.2em solid #38bfe7;
   background-color: #fff;
   color: #000;
   float: left;
@@ -448,7 +487,7 @@ h1 {
 
 #arrowIcon {
   font-size: 200px;
-  color: #38Bfe7;
+  color: #38bfe7;
   text-align: center;
   margin: 700px, 0px;
   margin-top: 140px;

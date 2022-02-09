@@ -1,14 +1,14 @@
 // When adding an interactive tutorial, edit this object
 let interactiveTutorials = {
-    arraysTutorial: {
-      path: 'arrays-tutorial',
-      title: 'ARRAYS TUTORIAL',
-      content: 'Learn how Javascript arrays work'
-    },
     alertDataTypeTutorial: {
       path: 'alerts-data-types-variables-tutorial',
       title: 'ALERT, DATA TYPE, VARIABLE TUTORIAL',
       content: 'Learn about alerts, data types, and variables in Javascript',
+    },
+    arraysTutorial: {
+      path: 'arrays-tutorial',
+      title: 'ARRAYS TUTORIAL',
+      content: 'Learn how Javascript arrays work'
     },
     functionsParametersTutorial: {
       path: 'functions-parameters-tutorial',

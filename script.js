@@ -6,6 +6,11 @@ demosBox.addEventListener("click", (e) => {
   anchor.click();
 });
 
+/* NOTE: THIS FILE ISN'T USED ANYMORE
+ * DEMOS SHOULD GO IN THE JS FILE OF THE "main-demos" FOLDER
+ * TUTORIALS SHOULD GO IN THE JS FILE OF THE "main-tutorials" FOLDER
+*/
+
 let interactiveTutorials = {
   arraysDemo: {
     path: 'arrays-demo',
