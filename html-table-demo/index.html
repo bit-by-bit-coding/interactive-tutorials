@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Table Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">HTML TABLE DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <h2>What is an HTML table?</h2>
+      <p>The <span class="table-tag">&lttable&gt</span> element in HTML allows data to be represented by a two-dimensional table of rows and columns. The intersection of a table's rows and columns form table cells, and these cells contain the data displayed in the table.</p>
+      <p>To define a table cell, place the data between a <span class="td-tag">&lttd&gt</span> and a <span class="td-tag">&lt/td&gt</span> tag.</p>
+      <p>Once you have defined a table cell, place this cell between a table row's <span class="tr-tag">&lttr&gt</span> and <span class="tr-tag">&lt/tr&gt</span> tags. Note, you can have multiple rows in a table, just make sure that the number of cells in each row are the same!</p>
+      <p>Finally, place your table row or rows between a <span class="table-tag">&lttable&gt</span> and a <span class="table-tag">&lt/table&gt</span> tag to form a complete table.</p>
+      <p>As a bonus, if you'd like your table to have headers, create and place another table row before all other table rows in your table. In this newly created table row, place a <span class="th-tag">&ltth&gt</span> and a <span class="th-tag">&lt/th&gt</span> tag with the title of the heading inbetween. Note, make sure that the number of <span class="th-tag">&ltth&gt</span> tags is the same as the number of <span class="td-tag">&lttd&gt</span> tags in each table row! This will ensure that each column has a heading.</p>
+    </div>
+    <div class="section">
+      <h2>Table Examples</h2>
+      <div class="table-examples">
+        <div class="table-example">
+          <div class="table-example-example">
+            <h3>Example 1</h3>
+            <p>The HTML to the right creates a table with one row, hence the single <span class="tr-tag">&lttr&gt</span>, a two columns. Each <span class="td-tag">&lttd&gt</span> inside the <span class="tr-tag">&lttr&gt</span> represents a separate column.</p>
+            <div class="bit-by-bot-flex">
+              <img class="bit-by-bot" src="/assets/bit-by-bot-images/sound-suspicious-open-bot.svg" alt="Bit by Bot thinking">
+            </div>
+          </div>
+          <div class="table-example-html">
+            <h3>HTML</h3>
+            <p class="table-tag">&lttable&gt</p>
+            <p class="tr-tag">&lttr&gt</p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 1<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 2<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p class="tr-tag">&lt/tr&gt</p>
+            <p class="table-tag">&lt/table&gt</p>
+          </div>
+          <div class="table-example-table">
+            <h3>Outputted Table</h3>
+            <table>
+              <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br>
+        <div class="table-example">
+          <div class="table-example-example">
+            <h3>Example 2</h3>
+            <p>If you wanted to add another row to the table in Example 1, then simply add another <span class="tr-tag">&lttr&gt</span> with a same amout of <span class="td-tag">&lttd&gt</span> tags as the first <span class="tr-tag">&lttr&gt</span> inside of the <span class="table-tag">&lttable&gt</span>.</p>
+            <p>If you wanted to add another column to the table, then add another <span class="td-tag">&lttd&gt</span> in each <span class="tr-tag">&lttr&gt</span>.</p>
+            <div class="bit-by-bot-flex">
+              <img class="bit-by-bot" src="/assets/bit-by-bot-images/bulb-surprised-bot.svg" alt="Bit by Bot having an idea">
+            </div>
+          </div>
+          <div class="table-example-html">
+            <h3>HTML</h3>
+            <p class="table-tag">&lttable&gt</p>
+            <p class="tr-tag">&lttr&gt</p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 1<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 2<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 3<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p class="tr-tag">&lt/tr&gt</p>
+            <p class="tr-tag">&lttr&gt</p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 2 Column 1<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 2 Column 2<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 2 Column 3<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p class="tr-tag">&lt/tr&gt</p>
+            <p class="table-tag">&lt/table&gt</p>
+          </div>
+          <div class="table-example-table">
+            <h3>Outputted Table</h3>
+            <table>
+              <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+                <td>Row 1 Column 3</td>
+              </tr>
+              <tr>
+                <td>Row 2 Column 1</td>
+                <td>Row 2 Column 2</td>
+                <td>Row 2 Column 3</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br>
+        <div class="table-example">
+          <div class="table-example-example">
+            <h3>Example 3</h3>
+            <p>If you wanted to add table headings to Example 2, then you would simply create another table row before all other table rows in your table. In this newly created table row, place a <span class="th-tag">&ltth&gt</span> and a <span class="th-tag">&lt/th&gt</span> tag with the title of the heading inbetween, and make sure that the number of <span class="th-tag">&ltth&gt</span> tags matches the number of <span class="td-tag">&lttd&gt</span> in each table row.</p>
+            <p>Hooray! The final outputted table is shown to the right!</p>
+            <div class="bit-by-bot-flex">
+              <img class="bit-by-bot" src="/assets/bit-by-bot-images/two-hands-party-bot.svg" alt="Bit by Bot wearing a party hat">
+            </div>
+          </div>
+          <div class="table-example-html">
+            <h3>HTML</h3>
+            <p class="table-tag">&lttable&gt</p>
+            <p class="tr-tag">&lttr&gt</p>
+            <p>
+              <span class="th-tag">&ltth&gt</span>Heading 1<span class="th-tag">&lt/th&gt</span>
+            </p>
+            <p>
+              <span class="th-tag">&ltth&gt</span>Heading 2<span class="th-tag">&lt/th&gt</span>
+            </p>
+            <p>
+              <span class="th-tag">&ltth&gt</span>Heading 3<span class="th-tag">&lt/th&gt</span>
+            </p>
+            <p class="tr-tag">&lt/tr&gt</p>
+            <p class="tr-tag">&lttr&gt</p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 1<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 2<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 1 Column 3<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p class="tr-tag">&lt/tr&gt</p>
+            <p class="tr-tag">&lttr&gt</p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 2 Column 1<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 2 Column 2<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p>
+              <span class="td-tag">&lttd&gt</span>Row 2 Column 3<span class="td-tag">&lt/td&gt</span>
+            </p>
+            <p class="tr-tag">&lt/tr&gt</p>
+            <p class="table-tag">&lt/table&gt</p>
+          </div>
+          <div class="table-example-table">
+            <h3>Outputted Table</h3>
+            <table>
+              <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+              </tr>
+              <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+                <td>Row 1 Column 3</td>
+              </tr>
+              <tr>
+                <td>Row 2 Column 1</td>
+                <td>Row 2 Column 2</td>
+                <td>Row 2 Column 3</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section button-center">
+        <h2>Try it yourself!</h2>
+        <p>Add additional rows and columns to the table on the right using the buttons below. The number next to each 'R' represents the row number in each cell while the number next to each 'C' represents the column number. You can even add or remove the table headings.</p>
+        <p>Currently, the resulting table consists of <span id="table-key-heading"><span class="table-key-cols">#</span> <span class="th-tag">&ltth&gt</span> tag(s) inside of 1 <span class="tr-tag">&lttr&gt</span> tag and </span><span id="table-key-rows">#</span> <span class="tr-tag">&lttr&gt</span> tag(s) with <span class="table-key-cols">#</span> <span class="td-tag">&lttd&gt</span> tag(s) inside.</p>
+        <div class="button-flex-container">
+          <img class="bit-by-bot computer" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot using a computer">
+          <form class=form-style>
+            <input type="radio" id="on-button" name="heading-property" value="on" checked>
+            <label for="on-button">ON</label>
+            <p>HEADING</p>
+            <input type="radio" id="off-button" name="heading-property" value="off">
+            <label for="off-button">OFF</label>
+          </form>
+          <div class="button-flex">
+            <button id="plusRow" class="table-button triangle-up">+</button>
+            <p>ROWS</p>
+            <button id="minusRow" class="table-button triangle-down">-</button>
+          </div>
+          <br>
+          <div class="button-flex">
+            <button id="plusCol" class="table-button triangle-up">+</button>
+            <p>COLUMNS</p>
+            <button id="minusCol" class="table-button triangle-down">-</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex-col section">
+        <table>
+          <thead id="tableHead">
+            <tr>
+              <th>Heading 1</th>
+            </tr>
+        </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td>R1 | C1</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/prism.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

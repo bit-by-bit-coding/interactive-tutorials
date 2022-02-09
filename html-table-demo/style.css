@@ -1,0 +1,269 @@
+/* style.scss */
+/* Import the common styling */
+/* common.scss */
+/* Define all the colors */
+body {
+  margin: 5em 0 0 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background: #38bfe7;
+  padding: 0.5em 1em;
+  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #19a8d3;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+#header {
+  padding: 1em 2em;
+  background-color: white;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 3em;
+  z-index: 1000;
+  opacity: 95%;
+  box-shadow: 0 2px 2px #eee;
+}
+
+#header > * {
+  margin: 0;
+}
+
+#header button {
+  width: 3em;
+}
+
+#back-button {
+  padding: 0.25em 1em;
+  font-size: 1em;
+  height: 48px;
+}
+
+.content {
+  padding: 1em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/*Flexbox*/
+.flex-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: max-content;
+}
+
+.flex-item-header {
+  flex: 1 1 200px;
+}
+
+.flex-item-left {
+  flex: 1 1 100px;
+  max-width: max-content;
+}
+
+#top-heading {
+  width: max-content;
+}
+
+#bxb-logo {
+  max-height: 3em;
+  display: block;
+  text-align: left;
+  margin-left: calc(100% - 200px);
+}
+
+.section {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 0.2em solid #38bfe7;
+  background-color: #fff;
+  color: #000;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-col {
+  flex: 1;
+  padding: 0.5em;
+}
+
+.flex-col:not(:last-child) {
+  margin: 0 0.2em 0 0;
+}
+
+.flex-col:last-child {
+  margin: 0 0 0 0.2em;
+}
+
+.no-flex-col {
+  flex: 0;
+}
+
+.showcase-section {
+  padding: 0;
+}
+
+.editor-section {
+  position: relative;
+  overflow: scroll;
+  padding: 0;
+}
+
+.editor {
+  margin: 0;
+  height: 20em;
+  width: calc(100% - 35px - 1.25em);
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  padding: 1px 0.625em;
+}
+
+.editor-button-overlay {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 0;
+}
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  font-weight: normal;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #e7e2e2;
+}
+
+.flex-col.section {
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.button-flex-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.button-flex {
+  width: 20%;
+}
+
+.table-button {
+  font-size: 25px;
+}
+
+button:disabled {
+  background-color: lightgray;
+}
+
+.table-tag {
+  color: darkorchid;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.th-tag {
+  color: mediumseagreen;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.tr-tag {
+  color: orange;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.td-tag {
+  color: dodgerblue;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.table-examples {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-example {
+  display: flex;
+  width: 100%;
+  row-gap: 10%;
+  column-gap: 5%;
+}
+
+.table-example-example {
+  width: 40%;
+}
+
+.table-example-html {
+  width: 20%;
+}
+.table-example-html p {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.table-example-table {
+  width: 30%;
+}
+
+.bit-by-bot-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.bit-by-bot {
+  max-width: 150px;
+  height: auto;
+}
+.bit-by-bot.computer {
+  margin-right: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

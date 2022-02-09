@@ -67,6 +67,11 @@ let interactiveDemos = {
       title: "IF ELSE DEMO",
       content: "What is an If / Else Statement",
     },
+    htmlTableDemo: {
+      path: "html-table-demo",
+      title: "HTML TABLE DEMO",
+      content: "Learn how to create a data table using HTML!",
+    },
     mathRandom: {
       path: "math-random-demo",
       title: "MATH.RANDOM FUNCTION DEMO",
@@ -88,7 +93,7 @@ let interactiveDemos = {
     whileLoopDemo: {
       path: "while-loop-demo",
       title: "WHILE LOOP DEMO",
-      content: "What are while loops and do while loops?",
+      content: "What are while loops and do while loops?"
     }
 };
 
