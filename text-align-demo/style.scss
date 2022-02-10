@@ -1,0 +1,19 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: $primary-color;
+    font-size: 20px;
+    margin:auto;
+    padding: 8px;
+}
+
+th {
+    font-family: "NunitoBold";
+}

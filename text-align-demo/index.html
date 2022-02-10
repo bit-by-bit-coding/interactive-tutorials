@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Text Align Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <!-- Note: If you are making a tutorial, change the href to "/main-tutorials" -->
+        <a href="/main-demos" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">TEXT ALIGN DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>What is Text-Align?</h2>
+      <p>The CSS text-align property allows you to align text. It can take on four different values:</p> <br />
+      <table>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Left</td>
+          <td style="text-align: left;">Aligns text to the left</td>
+        </tr>
+        <tr>
+          <td>Right</td>
+          <td style="text-align: right;">Aligns text to the right</td>
+        </tr>
+        <tr>
+          <td>Center</td>
+          <td style="text-align: center;">Centers the text</td>
+        </tr>
+        <tr>
+          <td>Justify</td>
+          <td style="text-align: justify;">Stretches the lines so that each line has equal width</td>
+        </tr>
+      </table>
+    </div>
+    <div class="section">
+      <h2>Interactive</h2>
+      <p>Try manipulating the values on the left and see how it affects the result on the right!</p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>Number of p tags:  <input type="number" placeholder="3" id="numInput" /></p>
+        <button id="numButton">update number of p tags</button> <br /> <br />
+        <div id="leftDiv">
+          <p>P Tag 1:  
+            <select id="left1">
+              <option></option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+              <option value="center">Center</option>
+              <option value="justify">Justify</option>
+            </select>
+            <input id="leftInput1" placeholder="Hello World!" />
+          </p>
+          <p>P Tag 2:  
+            <select id="left2">
+              <option></option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+              <option value="center">Center</option>
+              <option value="justify">Justify</option>
+            </select>
+            <input id="leftInput2" placeholder="Hello World!" />
+          </p>
+          <p>P Tag 3:  
+            <select id="left3">
+              <option></option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+              <option value="center">Center</option>
+              <option value="justify">Justify</option>
+            </select>
+            <input id="leftInput3" placeholder="Hello World!" />
+          </p>
+        </div>
+        <button id="leftButton">update p tags</button>
+      </div>
+      <div class="flex-col section" id="rightDiv">
+        <p id="right1">Hello World!</p>
+        <p id="right2">Hello World!</p>
+        <p id="right3">Hello World!</p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
