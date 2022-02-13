@@ -38,25 +38,18 @@
   top: 350px;
 }
 
-#example-div {
-  background-color: #1bb1de;
-  width: 20em;
-  height: 20em;
-  margin: 20px auto 0;
+.blue-box {
+  background-color: lightskyblue;
 }
-
-.scroll {
-  overflow: scroll;
+.green-box {
+  background-color: lightgreen;
 }
-
-.hidden {
-  overflow: hidden;
+.form-style {
+  display: flex;
+  flex-direction: row;
 }
-
-.auto {
-  overflow: auto;
-}
-
-.visible {
-  overflow: visible;
+.inner-form-style {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }

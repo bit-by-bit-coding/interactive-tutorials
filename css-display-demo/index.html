@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Display Demo| Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <!-- Note: If you are making a tutorial, change the href to "/main-tutorials" -->
+        <a href="/main-demos" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">CSS DISPLAY DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <div class="two-col">
+        <div class="col-box">
+      <h2>What is the display property?</h2>
+          <p>
+            The display property controls how content fits inside of a block-level element.
+          </p>
+          <p>
+            There are many display properties to choose from but the four most commons ones are:
+          </p>
+          <ul>
+            <li>block</li>
+            <li>inline</li>
+            <li>inline-block</li>
+            <li>none</li>
+          </ul>
+          <p>
+            The code snippet to the right shows how the content in the blue square below is being rendered.
+            It is important to note, that by default, the overflow property, even when not specified in the CSS, is set to visible.
+            Cycle through different overflow properties in given a time interval and change colors too.
+          </p>
+        </div>
+        <div class="col-box">
+          <p class="code"><span class="orange">.blue-square</span> {</p>
+            <p class="code indent"><span class="blue">background-color:</span> #1bb1de;</p>
+            <p class="code indent"><span class="blue">height:</span> 320px;</p>
+            <p class="code indent"><span class="blue">width:</span> 320px;</p>
+            <p class="code indent"><span class="blue">display:</span> <span id="display-property">block</span>;</p>
+          <p class="code">}</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>more explanation</h2>
+      <p>
+        block: Displays an element as a block element (like p). It starts on a new line, and takes up the whole width
+      </p>
+      <p>
+        inline: Displays an element as an inline element (like span). Any height and width properties will have no effect
+      </p>
+      <p>
+        inline-block: Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+      </p>
+      <p>
+        none: The element is completely removed
+      </p>
+      <p>
+        Click on one of the overflow properties below to explore how the code snippet and content inside of the blue square changes with each property.
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2>
+          Change the properties
+        </h2>
+        <form class=form-style>
+          <div class=inner-form-style>
+            <div class="select-style">
+              <label for="select1">Box 1:</label>
+              <select id="select1" name="box1" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select2">Box 2:</label>
+              <select id="select2" name="box2" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select3">Box 3:</label>
+              <select id="select3" name="box3" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select4">Box 4:</label>
+              <select id="select4" name="box4" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select5">Box 5:</label>
+              <select id="select5" name="box5" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+          </div>
+          <div class=inner-form-style>
+            <div class="select-style">
+              <label for="select6">Box 6:</label>
+              <select id="select6" name="box6" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select7">Box 7:</label>
+              <select id="select7" name="box7" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select8">Box 8:</label>
+              <select id="select8" name="box8" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select9">Box 9:</label>
+              <select id="select9" name="box9" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select10">Box 10:</label>
+              <select id="select10" name="box10" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="flex-col section">
+          <div id="box1" class="blue-box">Box 1</div>
+          <div id="box2" class="green-box">Box 2</div>
+          <div id="box3" class="blue-box">Box 3</div>
+          <div id="box4" class="green-box">Box 4</div>
+          <div id="box5" class="blue-box">Box 5</div>
+          <div id="box6" class="green-box">Box 6</div>
+          <div id="box7" class="blue-box">Box 7</div>
+          <div id="box8" class="green-box">Box 8</div>
+          <div id="box9" class="blue-box">Box 9</div>
+          <div id="box10" class="green-box">Box 10</div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/prism.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

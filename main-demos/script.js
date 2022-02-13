@@ -22,6 +22,11 @@ let interactiveDemos = {
       content:
         "Margin, border, padding. Every HTML element has these, what do they do?",
     },
+    cssDisplayDemo: {
+      path: "css-display-demo",
+      title: "CSS DISPLAY DEMO",
+      content: "What is the display property in CSS and how do you use it?",
+    },
     cssOverflowDemo: {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
