@@ -3,6 +3,9 @@ const setDisplay = (element) => {
     if (element.value === "inline-block") {
         document.getElementById(element.name).style.width = '100px';
         document.getElementById(element.name).style.height = '50px';
+    } else {
+        document.getElementById(element.name).style.width = 'initial';
+        document.getElementById(element.name).style.height = 'initial';
     }
 };
 const displayArray = [
@@ -12,6 +15,10 @@ const displayArray = [
     'flex',
     'grid',
     'table',
+    'inherit',
+    'initial',
+    'inline-flex',
+    'inline-grid',
     'block'
 ];
 let count = 0;

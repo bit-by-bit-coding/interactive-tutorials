@@ -23,33 +23,75 @@
     margin-left: 30px;
   }
   .blue {
-    color: #50c6e9ff;
+    color: #50c6e9;
   }
   .orange {
-    color: #ffb560ff;
+    color: #ffb560;
   }
 }
 
 .bit-by-bot {
-  height: 150px;
+  height: 175px;
   width: auto;
   position: absolute;
   right: 200px;
-  top: 350px;
+  top: 325px;
 }
 
 .blue-box {
-  background-color: lightskyblue;
+  background-color: #50c6e9;
+  font-size: 18px;
 }
-.green-box {
-  background-color: lightgreen;
+
+.orange-box {
+  background-color: #ffb560;
+  font-size: 18px;
 }
+
 .form-style {
   display: flex;
   flex-direction: row;
 }
+
 .inner-form-style {
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+
+.inline-code {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.select-style {
+  margin: 10px 0px;
+  label {
+    margin-right: 5px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table {
+  td,
+  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  td:nth-child(odd) {
+    width: 20%;
+  }
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #50c6e9;
+  }
 }

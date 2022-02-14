@@ -6,7 +6,7 @@ body {
   margin: 5em 0 0 0;
   padding: 0;
   background-color: #fff;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
 
@@ -133,7 +133,7 @@ button:active {
   margin: 0;
   height: 20em;
   width: calc(100% - 35px - 1.25em);
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   padding: 1px 0.625em;
@@ -147,15 +147,15 @@ button:active {
 }
 
 @font-face {
-  font-family: "NunitoBold";
-  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+  font-family: 'NunitoBold';
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap');
 }
 .code {
   display: inline-block;
   color: #000;
   font-size: 18px;
   font-weight: 600;
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
 }
 
 .code-gray {
@@ -194,7 +194,7 @@ footer a {
 }
 footer h4 {
   text-align: center;
-  font-family: "NunitoBold", sans-serif;
+  font-family: 'NunitoBold', sans-serif;
 }
 footer .footer-home {
   width: 315px;
@@ -263,26 +263,28 @@ footer .footer-info {
   margin-left: 30px;
 }
 .code .blue {
-  color: #50c6e9ff;
+  color: #50c6e9;
 }
 .code .orange {
-  color: #ffb560ff;
+  color: #ffb560;
 }
 
 .bit-by-bot {
-  height: 150px;
+  height: 175px;
   width: auto;
   position: absolute;
   right: 200px;
-  top: 350px;
+  top: 325px;
 }
 
 .blue-box {
-  background-color: lightskyblue;
+  background-color: #50c6e9;
+  font-size: 18px;
 }
 
-.green-box {
-  background-color: lightgreen;
+.orange-box {
+  background-color: #ffb560;
+  font-size: 18px;
 }
 
 .form-style {
@@ -294,6 +296,41 @@ footer .footer-info {
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+
+.inline-code {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.select-style {
+  margin: 10px 0px;
+}
+.select-style label {
+  margin-right: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table td:nth-child(odd) {
+  width: 20%;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #50c6e9;
 }
 
 /*# sourceMappingURL=style.css.map */
