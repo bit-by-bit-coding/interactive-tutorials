@@ -32,16 +32,20 @@
     </div>
   </div>
   <div class="content">
-    <div class="section">
-      <h2>Introduction</h2>
-      <p>We use HTML tag <code class="codeHighlight">&lt;canvas&gt;</code> to present graphic on a web page. <br>
-        The <code class="codeHighlight">&lt;canvas&gt;</code> element is only a container of graphics. We must use a script to draw on it. <br>
-        <h3> The Grid </h3>
-        Before we get started, let's talk about coordinates or grid.<br>
-        The HTML canvas is a two-dimensional grid.<br>
-        The upper-left corner of the canvas has the coordinates (0,0). <br>
-        Normally, 1 pixel is corresponding to 1 grid. That is,  a graphic at position (x, y) is x pixels from the left and y pixels from the top.<br>
-      </p>
+    <div class="section" style="display: flex;" id="intro-div">
+      <div style="margin-right: 5em;">
+        <h2>Introduction</h2>
+        <p>We use HTML tag <code class="codeHighlight">&lt;canvas&gt;</code> to present graphic on a web page. <br>
+          The <code class="codeHighlight">&lt;canvas&gt;</code> element is only a container of graphics. We must use a script to draw on it. <br>
+          <h3> The Grid </h3>
+          Before we get started, let's talk about coordinates or grid.<br>
+          The HTML canvas is a two-dimensional grid.<br>
+          The upper-left corner of the canvas has the coordinates (0,0). <br>
+          Normally, 1 pixel is corresponding to 1 grid. That is,  a graphic at position (x, y) is x pixels from the left and y pixels from the top.<br>
+        </p>
+      </div>
+      <div style="margin-left: 5em;" id="grid-div">
+      </div>
     </div>
     <div class="section">
       <h2>Canvas Template</h2>
@@ -70,7 +74,7 @@
       <div style="margin-right: 5em;">
         <h2>Interact with the Canvas</h2>
         <p> Let's see what we can do with canvas! </p>
-        <p> Follow the instructions below. To see an example, click the <button type="button">function</button> buttons to add codes to editor. </p>
+        <p> Follow the instructions below. Click the <button type="button">function</button> buttons to see details. </p>
         <p> You can also modified the editor directly. Try different parameter and see what happen.</p>
         <p> We will use embeded script for simplicity. </p>
       </div>
@@ -87,7 +91,7 @@
         <button id="next-button" onClick="increament()">Next</button>
       </div>
       <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="input-editor" style="height: 500px;"></div> 
+        <div class="editor lang-html" id="input-editor" style="height: 550px;"></div> 
         <div class="editor-button-overlay">
           <button id="reset-button" title="Reset the text code">
             <i class="fas fa-redo-alt"></i>

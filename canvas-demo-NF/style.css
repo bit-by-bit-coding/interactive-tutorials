@@ -187,25 +187,25 @@ button:active {
 .codeComment {
   display: inline-block;
   color: #2F2D2C;
-  font: 1em;
+  font-size: 18px;
 }
 
 .codeHighlight {
   color: #ff8900;
   font-family: "Source Code Pro", monospace;
-  font: 18px;
+  font-size: 18px;
 }
 
 .codeBlue {
   display: inline-block;
   color: #38Bfe7;
-  font: 1em;
+  font-size: 18px;
 }
 
 .codeOrange {
   display: inline-block;
   color: #FF8900;
-  font: 1em;
+  font-size: 18px;
 }
 
 .sampleCode {
@@ -244,7 +244,7 @@ button:active {
   left: 1em;
 }
 
-#back-button {
+#function-back-button {
   position: absolute;
   bottom: 1em;
   right: 1em;
