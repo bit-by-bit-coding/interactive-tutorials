@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Animations Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">ANIMATIONS DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h3>Introduction</h3>
+      <p>
+        
+        Animations are used in many T.V. shows and cartoons, and they can also be programmed in JavaScript. All you have to do is write a function, to perform a movement or change in color/shape
+        and call that function with an object.<br><br>
+
+        You can use animations to perform any of these:
+        <ul>
+          <li>Changing the color over a period of time.</li>
+          <li>Changing the position of an object.</li>
+          <li>Merging or seperating two objects.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>Properties</h3>
+      <p>
+        There are many different <span class="bold">properties</span> of animations that could be applied. The table below shows the name and purpose of a few of these properties.
+      </p>
+      <table>
+        <tr>
+          <th class="bold">Property</th>
+          <th class="bold">Description</th>
+        </tr>
+        <tr>
+          <th>@keyframes</th>
+          <th>Signifies the animation code</th>
+        </tr>
+        <tr>
+          <th>animation</th>
+          <th>Sets all animation properties to default</th>
+        </tr>
+        <tr>
+          <th>animation-delay</th>
+          <th>Sets delay for animation</th>
+        </tr>
+        <tr>
+          <th>animation-direction</th>
+          <th>Sets the cycle in which the animation should run</th>
+        </tr>
+        <tr>
+          <th>animation-duration</th>
+          <th>Sets the time-period for one animation cycle</th>
+        </tr>
+        <tr>
+          <th>animation-fill-mode</th>
+          <th>Sets style for animation while not running</th>
+        </tr>
+        <tr>
+          <th>animation-iteration-count</th>
+          <th>Specifies the number of times the animation should run</th>
+        </tr>
+        <tr>
+          <th>animation-name</th>
+          <th>Sets the name of the @keyframes animation</th>
+        </tr>
+        <tr>
+          <th>animation-play-state</th>
+          <th>Sets the current status of animation (playing, paused)</th>
+        </tr>
+        <tr>
+          <th>animation-timing-function</th>
+          <th>Specifies the speed of the animation</th>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 1</h2>
+          Press the button below and watch the BxB bot move from one side to the other. The button is linked to a function that animates the bot to move from one side to the other.
+          <br><br>
+          <button onclick="e1Example()">Animate!</button><br><br>
+          <img src="../assets/bit-by-bot-images/waving-happy-bot.svg" id="e1Bot" alt="BxB Bot">
+      </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//This is the css declaration for the image of the bot. This is applied via Javascript when the button is pressed.</span><br>
+          #animatedBot { <br>
+          &emsp;width: 20%; <br>
+          &emsp;height: 20%; <br>
+          &emsp;position: relative;
+          &emsp;-webkit-animation:move 2.5s ease-in-out; <br>
+          } <br>
+          <br>
+          <span class="comment">//This is the actual animation of the bot</span> <br>
+          @-webkit-keyframes move  { <br>
+          &emsp;from {<br>
+          &emsp;&emsp;left: 0px; <br>
+          &emsp;&emsp;top: 0px; <br>
+          &emsp;}
+          <br>
+          &emsp;to {<br>
+            &emsp;&emsp;left: 300px; <br>
+            &emsp;&emsp;top: 0px; <br>
+            &emsp;} <br> <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <p>
+          <h2>Example 2</h2>
+          Press the button below to watch the BxB bot appear and disappear. Animations can be also set with a <span class="bold">delay</span>, which makes them appear after a period of time.
+          <br><br>
+          <button onclick="e2Example()">Animate!</button><br><br>
+          Delay: <span id="e1SliderAmount"></span><input type="range" min="0.1" step="0.1" max = "10" value = "1" class="slider" id ="e2DelayValue"><br><br>
+          <img src="../assets/bit-by-bot-images/waving-happy-bot.svg" id="e2Bot" alt="BxB Bot">
+      </div>
+      <div class="flex-col section">
+        <p class="code">
+          <span class="comment">//This is the css declaration for the image of the bot. This is applied via Javascript when the button is pressed.</span><br>
+          #animatedBot { <br>
+          &emsp;width: 20%; <br>
+          &emsp;height: 20%; <br>
+          &emsp;position: relative; <br>
+          &emsp;-webkit-animation:appear 2.5 ease-in-out; <br>
+          &emsp;animation-delay: <span class="comment">(delay set by Javascript)</span><br>
+          } <br>
+          <br>
+          <span class="comment">//This is the actual animation of the bot</span> <br>
+          @-webkit-keyframes appear  { <br>
+          &emsp;from {<br>
+          &emsp;&emsp;opacity: 0; <br>
+          &emsp;}
+          <br><br>
+          &emsp;to {<br>
+            &emsp;&emsp;opacity: 1;<br>
+            &emsp;} <br> <br>
+          <span style="color:black; font-size:smaller;">*Simplified version of code</span>
+        </p>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

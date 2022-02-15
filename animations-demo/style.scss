@@ -1,0 +1,73 @@
+/* style.scss */
+
+/* Import the common styling */
+@import "../assets/common.scss";
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+
+.bold {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-weight: 800;
+  }
+
+.comment {
+  font-style: italic;
+  color:rgb(11, 160, 110);
+}
+.code {
+  color: #f19100;
+  font-family: 'Anonymous Pro', monospace;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: #38Bfe7;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #38Bfe7;
+  cursor: pointer;
+}
+
+
+table, th{
+  border:2px solid #38bfe7;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  border-collapse: collapse;
+  padding: 1%;
+}
+
+#e1Bot {
+  width: 20%;
+  height: 20%;
+  position: relative;
+}
+
+#e2Bot {
+  width: 20%;
+  height: 20%;
+  opacity: 0;
+}
