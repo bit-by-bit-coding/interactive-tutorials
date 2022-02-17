@@ -89,6 +89,11 @@ let interactiveDemos = {
       content:
         "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!",
     },
+    textAlignDemo: {
+      path: "text-align-demo",
+      title: "TEXT ALIGN DEMO",
+      content: "How to align text using CSS",
+    },
     truthyFalsyDemo: {
       path: "truthy-falsy-demo",
       title: "TRUTHY AND FALSY VALUES DEMO",

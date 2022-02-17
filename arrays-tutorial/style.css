@@ -15,7 +15,7 @@ button {
   background: #38bfe7;
   padding: 0.5em 1em;
   -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
 
@@ -25,7 +25,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 #header {
@@ -40,7 +40,7 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-  box-shadow: 0 2px 2px #eee;
+          box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
@@ -69,11 +69,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-container-left {
@@ -81,11 +81,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -93,14 +93,14 @@ button:active {
 
 .flex-item-header {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 200px;
-  flex: 1 1 200px;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
 }
 
 .flex-item-left {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 100px;
-  flex: 1 1 100px;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -135,8 +135,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0.5em;
 }
 
@@ -150,8 +150,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .showcase-section {
@@ -179,16 +179,6 @@ button:active {
   bottom: 1em;
   right: 1em;
   padding: 0;
-}
-
-/* Footer */
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 14rem;
 }
 
 @font-face {
@@ -236,10 +226,10 @@ footer {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 footer a {
@@ -261,8 +251,8 @@ footer .footer-home h4 {
 
 footer .footer-socials {
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 footer .footer-socials h4 {
@@ -275,11 +265,11 @@ footer .footer-socials .socials {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   margin: 1rem 0 3rem 0;
 }
@@ -370,19 +360,19 @@ footer .footer-info {
   background-color: black;
   color: white;
   border-color: black;
-  border-right-color: #38bfe7;
+  border-right-color: #38Bfe7;
 }
 
 .flex-box-separator {
   height: 3px;
-  background-color: #38bfe7;
+  background-color: #38Bfe7;
   width: 100%;
   border: none;
 }
 
 .blink_me {
   -webkit-animation: blinker 1s linear infinite;
-  animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
 }
 
 @-webkit-keyframes blinker {
@@ -398,12 +388,12 @@ footer .footer-info {
 }
 
 .big-code {
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 14px;
 }
 
 .big-code .comment {
-  color: #2f2d2c;
+  color: #2F2D2C;
 }
 
 .instructions {
@@ -431,10 +421,10 @@ footer .footer-info {
 }
 
 .big-code .variable {
-  color: #38bfe7;
+  color: #38BFE7;
 }
 
 .big-code .string {
-  color: #ff8900;
+  color: #FF8900;
 }
 /*# sourceMappingURL=style.css.map */
