@@ -13,7 +13,7 @@ button {
   background: #38bfe7;
   padding: 0.5em 1em;
   -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
-  box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
+          box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
 
@@ -23,7 +23,7 @@ button:hover {
 
 button:active {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 #header {
@@ -38,7 +38,7 @@ button:active {
   z-index: 1000;
   opacity: 95%;
   -webkit-box-shadow: 0 2px 2px #eee;
-  box-shadow: 0 2px 2px #eee;
+          box-shadow: 0 2px 2px #eee;
 }
 
 #header > * {
@@ -67,11 +67,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-container-left {
@@ -79,11 +79,11 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -91,14 +91,14 @@ button:active {
 
 .flex-item-header {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 200px;
-  flex: 1 1 200px;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
 }
 
 .flex-item-left {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 100px;
-  flex: 1 1 100px;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -133,8 +133,8 @@ button:active {
 
 .flex-col {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0.5em;
 }
 
@@ -148,8 +148,8 @@ button:active {
 
 .no-flex-col {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .showcase-section {
@@ -177,16 +177,6 @@ button:active {
   bottom: 1em;
   right: 1em;
   padding: 0;
-}
-
-/* Footer */
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 14rem;
 }
 
 @font-face {
@@ -234,10 +224,10 @@ footer {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 footer a {
@@ -259,8 +249,8 @@ footer .footer-home h4 {
 
 footer .footer-socials {
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 footer .footer-socials h4 {
@@ -273,11 +263,11 @@ footer .footer-socials .socials {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   margin: 1rem 0 3rem 0;
 }
@@ -316,10 +306,7 @@ footer .footer-info {
   padding: 0.5em;
 }
 
-#transition,
-#thirdValue,
-#secondOperation,
-#fourthValue {
+#transition, #thirdValue, #secondOperation, #fourthValue {
   display: none;
 }
 
@@ -328,31 +315,23 @@ footer .footer-info {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   overflow-x: auto;
   padding: 30px;
   position: relative;
 }
 
-#card1,
-#card2,
-#card3,
-#card4,
-#card5 {
+#card1, #card2, #card3, #card4, #card5 {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   border: 0.125em solid #000000;
   width: 20em;
   margin: 0.25em;
   padding: 0.5em;
 }
 
-#check1,
-#check2,
-#check3,
-#check4,
-#check5 {
+#check1, #check2, #check3, #check4, #check5 {
   width: 50px;
   height: 50px;
   border: 3px solid #000000;
@@ -364,27 +343,27 @@ footer .footer-info {
   0% {
     background-color: red;
     -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
   }
   25% {
     background-color: yellow;
     -webkit-transform: translate(-50%, -50%) rotate(90deg);
-    transform: translate(-50%, -50%) rotate(90deg);
+            transform: translate(-50%, -50%) rotate(90deg);
   }
   50% {
     background-color: green;
     -webkit-transform: translate(-50%, -50%) rotate(180deg);
-    transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
   }
   75% {
     background-color: indigo;
     -webkit-transform: translate(-50%, -50%) rotate(270deg);
-    transform: translate(-50%, -50%) rotate(270deg);
+            transform: translate(-50%, -50%) rotate(270deg);
   }
   100% {
     background-color: hotpink;
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
-    transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -392,27 +371,27 @@ footer .footer-info {
   0% {
     background-color: red;
     -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
   }
   25% {
     background-color: yellow;
     -webkit-transform: translate(-50%, -50%) rotate(90deg);
-    transform: translate(-50%, -50%) rotate(90deg);
+            transform: translate(-50%, -50%) rotate(90deg);
   }
   50% {
     background-color: green;
     -webkit-transform: translate(-50%, -50%) rotate(180deg);
-    transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
   }
   75% {
     background-color: indigo;
     -webkit-transform: translate(-50%, -50%) rotate(270deg);
-    transform: translate(-50%, -50%) rotate(270deg);
+            transform: translate(-50%, -50%) rotate(270deg);
   }
   100% {
     background-color: hotpink;
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
-    transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -423,16 +402,16 @@ footer .footer-info {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   visibility: hidden;
 }
 
 #bitbybot.active {
   -webkit-animation: rotate 4s infinite;
-  animation: rotate 4s infinite;
+          animation: rotate 4s infinite;
 }
 
 #bitbybot img {
@@ -441,27 +420,24 @@ footer .footer-info {
 }
 
 select {
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
   margin-bottom: 2px;
 }
 
 label {
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 1em;
   line-height: 1.25em;
 }
 
-table,
-th,
-td {
+table, th, td {
   border: 0.0625em solid #38bfe7;
   border-collapse: collapse;
 }
 
-th,
-td {
+th, td {
   padding: 0.5em;
 }
 
