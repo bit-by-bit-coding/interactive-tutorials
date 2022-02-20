@@ -67,15 +67,15 @@ let interactiveDemos = {
       title: "FUNCTION DEMO",
       content: "Condensing code and calling upon functions!",
     },
-    ifElseDemo: {
-      path: "if-else-demo",
-      title: "IF ELSE DEMO",
-      content: "What is an If / Else Statement",
-    },
     htmlTableDemo: {
       path: "html-table-demo",
       title: "HTML TABLE DEMO",
       content: "Learn how to create a data table using HTML!",
+    },
+    ifElseDemo: {
+      path: "if-else-demo",
+      title: "IF ELSE DEMO",
+      content: "What is an If / Else Statement",
     },
     mathRandom: {
       path: "math-random-demo",
