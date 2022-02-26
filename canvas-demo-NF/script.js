@@ -256,7 +256,7 @@ let sampleCode_8 = `
  */
 let instruction_0 = `
 <h2> Drawing Shapes </h2>
-<p> <code class="codeHighlight">&lt;canvas&gt;</code> only draw paths and rectangles. 
+<p> <code class="codeBold">&lt;canvas&gt;</code> only draw paths and rectangles. 
 But we can draw other complex shapes by combining one or more paths.</p>
 `;
 
@@ -272,7 +272,7 @@ let instruction_1 = `
 
 let instruction_2 = `
 <h2> Drawing Shapes / Drawing Paths</h2>
-<p> A path is a set of connected points. It can be curved or straight. </p> \n
+<p> A <code class="codeBold">path</code> is a set of connected points. It can be curved or straight. </p> \n
 <p> We start with a <button id="beginPath-button" onClick="showFunctionDetail(this.id)"> beginPath() </button> function. Everytime this function is called, a new path is created (but not drawn yet).\n
 <p> Then we use path methods to draw path, including: </p>
 <ol>
@@ -306,7 +306,8 @@ let instruction_4 = `
 
 let instruction_5 = `
 <h2> Styles and Colors </h2>
-<p> It is also possible to change the transparency with the property: <button id="globalAlpha-button" onClick="showFunctionDetail(this.id)"> globalAlpha = VALUE </button>; </p>
+<p> It is also possible to change the transparency with the property:</p> 
+<button id="globalAlpha-button" onClick="showFunctionDetail(this.id)"> globalAlpha = VALUE </button>
 <p> The value of globalAlpha is between 0.0 (fully transparent) and 1.0 (fully opaque). </p>
 `;
 
@@ -344,7 +345,7 @@ let instruction_8 = `
 let fillRectFunction = `
 <h2> fillRect(x, y, width, height) </h2>
 <p> This function draw a rectangle. x and y indicate starting point of the rectangle. width and height determine the size. </p>
-<p> For example: fillRect(50, 60, 100, 200) </p>
+<p> For example: <code class="codeNavy">fillRect(<code class="codeOrange">50</code>, <code class="codeOrange">60</code>, <code class="codeOrange">100</code>, <code class="codeOrange">200</code>)</code> </p>
 <p> This method draw a rectangle which has a starting point at (50, 60). </p>
 <p> This rectangle has a width of 100 and a height of 200. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
@@ -353,7 +354,7 @@ let fillRectFunction = `
 let strokeRectFunction = `
 <h2> strokeRect(x, y, width, height) </h2>
 <p> This function draw a filled rectangle. x and y indicate starting point of the rectangle. Width and height determine the size. </p>
-<p> For example: strokeRect(50, 60, 100, 200) </p>
+<p> For example: <code class="codeNavy">strokeRect(<code class="codeOrange">50</code>, <code class="codeOrange">60</code>, <code class="codeOrange">100</code>, <code class="codeOrange">200</code>)</code> </p>
 <p> This method draw a filled rectangle which has a starting point at (50, 60). </p>
 <p> This filled rectangle has a width of 100 and a height of 200. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
@@ -362,7 +363,7 @@ let strokeRectFunction = `
 let clearReactFunction = `
 <h2> clearRect(x, y, width, height) </h2>
 <p> This function clear a rectangle by making it fully transparent. x and y indicate starting point of the rectangle. Width and height determine the size. </p>
-<p> For example: clearRect(50, 60, 100, 200) </p>
+<p> For example: <code class="codeNavy">clearRect(<code class="codeOrange">50</code>, <code class="codeOrange">60</code>, <code class="codeOrange">100</code>, <code class="codeOrange">200</code>)</code> </p>
 <p> This method clear a  rectangle which has a starting point at (50, 60). </p>
 <p> The rectangle being cleared has a width of 100 and a height of 200. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
@@ -370,23 +371,23 @@ let clearReactFunction = `
 
 let beginPathFunction = `
 <h2> beginPath() </h2>
-<p> This function begin a new path </p>
+<p> This function begin a new path. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
 `;
 
 let moveToFunction = `
 <h2> moveTo(x, y) </h2>
-<p> This function moves the starting point at (x, y) </p>
-<p> This function does not draw anything. You may think of it as lifting a pen and place it on the coordinate (x, y) </p>
+<p> This function moves the starting point at (x, y). </p>
+<p> This function does not draw anything. You may think of it as lifting a pen and place it on the coordinate (x, y). </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
 `;
 
 let lineToFunction = `
 <h2> lineTo(x, y) </h2>
-<p> This function draw a line from current position to (x, y) </p>
+<p> This function draw a line from current position to (x, y). </p>
 <p> For example: </p>
-<p> We can first move our pen to (50, 50) by moveTo(50, 50).  </p>
-<p> Then by calling lineTo(100, 50), we draw a horizontal line of length 50. </p>
+<p> We can first move our pen to (50, 50) by <code class="codeNavy">moveTo(<code class="codeOrange">50</code>, <code class="codeOrange">50</code>)</code>. </p>
+<p> Then by calling <code class="codeNavy">lineTo(<code class="codeOrange">100</code>, <code class="codeOrange">50</code>)</code>, we draw a horizontal line of length 50. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
 `;
 
@@ -425,9 +426,9 @@ let fillStyleProperty = `
 <p> The <code class="codeBlue">fillStyle</code> property can define the color of the shapes. </p>
 <p> Here are some examples of <code class="codeBlue">fillStyle</code> you can try: 
 <ul>
-<li>ctx.<code class="codeBlue">fillStyle</code> = <code class="codeOrange">"orange"</code></li>
-<li>ctx.<code class="codeBlue">fillStyle</code> = <code class="codeOrange">"#38Bfe7"</code></li>
-<li>ctx.<code class="codeBlue">fillStyle</code> = <code class="codeOrange">"rgb(0, 255, 0)"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">fillStyle</code> = "<code class="codeOrange">orange</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">fillStyle</code> = "<code class="codeOrange">#38Bfe7</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">fillStyle</code> = "<code class="codeOrange">rgb(0, 255, 0)</code>"</code></li>
 </ul>
 </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
@@ -438,9 +439,9 @@ let strokeStyleProperty = `
 <p> The <code class="codeBlue">strokeStyle</code> property can define the color of the strokes around the shapes. </p>
 <p> Here are some examples of <code class="codeBlue">strokeStyle</code> you can try: 
 <ul>
-<li>ctx.<code class="codeBlue">strokeStyle</code> = <code class="codeOrange">"blue"</code></li>
-<li>ctx.<code class="codeBlue">strokeStyle</code> = <code class="codeOrange">"#FF0000"</code></li>
-<li>ctx.<code class="codeBlue">strokeStyle</code> = <code class="codeOrange">"rgb(0, 255, 0)"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">strokeStyle</code> = "<code class="codeOrange">blue</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">strokeStyle</code> = "<code class="codeOrange">#FF0000</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">strokeStyle</code> = "<code class="codeOrange">rgb(0, 255, 0)</code>"</code></li>
 </ul>
 </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
@@ -448,22 +449,22 @@ let strokeStyleProperty = `
 
 let globalAlphaProperty = `
 <h2> globalAlpha = VALUE </h2>
-<p> The <code class="codeBlue">globalAlpha</code> property define the transparency of a shape. </p>
-<p> The values of <code class="codeBlue">globalAlpha</code> is a number between 0.0(fully transparent) and 1.0(fully opaque). The default value is 1.0.</code>. </p>
+<p> The globalAlpha property define the transparency of a shape. </p>
+<p> The values of globalAlpha is a number between 0.0(fully transparent) and 1.0(fully opaque). The default value is 1.0.</code>. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
 `;
 
 let lineWidthProperty = `
 <h2> lineWidth = VALUE </h2>
-<p> The <code class="codeBlue">lineWidth</code> property define the thickness of lines. </p>
-<p> The values of <code class="codeBlue">lineWidth</code> is a number. The default value is 1.0. </p>
+<p> The lineWidth property define the thickness of lines. </p>
+<p> The values of lineWidth is a number. The default value is 1.0. </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
 `;
 
 let lineCapProperty = `
 <h2> lineCap = VALUE </h2>
-<p> The <code class="codeBlue">lineCap</code> property define the shape of the end point of lines. </p>
-<p> Possible values of <code class="codeBlue">lineCap</code> includes: 
+<p> The lineCap property define the shape of the end point of lines. </p>
+<p> Possible values of lineCap includes: 
 <ul>
 <li><code class="codeOrange">"butt"</code></li>
 <li><code class="codeOrange">"round"</code></li>
@@ -476,8 +477,8 @@ The default value is <code class="codeOrange">"butt"</code>.
 
 let lineJoinProperty = `
 <h2> lineJoin = VALUE </h2>
-<p> The <code class="codeBlue">lineJoin</code> property define the corners where two or more lines intersect. </p>
-<p> Possible values of <code class="codeBlue">lineJoin</code> includes: 
+<p> The lineJoin property define the corners where two or more lines intersect. </p>
+<p> Possible values of lineJoin includes: 
 <ul>
 <li><code class="codeOrange">"bevel"</code></li>
 <li><code class="codeOrange">"round"</code></li>
@@ -520,13 +521,13 @@ let strokeTextFunction = `
 
 let fontProperty = `
 <h2> font = VALUE </h2>
-<p> The <code class="codeBlue">font</code> property define the text font, such as size, weight, and family. </p>
-<p> Here are some examples of <code class="codeBlue">textAlign</code> you can try: 
+<p> The font property define the text font, such as size, weight, and family. </p>
+<p> Here are some examples of font you can try: 
 <ul>
-<li>ctx.<code class="codeBlue">font</code> = <code class="codeOrange">"normal 30px Arial"</code></li>
-<li>ctx.<code class="codeBlue">font</code> = <code class="codeOrange">"bolder 30px Arial"</code></li>
-<li>ctx.<code class="codeBlue">font</code> = <code class="codeOrange">"normal smaller Arial"</code></li>
-<li>ctx.<code class="codeBlue">font</code> = <code class="codeOrange">"normal 30px serif"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">font</code> = "<code class="codeOrange">normal 30px Arial</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">font</code> = "<code class="codeOrange">bolder 30px Arial</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">font</code> = "<code class="codeOrange">normal smaller Arial</code>"</code></li>
+<li><code class="codeNavy">ctx.<code class="codeBlue">font</code> = "<code class="codeOrange">normal 30px serif</code>"</code></li>
 </ul>
 </p>
 <button id="function-back-button" onClick="backButtonClicked()">Back</button>
@@ -534,8 +535,8 @@ let fontProperty = `
 
 let textAlignProperty = `
 <h2> textAlign = VALUE </h2>
-<p> The <code class="codeBlue">textAlign</code> property define the text alignment. </p>
-<p> Possible values of <code class="codeBlue">textAlign</code> includes: 
+<p> The textAlign property define the text alignment. </p>
+<p> Possible values of textAlign includes: 
 <ul>
 <li><code class="codeOrange">"left"</code></li>
 <li><code class="codeOrange">"right"</code></li>
@@ -550,8 +551,8 @@ The default value is <code class="codeOrange">"start"</code>.
 
 let textBaselineProperty = `
 <h2> textBaseline = VALUE </h2>
-<p> The <code class="codeBlue">textBaseline</code> property define the text baseline, which is the line upon which most letters sit. </p>
-<p> Possible values of <code class="codeBlue">textBaseline</code> includes: 
+<p> The textBaseline property define the text baseline, which is the line upon which most letters sit. </p>
+<p> Possible values of textBaseline includes: 
 <ul>
 <li><code class="codeOrange">"top"</code></li>
 <li><code class="codeOrange">"hanging"</code></li>
@@ -567,12 +568,12 @@ The default value is <code class="codeOrange">"alphabetic"</code>.
 
 let directionProperty = `
 <h2> direction = VALUE </h2>
-<p> The <code class="codeBlue">direction</code> property define the direction of text. </p>
-<p> Possible values of <code class="codeBlue">direction</code> includes: 
+<p> The direction property define the direction of text. </p>
+<p> Possible values of direction includes: 
 <ul>
 <li><code class="codeOrange">"ltr"</code> : left-to-right direction. </li>
 <li><code class="codeOrange">"rtl"</code> : right-to-left direction. </li>
-<li><code class="codeOrange">"inherit"</code> : text direction is inherit from the <code class="sampleCode">&lt;canvas&gt;</code> element. </li>
+<li><code class="codeOrange">"inherit"</code> : text direction is inherit from the <code class="codeNavy">&lt;canvas&gt;</code> element. </li>
 </ul>
 The default value is <code class="codeOrange">"inherit"</code>.
 </p>

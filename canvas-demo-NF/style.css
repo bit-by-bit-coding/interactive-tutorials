@@ -184,16 +184,14 @@ button:active {
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
 /*# sourceMappingURL=style.css.map */
-.codeComment {
+.codeBlack {
   display: inline-block;
   color: #2F2D2C;
   font-size: 18px;
 }
 
-.codeHighlight {
-  color: #ff8900;
-  font-family: "Source Code Pro", monospace;
-  font-size: 18px;
+.codeBold {
+  font-family: 'Anonymous Pro', monospace;
 }
 
 .codeBlue {
@@ -208,7 +206,7 @@ button:active {
   font-size: 18px;
 }
 
-.sampleCode {
+.codeNavy {
   display: inline-block;
   color: #153570;
   font-size: 18px;
