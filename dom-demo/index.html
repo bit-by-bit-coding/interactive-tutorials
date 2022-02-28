@@ -33,45 +33,40 @@
       </div>
     </div>
     <div class="default-border default-container">
-      <div id="bigcont">
-        <div id="leftcont">
-            <p id="idText"> ID: <input id="giveID" type="text"></p>
-            <div id="pre">
-                <p>Hello world!</p>
-                <p>I am a div.</p>
-            </div>
-        </div>
-        <div id="arrow">
-            <i id="arrowIcon" class="fas fa-arrow-right"></i>
-        </div>
-        
-        <div id="rightcont">
-          <p>The ID of this div is: <code id="showID">N/A</code></p>
-          <div id='columns'>
-            <div id="post">
-              <p class="postContent">Hello world!</p>
-              <p class='postContent'>I am a div.</p>
-            </div>
-            <div id='spancont'>
-              <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br>
-  
-              <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br>
-              <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br>
-              <span>Change border:<br><input id="giveWidth" type="text" value="3"> px solid <input id="giveBorderColor" type="text" value="black"></span><br>
-              <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
-              <button id="submit">GO!</button>
-            </div>
+      <div id="leftcont">
+          <p id="idText"> ID: <input id="giveID" type="text"></p>
+          <div id="pre">
+              <p>Hello world!</p>
+              <p>I am a div.</p>
+          </div>
+      </div>
+      <div id="arrow">
+          <i id="arrowIcon" class="fas fa-arrow-right"></i>
+      </div>
+      
+      <div id="rightcont">
+        <p>The ID of this div is: <code id="showID">N/A</code></p>
+        <div id='columns'>
+          <div id="post">
+            <p class="postContent">Hello world!</p>
+            <p class='postContent'>I am a div.</p>
+          </div>
+          <div id='spancont'>
+            <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br>
+
+            <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br>
+            <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br>
+            <span>Change border:<br><input id="giveWidth" type="text" value="3"> px solid <input id="giveBorderColor" type="text" value="black"></span><br>
+            <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
+            <button id="submit">GO!</button>
           </div>
         </div>
       </div>
     </div>
     <br>
-    <div class="default-container">
-      <div class=default-border>
-        <h2 style="padding-left: 10px;">JavaScript code showing the transition:</h2>
-        <br>
-        <div id="DOMCode"></div>
-      </div>
+    <div class="default-container default-border" id="black-window">
+      <h2 id="black-window-title">JavaScript code showing the transition:</h2>
+      <div id="DOMCode"></div>
     </div>
     <!-- <footer>
       Bit by Bit Coding is a registered nonprofit<br>
