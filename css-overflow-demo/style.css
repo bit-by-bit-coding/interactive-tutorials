@@ -219,7 +219,8 @@ footer {
   background: #153570;
   color: #fff;
   width: 100vw;
-  padding: 0.5vh 2vw;
+  padding: 30px 0;
+  position: absolute;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,6 +324,7 @@ footer .footer-info {
 .code {
   font-family: monospace;
   font-size: 24px;
+  display: block;
 }
 
 .code.indent {

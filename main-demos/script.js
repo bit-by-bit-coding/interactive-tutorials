@@ -22,6 +22,11 @@ let interactiveDemos = {
       content:
         "Margin, border, padding. Every HTML element has these, what do they do?",
     },
+    cssDisplayDemo: {
+      path: "css-display-demo",
+      title: "CSS DISPLAY DEMO",
+      content: "What is the display property in CSS and how do you use it?",
+    },
     cssOverflowDemo: {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
@@ -67,6 +72,11 @@ let interactiveDemos = {
       title: "IF ELSE DEMO",
       content: "What is an If / Else Statement",
     },
+    htmlTableDemo: {
+      path: "html-table-demo",
+      title: "HTML TABLE DEMO",
+      content: "Learn how to create a data table using HTML!",
+    },
     mathRandom: {
       path: "math-random-demo",
       title: "MATH.RANDOM FUNCTION DEMO",
@@ -79,6 +89,11 @@ let interactiveDemos = {
       content:
         "What are objects in JavaScript? This tutorial shows the syntax of a JSON object with a neat car that changes color!",
     },
+    textAlignDemo: {
+      path: "text-align-demo",
+      title: "TEXT ALIGN DEMO",
+      content: "How to align text using CSS",
+    },
     truthyFalsyDemo: {
       path: "truthy-falsy-demo",
       title: "TRUTHY AND FALSY VALUES DEMO",
@@ -88,7 +103,7 @@ let interactiveDemos = {
     whileLoopDemo: {
       path: "while-loop-demo",
       title: "WHILE LOOP DEMO",
-      content: "What are while loops and do while loops?",
+      content: "What are while loops and do while loops?"
     }
 };
 

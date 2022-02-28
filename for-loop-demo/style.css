@@ -219,7 +219,8 @@ footer {
   background: #153570;
   color: #fff;
   width: 100vw;
-  padding: 0.5vh 2vw;
+  padding: 30px 0;
+  position: absolute;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,6 +306,11 @@ footer .footer-info {
 }
 
 /* The page-specific styling */
+footer {
+  position: unset;
+  width: 100%;
+}
+
 .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,7 +365,7 @@ footer .footer-info {
 }
 
 .big-code {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: "Anonymous Pro", 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1.25em;
   color: #38bfe7;
 }
@@ -369,7 +375,7 @@ footer .footer-info {
 }
 
 .bold {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: "Anonymous Pro", 'Andale Mono', 'Ubuntu Mono', monospace;
   padding: 5px;
   font-weight: 800;
 }

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Display Demo| Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="../assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/main-demos" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">CSS DISPLAY DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="two-col">
+        <div class="col-box">
+      <h2>What is the display property?</h2>
+          <p>
+            The display property tells an HTML element how to render - or display - itself on the screen.
+          </p>
+          <p>
+            There are many display properties to choose from but the four most common ones are:
+          </p>
+          <ul>
+            <li>block</li>
+            <li>inline</li>
+            <li>inline-block</li>
+            <li>none</li>
+          </ul>
+          <p></p>
+          <p>
+            The code snippet to the right shows an example of how to set the display property of an element in CSS to some of the many display properties that are possible.
+            It is important to note that each element has it's own default display value. A <span class="inline-code">&ltdiv&gt</span>, for example, defaults to a block display, while a <span class="inline-code">&ltspan&gt</span> defaults to an inline display.
+          </p>
+        </div>
+        <div class="col-box">
+          <p class="code"><span class="orange">.blue-container</span> {</p>
+            <p class="code indent"><span class="blue">background-color:</span> blue;</p>
+            <p class="code indent"><span class="blue">display:</span> <span id="display-property">block</span>;</p>
+          <p class="code">}</p>
+          <img class="bit-by-bot" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot Using a Computer">
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>What does each display property do?</h2>
+      <p>Below is a table explaining how four of the many display properties render elements on the screen.</p>
+      <table>
+        <tr>
+          <th>PROPERTY NAME</th>
+          <th>FUNCTION</th>
+        </tr>
+        <tr>
+          <td>
+            BLOCK
+          </td>
+          <td>
+            <p>Displays an element starting on a new line, taking up the whole width of the line by default. You can set the height and/or width values of the element.</p>
+            <p>Ex. <span class="inline-code">&ltdiv&gt</span>, <span class="inline-code">&lth1&gt</span>, and <span class="inline-code">&ltp&gt</span></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            INLINE
+          </td>
+          <td>
+            <p>Displays an element on the same line as other elements, only taking up the width and height needed for the content inside to fit. You cannot set the width or height values of the element.</p>
+            <p>Ex. <span class="inline-code">&ltinput&gt</span> and <span class="inline-code">&ltspan&gt</span></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            INLINE-BLOCK
+          </td>
+          <td>
+            <p>Displays an element on the same line as other elements like an inline element, however you can set the height and/or width values of the element like you can with a block element.</p>
+            <p>Ex. a <span class="inline-code">&ltdiv&gt</span> with a specified height and/or width and a display value of inline-block</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            NONE
+          </td>
+          <td>
+            <p>The element is not displayed and removed from the flow layout</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2>
+          Try it out!
+        </h2>
+        <p>
+          Change the display properties for each of the boxes below to see how each box on the right displays itself according to the property chosen.
+        </p>
+        <p>*Note: Each inline-block element has a set width and height (100x50px)</p>
+        <form class=form-style>
+          <div class=inner-form-style>
+            <div class="select-style">
+              <label for="select1">Box 1:</label>
+              <select id="select1" name="box1" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select2">Box 2:</label>
+              <select id="select2" name="box2" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select3">Box 3:</label>
+              <select id="select3" name="box3" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select4">Box 4:</label>
+              <select id="select4" name="box4" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select5">Box 5:</label>
+              <select id="select5" name="box5" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+          </div>
+          <div class=inner-form-style>
+            <div class="select-style">
+              <label for="select6">Box 6:</label>
+              <select id="select6" name="box6" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select7">Box 7:</label>
+              <select id="select7" name="box7" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select8">Box 8:</label>
+              <select id="select8" name="box8" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select9">Box 9:</label>
+              <select id="select9" name="box9" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+            <div class="select-style">
+              <label for="select10">Box 10:</label>
+              <select id="select10" name="box10" onchange=setDisplay(this)>
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="none">none</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="flex-col section">
+          <div id="box1" class="blue-box">Box 1</div>
+          <div id="box2" class="orange-box">Box 2</div>
+          <div id="box3" class="blue-box">Box 3</div>
+          <div id="box4" class="orange-box">Box 4</div>
+          <div id="box5" class="blue-box">Box 5</div>
+          <div id="box6" class="orange-box">Box 6</div>
+          <div id="box7" class="blue-box">Box 7</div>
+          <div id="box8" class="orange-box">Box 8</div>
+          <div id="box9" class="blue-box">Box 9</div>
+          <div id="box10" class="orange-box">Box 10</div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/codejar.js"></script>
+  <script src="../assets/linenumbers.js"></script>
+  <script src="../assets/prism.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
