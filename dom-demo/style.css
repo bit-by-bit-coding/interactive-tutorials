@@ -259,10 +259,6 @@ footer .footer-info {
   text-align: center;
 }
 
-#leftcont {
-  float: left;
-}
-
 #leftcont, #rightcont {
   padding: 10px;
 }
@@ -346,10 +342,6 @@ footer .footer-info {
   font-size: 24px;
   background-color: black;
   color: white;
-}
-
-h2 {
-  display: inline-block;
 }
 
 h1 {

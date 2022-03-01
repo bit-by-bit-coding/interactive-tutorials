@@ -19,12 +19,10 @@
     }
 }
 
-#leftcont {
-    float: left;
-}
 #leftcont, #rightcont {
     padding: 10px;
 }
+
 #pre, #post {
     border: 3px solid #000000;
     background-color: #fff;
@@ -96,12 +94,11 @@
     background-color: black;
     color: white;
 }
-h2 {
-    display: inline-block;
-}
+
 h1 {
     text-align: center;
 }
+
 #slider {
     display: table;
     margin: 0 auto;
