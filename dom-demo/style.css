@@ -378,6 +378,12 @@ h1 {
   width: 94%;
 }
 
+#instruction-heading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 #infoText {
   padding: 0.5em;
   color: #000;
