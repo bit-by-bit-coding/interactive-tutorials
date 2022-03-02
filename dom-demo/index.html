@@ -25,52 +25,57 @@
         <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg" alt="Logo">
       </div>
     </div>
-    <div id="bigcont">
+    <div class='default-container'>
+      <div id="infoText" class="default-border">
+        <div id="instruction-heading">
+          <h2>Instructions</h2>
+        </div>
+        <p>Let's see how the DOM (Document-Object Model) works in JavaScript!<br><br>The goal is to change this div tag using JavaScript.<br><br>First things first, we need to find some way to reference (talk about) this div in our JavaScript. It helps if the div tag has a name -- click on the ID input box on the upper left and type out an ID. <br><br>
+            After giving it an ID, look at all the input boxes on the right. Try typing different values for the text, colors, and border. <br><br>
+            Once you have finished, click the GO! button. It will show you, line by line, the JavaScript necessary to change the div tag according to the descriptions that you wrote.<br><br>If all of the lines of code go by too fast or too slow, feel free to change the transition speed.</p>
+      </div>
+    </div>
+    <div class="default-border default-container">
       <div id="leftcont">
           <p id="idText"> ID: <input id="giveID" type="text"></p>
           <div id="pre">
-              <p>Hello world! I am a div.</p>
+              <p>Hello world!</p>
+              <p>I am a div.</p>
           </div>
       </div>
       <div id="arrow">
           <i id="arrowIcon" class="fas fa-arrow-right"></i>
-          <!-- <img src="https://img.icons8.com/?id=eEcZcOKmYvIJ&size=2x&color=000000"> -->
       </div>
-
+      
       <div id="rightcont">
         <p>The ID of this div is: <code id="showID">N/A</code></p>
-        <div id="post">
-          <p id="postContent">Hello world! I am a div.</p>
+        <div id='columns'>
+          <div id="post">
+            <p class="postContent">Hello world!</p>
+            <p class='postContent'>I am a div.</p>
+          </div>
+          <div id='spancont'>
+            <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br>
+
+            <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br>
+            <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br>
+            <span>Change border:<br><input id="giveWidth" type="text" value="3"> px solid <input id="giveBorderColor" type="text" value="black"></span><br>
+            <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
+            <button id="submit">GO!</button>
+          </div>
         </div>
-
-        <span>Change text:<br><textarea id="giveText"style="resize:none">Hello world! I am a div.</textarea></span><br><br>
-
-        <span>Change background color:<br><input id="giveBGColor" type="text" value="white"></span><br><br>
-        <span>Change text color:<br><input id="giveColor" type="text" value="black"></span><br><br>
-        <span>Change border:<br><input id="giveWidth" type="text" value="3">px solid <input id="giveBorderColor" type="text" value="black"></span><br><br>
-        <span id="slider">Transition speed: <input id="sliderValue" type="range" min="1" max="100" value="50"></span>
-        <button id="submit">GO!</button>
       </div>
     </div>
-    <div id="infoText">
-      <h3>Let's see how the DOM (Document-Object Model) works in JavaScript!<br><br>The goal is to change this div tag using JavaScript.<br><br>First things first, we need to find some way to reference (talk about) this div in our JavaScript. It helps if the div tag has a name -- click on the ID input box on the upper left and type out an ID. <br><br>
-          After giving it an ID, look at all the input boxes on the right. Try typing different values for the text, colors, and border. <br><br>
-          Once you have finished, click the GO! button. It will show you, line by line, the JavaScript necessary to change the div tag according to the descriptions that you wrote.<br><br>If all of the lines of code go by too fast or too slow, feel free to change the transition speed.</h3>
-    </div>
     <br>
-    <div id="secondcont">
-      <h2 style="padding-left: 10px;">JavaScript code showing the transition:</h2>
-      <br>
+    <div class="default-container default-border" id="black-window">
+      <h2 id="black-window-title">JavaScript code showing the transition:</h2>
       <div id="DOMCode"></div>
     </div>
- <!--
-  <footer>
-    Bit by Bit Coding is a registered nonprofit<br>
-    EIN 84-5025902<br>
-    © 2021 Bit by Bit Coding<br>
-  </footer>
-
-  -->
+    <!-- <footer>
+      Bit by Bit Coding is a registered nonprofit<br>
+      EIN 84-5025902<br>
+      © 2021 Bit by Bit Coding<br>
+    </footer> -->
     <script src="DOMscript.js"></script>
   </body>
 </html>
