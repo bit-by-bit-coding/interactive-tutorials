@@ -264,23 +264,23 @@ let instruction_1 = `
 <h2> Drawing Shapes / Drawing Rectangles</h2>
 <p> There are three ways to draw a rectangle. </p>
 <ol>
-  <li> <button id="fillRect-button" onClick="showFunctionDetail(this.id)"> fillRect(x, y, width, height) </button> </li> <br>
-  <li> <button id="strokeRect-button" onClick="showFunctionDetail(this.id)"> strokeRect(x, y, width, height) </button> </li> <br>
-  <li> <button id="clearRect-button" onClick="showFunctionDetail(this.id)"> clearRect(x, y, width, height) </button> </li>
+  <li> <button class="function-button" id="fillRect-button" onClick="showFunctionDetail(this.id)"> fillRect(x, y, width, height) </button> </li> <br>
+  <li> <button class="function-button" id="strokeRect-button" onClick="showFunctionDetail(this.id)"> strokeRect(x, y, width, height) </button> </li> <br>
+  <li> <button class="function-button" id="clearRect-button" onClick="showFunctionDetail(this.id)"> clearRect(x, y, width, height) </button> </li>
 </ol>
 `;
 
 let instruction_2 = `
 <h2> Drawing Shapes / Drawing Paths</h2>
 <p> A <code class="codeBold">path</code> is a set of connected points. It can be curved or straight. </p> \n
-<p> We start with a <button id="beginPath-button" onClick="showFunctionDetail(this.id)"> beginPath() </button> function. Everytime this function is called, a new path is created (but not drawn yet).\n
+<p> We start with a <button class="function-button" id="beginPath-button" onClick="showFunctionDetail(this.id)"> beginPath() </button> function. Everytime this function is called, a new path is created (but not drawn yet).\n
 <p> Then we use path methods to draw path, including: </p>
 <ol>
-  <li> <button id="moveTo-button" onClick="showFunctionDetail(this.id)"> moveTo(x, y) </button> </li> <br>
-  <li> <button id="lineTo-button" onClick="showFunctionDetail(this.id)"> lineTo(x, y) </button> </li> <br>
-  <li> <button id="arc-button" onClick="showFunctionDetail(this.id)"> arc(x, y, radius, startAngle, endAngle, counterclockwise) </button> </li>
+  <li> <button class="function-button" id="moveTo-button" onClick="showFunctionDetail(this.id)"> moveTo(x, y) </button> </li> <br>
+  <li> <button class="function-button" id="lineTo-button" onClick="showFunctionDetail(this.id)"> lineTo(x, y) </button> </li> <br>
+  <li> <button class="function-button" id="arc-button" onClick="showFunctionDetail(this.id)"> arc(x, y, radius, startAngle, endAngle, counterclockwise) </button> </li>
 </ol>
-<p> Finally, we close the path with <button id="closePath-button" onClick="showFunctionDetail(this.id)"> closePath() </button> function. This step is optional. It closed the path by draw a straight line from the current point to the starting point. </p>
+<p> Finally, we close the path with <button class="function-button" id="closePath-button" onClick="showFunctionDetail(this.id)"> closePath() </button> function. This step is optional. It closed the path by draw a straight line from the current point to the starting point. </p>
 <p> See stroke() and fill() function in next page. </p>
 `
 
@@ -288,8 +288,8 @@ let instruction_3 = `
 <h2> Drawing Shapes / Drawing Paths </h2>
 <p> These two functions are also used to draw shapes. </p> \n
 <ol>
-  <li> <button id="stroke-button" onClick="showFunctionDetail(this.id)"> stroke() </button> </li> <br>
-  <li> <button id="fill-button" onClick="showFunctionDetail(this.id)"> fill() </button> </li>
+  <li> <button class="function-button" id="stroke-button" onClick="showFunctionDetail(this.id)"> stroke() </button> </li> <br>
+  <li> <button class="function-button" id="fill-button" onClick="showFunctionDetail(this.id)"> fill() </button> </li>
 </ol>
 `;
 
@@ -298,8 +298,8 @@ let instruction_4 = `
 <p> We have now learned how to draw shapes on canvas in default styles. But we can add colors and more styles to it. </p> \n
 <p> We can change the color by setting the following properties: </p>
 <ol>
-  <li> <button id="fillStyle-button" onClick="showFunctionDetail(this.id)"> fillStyle = COLOR </button></li> <br>
-  <li> <button id="strokeStyle-button" onClick="showFunctionDetail(this.id)"> strokeStyle = COLOR </button> </li>
+  <li> <button class="function-button" id="fillStyle-button" onClick="showFunctionDetail(this.id)"> fillStyle = COLOR </button></li> <br>
+  <li> <button class="function-button" id="strokeStyle-button" onClick="showFunctionDetail(this.id)"> strokeStyle = COLOR </button> </li>
 </ol>
 <p> where the color is a string representing CSS color. You can define fillStyle and strokeStyle just like the way you define color in CSS.
 `;
@@ -307,7 +307,7 @@ let instruction_4 = `
 let instruction_5 = `
 <h2> Styles and Colors </h2>
 <p> It is also possible to change the transparency with the property:</p> 
-<button id="globalAlpha-button" onClick="showFunctionDetail(this.id)"> globalAlpha = VALUE </button>
+<button class="function-button" id="globalAlpha-button" onClick="showFunctionDetail(this.id)"> globalAlpha = VALUE </button>
 <p> The value of globalAlpha is between 0.0 (fully transparent) and 1.0 (fully opaque). </p>
 `;
 
@@ -315,9 +315,9 @@ let instruction_6 = `
 <h2> Styles and Colors / Line Styles </h2>
 <p> The following properties define the styles of a path.
 <ol>
-  <li> <button id="lineWidth-button" onClick="showFunctionDetail(this.id)"> lineWidth = VALUE </button> </li> <br>
-  <li> <button id="lineCap-button" onClick="showFunctionDetail(this.id)"> lineCap = VALUE </button> </li> <br>
-  <li> <button id="lineJoin-button" onClick="showFunctionDetail(this.id)"> lineJoin = VALUE </button> </li>
+  <li> <button class="function-button" id="lineWidth-button" onClick="showFunctionDetail(this.id)"> lineWidth = VALUE </button> </li> <br>
+  <li> <button class="function-button" id="lineCap-button" onClick="showFunctionDetail(this.id)"> lineCap = VALUE </button> </li> <br>
+  <li> <button class="function-button" id="lineJoin-button" onClick="showFunctionDetail(this.id)"> lineJoin = VALUE </button> </li>
 </ol>
 `;
 
@@ -325,8 +325,8 @@ let instruction_7 = `
 <h2> Text </h2>
 <p> To print texts on canvas, use the following funtions: </p>
 <ol>
-  <li> <button id="fillText-button" onClick="showFunctionDetail(this.id)"> fillText(text, x, y, maxWidth) </button> </li> <br>
-  <li> <button id="strokeText-button" onClick="showFunctionDetail(this.id)"> strokeText(text, x, y, maxWidth) </button> </li>
+  <li> <button class="function-button" id="fillText-button" onClick="showFunctionDetail(this.id)"> fillText(text, x, y, maxWidth) </button> </li> <br>
+  <li> <button class="function-button" id="strokeText-button" onClick="showFunctionDetail(this.id)"> strokeText(text, x, y, maxWidth) </button> </li>
 </ol>
 `;
 
@@ -334,10 +334,10 @@ let instruction_8 = `
 <h2> Text </h2>
 <p> And used these properties to add style: </p>
 <ol>
-  <li> <button id="font-button" onClick="showFunctionDetail(this.id)"> font = VALUE </button> </li> <br> 
-  <li> <button id="textAlign-button" onClick="showFunctionDetail(this.id)"> textAlign = VALUE </button> </li> <br>
-  <li> <button id="textBaseline-button" onClick="showFunctionDetail(this.id)"> textBaseline = VALUE </button> </li> <br> 
-  <li> <button id="direction-button" onClick="showFunctionDetail(this.id)"> direction = VALUE </button> </li>
+  <li> <button class="function-button" id="font-button" onClick="showFunctionDetail(this.id)"> font = VALUE </button> </li> <br> 
+  <li> <button class="function-button" id="textAlign-button" onClick="showFunctionDetail(this.id)"> textAlign = VALUE </button> </li> <br>
+  <li> <button class="function-button" id="textBaseline-button" onClick="showFunctionDetail(this.id)"> textBaseline = VALUE </button> </li> <br> 
+  <li> <button class="function-button" id="direction-button" onClick="showFunctionDetail(this.id)"> direction = VALUE </button> </li>
 </ol>
 `
 

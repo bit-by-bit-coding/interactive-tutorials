@@ -247,3 +247,7 @@ button:active {
   bottom: 1em;
   right: 1em;
 }
+
+.function-button {
+  background: #FFE266;
+}
