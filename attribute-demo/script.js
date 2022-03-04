@@ -2,8 +2,8 @@
 // If you want to change the image, just update both Hash tables and the option menu.
 let urlMap = new Map();
 urlMap.set("party-bot", "../assets/bit-by-bot-images/two-hands-party-bot.png");
-urlMap.set("flower-bot", "../assets/bit-by-bot-images/bit by bot with flower.svg");
-urlMap.set("happy-bot", "../assets/bit-by-bot-images/bit by bot 4.svg");
+urlMap.set("flower-bot", "../assets/bit-by-bot-images/bit by bot with flower.png");
+urlMap.set("happy-bot", "../assets/bit-by-bot-images/bit by bot 4.png");
 
 let optionMap = new Map();
 optionMap.set("Party Bot", "party-bot");
