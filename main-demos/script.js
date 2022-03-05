@@ -22,6 +22,12 @@ let interactiveDemos = {
       content:
         "Margin, border, padding. Every HTML element has these, what do they do?",
     },
+    canvasDemo: {
+      path: "canvas-demo",
+      title: "CANVAS DEMO",
+      content:
+        "What is the canvas tag and how can it be used?",
+    },
     cssDisplayDemo: {
       path: "css-display-demo",
       title: "CSS DISPLAY DEMO",
