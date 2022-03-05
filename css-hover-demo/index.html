@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="../assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/main-demos" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <h1 class="flex-item-left">CSS HOVER DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <h2>What is the hover psuedo-class?</h2>
+      <p>
+        The CSS hover psuedo-class can be used to select and style an element while a user's mouse is hovered over that element.
+      </p>
+      <p>
+        To apply the hover psuedo-class to an element, simply append ":hover" to the element's selector.
+      </p>
+      <p>
+        The example below demonstrates how we can change the background color of an element using the :hover psuedo-class.
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2>How do you use hover?</h2>
+        <p>
+          In the first code snippet, we select the blue circle to the right using the class selector ".blue-circle" and style it to have a blue background by default.
+        </p>
+        <p class="code"><span class="orange">.blue-circle</span> {</p>
+          <p class="code indent"><span class="blue">background-color:</span> blue;</p>
+          <p class="code indent"><span class="blue">height:</span> 300px;</p>
+          <p class="code indent"><span class="blue">width:</span> 300px;</p>
+          <p class="code indent"><span class="blue">border-radius:</span> 50%;</p>
+        <p class="code">}</p>
+        <p>
+          In the second code snippet, we select the blue circle again, this time adding ":hover" to the end of the ".blue-circle" class selector  and style it to have an orange background when a user hovers over it with their mouse.
+        </p>
+        <p class="code"><span class="orange">.blue-circle:hover</span> {</p>
+          <p class="code indent"><span class="blue">background-color:</span> orange;</p>
+        <p class="code">}</p>
+        <p></p>
+      </div>
+      <div class="flex-col section">
+        <h2>Example Output</h2>
+        <div class="circle example">
+          Hover Over Me!
+        </div>
+        <img class="bit-by-bot computer" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot Using a Computer">
+      </div>
+    </div>
+    <div class="section">
+      <h2>Try it out!</h2>
+      <p>Use your mouse to hover over each circle to discover more fun things you can do with the hover psuedo-class!</p>
+      <div class="circle-container">
+        <div class="circle one">
+          <p>Circle 1</p>
+        </div>
+        <div class="circle two">
+          <p>Circle 2</p>
+        </div>
+        <div class="circle-three-container">
+          <div class="circle three">
+            <p>Circle 3</p>
+          </div>
+          <img class="bit-by-bot party-hat" src="../assets/bit-by-bot-images/two-hands-party-bot.png" alt="Bit by Bot wearing a party hat">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

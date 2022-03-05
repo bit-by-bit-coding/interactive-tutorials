@@ -14,17 +14,13 @@ button {
   border: none;
   background: #38bfe7;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   box-shadow: 0.125em 0.125em 0.2em #bfbfbf;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #19a8d3;
 }
-
 button:active {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -39,14 +35,11 @@ button:active {
   max-height: 3em;
   z-index: 1000;
   opacity: 95%;
-  -webkit-box-shadow: 0 2px 2px #eee;
   box-shadow: 0 2px 2px #eee;
 }
-
 #header > * {
   margin: 0;
 }
-
 #header button {
   width: 3em;
 }
@@ -65,50 +58,28 @@ button:active {
 
 /*Flexbox*/
 .flex-container-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .flex-container-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
 }
 
 .flex-item-header {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 200px;
   flex: 1 1 200px;
 }
 
 .flex-item-left {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 100px;
   flex: 1 1 100px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
 }
 
 #top-heading {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -128,14 +99,10 @@ button:active {
 }
 
 .flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-col {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   padding: 0.5em;
 }
@@ -149,8 +116,6 @@ button:active {
 }
 
 .no-flex-col {
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
   flex: 0;
 }
 
@@ -167,7 +132,7 @@ button:active {
 .editor {
   margin: 0;
   height: 20em;
-  width: calc(100% - 35px - calc(0.625em * 2));
+  width: calc(100% - 35px - 1.25em);
   font-family: 'Anonymous Pro', monospace;
   font-size: 0.875em;
   line-height: 1.25em;
@@ -185,7 +150,6 @@ button:active {
   font-family: 'NunitoBold';
   src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap');
 }
-
 .code {
   display: inline-block;
   color: #000;
@@ -222,59 +186,37 @@ footer {
   padding: 30px 0;
   position: absolute;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
-
 footer a {
   color: #fff;
 }
-
 footer h4 {
   text-align: center;
   font-family: 'NunitoBold', sans-serif;
 }
-
 footer .footer-home {
   width: 315px;
 }
-
 footer .footer-home h4 {
   text-align: left;
 }
-
 footer .footer-socials {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
 }
-
 footer .footer-socials h4 {
   text-align: center;
 }
-
 footer .footer-socials .socials {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 0;
   margin: 1rem 0 3rem 0;
 }
-
 footer .footer-socials .socials li {
   display: inline-block;
   width: 1.5em;
@@ -286,19 +228,15 @@ footer .footer-socials .socials li {
   border-radius: 50%;
   background-color: #fff;
 }
-
 footer .footer-socials .socials li a {
   color: #153570;
 }
-
 footer .footer-socials .socials li:hover {
   background-color: #153570;
 }
-
 footer .footer-socials .socials li:hover a {
   color: #fff;
 }
-
 footer .footer-info {
   text-align: right;
   line-height: 0.8em;
@@ -307,66 +245,182 @@ footer .footer-info {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
-.two-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.two-col .col-box {
-  width: 50%;
-}
-
-.two-col .col-box:last-child {
-  margin-left: 30px;
-}
-
 .code {
   font-family: monospace;
-  font-size: 24px;
+  font-size: 20px;
   display: block;
 }
-
 .code.indent {
   margin-left: 30px;
 }
-
 .code .blue {
   color: #50c6e9;
 }
-
 .code .orange {
   color: #ffb560;
 }
 
+@-webkit-keyframes spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinning {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes jumping {
+  0% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -ms-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes jumping {
+  0% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -ms-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
 .bit-by-bot {
-  height: 150px;
-  width: auto;
+  height: auto;
+}
+.bit-by-bot.computer {
+  max-width: 300px;
+  float: right;
+  margin-top: 20px;
+}
+.bit-by-bot.party-hat {
+  max-width: 250px;
   position: absolute;
-  right: 200px;
-  top: 350px;
+  top: 20px;
+  left: 20px;
 }
 
-#example-div {
-  background-color: #1bb1de;
-  width: 20em;
-  height: 20em;
-  margin: 20px auto 0;
+.circle {
+  background-color: #38bfe7;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.circle.example {
+  margin: 0 auto;
+}
+.circle.example:hover {
+  background-color: #ff8900;
+}
+.circle.one:hover {
+  -webkit-animation: spinning 1s linear infinite;
+  -moz-animation: spinning 1s linear infinite;
+  animation: spinning 1s linear infinite;
+}
+.circle.two {
+  position: relative;
+  z-index: 0;
+}
+.circle.two p {
+  position: relative;
+  z-index: 2;
+}
+.circle.two:after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: 0%;
+  width: 0%;
+  margin: auto;
+  background: #ff8900;
+  z-index: 1;
+}
+.circle.two:hover:after {
+  height: 100%;
+  width: 100%;
+  transition: 1s ease;
+}
+.circle.three {
+  position: relative;
+  z-index: 2;
 }
 
-.scroll {
-  overflow: scroll;
+.circle-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0px 10px;
 }
 
-.hidden {
-  overflow: hidden;
+.circle-three-container {
+  position: relative;
 }
 
-.auto {
-  overflow: auto;
+.circle-three-container:hover .circle.three {
+  position: relative;
+  transform: rotate(-150deg);
+  transform-origin: 50px 50px;
+  transition: transform 0.8s ease;
+  z-index: 2;
+}
+.circle-three-container:hover .bit-by-bot {
+  -webkit-animation: jumping 0.5s ease-out infinite;
+  -moz-animation: jumping 0.5s ease-out infinite;
+  animation: jumping 0.5s ease-out infinite;
 }
 
-.visible {
-  overflow: visible;
-}
 /*# sourceMappingURL=style.css.map */
