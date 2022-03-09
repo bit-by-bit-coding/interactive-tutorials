@@ -245,6 +245,12 @@ footer .footer-info {
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+.inline-code {
+  font-family: monospace;
+  font-size: 16px;
+  color: #ff8900;
+}
+
 .code {
   font-family: monospace;
   font-size: 20px;
@@ -254,10 +260,10 @@ footer .footer-info {
   margin-left: 30px;
 }
 .code .blue {
-  color: #50c6e9;
+  color: #38bfe7;
 }
 .code .orange {
-  color: #ffb560;
+  color: #ff8900;
 }
 
 @-webkit-keyframes spinning {

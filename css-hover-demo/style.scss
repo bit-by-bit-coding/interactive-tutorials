@@ -5,6 +5,11 @@
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
+.inline-code {
+  font-family: monospace;
+  font-size: 16px;
+  color: #ff8900;
+}
 
 .code {
   font-family: monospace;
@@ -14,10 +19,10 @@
     margin-left: 30px;
   }
   .blue {
-    color: #50c6e9;
+    color: #38bfe7;
   }
   .orange {
-    color: #ffb560;
+    color: #ff8900;
   }
 }
 
