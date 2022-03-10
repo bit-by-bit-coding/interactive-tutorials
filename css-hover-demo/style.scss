@@ -1,0 +1,201 @@
+/* style.scss */
+
+/* Import the common styling */
+@import '../assets/common.scss';
+
+/* The page-specific styling */
+/* TODO: Put whatever styles you need for just your demo here */
+.inline-code {
+  font-family: monospace;
+  font-size: 16px;
+  color: #ff8900;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 20px;
+  display: block;
+  &.indent {
+    margin-left: 30px;
+  }
+  .blue {
+    color: #38bfe7;
+  }
+  .orange {
+    color: #ff8900;
+  }
+}
+
+@-webkit-keyframes spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinning {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes jumping {
+  0% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -ms-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes jumping {
+  0% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -ms-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+.bit-by-bot {
+  height: auto;
+  &.computer {
+    max-width: 300px;
+    float: right;
+    margin-top: 20px;
+  }
+  &.party-hat {
+    max-width: 250px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.circle {
+  background-color: #38bfe7;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+
+  &.example {
+    margin: 0 auto;
+  }
+  &.example:hover {
+    background-color: #ff8900;
+  }
+
+  &.one:hover {
+    -webkit-animation: spinning 1s linear infinite;
+    -moz-animation: spinning 1s linear infinite;
+    animation: spinning 1s linear infinite;
+  }
+
+  &.two {
+    position: relative;
+    z-index: 0;
+
+    p {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &.two:after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    height: 0%;
+    width: 0%;
+    margin: auto;
+    background: #ff8900;
+    z-index: 1;
+  }
+
+  &.two:hover:after {
+    height: 100%;
+    width: 100%;
+    transition: 1s ease;
+  }
+
+  &.three {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0px 10px;
+}
+
+.circle-three-container {
+  position: relative;
+}
+
+.circle-three-container:hover {
+  .circle.three {
+    position: relative;
+    transform: rotate(-150deg);
+    transform-origin: 50px 50px;
+    transition: transform 0.8s ease;
+    z-index: 2;
+  }
+  .bit-by-bot {
+    -webkit-animation: jumping 0.5s ease-out infinite;
+    -moz-animation: jumping 0.5s ease-out infinite;
+    animation: jumping 0.5s ease-out infinite;
+  }
+}

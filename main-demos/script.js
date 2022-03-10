@@ -33,6 +33,11 @@ let interactiveDemos = {
       title: "CSS DISPLAY DEMO",
       content: "What is the display property in CSS and how do you use it?",
     },
+    cssHoverDemo: {
+      path: "css-hover-demo",
+      title: "CSS HOVER DEMO",
+      content: "What is the hover pseudo-class in CSS and how do you use it?",
+    },
     cssOverflowDemo: {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
