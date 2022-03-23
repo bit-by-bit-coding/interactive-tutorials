@@ -2,13 +2,13 @@
 // If you want to change the image, just update both Hash tables and the option menu.
 let urlMap = new Map();
 urlMap.set("party-bot", "../assets/bit-by-bot-images/two-hands-party-bot.png");
-urlMap.set("pumpkin-bot", "../assets/bit-by-bot-images/pumpkin-yellow-bot.png");
-urlMap.set("snowman-bot", "../assets/bit-by-bot-images/snowman-bot.png");
+urlMap.set("flower-bot", "../assets/bit-by-bot-images/bit by bot with flower.png");
+urlMap.set("happy-bot", "../assets/bit-by-bot-images/bit by bot 4.png");
 
 let optionMap = new Map();
 optionMap.set("Party Bot", "party-bot");
-optionMap.set("Pumpkin Bot", "pumpkin-bot");
-optionMap.set("Snowman Bot", "snowman-bot");
+optionMap.set("Flower Bot", "flower-bot");
+optionMap.set("Happy Bot", "happy-bot");
 
 /* Set up the editor. */
 let editorElement = document.querySelector(".editor");
@@ -44,8 +44,8 @@ let optionHandler = (e) => {
 let imgSrcElement = document.getElementById("img-src");
 createOption(imgSrcElement, {
     "Party Bot": "party-bot",
-    "Pumpkin Bot" : "pumpkin-bot",
-    "Snowman Bot": "snowman-bot",
+    "Flower Bot" : "flower-bot",
+    "Happy Bot": "happy-bot",
   }, optionHandler);
 
 /* Width and height slider. */
