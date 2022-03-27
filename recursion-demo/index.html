@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- TODO: Change the title of the page to your demo name -->
+  <title>Recursion Demo | Bit by Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://bitbybitcoding.org/imgs/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
+  <script>
+      function checkAnswers(){
+          input_answer = document.querySelector('[name="answer"]').value
+          correct_answer = 29
+  
+          if (input_answer.length == 0) {
+              alert("Please type your answer. ");
+              return false;
+          }
+  
+          if (input_answer == correct_answer) {
+              alert("That is correct! ");
+          } 
+          else {
+              alert("Oops, be careful with your calculations! ");
+          }
+  
+      }
+      </script>
+</head>
+<body>
+  <div id="header" class="flex-container-header">
+    <div class="flex-item-header flex-container-left">
+      <div class="flex-item-left">
+        <a href="/" style="margin-right: 1em;">
+          <button id="back-button" title="Back to all demos">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </a>
+      </div>
+      <!-- TODO: Change the name of the demo here -->
+      <h1 class="flex-item-left">RECURSION DEMO</h1>
+    </div>
+    <div class="flex-item-header">
+      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg" alt="Logo">
+    </div>
+  </div>
+  <div class="content">
+    <!-- TODO: Fill this content div with all the content of the demo -->
+    <div class="section">
+      <h2>Introduction</h2>
+      <p>
+        The process of a function calling itself is called recursion, and this function is called a recursive function. By using recursion, we can solve certain type of tasks easily. 
+      </p>
+      <p>
+        You may ask, if a function calls itself, it will lead to calling itself again, and again, and again... when would it stop? This is why it is always important to add a stop condition for recursive functions, 
+        which is called the base case of the recursion. 
+      </p>
+    </div>
+    <div class="flex-box">
+      <div class="flex-col section">
+        <h2>Example</h2>
+        <p>
+          Let's investigate an interesting topic! How do bit by bots "reproduce"? Well, a newly created bit by bot need to learn how to create new bit by bots for a month; 
+          after that, the bit by bot will create a new bit by bot every month. If we start with one single newly created bit by bot, as shown in the picture below, 
+          it takes the bit by bot one month to learn how to create a new bit by bot and it will be creating one new bit by bot every month. 
+          Remember, each newly created bit by bot only starts to create new bit by bots after it has spent one month learning the way to do so. 
+        </p>
+        <p>
+          In this picture, each row represents the total number of bit by bot of the corresponding month. For each month, each bit by bot that knows how to build bit by bots will
+          still be in the group in the next month (represented by the black branches) and will make a new bit by bot (represented by the red branches). 
+        </p>
+        <img src="/assets/recursion.jpg" width="650">
+      </div>
+      <div class="flex-col section">
+        <h2>Analysis of example</h2>
+        <p>
+          The number of bit by bots for each month actually follows a pattern. 1, 1, 2, 3, 5, 8, ... Starting from the third term, each term is the sum of the previous two terms. 
+          This is a famous sequence called the Fibonacci sequence. Now, let's write a function that will give us the total number of bit by bots produced in such fashion 
+          for any given month. 
+        </p>
+        <p>
+          The function should take a single input, namely the month, and output the total number of bit by bots for that month. (You can pause here briefly and try to write 
+          a function that will work as described without using recursion. ) The code below is the recursive function that completes the task:
+        </p>
+        <span class="big-code">
+          function <span class="identifier">fibonacci(<span class="values">month</span>)</span> {<br>
+            <span class="comment"> &emsp; // Here the two ifs are the base case for the recursion, as<br>
+              &emsp; you can see they are not calling the function itself anymore</span><br>
+            &emsp; if (<span class="values">n == 0</span>)<br>
+            &emsp; &emsp; return <span class="values">0</span>;<br>
+            &emsp; if (<span class="values">n == 1 || n == 2</span>)<br>
+            &emsp; &emsp; return <span class="values">1</span>;<br>
+            <span class="comment"> &emsp; // This is where recursion occurs, the function is calling itself. <br>
+              &emsp; It says the output should be the sum of previous two months</span><br>
+            &emsp; else <br>
+            &emsp; &emsp; return <span class="identifier">fibonacci(<span class="values">month - 1</span>)</span> + <span class="identifier">fibonacci(<span class="values">month - 2</span>)</span>;<br>
+            }<br></span>
+        <p>
+          One important thing worth noting is how the function is evaluated. The only three cases where the function does not call itself repeatedly are month 0, 1, and 2. 
+          These are our base cases and we set them to 0, 1, and 1 correspondingly. For any larger input, the function will need to call itself. 
+        </p>
+        <p>
+            For instance, if our input is 5, 
+            fibonacci(5) will call fibonacci(4) and fibonacci(3); both of fibonacci(4) and fibonacci(3) are not fully evaluated yet, and they go on to call fibonacci(3) and 
+            fibonacci(2), and fibonacci(2) and fibonacci(1). As stated before, fibonacci(2) and fibonacci(1) are just defined numbers, thus fibonacci(3) is determined, and is used to determine 
+            the value of fibonacci(4); with both fibonacci(3) and fibonacci(4) completely evaluated, the value of fibonacci(5) is returned. 
+          </p>
+      </div>
+    </div>
+    <div class="section">
+        <h2>Quick exercise</h2>
+        <div class="flex-box">
+        <div class="flex-col">
+        <p>
+                See if you can figure out the console output of the following code, where input n is a positive number. <br>
+        </p>
+        <span class="big-code">
+        function <span class="identifier">exercise(<span class="values">n</span>)</span> {<br>
+          &emsp; if (<span class="values">n == 1</span>)<br>
+          &emsp; &emsp; return <span class="values">1</span>;<br>
+          &emsp; else <br>
+          &emsp; &emsp; return n + <span class="identifier">exercise(<span class="values">n - 1</span>)</span> + n;<br>
+          }<br>
+          console.log(<span class="identifier">exercise(<span class="values">5</span>)</span>);</span>
+        </div>
+        <div class="flex-col">
+          <form action="" name="f1" onsubmit >
+          your answer = <input type="password" name="answer" size="20">
+          <br>
+          <br>
+          <input type="button" value="Check" onClick="checkAnswers()">
+        </form>
+        <img src="/assets/bit-by-bot-images/computer-suspicious-closed-bot.svg" width="200">
+      </div>
+      </div>
+    </div>
+    <!-- The end of the content div is here -->
+  </div>
+</body>
+</html>
