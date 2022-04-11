@@ -42,6 +42,11 @@ let interactiveDemos = {
       path: "css-overflow-demo",
       title: "CSS OVERFLOW DEMO",
       content: "What is the overflow property in CSS and how do you use it?",
+    },
+    cssPositionDemo: {
+      path: 'css-position-demo',
+      title: 'CSS POSITION DEMO',
+      content: 'What is the position property in CSS and how can we use it?'
     }, 
     cssSelectorsDemo: {
       path: 'css-selectors-demo',
