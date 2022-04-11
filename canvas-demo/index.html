@@ -91,8 +91,11 @@
         <button id="next-button" onClick="increament()">Next</button>
       </div>
       <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="input-editor" style="height: 550px;"></div> 
+        <div class="editor lang-html" id="html-input-editor" style="height: 550px;"></div> 
+        <div hidden class="editor lang-js" id="js-input-editor" style="height: 550px;"></div> 
         <div class="editor-button-overlay">
+          <button hidden id="switch-html-button" onClick="switchLang(this.id)">HTML file</button>
+          <button id="switch-js-button" onClick="switchLang(this.id)">JavaScript file</button>
           <button id="reset-button" title="Reset the text code">
             <i class="fas fa-redo-alt"></i>
           </button>

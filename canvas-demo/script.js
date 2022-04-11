@@ -1,5 +1,3 @@
-/* Append default code at the beginning of the code editor */
-let defaultCanvasCode = '<canvas id="canvas" width="700" height="300"></canvas>\n';
 
 /**
  * Map that stores default codes
@@ -28,7 +26,6 @@ const InstructionMap = new Map();
 let sampleCode_0 = "";
 
 let sampleCode_1 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -38,11 +35,9 @@ let sampleCode_1 = `
       ctx.strokeRect(275, 25, 100, 200);
       ctx.clearRect(250, 20, 150, 250);
   }
-</script> 
 `;
 
 let sampleCode_2 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -62,11 +57,9 @@ let sampleCode_2 = `
       ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
       ctx.stroke();
   }
-</script>
 `;
 
 let sampleCode_3 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -83,11 +76,9 @@ let sampleCode_3 = `
       ctx.lineTo(350, 150);
       ctx.fill();
   }
-</script> 
 `;
 
 let sampleCode_4 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -118,11 +109,9 @@ let sampleCode_4 = `
       ctx.lineTo(350, 100);
       ctx.fill();
   }
-</script> 
 `;
 
 let sampleCode_5 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -136,11 +125,9 @@ let sampleCode_5 = `
           ctx.fill();
       }
   }
-</script> 
 `;
 
 let sampleCode_6 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -194,11 +181,9 @@ let sampleCode_6 = `
       ctx.lineTo(300, 250);
       ctx.stroke();
   }
-</script> 
 `;
 
 let sampleCode_7 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -206,11 +191,9 @@ let sampleCode_7 = `
       ctx.fillText('Hello world', 50, 50);
       ctx.strokeText('Bit By Bit', 400, 50);
   }
-</script> 
 `;
 
 let sampleCode_8 = `
-<script>
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
@@ -248,7 +231,6 @@ let sampleCode_8 = `
           ctx.fillText('Hello World! (' + direction[k] + ')' , 500, 50 * k + 20);
       }
   }
-</script> 
 `;
 
 /**
@@ -624,112 +606,6 @@ FunctionMap.set("textAlign-button", textAlignProperty);
 FunctionMap.set("textBaseline-button", textBaselineProperty);
 FunctionMap.set("direction-button", directionProperty);
 
-
-/* Page number */
-var pageNum = 0;
-
-/* Instruction Section */
-document.getElementById("instructionContent").innerHTML = InstructionMap.get(pageNum);
-
-/* Editor Function */
-let Jar = CodeJar(document.getElementById("input-editor"), withLineNumbers(Prism.highlightElement, {
-    color: '#000',
-    backgroundColor: 'rgb(232, 232, 232)'
-}), {
-    tab: '  ',
-    indentOn: /<[a-zA-Z =\"\-]+>$/
-});
-
-var displayedCode = defaultCanvasCode;
-
-Jar.updateCode(displayedCode);
-executeCode(Jar);
-
-Jar.onUpdate(code => {
-    executeCode(Jar);
-});
-
-let resetButton = document.getElementById("reset-button");
-resetButton.onclick = function (e) {
-    Jar.updateCode(displayedCode);
-  executeCode(Jar);
-};
-
-/* Run the code in jar and display the result in frame */
-function executeCode(jar) {
-  let frame = document.getElementById("display-input-frame");
-  let frameDoc =
-    frame.contentWindow ||
-    frame.contentDocument.document ||
-    frame.contentDocument;
-  let body = jar.toString();
-  frameDoc.document.write(
-    '<html><head></head>' +
-      body +
-      "</html>"
-  );
-  frameDoc.document.close();
-}
-
-
-/* Button Clicked Function */
-function increament() {
-  if (pageNum < 8) {
-    pageNum++;
-  }
-  /* Check button visiblity */
-  checkPageNum()
-  /* update tutorial */
-  update();
-}
-
-function decrement() {
-  if (pageNum > 0) {
-    pageNum--;
-  }
-  /* Check button visiblity */
-  checkPageNum()
-  /* update tutorial */
-  update();
-}
-
-function checkPageNum() {
-  if (pageNum <= 0) {
-    document.getElementById("prev-button").style.visibility = "hidden";
-  } else {
-    document.getElementById("prev-button").style.visibility = "visible";
-  }
-
-  if (pageNum >= 8) {
-    document.getElementById("next-button").style.visibility = "hidden";
-  } else {
-    document.getElementById("next-button").style.visibility = "visible";
-  }
-}
-
-function update() {
-  document.getElementById("instructionContent").innerHTML = InstructionMap.get(pageNum);
-  displayedCode = defaultCanvasCode + CodeMap.get(pageNum);
-  Jar.updateCode(displayedCode);
-  executeCode(Jar);
-}
-
-/* Function Button Clicked */
-function showFunctionDetail(functionId) {
-
-  document.getElementById("instructionContent").innerHTML = FunctionMap.get(functionId);
-
-  document.getElementById("prev-button").style.visibility = "hidden";
-  document.getElementById("next-button").style.visibility = "hidden";
-}
-
-function backButtonClicked() {
-  document.getElementById("prev-button").style.visibility = "visible";
-  document.getElementById("next-button").style.visibility = "visible";
-
-  update()
-}
-
 /* Canvas that draw the grid */
 
 /* create a canvas and append it to grid-div */
@@ -777,3 +653,179 @@ gctx.fill();
 gctx.beginPath();
 gctx.font = '15px serif';
 gctx.fillText("(5,3)", 165, 105)
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Page number */
+var pageNum = 0;
+
+/* Instruction Section */
+document.getElementById("instructionContent").innerHTML = InstructionMap.get(pageNum);
+
+/* default HTML code */
+let innerHTMLCode = '<canvas id="canvas" width="700" height="300"></canvas>\n';
+let HTMLCode_1 = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="main.js"></script>
+</head>
+<body>`;
+let HTMLCode_2 = `
+</body>
+</html>`
+
+
+/* Editor Function */
+let HTMLJar = CodeJar(document.getElementById("html-input-editor"), withLineNumbers(Prism.highlightElement, {
+    color: '#000',
+    backgroundColor: 'rgb(232, 232, 232)'
+}), {
+    tab: '  ',
+    indentOn: /<[a-zA-Z =\"\-]+>$/
+});
+
+let JsJar = CodeJar(document.getElementById("js-input-editor"), withLineNumbers(Prism.highlightElement, {
+  color: '#000',
+  backgroundColor: 'rgb(232, 232, 232)'
+}), {
+  tab: '  ',
+  indentOn: /<[a-zA-Z =\"\-]+>$/
+});
+
+var displayedHTMLCode = HTMLCode_1 + innerHTMLCode + HTMLCode_2;
+var displayedJSCode = "";
+
+HTMLJar.updateCode(displayedHTMLCode);
+
+JsJar.updateCode(displayedJSCode);
+executeCode(JsJar);
+
+HTMLJar.onUpdate(code => {
+  executeCode(JsJar);
+});
+
+JsJar.onUpdate(code => {
+  executeCode(JsJar);
+});
+
+/* consider 2 cases */
+let resetButton = document.getElementById("reset-button");
+resetButton.onclick = function (e) {
+  let isHTMLEditor = document.getElementById("html-input-editor").hidden;
+  
+  if (!isHTMLEditor) {
+    HTMLJar.updateCode(displayedHTMLCode);
+    executeCode(JsJar);
+  } else {
+    JsJar.updateCode(displayedJSCode);
+    executeCode(JsJar);
+  }
+};
+
+/* Run the code in jar and display the result in frame */
+function executeCode(jar) {
+  let frame = document.getElementById("display-input-frame");
+  let frameDoc =
+    frame.contentWindow ||
+    frame.contentDocument.document ||
+    frame.contentDocument;
+  let body = jar.toString();
+  let htmlcode = findInnerCanvas(HTMLJar.toString());
+  frameDoc.document.write(
+    '<html><head></head>' +
+    htmlcode + 
+    `<script>` + 
+    body +
+    `</script>` +
+    `</html>`
+  );
+  frameDoc.document.close();
+}
+
+function findInnerCanvas(code) {
+  let begin = code.indexOf("<canvas");
+  let end = code.indexOf("</canvas>") + 10;
+  return code.substring(begin, end);
+}
+
+
+/* Button Clicked Function */
+function increament() {
+  if (pageNum < 8) {
+    pageNum++;
+  }
+  /* Check button visiblity */
+  checkPageNum()
+  /* update tutorial */
+  update();
+}
+
+function decrement() {
+  if (pageNum > 0) {
+    pageNum--;
+  }
+  /* Check button visiblity */
+  checkPageNum()
+  /* update tutorial */
+  update();
+}
+
+function checkPageNum() {
+  if (pageNum <= 0) {
+    document.getElementById("prev-button").style.visibility = "hidden";
+  } else {
+    document.getElementById("prev-button").style.visibility = "visible";
+  }
+
+  if (pageNum >= 8) {
+    document.getElementById("next-button").style.visibility = "hidden";
+  } else {
+    document.getElementById("next-button").style.visibility = "visible";
+  }
+}
+
+function update() {
+  document.getElementById("instructionContent").innerHTML = InstructionMap.get(pageNum);
+  displayedJSCode = CodeMap.get(pageNum);
+  JsJar.updateCode(displayedJSCode);
+  executeCode(JsJar);
+}
+
+/* Function Button Clicked */
+function showFunctionDetail(functionId) {
+
+  document.getElementById("instructionContent").innerHTML = FunctionMap.get(functionId);
+
+  document.getElementById("prev-button").style.visibility = "hidden";
+  document.getElementById("next-button").style.visibility = "hidden";
+}
+
+function backButtonClicked() {
+  document.getElementById("prev-button").style.visibility = "visible";
+  document.getElementById("next-button").style.visibility = "visible";
+
+  update()
+}
+
+
+
+/* Switch Lang */
+function switchLang(lang) {
+  if (lang == "switch-html-button") {
+    document.getElementById("switch-html-button").hidden = true;
+    document.getElementById("switch-js-button").hidden = false;
+
+    document.getElementById("js-input-editor").hidden = true;
+    document.getElementById("html-input-editor").hidden = false;
+  } else {
+    console.log("switch to js");
+    document.getElementById("switch-html-button").hidden = false;
+    document.getElementById("switch-js-button").hidden = true;
+
+    document.getElementById("html-input-editor").hidden = true;
+    document.getElementById("js-input-editor").hidden = false;
+  }
+}
