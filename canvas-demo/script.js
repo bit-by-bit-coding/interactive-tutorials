@@ -26,9 +26,9 @@ const InstructionMap = new Map();
 let sampleCode_0 = "";
 
 let sampleCode_1 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_1 = document.getElementById("canvas");
+  if (canvas_1.getContext) {
+      let ctx = canvas_1.getContext("2d");
 
       ctx.fillRect(25, 25, 100, 200);
       ctx.strokeRect(150, 25, 100, 200);
@@ -38,9 +38,9 @@ let sampleCode_1 = `
 `;
 
 let sampleCode_2 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_2 = document.getElementById("canvas");
+  if (canvas_2.getContext) {
+      let ctx = canvas_2.getContext("2d");
 
       ctx.beginPath();
       ctx.moveTo(50, 50);
@@ -48,21 +48,21 @@ let sampleCode_2 = `
       ctx.stroke();
       
       ctx.beginPath();
-      var x = 200;
-      var y = 100;
-      var radius = 50;
-      var startAngle = 0;
-      var endAngle = Math.PI;
-      var counterclockwise = true;
+      let x = 200;
+      let y = 100;
+      let radius = 50;
+      let startAngle = 0;
+      let endAngle = Math.PI;
+      let counterclockwise = true;
       ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
       ctx.stroke();
   }
 `;
 
 let sampleCode_3 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_3 = document.getElementById("canvas");
+  if (canvas_3.getContext) {
+      let ctx = canvas_3.getContext("2d");
 
       ctx.beginPath();
       ctx.moveTo(100, 100);
@@ -79,31 +79,31 @@ let sampleCode_3 = `
 `;
 
 let sampleCode_4 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_4 = document.getElementById("canvas");
+  if (canvas_4.getContext) {
+      let ctx = canvas_4.getContext("2d");
 
       ctx.beginPath();
-      ctx.strokeStyle = 'orange';
+      ctx.strokeStyle = "orange";
       ctx.moveTo(50, 50);
       ctx.lineTo(150, 50);
       ctx.stroke();
       
       ctx.beginPath();
-      ctx.strokeStyle = '#38Bfe7';
+      ctx.strokeStyle = "#38Bfe7";
       ctx.moveTo(50, 100);
       ctx.lineTo(150, 100);
       ctx.stroke();
       
       ctx.beginPath();
-      ctx.fillStyle = 'rgb(21,53,112)';
+      ctx.fillStyle = "rgb(21,53,112)";
       ctx.moveTo(200, 50);
       ctx.lineTo(200, 100);
       ctx.lineTo(250, 100);
       ctx.fill();
       
       ctx.beginPath();
-      ctx.fillStyle = '#ff8900';
+      ctx.fillStyle = "#ff8900";
       ctx.moveTo(300, 50);
       ctx.lineTo(300, 100);
       ctx.lineTo(350, 100);
@@ -112,9 +112,9 @@ let sampleCode_4 = `
 `;
 
 let sampleCode_5 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_5 = document.getElementById("canvas");
+  if (canvas_5.getContext) {
+      let ctx = canvas_5.getContext("2d");
 
       for (var i = 0; i < 10; i++) {
           ctx.beginPath();
@@ -128,9 +128,9 @@ let sampleCode_5 = `
 `;
 
 let sampleCode_6 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_6 = document.getElementById("canvas");
+  if (canvas_6.getContext) {
+      let ctx = canvas_6.getContext("2d");
 
       for (var i = 0; i < 5; i++) {
           ctx.lineWidth = i + 1;
@@ -140,19 +140,19 @@ let sampleCode_6 = `
           ctx.stroke();
       }
       
-      ctx.lineCap = 'butt';
+      ctx.lineCap = "butt";
       ctx.beginPath();
       ctx.moveTo(130, 5);
       ctx.lineTo(130, 150);
       ctx.stroke();
       
-      ctx.lineCap = 'round';
+      ctx.lineCap = "round";
       ctx.beginPath();
       ctx.moveTo(150, 5);
       ctx.lineTo(150, 150);
       ctx.stroke();
       
-      ctx.lineCap = 'square';
+      ctx.lineCap = "square";
       ctx.beginPath();
       ctx.moveTo(170, 5);
       ctx.lineTo(170, 150);
@@ -160,21 +160,21 @@ let sampleCode_6 = `
 
       ctx.lineWidth = 10;
   
-      ctx.lineJoin  = 'round';
+      ctx.lineJoin  = "round";
       ctx.beginPath();
       ctx.moveTo(50, 200);
       ctx.lineTo(50, 250);
       ctx.lineTo(100, 250);
       ctx.stroke();
       
-      ctx.lineJoin  = 'bevel';
+      ctx.lineJoin  = "bevel";
       ctx.beginPath();
       ctx.moveTo(150, 200);
       ctx.lineTo(150, 250);
       ctx.lineTo(200, 250);
       ctx.stroke();
       
-      ctx.lineJoin  = 'miter';
+      ctx.lineJoin  = "miter";
       ctx.beginPath();
       ctx.moveTo(250, 200);
       ctx.lineTo(250, 250);
@@ -184,32 +184,32 @@ let sampleCode_6 = `
 `;
 
 let sampleCode_7 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_7 = document.getElementById("canvas");
+  if (canvas_7.getContext) {
+      let ctx = canvas_7.getContext("2d");
       ctx.font = "40px serif";
-      ctx.fillText('Hello world', 50, 50);
-      ctx.strokeText('Bit By Bit', 400, 50);
+      ctx.fillText("Hello world", 50, 50);
+      ctx.strokeText("Bit By Bit", 400, 50);
   }
 `;
 
 let sampleCode_8 = `
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
+  let canvas_8 = document.getElementById("canvas");
+  if (canvas_8.getContext) {
+      let ctx = canvas_8.getContext("2d");
 
-      var textAlign = ['start', 'end', 'left', 'right', 'center'];
-      var textBaseLine = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-      var direction = ['ltr', 'rtl', 'inherit'];
+      let textAlign = ["start", "end", "left", "right", "center"];
+      let textBaseLine = ["top", "hanging", "middle", "alphabetic", "ideographic", "bottom"];
+      let direction = ["ltr", "rtl", "inherit"];
       
       ctx.font = "20px serif";
       
-      ctx.strokeStyle = '#38Bfe7';
+      ctx.strokeStyle = "#38Bfe7";
       ctx.beginPath();
       ctx.moveTo(100, 0);
       ctx.lineTo(100, 270);
       ctx.stroke();
-      ctx.strokeStyle = 'black';
+      ctx.strokeStyle = "black";
       for (var i = 0; i < 5; i++) {
           ctx.textAlign = textAlign[i]
           ctx.strokeText(textAlign[i], 100, 50 * i + 20);
@@ -217,18 +217,18 @@ let sampleCode_8 = `
       
       
       for (var j = 0; j < 6; j++) {
-          ctx.strokeStyle = '#38Bfe7';
+          ctx.strokeStyle = "#38Bfe7";
           ctx.beginPath();
           ctx.moveTo(200, 50 * j + 20);
           ctx.lineTo(400, 50 * j + 20);
           ctx.stroke();
           ctx.textBaseline = textBaseLine[j]
-          ctx.fillText('Bit By Bit (' + textBaseLine[j] + ' )', 300, 50 * j + 20);
+          ctx.fillText("Bit By Bit (" + textBaseLine[j] + " )", 300, 50 * j + 20);
       }
       
       for (var k = 0; k < 3; k++) {
           ctx.direction = direction[k]
-          ctx.fillText('Hello World! (' + direction[k] + ')' , 500, 50 * k + 20);
+          ctx.fillText("Hello World! (" + direction[k] + ")" , 500, 50 * k + 20);
       }
   }
 `;
@@ -609,7 +609,7 @@ FunctionMap.set("direction-button", directionProperty);
 /* Canvas that draw the grid */
 
 /* create a canvas and append it to grid-div */
-var grid = document.createElement('canvas');
+var grid = document.createElement("canvas");
 grid.id = "grid-canvas";
 grid.width = 400;
 grid.height = 300 ;
@@ -618,7 +618,7 @@ var body = document.getElementById("grid-div");
 body.appendChild(grid);
 
 /* draw the grid */
-var gctx = grid.getContext('2d');
+var gctx = grid.getContext("2d");
 
 gctx.beginPath();
 gctx.lineWidth = 1;
@@ -642,7 +642,7 @@ gctx.arc(30, 30, 5, 0, 2 * Math.PI, true);
 gctx.fill();
 
 gctx.beginPath();
-gctx.font = '15px serif';
+gctx.font = "15px serif";
 gctx.fillText("(0,0)", 15, 15)
 
 /* draw a point at (5, 3) */
@@ -651,7 +651,7 @@ gctx.arc(180, 120, 5, 0, 2 * Math.PI, true);
 gctx.fill();
 
 gctx.beginPath();
-gctx.font = '15px serif';
+gctx.font = "15px serif";
 gctx.fillText("(5,3)", 165, 105)
 
 
@@ -664,15 +664,13 @@ var pageNum = 0;
 document.getElementById("instructionContent").innerHTML = InstructionMap.get(pageNum);
 
 /* default HTML code */
-let innerHTMLCode = '<canvas id="canvas" width="700" height="300"></canvas>\n';
+let innerHTMLCode = `<canvas id="canvas" width="700" height="300"></canvas>\n`;
 let HTMLCode_1 = `
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<script src="main.js"></script>
 </head>
-<body>`;
+<body>\n\n`;
 let HTMLCode_2 = `
 </body>
 </html>`
