@@ -344,11 +344,11 @@ footer .footer-info {
   width: auto;
   position: absolute;
   right: 200px;
-  top: 325px;
+  top: 275px;
 }
 
 .scroll {
-  height: 300px;
+  height: 500px;
   width: 100%;
   overflow: scroll;
   text-align: justify;
@@ -427,5 +427,12 @@ input[type='number'] {
 
 .flex-box {
   margin-bottom: 1em;
+}
+
+#next {
+  float: right;
+  margin-top: 50px;
+  font-size: 30px;
+  padding: 0px 20px 5px;
 }
 /*# sourceMappingURL=style.css.map */

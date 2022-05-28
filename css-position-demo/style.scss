@@ -1,109 +1,116 @@
 /* style.scss */
 
 /* Import the common styling */
-@import "../assets/common.scss";
+@import '../assets/common.scss';
 
 /* The page-specific styling */
 /* TODO: Put whatever styles you need for just your demo here */
 
 .two-col {
-    display: flex;
-    .col-box {
-      width: 50%;
-    }
-    .col-box:last-child {
-      margin-left: 30px;
-    }
+  display: flex;
+  .col-box {
+    width: 50%;
+  }
+  .col-box:last-child {
+    margin-left: 30px;
+  }
 }
 
 .code {
-    font-family: monospace;
-    font-size: 24px;
-    display: block;
-    &.indent {
-        margin-left: 30px;
-    }
-    .blue {
-        color: #50c6e9;
-    }
-    .orange {
-        color: #ffb560;
-    }
+  font-family: monospace;
+  font-size: 24px;
+  display: block;
+  &.indent {
+    margin-left: 30px;
+  }
+  .blue {
+    color: #50c6e9;
+  }
+  .orange {
+    color: #ffb560;
+  }
 }
-  
+
 .bit-by-bot-computer {
-    height: 250px;
-    width: auto;
-    position: absolute;
-    right: 200px;
-    top: 325px;
+  height: 250px;
+  width: auto;
+  position: absolute;
+  right: 200px;
+  top: 275px;
 }
-  
+
 .scroll {
-    height: 300px;
-    width: 100%;
-    overflow: scroll;
-    text-align: justify;
-    h3 {
-        text-align: center;
-    }
+  height: 500px;
+  width: 100%;
+  overflow: scroll;
+  text-align: justify;
+  h3 {
+    text-align: center;
+  }
 }
 
 .bit-by-bot-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    align-self: flex-start;
-    width: 100px;
-    float: left; 
-    margin: 0px 15px 5px 0px;
-    border: 3px solid #ffb560;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  align-self: flex-start;
+  width: 100px;
+  float: left;
+  margin: 0px 15px 5px 0px;
+  border: 3px solid #ffb560;
 }
 
 .inline-code {
-    font-family: monospace;
-    font-size: 16px;
+  font-family: monospace;
+  font-size: 16px;
 }
 
 .relative {
-    border: 3px solid #ffb560;
-    position: relative;
+  border: 3px solid #ffb560;
+  position: relative;
 }
 
 .absolute {
-    border: 3px solid #50c6e9;
-    position: relative;
-    top: 0px;
-    left: 0px;
+  border: 3px solid #50c6e9;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .static {
-    border: 3px dotted rgba(128, 128, 128, 0.4);
-    position: absolute;
-    left: -3px;
-    top: -3px;
-    width: 100%;
-    height: 100%;
+  border: 3px dotted rgba(128, 128, 128, 0.4);
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 100%;
+  height: 100%;
 }
 
 .form-style {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .inner-form-style {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-input[type='number']{
-    width: 80px;
-    height: 20px;
-    font-size: 16px;
+input[type='number'] {
+  width: 80px;
+  height: 20px;
+  font-size: 16px;
 }
 
 .flex-box {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+#next {
+  float: right;
+  margin-top: 50px;
+  font-size: 30px;
+  padding: 0px 20px 5px;
 }

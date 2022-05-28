@@ -1,182 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Position Demo | Bit by Bit</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="../assets/favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/7f9874946f.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div id="header" class="flex-container-header">
-    <div class="flex-item-header flex-container-left">
-      <div class="flex-item-left">
-        <a href="/main-demos" style="margin-right: 1em;">
-          <button id="back-button" title="Back to all demos">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </a>
-      </div>
-      <h1 class="flex-item-left">CSS POSITION DEMO</h1>
-    </div>
-    <div class="flex-item-header">
-      <img id="bxb-logo" src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg" alt="Logo">
-    </div>
-  </div>
-  <div class="content">
-    <div class="section">
-      <div class="two-col">
-        <div class="col-box">
-          <h2>What is the position property?</h2>
-          <p>
-            Did you know there is more than one way to position HTML elements on a page?
-          </p>
-          <p>
-            With the position property, you can specify how elements are positioned on a page relative to the page itself, or even to other elements! Below are the five values to utilize when positioning an element:
-          </p>
-          <ul>
-            <li>fixed</li>
-            <li>sticky</li>
-            <li>static</li>
-            <li>relative</li>
-            <li>absolute</li>
-          </ul>
-          <p>
-            The code snippet to the right shows an example of how to set the position property of an element in CSS to any of the five possible values.
-            It is important to note that, by default, an element's position is static unless otherwise stated. Below, we'll explore more about each of the five position values.
-          </p>
+  <head>
+    <title>Position Demo | Bit by Bit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7f9874946f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header" class="flex-container-header">
+      <div class="flex-item-header flex-container-left">
+        <div class="flex-item-left">
+          <a href="/main-demos" style="margin-right: 1em">
+            <button id="back-button" title="Back to all demos">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+          </a>
         </div>
-        <div class="col-box">
-          <p class="code"><span class="orange">div</span> {</p>
-            <p class="code indent"><span class="blue">position:</span> <span id="position-property">static</span>;</p>
-          <p class="code">}</p>
-          <img class="bit-by-bot-computer" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot Using a Computer">
-        </div>
+        <h1 class="flex-item-left">CSS POSITION DEMO</h1>
+      </div>
+      <div class="flex-item-header">
+        <img
+          id="bxb-logo"
+          src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg"
+          alt="Logo"
+        />
       </div>
     </div>
-    <div class="section">
-      <h2>Fixed</h2>
-      <p>
-        An element that is fixed remains in the exact same place on the page, even as the page is scrolled.
-      </p>
-      <p>
-        It is also positioned relative to the viewable area of your screen, and it's position can be is affected by the top, right, bottom, and left properties.
-      </p>
-      <p>
-        The header on this page that reads "CSS POSITION DEMO" for example, is a demonstartion of using a fixed value for the position property. Test it out! Try scrolling the page up and down and watch as the header stays at the top of the page.
-      </p>
-    </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <h2>Sticky</h2>
-        <p>
-          A sticky element is positioned relative to the blue container until it reaches a specified offset position on the viewable area of your screen. Once it reaches this specified offset, it then behaves as an element with position fixed.
-        </p>
-        <p>
-          In the example to the right, the image of the bit by bot is sticky, and the top of the container has been specified as the offset position. Intially, the image will behave with position relative, and scroll along with the rest of the content until it reaches the top. Then, it will remain position fixed at the top as you continue scrolling.
-        </p>
-      </div>
-      <div class="flex-col section">
-        <div class="scroll">
-          <h3>Bit By Bit - A Tongue Twister</h3>
-          <p>Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog.</p>
-          <img class="bit-by-bot-sticky" src="../assets/bit-by-bot-images/computer-open-bot.svg" alt="Bit by Bot Using a Computer">
-          <p>Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog.</p>
-          <p>Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog.</p>
-          <p>Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog.</p>
-          <p>Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog. Bit by bit, the bit-by-bot builds its blog.</p>
+    <div class="content">
+      <div class="section">
+        <div class="two-col">
+          <div class="col-box">
+            <h2>What is the position property?</h2>
+            <p>
+              Did you know there is more than one way to position HTML elements
+              on a page?
+            </p>
+            <p>
+              With the position property, you can specify how elements are
+              positioned on a page relative to the page itself, or even to other
+              elements! Below are the five values to utilize when positioning an
+              element:
+            </p>
+            <ul>
+              <li>fixed</li>
+              <li>sticky</li>
+              <li>static</li>
+              <li>relative</li>
+              <li>absolute</li>
+            </ul>
+            <p>
+              The code snippet to the right shows an example of how to set the
+              position property of an element in CSS to any of the five possible
+              values. It is important to note that, by default, an element's
+              position is static unless otherwise stated. Below, we'll explore
+              more about each of the five position values.
+            </p>
+          </div>
+          <div class="col-box">
+            <p class="code"><span class="orange">div</span> {</p>
+            <p class="code indent">
+              <span class="blue">position:</span>
+              <span id="position-property">static</span>;
+            </p>
+            <p class="code">}</p>
+            <img
+              class="bit-by-bot-computer"
+              src="../assets/bit-by-bot-images/computer-open-bot.svg"
+              alt="Bit by Bot Using a Computer"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <h2>Static & Relative</h2>
-        <p>
-          As mentioned previously, all elements are positioned static by default. This means that they will respect the normal flow of the page and, unlike the other postion values, are not affected by the top, right, bottom, and left properties.
-        </p>
-        <p>
-          However, using relative positioning, you can have an element that not only respects the normal flow of the page, but is also affected by the top, bottom, left, and right properties.
-        </p>
-        <p>
-          Currently, the orange div to the right is positioned static. Change it's position to relative in order to enable the use of the top and left properties. Then using those same properties, watch how the orange div moves relative to it's previously static position as indicated by the gray, dotted div. *Note: You enter numbers from -30 to 30.
-        </p>
-        <form class=form-style>
-          <div class=inner-form-style>
-            <div>
-              <label for="select1">Position:</label>
-              <select id="select1" name="example1" onchange=setDisplay(this)>
-                <option value="static">static</option>
-                <option value="relative">relative</option>
-              </select>
-            </div>
-            <div>
-              <label for="top1">Top:</label>
-              <input id="top1" name="top" type="number" min="-30" max="30" disabled>
-            </div>
-            <div>
-              <label for="left1">Left:</label>
-              <input id="left1" name="left" type="number" min="-30" max="30" disabled>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="flex-col section">
-          <p>Bit by bit, the bit-by-bot builds its blog.</p>
-          <div class="relative example1">
-            Position me!
-            <div class="static example1"></div>
-          </div>
-          <p>Bit by bit, the bit-by-bot builds its blog.</p>
-          <p>Bit by bit, the bit-by-bot builds its blog.</p>
+      <div class="flex-box">
+        <div class="flex-col section">
+          <div id="instruction"></div>
+          <button id="next">&#8594;</button>
+        </div>
+        <div id="demo" class="flex-col section"></div>
       </div>
     </div>
-    <div class="flex-box">
-      <div class="flex-col section">
-        <h2>Relative & Absolute</h2>
-        <p>
-          As mentioned previously, elements positioned relative respect the normal flow of the page and are affected by the top, right, bottom, and left properties.
-        </p>
-        <p>
-          However, absolute positioning, while being affected by the top, right, bottom, and left properties, does not respect the normal flow of the page. When an element is positioned absolute, it is removed from the normal flow of the page and can overlap other elements. An absolute positioned element is also positioned relative to its closest a relative position ancestor.
-        </p>
-        <p>
-          Currently, the both the orange and blue divs to the right are positioned relative. Change the blue div's position to absolute, and making use of the top and left properties, watch how the blue div moves relative to it's relative positioned ancestor, the orange div and it's contents. *Note: You enter numbers from -30 to 30.
-        </p>
-        <form class=form-style>
-          <div class=inner-form-style>
-            <div>
-              <label for="select2">Position:</label>
-              <select id="select2" name="example2" onchange=setDisplay2(this)>
-                <option value="relative">relative</option>
-                <option value="absolute">absolute</option>
-              </select>
-            </div>
-            <div>
-              <label for="top2">Top:</label>
-              <input id="top2" name="top" type="number" min="-30" max="30" disabled>
-            </div>
-            <div>
-              <label for="left2">Left:</label>
-              <input id="left2" name="left" type="number" min="-30" max="30" disabled>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="flex-col section">
-          <div class="relative example2">
-            <p>Bit by bit, the bit-by-bot builds its blog.</p>
-            <p>Bit by bit, the bit-by-bot builds its blog.</p>
-            <div class="absolute example2">
-              Position me!
-            </div>
-            <p>Bit by bit, the bit-by-bot builds its blog.</p>
-            <p>Bit by bit, the bit-by-bot builds its blog.</p>
-            <p>Bit by bit, the bit-by-bot builds its blog.</p>
-          </div>
-      </div>
-    </div>
-  </div>
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
