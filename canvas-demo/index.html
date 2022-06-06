@@ -76,7 +76,7 @@
         <p> Let's see what we can do with canvas! </p>
         <p> Follow the instructions below. Click the <button class="function-button" type="button">function</button> buttons to see details. </p>
         <p> You can also modify the editor directly. Try different parameter and see what happens.</p>
-        <p> We will use embedded script for simplicity. </p>
+        <p> Please only modify the canavs element in the HTML file. Also, it is recommended to use let instead of var, even though the demo does otherwise.</p>
       </div>
       <div style="margin-left: 5em;">
         <img style="flex: 0; height: 13em;" src="../assets/bit-by-bot-images/two-hands-happy-bot.svg">
@@ -91,8 +91,11 @@
         <button id="next-button" onClick="increament()">Next</button>
       </div>
       <div class="editor-section flex-col section">
-        <div class="editor lang-html" id="input-editor" style="height: 550px;"></div> 
+        <div class="editor lang-html" id="html-input-editor" style="height: 550px;"></div> 
+        <div hidden class="editor lang-js" id="js-input-editor" style="height: 550px;"></div> 
         <div class="editor-button-overlay">
+          <button hidden id="switch-html-button" onClick="switchLang(this.id)">HTML file</button>
+          <button id="switch-js-button" onClick="switchLang(this.id)">JavaScript file</button>
           <button id="reset-button" title="Reset the text code">
             <i class="fas fa-redo-alt"></i>
           </button>
