@@ -348,7 +348,7 @@ footer .footer-info {
 }
 
 .scroll {
-  height: 500px;
+  height: 350px;
   width: 100%;
   overflow: scroll;
   text-align: justify;
@@ -429,8 +429,11 @@ input[type='number'] {
   margin-bottom: 1em;
 }
 
-#next {
+.control-flow {
   float: right;
+}
+
+.control-flow button {
   margin-top: 50px;
   font-size: 30px;
   padding: 0px 20px 5px;

@@ -13,7 +13,7 @@ setInterval(cycleArray, 1500);
 let instructions0 = `
 <h2>Fixed</h2>
 <p>An element that is fixed remains in the exact same place on the page, even as the page is scrolled.</p>
-<p>It is also positioned relative to the viewable area of your screen, and it's position can be is affected by the top, right, bottom, and left properties.</p>
+<p>It is also positioned relative to the viewable area of your screen, and its position can be is affected by the top, right, bottom, and left properties.</p>
 `;
 
 let demo0 = `
@@ -123,10 +123,19 @@ const demoArray = [demo0, demo1, demo2, demo3];
 
 const instruction = document.getElementById('instruction');
 const demo = document.getElementById('demo');
+const back = document.getElementById('back');
 const next = document.getElementById('next');
 
 instruction.innerHTML = instructionArray[page];
 demo.innerHTML = demoArray[page];
+
+back.addEventListener('click', function () {
+  page < 1 ? (page = 3) : (page -= 1);
+  instruction.innerHTML = instructionArray[page];
+  demo.innerHTML = demoArray[page];
+  page2(page === 2);
+  page3(page === 3);
+});
 
 next.addEventListener('click', function () {
   page >= 3 ? (page = 0) : (page += 1);
