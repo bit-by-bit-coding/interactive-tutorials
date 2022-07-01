@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position Demo | Bit by Bit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7f9874946f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header" class="flex-container-header">
+      <div class="flex-item-header flex-container-left">
+        <div class="flex-item-left">
+          <a href="/main-demos" style="margin-right: 1em">
+            <button id="back-button" title="Back to all demos">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+          </a>
+        </div>
+        <h1 class="flex-item-left">CSS POSITION DEMO</h1>
+      </div>
+      <div class="flex-item-header">
+        <img
+          id="bxb-logo"
+          src="https://bitbybitcoding.org/imgs/Logos%20and%20Icons/Logo.svg"
+          alt="Logo"
+        />
+      </div>
+    </div>
+    <div class="content">
+      <div class="section">
+        <div class="two-col">
+          <div class="col-box">
+            <h2>What is the position property?</h2>
+            <p>
+              Did you know there is more than one way to position HTML elements
+              on a page?
+            </p>
+            <p>
+              With the position property, you can specify how elements are
+              positioned on a page relative to the page itself, or even to other
+              elements! Below are the five values to utilize when positioning an
+              element:
+            </p>
+            <ul>
+              <li>fixed</li>
+              <li>sticky</li>
+              <li>static</li>
+              <li>relative</li>
+              <li>absolute</li>
+            </ul>
+            <p>
+              The code snippet to the right shows an example of how to set the
+              position property of an element in CSS to any of the five possible
+              values. It is important to note that, by default, an element's
+              position is static unless otherwise stated. Below, we'll explore
+              more about each of the five position values.
+            </p>
+          </div>
+          <div class="col-box">
+            <p class="code"><span class="orange">div</span> {</p>
+            <p class="code indent">
+              <span class="blue">position:</span>
+              <span id="position-property">static</span>;
+            </p>
+            <p class="code">}</p>
+            <img
+              class="bit-by-bot-computer"
+              src="../assets/bit-by-bot-images/computer-open-bot.svg"
+              alt="Bit by Bot Using a Computer"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex-box">
+        <div class="flex-col section">
+          <div id="instruction"></div>
+          <div class="control-flow">
+            <button id="back">&#8592;</button>
+            <button id="next">&#8594;</button>
+          </div>
+        </div>
+        <div id="demo" class="flex-col section"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
